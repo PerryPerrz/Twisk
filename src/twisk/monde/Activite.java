@@ -6,10 +6,15 @@ public class Activite extends Etape {
 
     public Activite(String nom){
         super(nom);
+        temps = 10;
+        ecartTemps = 10;
     }
 
-    public Activite(String nom,int nb){
-        super(nom,nb);
+    public Activite(String nom, int t, int e){
+        super(nom);
+        this.temps = t;
+        this.ecartTemps = e;
+
     }
 
     @Override
@@ -18,4 +23,19 @@ public class Activite extends Etape {
     }
 
 
+    public int getTemps() {
+        return temps;
+    }
+
+    public void setTemps(int temps) {
+        this.temps = temps;
+    }
+
+    public int getEcartTemps() {
+        return ecartTemps;
+    }
+
+    public void setEcartTemps(int ecartTemps) {
+        this.ecartTemps = ecartTemps;
+    }
 }
