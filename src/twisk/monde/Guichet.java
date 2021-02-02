@@ -25,4 +25,13 @@ public class Guichet extends Etape{
     public void setNbJetons(int nbJetons) {
         this.nbJetons = nbJetons;
     }
+
+    @Override
+    public String toString() {
+        return "Guichet{" +
+                "succ=" + succ +
+                ", nom='" + nom + '\'' +
+                ", nbJetons=" + nbJetons +
+                '}';
+    }
 }

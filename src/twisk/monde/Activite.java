@@ -38,4 +38,14 @@ public class Activite extends Etape {
     public void setEcartTemps(int ecartTemps) {
         this.ecartTemps = ecartTemps;
     }
+
+    @Override
+    public String toString() {
+        return "Activite{" +
+                "temps=" + temps +
+                ", ecartTemps=" + ecartTemps +
+                ", succ=" + succ +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
 }
