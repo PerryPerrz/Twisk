@@ -5,20 +5,19 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public abstract class Etape implements Iterable<Etape> {
-    protected ArrayList<Etape> succ;
+    protected GestionnaireSuccesseurs gestsucc;
     protected String nom;
 
     public Etape(String nom) {
         this.nom = nom;
-        succ = new ArrayList<>(5);  //On mets 5 en capacité initiale pour l'instant (à ajuster par la suite)
+        gestsucc = new GestionnaireSuccesseurs();
     }
 
-    public void ajouterSuccesseur(Etape... e) {
-        succ.addAll(Arrays.asList(e));
+    public void ajouterSuccesseur(Etape... e) { gestsucc.ajouter(e);
     }
 
     public int nbSuccesseurs() {
-        return succ.size();
+        return gestsucc.nbEtapes();
     }
 
     public boolean estUneActivite() {
@@ -30,6 +29,6 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     public Iterator<Etape> iterator() {
-        return succ.iterator();
+        return gestsucc.iterator();
     }
 }

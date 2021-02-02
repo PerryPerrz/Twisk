@@ -44,7 +44,7 @@ public class Activite extends Etape {
         return "Activite{" +
                 "temps=" + temps +
                 ", ecartTemps=" + ecartTemps +
-                ", succ=" + succ +
+                ", gestsucc=" + gestsucc +
                 ", nom='" + nom + '\'' +
                 '}';
     }
