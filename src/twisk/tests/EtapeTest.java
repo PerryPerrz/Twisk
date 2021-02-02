@@ -10,20 +10,48 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EtapeTest {
 
-    Activite act1,act2;
-    Guichet gui1,gui2;
+    Activite act1,act2,act3;
+    Guichet gui1,gui2,gui3;
 
     @BeforeEach
     void setUp() {
         act1 = new Activite("act1");
         act2 = new Activite("act2",10,2);
+        act3 = new Activite("act3");
         gui1 = new Guichet("gui1");
         gui2 = new Guichet("gui2", 10);
+        gui3 = new Guichet("gui3");
     }
 
     @Test
-    void ajouterSuccesseur() {
+    void nbSuccesseur() {
+        //On ajoute des activités à des activités
+        assertEquals(act1.nbSuccesseurs(),0);
+        act1.ajouterSuccesseur(act2);
+        assertEquals(act1.nbSuccesseurs(),1);
+        act1.ajouterSuccesseur(act3);
+        assertEquals(act1.nbSuccesseurs(),2);
 
+        //on ajoute des guichets à des guichets
+        assertEquals(gui1.nbSuccesseurs(),0);
+        gui1.ajouterSuccesseur(gui2);
+        assertEquals(gui1.nbSuccesseurs(),1);
+        gui1.ajouterSuccesseur(gui3);
+        assertEquals(gui1.nbSuccesseurs(),2);
+
+        //On ajoute des guichets à des activités
+        assertEquals(act1.nbSuccesseurs(),2);
+        act1.ajouterSuccesseur(gui1);
+        assertEquals(act1.nbSuccesseurs(),3);
+        act1.ajouterSuccesseur(gui3);
+        assertEquals(act1.nbSuccesseurs(),4);
+
+        //on ajoute des activités à des guichets
+        assertEquals(gui1.nbSuccesseurs(),2);
+        gui1.ajouterSuccesseur(act1);
+        assertEquals(gui1.nbSuccesseurs(),3);
+        gui1.ajouterSuccesseur(act3);
+        assertEquals(gui1.nbSuccesseurs(),4);
     }
 
     @Test
