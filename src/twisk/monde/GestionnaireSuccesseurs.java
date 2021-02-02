@@ -25,8 +25,16 @@ public class GestionnaireSuccesseurs implements Iterable<Etape>  {
 
     @Override
     public String toString() {
-        return "GestionnaireSuccesseurs{" +
-                "succ=" + succ +
-                '}';
+        if (this.nbEtapes() == 0)
+            return "pas de successeurs";
+        StringBuilder str = new StringBuilder(50*this.nbEtapes());
+        str.append("Successeurs : ");
+        for (Etape e : this) {
+            str.append(e.getNom()).append(" - ");
+        }
+        str.deleteCharAt(str.toString().length() - 1); //On enlève les 3 derniers caractères pour ne pas avoir le " - " en plus
+        str.deleteCharAt(str.toString().length() - 1);
+        str.deleteCharAt(str.toString().length() - 1);
+        return str.toString();
     }
 }

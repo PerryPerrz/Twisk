@@ -31,4 +31,8 @@ public abstract class Etape implements Iterable<Etape> {
     public Iterator<Etape> iterator() {
         return gestsucc.iterator();
     }
+
+    public String getNom() {
+        return nom;
+    }
 }

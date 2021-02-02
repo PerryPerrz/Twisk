@@ -28,10 +28,10 @@ public class Guichet extends Etape{
 
     @Override
     public String toString() {
-        return "Guichet{" +
-                "gestsucc=" + gestsucc +
-                ", nom='" + nom + '\'' +
-                ", nbJetons=" + nbJetons +
+        return "Guichet { " +
+                "nbJetons = " + nbJetons +
+                ", " + gestsucc +
+                ", nom = '" + nom + '\'' +
                 '}';
     }
 }

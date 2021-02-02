@@ -25,8 +25,13 @@ public class GestionnaireEtapes implements Iterable<Etape> {
 
     @Override
     public String toString() {
-        return "GestionnaireEtapes{" +
-                "etapes=" + etapes +
-                '}';
+        if (this.nbEtapes() == 0)
+            return "pas d'étapes";
+        StringBuilder str = new StringBuilder(50*this.nbEtapes());
+        str.append("Etapes : \n");
+        for (Etape e : this) {
+            str.append("  ").append(e).append("\n");
+        }
+        return str.toString();
     }
 }

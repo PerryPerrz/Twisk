@@ -16,6 +16,8 @@ public class ClientTwisk {
         Activite toboggan = new Activite("toboggan");
         balade.ajouterSuccesseur(guichet);
         guichet.ajouterSuccesseur(toboggan);
+        monde.aCommeEntree(balade);
+        monde.aCommeSortie(toboggan);
         monde.ajouter(balade, guichet, toboggan);
         return monde;
     }
@@ -31,6 +33,8 @@ public class ClientTwisk {
         parking.ajouterSuccesseur(balade);
         balade.ajouterSuccesseur(guichet2);
         guichet2.ajouterSuccesseur(toboggan);
+        monde.aCommeEntree(guichet2500, balade);
+        monde.aCommeSortie(toboggan);
         monde.ajouter(guichet2500, parking, balade, guichet2, toboggan);
         return monde;
     }
@@ -39,10 +43,14 @@ public class ClientTwisk {
         //Création du monde
         Monde monde;
         ClientTwisk clientTwisk = new ClientTwisk();
-        monde = clientTwisk.ConstruMonde2();
+        monde = clientTwisk.ConstruMonde1();
 
         //Début de la simulation
         Simulation simulation = new Simulation();
+        simulation.simuler(monde);
+
+        //Simulation n°2
+        monde = clientTwisk.ConstruMonde2();
         simulation.simuler(monde);
     }
 }

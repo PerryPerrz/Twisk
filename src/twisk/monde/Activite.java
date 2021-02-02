@@ -41,11 +41,11 @@ public class Activite extends Etape {
 
     @Override
     public String toString() {
-        return "Activite{" +
-                "temps=" + temps +
-                ", ecartTemps=" + ecartTemps +
-                ", gestsucc=" + gestsucc +
-                ", nom='" + nom + '\'' +
+        return "Activite { " +
+                "temps = " + temps +
+                ", ecartTemps = " + ecartTemps +
+                ", " + gestsucc +
+                ", nom = '" + nom + '\'' +
                 '}';
     }
 }
