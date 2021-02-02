@@ -17,6 +17,10 @@ public abstract class Etape implements Iterable<Etape> {
         succ.addAll(Arrays.asList(e));
     }
 
+    public int nbSuccesseurs() {
+        return succ.size();
+    }
+
     public boolean estUneActivite() {
         return false;
     }
@@ -26,6 +30,6 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     public Iterator<Etape> iterator() {
-        return null;
+        return succ.iterator();
     }
 }
