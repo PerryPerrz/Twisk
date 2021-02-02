@@ -45,4 +45,13 @@ public class Monde {
     public Iterator<Etape> iterator() {
         return ge.iterator();
     }
+
+    @Override
+    public String toString() {
+        return "Monde{" +
+                "sasE=" + sasE +
+                ", sasS=" + sasS +
+                ", ge=" + ge +
+                '}';
+    }
 }
