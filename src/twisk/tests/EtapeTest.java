@@ -56,8 +56,6 @@ class EtapeTest {
 
     @Test
     void estUneActivite() {
-        assertTrue(act1.estUneActivite());
-        assertTrue(act2.estUneActivite());
         assertFalse(gui1.estUneActivite());
         assertFalse(gui2.estUneActivite());
     }
@@ -66,8 +64,6 @@ class EtapeTest {
     void estUnGuichet() {
         assertFalse(act1.estUnGuichet());
         assertFalse(act2.estUnGuichet());
-        assertTrue(gui1.estUnGuichet());
-        assertTrue(gui2.estUnGuichet());
     }
 
     @Test
