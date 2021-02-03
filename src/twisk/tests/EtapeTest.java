@@ -2,9 +2,7 @@ package twisk.tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import twisk.monde.Activite;
-import twisk.monde.Etape;
-import twisk.monde.Guichet;
+import twisk.monde.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,6 +10,10 @@ class EtapeTest {
 
     Activite act1,act2,act3;
     Guichet gui1,gui2,gui3;
+    ActiviteRestreinte actRes1, actRes2, actRes3;
+    SasEntree sasE1, sasE2;
+    SasSortie sasS1, sasS2;
+
 
     @BeforeEach
     void setUp() {
@@ -21,6 +23,13 @@ class EtapeTest {
         gui1 = new Guichet("gui1");
         gui2 = new Guichet("gui2", 10);
         gui3 = new Guichet("gui3");
+        actRes1 = new ActiviteRestreinte("actRes1");
+        actRes2 = new ActiviteRestreinte("actRes2", 10, 2);
+        actRes3 = new ActiviteRestreinte("actRes3");
+        sasE1 = new SasEntree();
+        sasE2 = new SasEntree();
+        sasS1 = new SasSortie();
+        sasS2 = new SasSortie();
     }
 
     @Test
@@ -58,12 +67,16 @@ class EtapeTest {
     void estUneActivite() {
         assertFalse(gui1.estUneActivite());
         assertFalse(gui2.estUneActivite());
+        assertTrue(act1.estUneActivite());
+        assertTrue(act2.estUneActivite());
     }
 
     @Test
     void estUnGuichet() {
         assertFalse(act1.estUnGuichet());
         assertFalse(act2.estUnGuichet());
+        assertTrue(gui1.estUnGuichet());
+        assertTrue(gui2.estUnGuichet());
     }
 
     @Test

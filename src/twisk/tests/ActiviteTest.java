@@ -6,19 +6,7 @@ import twisk.monde.Activite;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ActiviteTest {
-
-    Activite activite1, activite2;
-
-    @BeforeEach
-    void setUp() {
-        activite1 = new Activite("act");
-        activite2 = new Activite("act2", 10, 5);
-    }
-
-    @Test
-    void estUneActivite() {
-        assertTrue(activite1.estUneActivite());
-        assertTrue(activite2.estUneActivite());
-    }
+class ActiviteTest extends EtapeTest {
+    //La classe ActiviteTest hérite des tests de la classe EtapeTest ce qui permet de ne pas avoir à réecrire ces tests
+    //Nous écrirons dans cette classe tous les tests qui sont propres à la classe Activité une fois que nous aurons de telles fonctions à tester
 }
