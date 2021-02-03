@@ -1,16 +1,19 @@
 package twisk.monde;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import twisk.outils.FabriqueNumero;
+
 import java.util.Iterator;
 
 public abstract class Etape implements Iterable<Etape> {
     protected GestionnaireSuccesseurs gestsucc;
     protected String nom;
+    protected int num;
 
     public Etape(String nom) {
+        FabriqueNumero fabNum = FabriqueNumero.getInstance();
         this.nom = nom;
         gestsucc = new GestionnaireSuccesseurs();
+        num = fabNum.getNumeroEtape();
     }
 
     public void ajouterSuccesseur(Etape... e) { gestsucc.ajouter(e);
@@ -34,5 +37,9 @@ public abstract class Etape implements Iterable<Etape> {
 
     public String getNom() {
         return nom;
+    }
+
+    public int getNum() {
+        return num;
     }
 }
