@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import twisk.monde.Activite;
 import twisk.monde.Etape;
 import twisk.monde.Guichet;
+import twisk.outils.FabriqueNumero;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,9 +13,12 @@ class EtapeTest {
 
     Activite act1,act2,act3;
     Guichet gui1,gui2,gui3;
+    FabriqueNumero fabNum;
 
     @BeforeEach
     void setUp() {
+        fabNum = FabriqueNumero.getInstance();
+        fabNum.reset();
         act1 = new Activite("act1");
         act2 = new Activite("act2",10,2);
         act3 = new Activite("act3");
@@ -85,5 +89,16 @@ class EtapeTest {
             count++;
         }
         assertEquals(count, act2.nbSuccesseurs());
+    }
+
+    @Test
+    void num(){
+        //On teste si le numéro unique à chaque étape est bien créer, on créer cette fonction car nous n'avons pas d'autres fonctions de tests dans lequels il est logique de tester le numéro.
+        assertEquals(act1.getNum(),0);
+        assertEquals(act2.getNum(),1);
+        assertEquals(act3.getNum(),2);
+        assertEquals(gui1.getNum(),3);
+        assertEquals(gui2.getNum(),4);
+        assertEquals(gui3.getNum(),5);
     }
 }

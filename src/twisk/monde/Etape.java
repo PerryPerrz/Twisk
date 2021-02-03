@@ -40,4 +40,8 @@ public abstract class Etape implements Iterable<Etape> {
     public String getNom() {
         return nom;
     }
+
+    public int getNum() {
+        return num;
+    }
 }
