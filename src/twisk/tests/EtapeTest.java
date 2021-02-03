@@ -218,6 +218,12 @@ class EtapeTest {
         assertFalse(gui2.estUneActivite());
         assertTrue(act1.estUneActivite());
         assertTrue(act2.estUneActivite());
+        assertTrue(actRes1.estUneActivite());
+        assertTrue(actRes2.estUneActivite());
+        assertTrue(sasE1.estUneActivite());
+        assertTrue(sasE2.estUneActivite());
+        assertTrue(sasS1.estUneActivite());
+        assertTrue(sasS2.estUneActivite());
     }
 
     @Test
@@ -226,6 +232,12 @@ class EtapeTest {
         assertFalse(act2.estUnGuichet());
         assertTrue(gui1.estUnGuichet());
         assertTrue(gui2.estUnGuichet());
+        assertFalse(actRes1.estUnGuichet());
+        assertFalse(actRes2.estUnGuichet());
+        assertFalse(sasE1.estUnGuichet());
+        assertFalse(sasE2.estUnGuichet());
+        assertFalse(sasS1.estUnGuichet());
+        assertFalse(sasS2.estUnGuichet());
     }
 
     @Test
@@ -241,11 +253,35 @@ class EtapeTest {
         assertEquals(count, act1.nbSuccesseurs());
 
         count = 0;
-        act2.ajouterSuccesseur(gui1, gui2, gui3);
-        for (Etape etape : act2) {
+        gui1.ajouterSuccesseur(gui2, gui3);
+        for (Etape etape : gui1) {
             assertTrue(etape.estUnGuichet());
             count++;
         }
-        assertEquals(count, act2.nbSuccesseurs());
+        assertEquals(count, gui1.nbSuccesseurs());
+
+        actRes1.ajouterSuccesseur(actRes2, actRes3);
+        count = 0;
+        for (Etape etape : actRes1) {
+            assertTrue(etape.estUneActivite());
+            count++;
+        }
+        assertEquals(count, actRes1.nbSuccesseurs());
+
+        sasE1.ajouterSuccesseur(sasE2, sasE3);
+        count = 0;
+        for (Etape etape : sasE1) {
+            assertTrue(etape.estUneActivite());
+            count++;
+        }
+        assertEquals(count, sasE1.nbSuccesseurs());
+
+        sasS1.ajouterSuccesseur(sasS2, sasS3);
+        count = 0;
+        for (Etape etape : sasS1) {
+            assertTrue(etape.estUneActivite());
+            count++;
+        }
+        assertEquals(count, sasS1.nbSuccesseurs());
     }
 }
