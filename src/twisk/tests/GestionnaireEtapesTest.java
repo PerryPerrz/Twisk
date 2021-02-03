@@ -7,7 +7,8 @@ import twisk.monde.Etape;
 import twisk.monde.GestionnaireEtapes;
 import twisk.monde.Guichet;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GestionnaireEtapesTest {
     Activite act1,act2,act3;

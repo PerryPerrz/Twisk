@@ -7,9 +7,8 @@ import twisk.monde.Etape;
 import twisk.monde.GestionnaireSuccesseurs;
 import twisk.monde.Guichet;
 
-import java.util.Iterator;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GestionnaireSuccesseursTest {
     Activite act1,act2,act3;
