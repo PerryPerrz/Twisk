@@ -46,6 +46,7 @@ public class Activite extends Etape {
                 ", ecartTemps = " + ecartTemps +
                 ", " + gestsucc +
                 ", nom = '" + nom + '\'' +
+                ", numéro = " + num +
                 '}';
     }
 }

@@ -32,6 +32,7 @@ public class Guichet extends Etape{
                 "nbJetons = " + nbJetons +
                 ", " + gestsucc +
                 ", nom = '" + nom + '\'' +
+                ", numéro = " + num +
                 '}';
     }
 }
