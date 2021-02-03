@@ -2,8 +2,6 @@ package twisk.monde;
 
 import twisk.outils.FabriqueNumero;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 
 public abstract class Etape implements Iterable<Etape> {

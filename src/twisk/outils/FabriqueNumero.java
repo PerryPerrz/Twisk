@@ -2,9 +2,11 @@ package twisk.outils;
 
 public class FabriqueNumero {
     private int cptEtape;
+    private int cptSemaphore;
 
     private FabriqueNumero(){
         cptEtape = 0;
+        cptSemaphore = 1;
     }
 
     private static final FabriqueNumero instance = new FabriqueNumero();
@@ -18,7 +20,13 @@ public class FabriqueNumero {
         return cptEtape - 1; //On retourne le numéro de l'étape actuel
     }
 
+    public int getNumeroSemaphore(){
+        cptSemaphore++;
+        return cptSemaphore - 1;
+    }
+
     public void reset(){
         cptEtape = 0;
+        cptSemaphore = 1;
     }
 }

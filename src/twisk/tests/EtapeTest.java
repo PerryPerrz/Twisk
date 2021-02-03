@@ -13,7 +13,7 @@ class EtapeTest {
 
     Activite act1,act2,act3;
     Guichet gui1,gui2,gui3;
-    
+
     @BeforeEach
     void setUp() {
         act1 = new Activite("act1");
