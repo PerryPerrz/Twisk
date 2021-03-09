@@ -50,4 +50,9 @@ public class Guichet extends Etape {
                 ", numéro = " + num +
                 '}';
     }
+
+    @Override
+    public String toC() { //On assume que le monde est correct et donc que l'étape suivant un guichet est bien une activité restreinte
+        return "P(ids, " + getNumSemaphore() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC() + "V(ids, " + getNumSemaphore() + ");\ntransfert(" + getSucc().getNum() + ", " + getSucc().getSucc().getNum() + ");\n" + getSucc().getSucc().toC();
+    }
 }

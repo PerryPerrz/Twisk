@@ -1,6 +1,20 @@
 package twisk.tests;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class SasSortieTest extends ActiviteTest {
-    //La classe SasSortieTest hérite des tests de la classe ActiviteTest ce qui permet de ne pas avoir à réecrire ces tests
-    //Nous écrirons dans cette classe tous les tests qui sont propres à la classe SasSortie une fois que nous aurons de telles fonctions à tester
+    @BeforeEach
+    void setUp() {
+        super.setUp();
+    }
+
+    @Test
+    void toC() {
+        assertEquals(sasS1.toC(), "");
+        assertEquals(sasS2.toC(), "");
+        assertEquals(sasS3.toC(), "");
+    }
 }

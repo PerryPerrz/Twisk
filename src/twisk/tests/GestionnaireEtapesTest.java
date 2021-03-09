@@ -11,14 +11,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GestionnaireEtapesTest {
-    Activite act1,act2,act3;
-    Guichet gui1,gui2,gui3;
+    Activite act1, act2, act3;
+    Guichet gui1, gui2, gui3;
     GestionnaireEtapes gest1, gest2, gest3;
 
     @BeforeEach
     void setUp() {
         act1 = new Activite("act1");
-        act2 = new Activite("act2",10,2);
+        act2 = new Activite("act2", 10, 2);
         act3 = new Activite("act3");
         gui1 = new Guichet("gui1");
         gui2 = new Guichet("gui2", 10);
@@ -31,25 +31,25 @@ class GestionnaireEtapesTest {
     @Test
     void nbEtapes() {
         //On ajoute des activités
-        assertEquals(gest1.nbEtapes(),0);
+        assertEquals(gest1.nbEtapes(), 0);
         gest1.ajouter(act1);
-        assertEquals(gest1.nbEtapes(),1);
+        assertEquals(gest1.nbEtapes(), 1);
         gest1.ajouter(act2, act3);
-        assertEquals(gest1.nbEtapes(),3);
+        assertEquals(gest1.nbEtapes(), 3);
 
         //on ajoute des guichets
-        assertEquals(gest2.nbEtapes(),0);
+        assertEquals(gest2.nbEtapes(), 0);
         gest2.ajouter(gui1);
-        assertEquals(gest2.nbEtapes(),1);
+        assertEquals(gest2.nbEtapes(), 1);
         gest2.ajouter(gui2, gui3);
-        assertEquals(gest2.nbEtapes(),3);
+        assertEquals(gest2.nbEtapes(), 3);
 
         //On ajoute des activités et des guichets
-        assertEquals(gest3.nbEtapes(),0);
+        assertEquals(gest3.nbEtapes(), 0);
         gest3.ajouter(gui1, act1);
-        assertEquals(gest3.nbEtapes(),2);
+        assertEquals(gest3.nbEtapes(), 2);
         gest3.ajouter(gui2, act2, act3, gui3);
-        assertEquals(gest3.nbEtapes(),6);
+        assertEquals(gest3.nbEtapes(), 6);
     }
 
     @Test

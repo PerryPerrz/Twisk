@@ -16,7 +16,8 @@ public abstract class Etape implements Iterable<Etape> {
         num = fabNum.getNumeroEtape();
     }
 
-    public void ajouterSuccesseur(Etape... e) { gestsucc.ajouter(e);
+    public void ajouterSuccesseur(Etape... e) {
+        gestsucc.ajouter(e);
     }
 
     public int nbSuccesseurs() {
@@ -41,5 +42,15 @@ public abstract class Etape implements Iterable<Etape> {
 
     public int getNum() {
         return num;
+    }
+
+    public abstract String toC();
+
+    public GestionnaireSuccesseurs getGestsucc() {
+        return gestsucc;
+    }
+
+    public Etape getSucc() {
+        return getGestsucc().getSucc();
     }
 }

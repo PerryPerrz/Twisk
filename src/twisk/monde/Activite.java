@@ -4,13 +4,13 @@ public class Activite extends Etape {
     private int temps;
     private int ecartTemps;
 
-    public Activite(String nom){
+    public Activite(String nom) {
         super(nom);
         temps = 10;
         ecartTemps = 10;
     }
 
-    public Activite(String nom, int t, int e){
+    public Activite(String nom, int t, int e) {
         super(nom);
         this.temps = t;
         this.ecartTemps = e;
@@ -18,10 +18,9 @@ public class Activite extends Etape {
     }
 
     @Override
-    public boolean estUneActivite(){
+    public boolean estUneActivite() {
         return true;
     }
-
 
     public int getTemps() {
         return temps;
@@ -48,5 +47,10 @@ public class Activite extends Etape {
                 ", nom = '" + nom + '\'' +
                 ", numéro = " + num +
                 '}';
+    }
+
+    @Override
+    public String toC() {
+        return "delai(" + getTemps() + ", " + getEcartTemps() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC();//On assume que le monde est correct et que l'activité n'a qu'un seul successeur
     }
 }

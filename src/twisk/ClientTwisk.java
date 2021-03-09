@@ -7,7 +7,8 @@ import twisk.simulation.Simulation;
 
 public class ClientTwisk {
 
-    public ClientTwisk() {}
+    public ClientTwisk() {
+    }
 
     public Monde ConstruMonde1() {
         Monde monde = new Monde();
