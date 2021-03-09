@@ -9,5 +9,6 @@ public class Simulation {
 
     public void simuler(Monde monde) {
         System.out.println(monde);
+        monde.toC();
     }
 }
