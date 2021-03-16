@@ -24,6 +24,7 @@ public class KitC {
             for (String nom : liste) {
                 Path source = Paths.get(getClass().getResource("/twisk/ressources/codeC/" + nom).getPath());
                 Path newdir = Paths.get("/tmp/twisk/");
+                System.out.println("source : " + source + "newdir : " + newdir);
                 Files.copy(source, newdir.resolve(source.getFileName()), REPLACE_EXISTING);
             }
         } catch (IOException e) {
