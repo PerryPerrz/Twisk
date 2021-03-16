@@ -17,21 +17,21 @@ class KitCTest {
     @BeforeEach
     void setUp() {
         kitC = new KitC();
-        kitC.creerEnvironnement();
     }
 
     @Test
     void creerEnvironnement() {
+        kitC.creerEnvironnement();
         assertTrue(Files.exists(Paths.get("/tmp/twisk/programmeC.o")));
         assertTrue(Files.exists(Paths.get("/tmp/twisk/def.h")));
     }
 
     @Test
     void creerFichier() {
-        kitC.creerFichier("DE RENARD\nQUEUE");
+        kitC.creerFichier("#include <stdio.h>\n\nint main(int argc, char* argv[]) {}");
         assertTrue(Files.exists(Paths.get("/tmp/twisk/client.c")));
         try {
-            Files.readString(Paths.get("/tmp/twisk/client.c"));
+            assertEquals(Files.readString(Paths.get("/tmp/twisk/client.c")),"#include <stdio.h>\n\nint main(int argc, char* argv[]) {}\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
