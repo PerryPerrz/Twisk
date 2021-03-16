@@ -1,7 +1,11 @@
 package twisk.outils;
 
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -20,6 +24,19 @@ public class KitC {
                 Path newdir = Paths.get("/tmp/twisk/");
                 Files.copy(source, newdir.resolve(source.getFileName()), REPLACE_EXISTING);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void creerFichier(String codeC){
+        try {
+            // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
+            FileWriter flot = new FileWriter("/tmp/twisk/client.c");
+            PrintWriter flotFiltre = new PrintWriter(flot) ;
+            flotFiltre.println(codeC) ;
+            flotFiltre.close() ;
+
         } catch (IOException e) {
             e.printStackTrace();
         }
