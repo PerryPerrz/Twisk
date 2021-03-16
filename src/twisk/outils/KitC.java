@@ -16,9 +16,9 @@ public class KitC {
     public void creerEnvironnement() {
         try {
             // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
-            if (!Files.exists(Paths.get("/tmp/twisk"))) {
-                Path directories = Files.createDirectories(Paths.get("/tmp/twisk"));
-            }
+            System.out.println(Files.exists(Paths.get("/tmp/twisk")));
+            Path directories = Files.createDirectories(Paths.get("/tmp/twisk"));
+            System.out.println(Files.exists(Paths.get("/tmp/twisk")));
             // copie des deux fichiers programmeC.o et def.h depuis le projet sous /tmp/twisk
             String[] liste = {"programmeC.o", "def.h"};
             for (String nom : liste) {
