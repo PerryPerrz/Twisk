@@ -12,5 +12,6 @@ public class Simulation {
         KitC kitC = new KitC();
         kitC.creerEnvironnement();
         kitC.creerFichier(monde.toC());
+        kitC.compiler();
     }
 }

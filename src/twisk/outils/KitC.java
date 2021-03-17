@@ -53,6 +53,9 @@ public class KitC {
             while ((ligne = output.readLine()) != null) {
                 System.out.println(ligne);
             }
+            while ((ligne = error.readLine()) != null) {
+                System.out.println(ligne);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
