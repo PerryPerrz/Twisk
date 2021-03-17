@@ -24,6 +24,7 @@ class KitCTest {
         kitC.creerEnvironnement();
         assertTrue(Files.exists(Paths.get("/tmp/twisk/programmeC.o")));
         assertTrue(Files.exists(Paths.get("/tmp/twisk/def.h")));
+        assertTrue(Files.exists(Paths.get("/tmp/twisk/codeNatif.o")));
     }
 
     @Test
