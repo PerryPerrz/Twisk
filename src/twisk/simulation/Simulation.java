@@ -13,5 +13,6 @@ public class Simulation {
         kitC.creerEnvironnement();
         kitC.creerFichier(monde.toC());
         kitC.compiler();
+        kitC.construireLaLibrairie();
     }
 }
