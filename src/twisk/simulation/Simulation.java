@@ -14,6 +14,8 @@ public class Simulation {
         kitC.creerFichier(monde.toC());
         kitC.compiler();
         kitC.construireLaLibrairie();
+        //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
+        System.load("/tmp/twisk/libTwisk.so");
     }
 
     public native int[] start_simulation(int nbEtapes, int nbServices, int nbClients, int[] tabJetonsServices) ;
