@@ -53,4 +53,9 @@ public class Activite extends Etape {
     public String toC() {
         return "delai(" + getTemps() + ", " + getEcartTemps() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC();//On assume que le monde est correct et que l'activité n'a qu'un seul successeur
     }
+
+    @Override
+    public int getNbTicketSiGuichet() {
+        return 0; //Une activité ne contient pas de tickets
+    }
 }

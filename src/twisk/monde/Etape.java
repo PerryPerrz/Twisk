@@ -53,4 +53,6 @@ public abstract class Etape implements Iterable<Etape> {
     public Etape getSucc() {
         return getGestsucc().getSucc();
     }
+
+    public abstract int getNbTicketSiGuichet();
 }

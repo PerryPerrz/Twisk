@@ -57,4 +57,16 @@ public class Monde {
     public String toC() {
         return sasE.toC();
     }
+
+    public int getNbTicketsGuichetI(int i) {
+        int cpt = 0;
+        for (Etape e : ge) {
+            if (e.estUnGuichet()) {
+                if (cpt == i)
+                    return e.getNbTicketSiGuichet();
+                cpt++;
+            }
+        }
+        return 0; //Le guichet n'existe pas
+    }
 }
