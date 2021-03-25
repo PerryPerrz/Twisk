@@ -38,6 +38,7 @@ public class Simulation {
                 }
                 System.out.println();
             }
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
