@@ -15,9 +15,9 @@ class SasEntreeTest extends ActiviteTest {
     @Test
     void toC() {//Pour ce test, on travaille sur des mondes non-cohérents donc on doit rajouter des sas de sorties en tant que successeurs des sas d'entrées à tester
         sasE1.ajouterSuccesseur(sasS1);
-        assertEquals(sasE1.toC(), "entrer(9);\ndelai(10, 10);\ntransfert(9, 12);\n");
+        assertEquals(sasE1.toC(), "entrer(69);\ndelai(5, 2);\ntransfert(69, 72);\n");
         sasE2.ajouterSuccesseur(act1);
         act1.ajouterSuccesseur(sasS2);
-        assertEquals(sasE2.toC(), "entrer(10);\ndelai(10, 10);\ntransfert(10, 0);\ndelai(10, 10);\ntransfert(0, 13);\n");
+        assertEquals(sasE2.toC(), "entrer(70);\ndelai(5, 2);\ntransfert(70, 60);\ndelai(5, 2);\ntransfert(60, 73);\n");
     }
 }
