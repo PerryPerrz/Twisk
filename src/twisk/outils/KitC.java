@@ -31,7 +31,10 @@ public class KitC {
             // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
             FileWriter flot = new FileWriter("/tmp/twisk/client.c");
             PrintWriter flotFiltre = new PrintWriter(flot) ;
+            flotFiltre.println("#include \"def.h\"");
+            flotFiltre.println("void simulation(int ids) {");
             flotFiltre.println(codeC) ;
+            flotFiltre.println("}");
             flotFiltre.close() ;
 
         } catch (IOException e) {
