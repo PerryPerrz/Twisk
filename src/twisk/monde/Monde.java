@@ -55,7 +55,7 @@ public class Monde {
     }
 
     public String toC() {
-        return sasE.toC();
+        return "#include \"def.h\"\nvoid simulation(int ids) {\n" + sasE.toC() + "}";
     }
 
     public int getNbTicketsGuichetI(int i) {

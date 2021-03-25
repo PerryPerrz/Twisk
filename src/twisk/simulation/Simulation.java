@@ -39,7 +39,7 @@ public class Simulation {
                 System.out.println();
             }
             try {
-                Thread.sleep(2);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

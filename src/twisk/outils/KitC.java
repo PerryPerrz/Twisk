@@ -31,10 +31,7 @@ public class KitC {
             // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
             FileWriter flot = new FileWriter("/tmp/twisk/client.c");
             PrintWriter flotFiltre = new PrintWriter(flot) ;
-            flotFiltre.println("#include \"def.h\"");
-            flotFiltre.println("void simulation(int ids) {");
             flotFiltre.println(codeC) ;
-            flotFiltre.println("}");
             flotFiltre.close() ;
 
         } catch (IOException e) {
@@ -66,7 +63,7 @@ public class KitC {
     public void construireLaLibrairie() {
         try {
             Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
-            Process p = runtime.exec("gcc -shared /tmp/twisk/programmeC.o /tmp/twisk/codeNatif.o -o /tmp/twisk/libTwisk.so");//On demande l’exécution de la compilation
+            Process p = runtime.exec("gcc -shared /tmp/twisk/programmeC.o /tmp/twisk/codeNatif.o /tmp/twisk/client.o -o /tmp/twisk/libTwisk.so");//On demande l’exécution de la compilation
             p.waitFor();
             // récupération des messages sur la sortie standard et la sortie d’erreur de la commande exécutée
             // à reprendre éventuellement et à adapter à votre code
