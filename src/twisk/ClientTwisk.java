@@ -49,10 +49,14 @@ public class ClientTwisk {
 
         //Début de la simulation
         Simulation simulation = new Simulation();
+        simulation.setNbClients(5);
         simulation.simuler(monde);
-        /*
+
+        /* A changer plus tard
         //Simulation n°2
         monde = clientTwisk.ConstruMonde2();
-        simulation.simuler(monde);*/
+        simulation.setNbClients(5);
+        simulation.simuler(monde);
+         */
     }
 }

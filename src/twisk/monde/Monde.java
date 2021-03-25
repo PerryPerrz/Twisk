@@ -78,5 +78,7 @@ public class Monde {
         return null;
     }
 
-    public int getNumSasSortie() {return sasS.getNum();}
+    public int getNumSasSortie() {
+        return sasS.getNum();
+    }
 }

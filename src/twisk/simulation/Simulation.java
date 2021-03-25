@@ -28,7 +28,7 @@ public class Simulation {
 
         //On affiche les clients dans les étapes
         int[] tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
-        while (nbClients != tabClientsEtapes[monde.nbEtapes() * nbClients + monde.nbEtapes() - 1 - nbClients]) {
+        while (nbClients != tabClientsEtapes[monde.getNumSasSortie() * nbClients + monde.getNumSasSortie()]) {
             tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
             for (int i = 0; i < monde.nbEtapes(); i++) {
                 int temp = tabClientsEtapes[(i * nbClients) + i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
