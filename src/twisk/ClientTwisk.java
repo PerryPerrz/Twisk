@@ -13,7 +13,7 @@ public class ClientTwisk {
     public Monde ConstruMonde1() {
         Monde monde = new Monde();
         Activite balade = new Activite("balade au zoo");
-        Guichet guichet = new Guichet("guichet", 2);
+        Guichet guichet = new Guichet("guichet", 1);
         Activite toboggan = new Activite("toboggan");
         balade.ajouterSuccesseur(guichet);
         guichet.ajouterSuccesseur(toboggan);
@@ -49,9 +49,9 @@ public class ClientTwisk {
         //Début de la simulation
         Simulation simulation = new Simulation();
         simulation.simuler(monde);
-
+        /*
         //Simulation n°2
         monde = clientTwisk.ConstruMonde2();
-        simulation.simuler(monde);
+        simulation.simuler(monde);*/
     }
 }

@@ -6,8 +6,8 @@ public class Activite extends Etape {
 
     public Activite(String nom) {
         super(nom);
-        temps = 10;
-        ecartTemps = 10;
+        temps = 5;
+        ecartTemps = 2;
     }
 
     public Activite(String nom, int t, int e) {
@@ -51,6 +51,7 @@ public class Activite extends Etape {
 
     @Override
     public String toC() {
+        System.out.println(this.getNom() + ", " + this.getNum());
         return "delai(" + getTemps() + ", " + getEcartTemps() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC();//On assume que le monde est correct et que l'activité n'a qu'un seul successeur
     }
 

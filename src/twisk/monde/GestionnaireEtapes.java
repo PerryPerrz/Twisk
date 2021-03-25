@@ -34,4 +34,8 @@ public class GestionnaireEtapes implements Iterable<Etape> {
         }
         return str.toString();
     }
+
+    public Etape getEtapeI(int index) {
+        return etapes.get(index);
+    }
 }

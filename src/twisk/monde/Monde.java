@@ -11,6 +11,7 @@ public class Monde {
         sasE = new SasEntree();
         sasS = new SasSortie();
         ge = new GestionnaireEtapes();
+        ge.ajouter(sasE, sasS);
     }
 
     public void aCommeEntree(Etape... etapes) {
@@ -68,5 +69,9 @@ public class Monde {
             }
         }
         return 0; //Le guichet n'existe pas
+    }
+
+    public String getNomEtapeI(int index) {
+        return ge.getEtapeI(index).getNom();
     }
 }

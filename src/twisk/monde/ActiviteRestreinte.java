@@ -12,6 +12,7 @@ public class ActiviteRestreinte extends Activite {
 
     @Override
     public String toC() {
+        System.out.println(this.getNom() + ", " + this.getNum());
         return "delai(" + getTemps() + ", " + getEcartTemps() + ");\n";
     }
 }

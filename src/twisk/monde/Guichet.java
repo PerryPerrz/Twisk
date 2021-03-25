@@ -8,7 +8,7 @@ public class Guichet extends Etape {
 
     public Guichet(String nom) {
         super(nom);
-        nbJetons = 10;
+        nbJetons = 2;
         FabriqueNumero fabNum = FabriqueNumero.getInstance();
         numSemaphore = fabNum.getNumeroSemaphore();
     }
@@ -53,6 +53,7 @@ public class Guichet extends Etape {
 
     @Override
     public String toC() { //On assume que le monde est correct et donc que l'étape suivant un guichet est bien une activité restreinte
+        System.out.println(this.getNom() + ", " + this.getNum());
         return "P(ids, " + getNumSemaphore() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC() + "V(ids, " + getNumSemaphore() + ");\ntransfert(" + getSucc().getNum() + ", " + getSucc().getSucc().getNum() + ");\n" + getSucc().getSucc().toC();
     }
 

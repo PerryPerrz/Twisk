@@ -14,6 +14,7 @@ public class Simulation {
         kitC.creerFichier(monde.toC());
         kitC.compiler();
         kitC.construireLaLibrairie();
+        System.out.println(monde.toString());
         //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
         System.load("/tmp/twisk/libTwisk.so");
         int nbClients = 5;  //On ne sait pas combien de clients on veut pour l'instant
@@ -31,10 +32,10 @@ public class Simulation {
         while (nbClients != tabClientsEtapes[monde.nbEtapes() * nbClients + monde.nbEtapes() - 1 - nbClients]) {
             tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
             for (int i = 0; i < monde.nbEtapes(); i++) {
-                int temp = tabClientsEtapes[(i*nbClients)+i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
-                System.out.print("Etape"+ i +", "+ temp +" clients : ");
+                int temp = tabClientsEtapes[(i * nbClients) + i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
+                System.out.print("" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
                 for (int j = 0; j < temp; j++) {
-                    System.out.print(tabClientsEtapes[(i*nbClients) + i + j + 1] +", ");
+                    System.out.print(tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
                 }
                 System.out.println();
             }
@@ -48,7 +49,9 @@ public class Simulation {
         nettoyage();
     }
 
-    public native int[] start_simulation(int nbEtapes, int nbServices, int nbClients, int[] tabJetonsServices) ;
-    public native int[] ou_sont_les_clients(int nbEtapes, int nbClients) ;
+    public native int[] start_simulation(int nbEtapes, int nbServices, int nbClients, int[] tabJetonsServices);
+
+    public native int[] ou_sont_les_clients(int nbEtapes, int nbClients);
+
     public native void nettoyage();
 }
