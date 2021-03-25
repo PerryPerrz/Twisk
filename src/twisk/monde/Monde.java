@@ -75,7 +75,7 @@ public class Monde {
         for (Etape e : ge)
             if (index == e.getNum())
                 return e.getNom();
-        return "NULL";
+        return null;
     }
 
     public int getNumSasSortie() {return sasS.getNum();}
