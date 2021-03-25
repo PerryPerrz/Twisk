@@ -1,6 +1,7 @@
 package twisk;
 
 import twisk.monde.Activite;
+import twisk.monde.ActiviteRestreinte;
 import twisk.monde.Guichet;
 import twisk.monde.Monde;
 import twisk.simulation.Simulation;
@@ -14,7 +15,7 @@ public class ClientTwisk {
         Monde monde = new Monde();
         Activite balade = new Activite("balade au zoo");
         Guichet guichet = new Guichet("guichet", 1);
-        Activite toboggan = new Activite("toboggan");
+        Activite toboggan = new ActiviteRestreinte("toboggan");
         balade.ajouterSuccesseur(guichet);
         guichet.ajouterSuccesseur(toboggan);
         monde.aCommeEntree(balade);
@@ -26,10 +27,10 @@ public class ClientTwisk {
     public Monde ConstruMonde2() {
         Monde monde = new Monde();
         Activite balade = new Activite("balade au zoo");
-        Activite parking = new Activite("parking");
+        Activite parking = new ActiviteRestreinte("parking");
         Guichet guichet2 = new Guichet("guichet", 2);
         Guichet guichet2500 = new Guichet("guichet", 2500);
-        Activite toboggan = new Activite("toboggan");
+        Activite toboggan = new ActiviteRestreinte("toboggan");
         guichet2500.ajouterSuccesseur(parking);
         parking.ajouterSuccesseur(balade);
         balade.ajouterSuccesseur(guichet2);

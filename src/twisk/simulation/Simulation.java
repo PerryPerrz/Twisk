@@ -4,6 +4,7 @@ import twisk.monde.Monde;
 import twisk.outils.KitC;
 
 public class Simulation {
+    private int nbClients;
 
     public Simulation() {
     }
@@ -14,10 +15,8 @@ public class Simulation {
         kitC.creerFichier(monde.toC());
         kitC.compiler();
         kitC.construireLaLibrairie();
-        System.out.println(monde.toString());
         //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
         System.load("/tmp/twisk/libTwisk.so");
-        int nbClients = 5;  //On ne sait pas combien de clients on veut pour l'instant
         int[] tabJetonsGuichet = new int[monde.nbGuichets()];
         for (int i = 0; i < monde.nbGuichets(); i++)
             tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i);
@@ -40,7 +39,7 @@ public class Simulation {
                 System.out.println();
             }
             try {
-                Thread.sleep(2000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -54,4 +53,8 @@ public class Simulation {
     public native int[] ou_sont_les_clients(int nbEtapes, int nbClients);
 
     public native void nettoyage();
+
+    public void setNbClients(int nbClients) {
+        this.nbClients = nbClients;
+    }
 }

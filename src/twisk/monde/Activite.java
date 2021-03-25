@@ -51,7 +51,6 @@ public class Activite extends Etape {
 
     @Override
     public String toC() {
-        System.out.println(this.getNom() + ", " + this.getNum());
         return "delai(" + getTemps() + ", " + getEcartTemps() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC();//On assume que le monde est correct et que l'activité n'a qu'un seul successeur
     }
 
