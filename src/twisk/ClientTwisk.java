@@ -24,12 +24,13 @@ public class ClientTwisk {
         return monde;
     }
 
+    /*A décommenter lorsque l'implémentation des multiples successeurs à une même Activité est codée
     public Monde ConstruMonde2() {
         Monde monde = new Monde();
         Activite balade = new Activite("balade au zoo");
         Activite parking = new ActiviteRestreinte("parking");
-        Guichet guichet2 = new Guichet("guichet", 2);
-        Guichet guichet2500 = new Guichet("guichet", 2500);
+        Guichet guichet2 = new Guichet("guichet2", 2);
+        Guichet guichet2500 = new Guichet("guichet2500", 2500);
         Activite toboggan = new ActiviteRestreinte("toboggan");
         guichet2500.ajouterSuccesseur(parking);
         parking.ajouterSuccesseur(balade);
@@ -39,7 +40,7 @@ public class ClientTwisk {
         monde.aCommeSortie(toboggan);
         monde.ajouter(guichet2500, parking, balade, guichet2, toboggan);
         return monde;
-    }
+    }*/
 
     public static void main(String[] args) {
         //Création du monde
@@ -52,11 +53,11 @@ public class ClientTwisk {
         simulation.setNbClients(5);
         simulation.simuler(monde);
 
-        /* A changer plus tard
+        /* A décommenter lorsque l'implémentation des multiples successeurs à une même Activité est codée
         //Simulation n°2
         monde = clientTwisk.ConstruMonde2();
         simulation.setNbClients(5);
         simulation.simuler(monde);
-         */
+        */
     }
 }
