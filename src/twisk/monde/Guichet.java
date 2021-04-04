@@ -44,10 +44,10 @@ public class Guichet extends Etape {
     @Override
     public String toString() {
         return "Guichet { " +
-                "nbJetons = " + nbJetons +
-                ", " + gestsucc +
-                ", nom = '" + nom + '\'' +
+                "nom = '" + nom + '\'' +
                 ", numéro = " + num +
+                ", " + gestsucc +
+                ", nbJetons = " + nbJetons +
                 '}';
     }
 

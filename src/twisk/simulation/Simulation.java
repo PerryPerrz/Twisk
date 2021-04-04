@@ -10,6 +10,7 @@ public class Simulation {
     }
 
     public void simuler(Monde monde) {
+        System.out.println(monde.toString() + "\n");
         KitC kitC = new KitC();
         kitC.creerEnvironnement();
         kitC.creerFichier(monde.toC());
@@ -21,10 +22,11 @@ public class Simulation {
         for (int i = 0; i < monde.nbGuichets(); i++)
             tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i);
         int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);
+        System.out.print("PID des clients : ");
         for (int i = 0; i < nbClients; i++) {
             System.out.print(numProc[i] + ", ");
         }
-        System.out.println();
+        System.out.println("\n");
 
         //On affiche les clients dans les étapes
         int[] tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);

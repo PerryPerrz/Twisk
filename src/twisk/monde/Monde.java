@@ -2,7 +2,7 @@ package twisk.monde;
 
 import java.util.Iterator;
 
-public class Monde {
+public class Monde implements Iterable<Etape> {
     private final SasEntree sasE;
     private final SasSortie sasS;
     private final GestionnaireEtapes ge;
@@ -48,11 +48,7 @@ public class Monde {
 
     @Override
     public String toString() {
-        return "Monde {\n" +
-                "sas d'entrée : " + sasE +
-                "\nsas de sortie : " + sasS +
-                "\n" + ge +
-                '}';
+        return "Monde {\n" + ge + '}';
     }
 
     public String toC() {
