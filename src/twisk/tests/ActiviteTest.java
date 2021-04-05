@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The type Activite test.
+ */
 class ActiviteTest extends EtapeTest {
     @Override
     @BeforeEach
@@ -12,6 +15,9 @@ class ActiviteTest extends EtapeTest {
         super.setUp();
     }
 
+    /**
+     * To c.
+     */
     @Test
     void toC() { //Pour ce test, on travaille sur des mondes non-cohérents donc on doit rajouter des sas de sorties en tant que successeurs des activitées à tester
         act1.ajouterSuccesseur(sasS1);

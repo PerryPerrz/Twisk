@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The type Activite restreinte test.
+ */
 class ActiviteRestreinteTest extends ActiviteTest {
     @BeforeEach
     void setUp() {

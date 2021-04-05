@@ -11,14 +11,26 @@ import java.nio.file.Paths;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * The type Kit c test.
+ */
 class KitCTest {
+    /**
+     * The Kit c.
+     */
     KitC kitC;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         kitC = new KitC();
     }
 
+    /**
+     * Creer environnement.
+     */
     @Test
     void creerEnvironnement() {
         kitC.creerEnvironnement();
@@ -27,6 +39,9 @@ class KitCTest {
         assertTrue(Files.exists(Paths.get("/tmp/twisk/codeNatif.o")));
     }
 
+    /**
+     * Creer fichier.
+     */
     @Test
     void creerFichier() {
         kitC.creerFichier("#include <stdio.h>\n\nint main(int argc, char* argv[]) {}");
