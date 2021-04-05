@@ -7,64 +7,18 @@ import twisk.monde.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * The type Etape test.
+ * La classe EtapeTest.
  */
 class EtapeTest {
 
-    /**
-     * The Act 1.
-     */
-    Activite act1, /**
-     * The Act 2.
-     */
-    act2, /**
-     * The Act 3.
-     */
-    act3;
-    /**
-     * The Gui 1.
-     */
-    Guichet gui1, /**
-     * The Gui 2.
-     */
-    gui2, /**
-     * The Gui 3.
-     */
-    gui3;
-    /**
-     * The Act res 1.
-     */
-    ActiviteRestreinte actRes1, /**
-     * The Act res 2.
-     */
-    actRes2, /**
-     * The Act res 3.
-     */
-    actRes3;
-    /**
-     * The Sas e 1.
-     */
-    SasEntree sasE1, /**
-     * The Sas e 2.
-     */
-    sasE2, /**
-     * The Sas e 3.
-     */
-    sasE3;
-    /**
-     * The Sas s 1.
-     */
-    SasSortie sasS1, /**
-     * The Sas s 2.
-     */
-    sasS2, /**
-     * The Sas s 3.
-     */
-    sasS3;
-
+    protected Activite act1, act2, act3;
+    protected Guichet gui1, gui2, gui3;
+    protected ActiviteRestreinte actRes1, actRes2, actRes3;
+    protected SasEntree sasE1, sasE2, sasE3;
+    protected SasSortie sasS1, sasS2, sasS3;
 
     /**
-     * Sets up.
+     * Mise en place des tests.
      */
     @BeforeEach
     void setUp() {
@@ -86,7 +40,7 @@ class EtapeTest {
     }
 
     /**
-     * Nb successeur.
+     * Test de la fonction nbSuccesseur.
      */
     @Test
     void nbSuccesseur() {
@@ -267,7 +221,7 @@ class EtapeTest {
     }
 
     /**
-     * Est une activite.
+     * Test de la fonction estUneActivite.
      */
     @Test
     void estUneActivite() {
@@ -284,7 +238,7 @@ class EtapeTest {
     }
 
     /**
-     * Est un guichet.
+     * Test de la fonction estUnGuichet.
      */
     @Test
     void estUnGuichet() {
@@ -301,7 +255,7 @@ class EtapeTest {
     }
 
     /**
-     * Iterator.
+     * Test de la fonction iterator.
      */
     @Test
     void iterator() {

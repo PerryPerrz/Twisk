@@ -1,12 +1,12 @@
 package twisk.monde;
 
 /**
- * The type Sas entree.
+ * La classe SasEntree.
  */
 public class SasEntree extends Activite {
 
     /**
-     * Instantiates a new Sas entree.
+     * Instancie un nouveau SasEntree.
      */
     public SasEntree() {
         super("SasEntree");

@@ -1,7 +1,7 @@
 package twisk.outils;
 
 /**
- * The type Fabrique numero.
+ * La classe FabriqueNumero.
  */
 public class FabriqueNumero {
     private int cptEtape;
@@ -15,18 +15,18 @@ public class FabriqueNumero {
     private static final FabriqueNumero instance = new FabriqueNumero();
 
     /**
-     * Gets instance.
+     * Retourne l'instance de FabriqueNumero.
      *
-     * @return the instance
+     * @return l'instance
      */
     public static FabriqueNumero getInstance() {
         return instance;
     }
 
     /**
-     * Gets numero etape.
+     * Retourne un numero d'étape unique.
      *
-     * @return the numero etape
+     * @return le numero d'étape
      */
     public int getNumeroEtape() {
         cptEtape++; //On passe au numéro de l'étape suivante
@@ -34,9 +34,9 @@ public class FabriqueNumero {
     }
 
     /**
-     * Gets numero semaphore.
+     * Retourne un numero unique de sémaphore.
      *
-     * @return the numero semaphore
+     * @return le numero de sémaphore
      */
     public int getNumeroSemaphore() {
         cptSemaphore++;
@@ -44,7 +44,7 @@ public class FabriqueNumero {
     }
 
     /**
-     * Reset.
+     * Réinitialise les numéros (sémaphore et étape).
      */
     public void reset() {
         cptEtape = 0;

@@ -11,42 +11,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * The type Gestionnaire successeurs test.
+ * La classe GestionnaireSuccesseursTest.
  */
 class GestionnaireSuccesseursTest {
-    /**
-     * The Act 1.
-     */
-    Activite act1, /**
-     * The Act 2.
-     */
-    act2, /**
-     * The Act 3.
-     */
-    act3;
-    /**
-     * The Gui 1.
-     */
-    Guichet gui1, /**
-     * The Gui 2.
-     */
-    gui2, /**
-     * The Gui 3.
-     */
-    gui3;
-    /**
-     * The Gest 1.
-     */
-    GestionnaireSuccesseurs gest1, /**
-     * The Gest 2.
-     */
-    gest2, /**
-     * The Gest 3.
-     */
-    gest3;
+
+    private Activite act1, act2, act3;
+    private Guichet gui1, gui2, gui3;
+    private GestionnaireSuccesseurs gest1, gest2, gest3;
 
     /**
-     * Sets up.
+     * Mise en place des tests.
      */
     @BeforeEach
     void setUp() {
@@ -62,7 +36,7 @@ class GestionnaireSuccesseursTest {
     }
 
     /**
-     * Nb etapes.
+     * Test de la fonction nbEtapes.
      */
     @Test
     void nbEtapes() {
@@ -89,7 +63,7 @@ class GestionnaireSuccesseursTest {
     }
 
     /**
-     * Iterator.
+     * Test de la fonction iterator.
      */
     @Test
     void iterator() {

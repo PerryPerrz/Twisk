@@ -12,16 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * The type Kit c test.
+ * La classe KitCTest.
  */
 class KitCTest {
-    /**
-     * The Kit c.
-     */
-    KitC kitC;
+
+    private KitC kitC;
 
     /**
-     * Sets up.
+     * Mise en place des tests.
      */
     @BeforeEach
     void setUp() {
@@ -29,7 +27,7 @@ class KitCTest {
     }
 
     /**
-     * Creer environnement.
+     * Test de la fonction creerEnvironnement.
      */
     @Test
     void creerEnvironnement() {
@@ -40,7 +38,7 @@ class KitCTest {
     }
 
     /**
-     * Creer fichier.
+     * Test de la fonction creerFichier.
      */
     @Test
     void creerFichier() {

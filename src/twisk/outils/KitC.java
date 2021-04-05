@@ -7,11 +7,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * The type Kit c.
+ * La classe KitC.
  */
 public class KitC {
     /**
-     * Creer environnement.
+     * Creer l'environnement nécessaire à la simulation.
      */
     public void creerEnvironnement() {
         try {
@@ -50,9 +50,9 @@ public class KitC {
     }
 
     /**
-     * Creer fichier.
+     * Creer le fichier client.c contenant le codeC généré par le monde.
      *
-     * @param codeC the code c
+     * @param codeC le code c
      */
     public void creerFichier(String codeC) {
         try {
@@ -68,7 +68,7 @@ public class KitC {
     }
 
     /**
-     * Compiler.
+     * Compile le fichier client.c contenant le code c généré par le monde.
      */
     public void compiler() {
         try {
@@ -92,7 +92,7 @@ public class KitC {
     }
 
     /**
-     * Construire la librairie.
+     * Construit la librairie à partir des fichiers en c.
      */
     public void construireLaLibrairie() {
         try {

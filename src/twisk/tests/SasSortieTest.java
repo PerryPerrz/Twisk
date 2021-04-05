@@ -6,9 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * The type Sas sortie test.
+ * La classe SasSortieTest.
  */
 class SasSortieTest extends ActiviteTest {
+
     @BeforeEach
     void setUp() {
         super.setUp();

@@ -4,21 +4,21 @@ import twisk.monde.Monde;
 import twisk.outils.KitC;
 
 /**
- * The type Simulation.
+ * La classe Simulation.
  */
 public class Simulation {
     private int nbClients;
 
     /**
-     * Instantiates a new Simulation.
+     * Instancie une nouvelle Simulation.
      */
     public Simulation() {
     }
 
     /**
-     * Simuler.
+     * Lance la simulation.
      *
-     * @param monde the monde
+     * @param monde le monde utilisé pour la simulation
      */
     public void simuler(Monde monde) {
         System.out.println(monde.toString() + "\n");
@@ -63,34 +63,34 @@ public class Simulation {
     }
 
     /**
-     * Start simulation int [ ].
+     * Fonction définit dans le fichier ressources/codeC/def.h, fonction qui démarre la simulation au niveau des clients.
      *
-     * @param nbEtapes          the nb etapes
-     * @param nbServices        the nb services
-     * @param nbClients         the nb clients
-     * @param tabJetonsServices the tab jetons services
-     * @return the int [ ]
+     * @param nbEtapes          le nombre d'étapes
+     * @param nbServices        le nombre de services
+     * @param nbClients         le nombre de clients
+     * @param tabJetonsServices le tableau contenant le nombre de jetons des services
+     * @return Un tableau d'entiers contenant les pids des clients
      */
     public native int[] start_simulation(int nbEtapes, int nbServices, int nbClients, int[] tabJetonsServices);
 
     /**
-     * Ou sont les clients int [ ].
+     * Fonction définit dans le fichier ressources/codeC/def.h, fonction qui renvoie la position des clients à l'instant actuel.
      *
-     * @param nbEtapes  the nb etapes
-     * @param nbClients the nb clients
-     * @return the int [ ]
+     * @param nbEtapes  le nombre d'étapes
+     * @param nbClients le nombre de clients
+     * @return Un tableau d'entiers contenant les positions des clients
      */
     public native int[] ou_sont_les_clients(int nbEtapes, int nbClients);
 
     /**
-     * Nettoyage.
+     * Nettoyage des clients.
      */
     public native void nettoyage();
 
     /**
-     * Sets nb clients.
+     * Définit le nombre de clients.
      *
-     * @param nbClients the nb clients
+     * @param nbClients le nombre de clients
      */
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;

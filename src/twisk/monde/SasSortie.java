@@ -1,12 +1,12 @@
 package twisk.monde;
 
 /**
- * The type Sas sortie.
+ * La classe SasSortie.
  */
 public class SasSortie extends Activite {
 
     /**
-     * Instantiates a new Sas sortie.
+     * Instancie un nouveau SasSortie.
      */
     public SasSortie() {
         super("SasSortie");

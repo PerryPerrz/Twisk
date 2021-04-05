@@ -6,9 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * The type Guichet test.
+ * La classe GuichetTest.
  */
 class GuichetTest extends EtapeTest {
+
     @Override
     @BeforeEach
     void setUp() {
@@ -16,7 +17,7 @@ class GuichetTest extends EtapeTest {
     }
 
     /**
-     * To c.
+     * Test de la fonction toC.
      */
     @Test
     void toC() { //Pour ce test, on travaille sur des mondes non-cohérents donc on doit rajouter des successeurs aux guichets que l'on teste

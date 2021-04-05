@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * The type Sas entree test.
+ * La classe SasEntreeTest.
  */
 class SasEntreeTest extends ActiviteTest {
 

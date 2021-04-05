@@ -7,20 +7,20 @@ import twisk.monde.Monde;
 import twisk.simulation.Simulation;
 
 /**
- * The type Client twisk.
+ * La classe ClientTwisk.
  */
 public class ClientTwisk {
 
     /**
-     * Instantiates a new Client twisk.
+     * Instancie un nouveau ClientTwisk.
      */
     public ClientTwisk() {
     }
 
     /**
-     * Constru monde 1 monde.
+     * Construit un monde simple.
      *
-     * @return the monde
+     * @return le monde
      */
     public Monde ConstruMonde1() {
         Monde monde = new Monde();
@@ -54,9 +54,9 @@ public class ClientTwisk {
     }*/
 
     /**
-     * The entry point of application.
+     * Le point d'entrée de l'application.
      *
-     * @param args the input arguments
+     * @param args les arguments d'entrée
      */
     public static void main(String[] args) {
         //Création du monde
