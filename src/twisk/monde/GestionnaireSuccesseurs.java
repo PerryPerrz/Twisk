@@ -5,31 +5,31 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 /**
- * The type Gestionnaire successeurs.
+ * La classe Gestionnaire successeurs.
  */
 public class GestionnaireSuccesseurs implements Iterable<Etape> {
     private final ArrayList<Etape> succ;
 
     /**
-     * Instantiates a new Gestionnaire successeurs.
+     * Constructeur de la classe Gestionnaire successeurs.
      */
     public GestionnaireSuccesseurs() {
         succ = new ArrayList<>(5);  //On mets 5 en capacité initiale pour l'instant (à ajuster par la suite)
     }
 
     /**
-     * Ajouter.
+     * Procédure qui ajoute des étapes au gestionnaire de successeurs.
      *
-     * @param etapes the etapes
+     * @param etapes les étapes
      */
     public void ajouter(Etape... etapes) {
         succ.addAll(Arrays.asList(etapes));
     }
 
     /**
-     * Nb etapes int.
+     * Fonction qui retourne le nombre d'étapes du gestionnaire de sucesseurs.
      *
-     * @return the int
+     * @return un entier
      */
     public int nbEtapes() {
         return succ.size();
@@ -40,9 +40,9 @@ public class GestionnaireSuccesseurs implements Iterable<Etape> {
     }
 
     /**
-     * Gets succ.
+     * Fonction qui retourne le successeur du gestionnnaire de successeurs.
      *
-     * @return the succ
+     * @return le successeur
      */
     public Etape getSucc() {
         if (nbEtapes() != 0)

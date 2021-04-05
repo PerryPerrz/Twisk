@@ -5,26 +5,26 @@ import twisk.outils.FabriqueNumero;
 import java.util.Iterator;
 
 /**
- * The type Etape.
+ * La classe Etape.
  */
 public abstract class Etape implements Iterable<Etape> {
     /**
-     * The Gestsucc.
+     * Attribut correspondant au gestionnaire de successeurs.
      */
     protected GestionnaireSuccesseurs gestsucc;
     /**
-     * The Nom.
+     * Le nom d'une étape.
      */
     protected String nom;
     /**
-     * The Num.
+     * Le numéro d'une étape.
      */
     protected int num;
 
     /**
-     * Instantiates a new Etape.
+     * Constructeur de la classe Etape.
      *
-     * @param nom the nom
+     * @param nom le nom
      */
     public Etape(String nom) {
         FabriqueNumero fabNum = FabriqueNumero.getInstance();
@@ -34,36 +34,36 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     /**
-     * Ajouter successeur.
+     * Procédure qui ajoute un succésseur de l'étape.
      *
-     * @param e the e
+     * @param e l'étape
      */
     public void ajouterSuccesseur(Etape... e) {
         gestsucc.ajouter(e);
     }
 
     /**
-     * Nb successeurs int.
+     * Fonction qui retourne le nombre de succésseur d'une étape.
      *
-     * @return the int
+     * @return un entier
      */
     public int nbSuccesseurs() {
         return gestsucc.nbEtapes();
     }
 
     /**
-     * Est une activite boolean.
+     * Fonction qui retourne vrai si l'étape est une activité.
      *
-     * @return the boolean
+     * @return un booléen
      */
     public boolean estUneActivite() {
         return false;
     }
 
     /**
-     * Est un guichet boolean.
+     * Fonction qui retourne vrai si l'étape est un guichet.
      *
-     * @return the boolean
+     * @return un booléen
      */
     public boolean estUnGuichet() {
         return false;
@@ -74,52 +74,52 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     /**
-     * Gets nom.
+     * Fonction qui retourne le nom d'une étape.
      *
-     * @return the nom
+     * @return le nom
      */
     public String getNom() {
         return nom;
     }
 
     /**
-     * Gets num.
+     * Fonction qui retourne le nom d'une étape.
      *
-     * @return the num
+     * @return le num
      */
     public int getNum() {
         return num;
     }
 
     /**
-     * To c string.
+     * Fonction qui écrit le code C nécessaire à un client pour passer dans l'étape.
      *
-     * @return the string
+     * @return un string
      */
     public abstract String toC();
 
     /**
-     * Gets gestsucc.
+     * Fonction qui retourne le gestionnaire de succésseur.
      *
-     * @return the gestsucc
+     * @return le gestionnaire de succésseur
      */
     public GestionnaireSuccesseurs getGestsucc() {
         return gestsucc;
     }
 
     /**
-     * Gets succ.
+     * Fonction qui retourne le succésseur.
      *
-     * @return the succ
+     * @return le succésseur
      */
     public Etape getSucc() {
         return getGestsucc().getSucc();
     }
 
     /**
-     * Gets nb ticket si guichet.
+     * Fonction qui retourne le nombre de ticket d'un guichet.
      *
-     * @return the nb ticket si guichet
+     * @return le nombre de ticket
      */
     public abstract int getNbTicketSiGuichet();
 }

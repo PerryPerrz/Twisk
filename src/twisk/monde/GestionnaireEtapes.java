@@ -5,31 +5,31 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 /**
- * The type Gestionnaire etapes.
+ * La classe Gestionnaire Etapes.
  */
 public class GestionnaireEtapes implements Iterable<Etape> {
     private final ArrayList<Etape> etapes;
 
     /**
-     * Instantiates a new Gestionnaire etapes.
+     * Constructeur de la classe gestionnaire d'étapes.
      */
     public GestionnaireEtapes() {
         etapes = new ArrayList<>(5);  //On mets 5 en capacité initiale pour l'instant (à ajuster par la suite)
     }
 
     /**
-     * Ajouter.
+     * Procédure qui ajoute une étape au gestionnaire d'étape.
      *
-     * @param etapes the etapes
+     * @param etapes les étapes
      */
     public void ajouter(Etape... etapes) {
         this.etapes.addAll(Arrays.asList(etapes));
     }
 
     /**
-     * Nb etapes int.
+     * Fonction qui retourne le nombre d'étapes dans le gestionnaire d'étapes.
      *
-     * @return the int
+     * @return une entier
      */
     public int nbEtapes() {
         return etapes.size();

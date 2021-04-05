@@ -1,25 +1,25 @@
 package twisk.monde;
 
 /**
- * The type Activite restreinte.
+ * La classe Activité restreinte.
  */
 public class ActiviteRestreinte extends Activite {
 
     /**
-     * Instantiates a new Activite restreinte.
+     * Constructeur de la classe Activité restreinte.
      *
-     * @param nom the nom
+     * @param nom le nom
      */
     public ActiviteRestreinte(String nom) {
         super(nom);
     }
 
     /**
-     * Instantiates a new Activite restreinte.
+     * Constructeur de la classe Activité restreinte.
      *
-     * @param nom the nom
-     * @param t   the t
-     * @param e   the e
+     * @param nom le nom
+     * @param t   le temps
+     * @param e   l'écart temps
      */
     public ActiviteRestreinte(String nom, int t, int e) {
         super(nom, t, e);

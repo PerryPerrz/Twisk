@@ -3,16 +3,16 @@ package twisk.monde;
 import twisk.outils.FabriqueNumero;
 
 /**
- * The type Guichet.
+ * La classe Guichet.
  */
 public class Guichet extends Etape {
     private int nbJetons;
     private int numSemaphore;
 
     /**
-     * Instantiates a new Guichet.
+     * Contructeur de la classe Guichet.
      *
-     * @param nom the nom
+     * @param nom le nom
      */
     public Guichet(String nom) {
         super(nom);
@@ -22,10 +22,10 @@ public class Guichet extends Etape {
     }
 
     /**
-     * Instantiates a new Guichet.
+     * Contructeur de la classe Guichet.
      *
-     * @param nom the nom
-     * @param nb  the nb
+     * @param nom le nom
+     * @param nb  le nombre
      */
     public Guichet(String nom, int nb) {
         super(nom);
@@ -40,36 +40,36 @@ public class Guichet extends Etape {
     }
 
     /**
-     * Gets nb jetons.
+     * Fonction qui retourne le nombre de jetons d'un guichet.
      *
-     * @return the nb jetons
+     * @return le nombre de jetons
      */
     public int getNbJetons() {
         return nbJetons;
     }
 
     /**
-     * Sets nb jetons.
+     * Fonction qui définit le nombre de jetons d'un guichet.
      *
-     * @param nbJetons the nb jetons
+     * @param nbJetons le nombre de jetons
      */
     public void setNbJetons(int nbJetons) {
         this.nbJetons = nbJetons;
     }
 
     /**
-     * Gets num semaphore.
+     * Fonction qui retourne le numéro de sémaphore d'un guichet.
      *
-     * @return the num semaphore
+     * @return le numéro de sémaphore
      */
     public int getNumSemaphore() {
         return numSemaphore;
     }
 
     /**
-     * Sets num semaphore.
+     * Fonction qui définit le numéro de sémaphore d'un guichet.
      *
-     * @param numSemaphore the num semaphore
+     * @param numSemaphore le numéro de sémaphore
      */
     public void setNumSemaphore(int numSemaphore) {
         this.numSemaphore = numSemaphore;

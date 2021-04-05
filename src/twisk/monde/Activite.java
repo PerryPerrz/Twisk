@@ -1,16 +1,16 @@
 package twisk.monde;
 
 /**
- * The type Activite.
+ * La classe Activité.
  */
 public class Activite extends Etape {
     private int temps;
     private int ecartTemps;
 
     /**
-     * Instantiates a new Activite.
+     * Constructeur de la classe Activite.
      *
-     * @param nom the nom
+     * @param nom le nom
      */
     public Activite(String nom) {
         super(nom);
@@ -19,11 +19,11 @@ public class Activite extends Etape {
     }
 
     /**
-     * Instantiates a new Activite.
+     * Constructeur de la classe Activite.
      *
-     * @param nom the nom
-     * @param t   the t
-     * @param e   the e
+     * @param nom le nom
+     * @param t   le temps
+     * @param e   l'écart temps
      */
     public Activite(String nom, int t, int e) {
         super(nom);
@@ -38,7 +38,7 @@ public class Activite extends Etape {
     }
 
     /**
-     * Gets temps.
+     * Retourne le temps.
      *
      * @return the temps
      */
@@ -47,27 +47,27 @@ public class Activite extends Etape {
     }
 
     /**
-     * Sets temps.
+     * Définit le temps
      *
-     * @param temps the temps
+     * @param temps le temps
      */
     public void setTemps(int temps) {
         this.temps = temps;
     }
 
     /**
-     * Gets ecart temps.
+     * Retourne l'écart temps.
      *
-     * @return the ecart temps
+     * @return l'écart temps
      */
     public int getEcartTemps() {
         return ecartTemps;
     }
 
     /**
-     * Sets ecart temps.
+     * Définit l'écart temps.
      *
-     * @param ecartTemps the ecart temps
+     * @param ecartTemps l'écart temps
      */
     public void setEcartTemps(int ecartTemps) {
         this.ecartTemps = ecartTemps;

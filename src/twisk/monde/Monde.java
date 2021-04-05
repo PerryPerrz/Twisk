@@ -3,7 +3,7 @@ package twisk.monde;
 import java.util.Iterator;
 
 /**
- * The type Monde.
+ * La classe Monde.
  */
 public class Monde implements Iterable<Etape> {
     private final SasEntree sasE;
@@ -11,7 +11,7 @@ public class Monde implements Iterable<Etape> {
     private final GestionnaireEtapes ge;
 
     /**
-     * Instantiates a new Monde.
+     * Constructeur de la classe Monde.
      */
     public Monde() {
         sasE = new SasEntree();
@@ -21,18 +21,18 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     * A comme entree.
+     * Procédure qui retourne l'entrée d'un monde.
      *
-     * @param etapes the etapes
+     * @param etapes les étapes
      */
     public void aCommeEntree(Etape... etapes) {
         sasE.ajouterSuccesseur(etapes); //Les étapes notées comme "entrées" sont mises comme successeurs du sas d'entrée
     }
 
     /**
-     * A comme sortie.
+     * Procédure qui retourne la sortie d'un monde.
      *
-     * @param etapes the etapes
+     * @param etapes les étapes
      */
     public void aCommeSortie(Etape... etapes) {
         for (Etape e : etapes) {
@@ -41,27 +41,27 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     * Ajouter.
+     * Procédure qui ajoute les étapes dans un monde.
      *
-     * @param etapes the etapes
+     * @param etapes les étapes.
      */
     public void ajouter(Etape... etapes) {
         ge.ajouter(etapes);
     }
 
     /**
-     * Nb etapes int.
+     * Fonction qui retourne le nombre d'étapes que possède un monde.
      *
-     * @return the int
+     * @return un entier
      */
     public int nbEtapes() {
         return ge.nbEtapes();
     }
 
     /**
-     * Nb guichets int.
+     * Fonction qui retourne le nombre de guichet que possède un monde.
      *
-     * @return the int
+     * @return un entier
      */
     public int nbGuichets() {
         int cpt = 0;
@@ -83,19 +83,19 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     * To c string.
+     * Fonction qui écrit le code C nécessaire à un client pour passer dans le monde.
      *
-     * @return the string
+     * @return une chaine de caractère.
      */
     public String toC() {
         return "#include \"def.h\"\nvoid simulation(int ids) {\n" + sasE.toC() + "}";
     }
 
     /**
-     * Gets nb tickets guichet i.
+     * Fonction qui retourne le nombre de ticket d'un guichet d'indice i dans le monde
      *
-     * @param i the
-     * @return the nb tickets guichet i
+     * @param i l'indice
+     * @return le nombre de ticket du guichet i
      */
     public int getNbTicketsGuichetI(int i) {
         int cpt = 0;
@@ -110,10 +110,10 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     * Gets nom etape i.
+     * Fonction qui retourne le nom de l'étape d'indice i
      *
-     * @param index the index
-     * @return the nom etape i
+     * @param index l'indice
+     * @return le nom de l'étape à l'indice i
      */
     public String getNomEtapeI(int index) {
         for (Etape e : ge)
@@ -123,9 +123,9 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     * Gets num sas sortie.
+     * Fonction qui retourne le numéro du sas de sortie.
      *
-     * @return the num sas sortie
+     * @return le numéro du sas de sortie.
      */
     public int getNumSasSortie() {
         return sasS.getNum();
