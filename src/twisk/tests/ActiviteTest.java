@@ -21,9 +21,9 @@ class ActiviteTest extends EtapeTest {
     @Test
     void toC() { //Pour ce test, on travaille sur des mondes non-cohérents donc on doit rajouter des sas de sorties en tant que successeurs des activitées à tester
         act1.ajouterSuccesseur(sasS1);
-        assertEquals(act1.toC(), "delai(5, 2);\ntransfert(60, 72);\n");
+        assertEquals(act1.toC(), "delai(4, 2);\ntransfert(60, 72);\n");
         act2.ajouterSuccesseur(act3);
         act3.ajouterSuccesseur(sasS2);
-        assertEquals(act2.toC(), "delai(10, 2);\ntransfert(61, 62);\ndelai(5, 2);\ntransfert(62, 73);\n");
+        assertEquals(act2.toC(), "delai(10, 2);\ntransfert(61, 62);\ndelai(4, 2);\ntransfert(62, 73);\n");
     }
 }
