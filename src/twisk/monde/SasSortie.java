@@ -6,7 +6,7 @@ package twisk.monde;
 public class SasSortie extends Activite {
 
     /**
-     * Instancie un nouveau SasSortie.
+     * Constructeur de la classe SasSortie.
      */
     public SasSortie() {
         super("SasSortie");

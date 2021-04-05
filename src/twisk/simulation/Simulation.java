@@ -10,7 +10,7 @@ public class Simulation {
     private int nbClients;
 
     /**
-     * Instancie une nouvelle Simulation.
+     * Constructeur de la classe Simulation.
      */
     public Simulation() {
     }
@@ -63,7 +63,7 @@ public class Simulation {
     }
 
     /**
-     * Fonction définit dans le fichier ressources/codeC/def.h, fonction qui démarre la simulation au niveau des clients.
+     * Fonction définie dans le fichier ressources/codeC/def.h, fonction qui démarre la simulation au niveau des clients.
      *
      * @param nbEtapes          le nombre d'étapes
      * @param nbServices        le nombre de services
@@ -74,7 +74,7 @@ public class Simulation {
     public native int[] start_simulation(int nbEtapes, int nbServices, int nbClients, int[] tabJetonsServices);
 
     /**
-     * Fonction définit dans le fichier ressources/codeC/def.h, fonction qui renvoie la position des clients à l'instant actuel.
+     * Fonction définie dans le fichier ressources/codeC/def.h, fonction qui renvoie la position des clients à l'instant actuel.
      *
      * @param nbEtapes  le nombre d'étapes
      * @param nbClients le nombre de clients

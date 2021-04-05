@@ -6,7 +6,7 @@ package twisk.monde;
 public class SasEntree extends Activite {
 
     /**
-     * Instancie un nouveau SasEntree.
+     * Constructeur de la classe SasEntree.
      */
     public SasEntree() {
         super("SasEntree");
