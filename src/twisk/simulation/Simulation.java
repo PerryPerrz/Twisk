@@ -3,12 +3,23 @@ package twisk.simulation;
 import twisk.monde.Monde;
 import twisk.outils.KitC;
 
+/**
+ * The type Simulation.
+ */
 public class Simulation {
     private int nbClients;
 
+    /**
+     * Instantiates a new Simulation.
+     */
     public Simulation() {
     }
 
+    /**
+     * Simuler.
+     *
+     * @param monde the monde
+     */
     public void simuler(Monde monde) {
         System.out.println(monde.toString() + "\n");
         KitC kitC = new KitC();
@@ -51,12 +62,36 @@ public class Simulation {
         nettoyage();
     }
 
+    /**
+     * Start simulation int [ ].
+     *
+     * @param nbEtapes          the nb etapes
+     * @param nbServices        the nb services
+     * @param nbClients         the nb clients
+     * @param tabJetonsServices the tab jetons services
+     * @return the int [ ]
+     */
     public native int[] start_simulation(int nbEtapes, int nbServices, int nbClients, int[] tabJetonsServices);
 
+    /**
+     * Ou sont les clients int [ ].
+     *
+     * @param nbEtapes  the nb etapes
+     * @param nbClients the nb clients
+     * @return the int [ ]
+     */
     public native int[] ou_sont_les_clients(int nbEtapes, int nbClients);
 
+    /**
+     * Nettoyage.
+     */
     public native void nettoyage();
 
+    /**
+     * Sets nb clients.
+     *
+     * @param nbClients the nb clients
+     */
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;
     }

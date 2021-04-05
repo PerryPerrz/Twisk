@@ -6,15 +6,66 @@ import twisk.monde.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The type Etape test.
+ */
 class EtapeTest {
 
-    Activite act1, act2, act3;
-    Guichet gui1, gui2, gui3;
-    ActiviteRestreinte actRes1, actRes2, actRes3;
-    SasEntree sasE1, sasE2, sasE3;
-    SasSortie sasS1, sasS2, sasS3;
+    /**
+     * The Act 1.
+     */
+    Activite act1, /**
+     * The Act 2.
+     */
+    act2, /**
+     * The Act 3.
+     */
+    act3;
+    /**
+     * The Gui 1.
+     */
+    Guichet gui1, /**
+     * The Gui 2.
+     */
+    gui2, /**
+     * The Gui 3.
+     */
+    gui3;
+    /**
+     * The Act res 1.
+     */
+    ActiviteRestreinte actRes1, /**
+     * The Act res 2.
+     */
+    actRes2, /**
+     * The Act res 3.
+     */
+    actRes3;
+    /**
+     * The Sas e 1.
+     */
+    SasEntree sasE1, /**
+     * The Sas e 2.
+     */
+    sasE2, /**
+     * The Sas e 3.
+     */
+    sasE3;
+    /**
+     * The Sas s 1.
+     */
+    SasSortie sasS1, /**
+     * The Sas s 2.
+     */
+    sasS2, /**
+     * The Sas s 3.
+     */
+    sasS3;
 
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         act1 = new Activite("act1");
@@ -34,6 +85,9 @@ class EtapeTest {
         sasS3 = new SasSortie();
     }
 
+    /**
+     * Nb successeur.
+     */
     @Test
     void nbSuccesseur() {
         //On ajoute des activités à des activités
@@ -212,6 +266,9 @@ class EtapeTest {
         assertEquals(sasS1.nbSuccesseurs(), 10);
     }
 
+    /**
+     * Est une activite.
+     */
     @Test
     void estUneActivite() {
         assertFalse(gui1.estUneActivite());
@@ -226,6 +283,9 @@ class EtapeTest {
         assertTrue(sasS2.estUneActivite());
     }
 
+    /**
+     * Est un guichet.
+     */
     @Test
     void estUnGuichet() {
         assertFalse(act1.estUnGuichet());
@@ -240,6 +300,9 @@ class EtapeTest {
         assertFalse(sasS2.estUnGuichet());
     }
 
+    /**
+     * Iterator.
+     */
     @Test
     void iterator() {
         //On teste si l'itérateur parcours bien tous les successeurs d'une étape et si les étapes parcourues sont les bonnes

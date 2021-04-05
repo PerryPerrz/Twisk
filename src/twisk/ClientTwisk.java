@@ -6,11 +6,22 @@ import twisk.monde.Guichet;
 import twisk.monde.Monde;
 import twisk.simulation.Simulation;
 
+/**
+ * The type Client twisk.
+ */
 public class ClientTwisk {
 
+    /**
+     * Instantiates a new Client twisk.
+     */
     public ClientTwisk() {
     }
 
+    /**
+     * Constru monde 1 monde.
+     *
+     * @return the monde
+     */
     public Monde ConstruMonde1() {
         Monde monde = new Monde();
         Activite balade = new Activite("balade au zoo");
@@ -42,6 +53,11 @@ public class ClientTwisk {
         return monde;
     }*/
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         //Création du monde
         Monde monde;

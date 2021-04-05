@@ -6,7 +6,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * The type Kit c.
+ */
 public class KitC {
+    /**
+     * Creer environnement.
+     */
     public void creerEnvironnement() {
         try {
             // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
@@ -43,6 +49,11 @@ public class KitC {
         }
     }
 
+    /**
+     * Creer fichier.
+     *
+     * @param codeC the code c
+     */
     public void creerFichier(String codeC) {
         try {
             // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
@@ -56,6 +67,9 @@ public class KitC {
         }
     }
 
+    /**
+     * Compiler.
+     */
     public void compiler() {
         try {
             Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
@@ -77,6 +91,9 @@ public class KitC {
         }
     }
 
+    /**
+     * Construire la librairie.
+     */
     public void construireLaLibrairie() {
         try {
             Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java

@@ -10,11 +10,44 @@ import twisk.monde.Guichet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * The type Gestionnaire etapes test.
+ */
 class GestionnaireEtapesTest {
-    Activite act1, act2, act3;
-    Guichet gui1, gui2, gui3;
-    GestionnaireEtapes gest1, gest2, gest3;
+    /**
+     * The Act 1.
+     */
+    Activite act1, /**
+     * The Act 2.
+     */
+    act2, /**
+     * The Act 3.
+     */
+    act3;
+    /**
+     * The Gui 1.
+     */
+    Guichet gui1, /**
+     * The Gui 2.
+     */
+    gui2, /**
+     * The Gui 3.
+     */
+    gui3;
+    /**
+     * The Gest 1.
+     */
+    GestionnaireEtapes gest1, /**
+     * The Gest 2.
+     */
+    gest2, /**
+     * The Gest 3.
+     */
+    gest3;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         act1 = new Activite("act1");
@@ -28,6 +61,9 @@ class GestionnaireEtapesTest {
         gest3 = new GestionnaireEtapes();
     }
 
+    /**
+     * Nb etapes.
+     */
     @Test
     void nbEtapes() {
         //On ajoute des activités
@@ -52,6 +88,9 @@ class GestionnaireEtapesTest {
         assertEquals(gest3.nbEtapes(), 6);
     }
 
+    /**
+     * Iterator.
+     */
     @Test
     void iterator() {
         //On teste si l'itérateur parcours bien tous les successeurs d'une étape et si les étapes parcourues sont les bonnes

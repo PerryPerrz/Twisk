@@ -2,10 +2,18 @@ package twisk.monde;
 
 import twisk.outils.FabriqueNumero;
 
+/**
+ * The type Guichet.
+ */
 public class Guichet extends Etape {
     private int nbJetons;
     private int numSemaphore;
 
+    /**
+     * Instantiates a new Guichet.
+     *
+     * @param nom the nom
+     */
     public Guichet(String nom) {
         super(nom);
         nbJetons = 2;
@@ -13,6 +21,12 @@ public class Guichet extends Etape {
         numSemaphore = fabNum.getNumeroSemaphore();
     }
 
+    /**
+     * Instantiates a new Guichet.
+     *
+     * @param nom the nom
+     * @param nb  the nb
+     */
     public Guichet(String nom, int nb) {
         super(nom);
         this.nbJetons = nb;
@@ -25,18 +39,38 @@ public class Guichet extends Etape {
         return true;
     }
 
+    /**
+     * Gets nb jetons.
+     *
+     * @return the nb jetons
+     */
     public int getNbJetons() {
         return nbJetons;
     }
 
+    /**
+     * Sets nb jetons.
+     *
+     * @param nbJetons the nb jetons
+     */
     public void setNbJetons(int nbJetons) {
         this.nbJetons = nbJetons;
     }
 
+    /**
+     * Gets num semaphore.
+     *
+     * @return the num semaphore
+     */
     public int getNumSemaphore() {
         return numSemaphore;
     }
 
+    /**
+     * Sets num semaphore.
+     *
+     * @param numSemaphore the num semaphore
+     */
     public void setNumSemaphore(int numSemaphore) {
         this.numSemaphore = numSemaphore;
     }

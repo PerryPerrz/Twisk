@@ -6,14 +6,26 @@ import twisk.outils.FabriqueNumero;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The type Fabrique numero test.
+ */
 class FabriqueNumeroTest {
+    /**
+     * The Fabrique numero.
+     */
     FabriqueNumero fabriqueNumero;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         fabriqueNumero = FabriqueNumero.getInstance();
     }
 
+    /**
+     * Gets numero etape.
+     */
     @Test
     void getNumeroEtape() {
         int i = fabriqueNumero.getNumeroEtape();
@@ -25,6 +37,9 @@ class FabriqueNumeroTest {
         assertEquals(j, 2);
     }
 
+    /**
+     * Gets numero semaphore.
+     */
     @Test
     void getNumeroSemaphore() {
         int i = fabriqueNumero.getNumeroSemaphore();
@@ -36,6 +51,9 @@ class FabriqueNumeroTest {
         assertEquals(j, 3);
     }
 
+    /**
+     * Reset.
+     */
     @Test
     void reset() {
         fabriqueNumero.getNumeroEtape();
