@@ -10,12 +10,18 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * La classe GestionnaireClientsTest.
+ */
 class GestionnaireClientsTest {
     private GestionnaireClients gest1;
     private GestionnaireClients gest2;
     private int[] tab1;
     private int[] tab2;
 
+    /**
+     * Mise en place des tests.
+     */
     @BeforeEach
     void setUp() {
         gest1 = new GestionnaireClients(5);
@@ -24,6 +30,9 @@ class GestionnaireClientsTest {
         tab2 = new int[10];
     }
 
+    /**
+     * Test de la fonction setClients.
+     */
     @Test
     void setClients() {
         Arrays.fill(tab1, 2);
@@ -37,6 +46,9 @@ class GestionnaireClientsTest {
             assertEquals(c.getNumeroClient(), 1);
     }
 
+    /**
+     * Test de la fonction allerA.
+     */
     @Test
     void allerA() {
         Arrays.fill(tab1, 2);
@@ -72,6 +84,9 @@ class GestionnaireClientsTest {
         }
     }
 
+    /**
+     * Test de la fonction reset.
+     */
     @Test
     void reset() {
         Arrays.fill(tab1, 2);
