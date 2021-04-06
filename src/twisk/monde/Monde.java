@@ -130,4 +130,17 @@ public class Monde implements Iterable<Etape> {
     public int getNumSasSortie() {
         return sasS.getNum();
     }
+
+    /**
+     * Fonction qui retourne l'étape d'indice i du monde.
+     *
+     * @param i l'indice
+     * @return Etape l'étape d'indice i
+     */
+    public Etape getEtapeI(int i) {
+        for (Etape e : ge)
+            if (i == e.getNum())
+                return e;
+        return null;
+    }
 }

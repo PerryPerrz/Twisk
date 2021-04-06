@@ -8,6 +8,7 @@ import twisk.outils.KitC;
  */
 public class Simulation {
     private int nbClients;
+    private GestionnaireClients gestCli;
 
     /**
      * Constructeur de la classe Simulation.
@@ -38,6 +39,8 @@ public class Simulation {
             System.out.print(numProc[i] + ", ");
         }
         System.out.println("\n");
+        this.gestCli = new GestionnaireClients(nbClients);
+        gestCli.setClients(numProc);
 
         //On affiche les clients dans les étapes
         int[] tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
@@ -46,10 +49,14 @@ public class Simulation {
             for (int i = 0; i < monde.nbEtapes(); i++) {
                 int temp = tabClientsEtapes[(i * nbClients) + i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
                 System.out.print("" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
-                for (int j = 0; j < temp; j++) {
+                for (int j = 0; j < temp; j++) {//On parcourt les clients qu'il y a dans l'étape.
                     System.out.print(tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
+                    gestCli.allerA(tabClientsEtapes[(i * nbClients) + i + j + 1], monde.getEtapeI(i), i);
                 }
                 System.out.println();
+            }
+            for (Client cl : gestCli) {
+                System.out.println("Cl : " + cl);
             }
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             try {
