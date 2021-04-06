@@ -56,4 +56,9 @@ public class Client {
     public int getRang() {
         return rang;
     }
+
+    @Override
+    public String toString() {
+        return "Client n° " + this.getNumeroClient() + " Son rang : " + this.getRang() + " L'étape à laquelle il se trouve : " + this.getEtape();
+    }
 }
