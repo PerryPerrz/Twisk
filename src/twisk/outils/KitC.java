@@ -20,7 +20,7 @@ public class KitC {
             // copie des deux fichiers programmeC.o et def.h depuis le projet sous /tmp/twisk
             String[] liste = {"programmeC.o", "def.h", "codeNatif.o"};
             for (String nom : liste) {
-                InputStream source = getClass().getResource("/codeC/" + nom).openStream();
+                InputStream source = getClass().getResource("/twisk/ressources/codeC/" + nom).openStream();
                 File destination = new File("/tmp/twisk/" + nom);
                 copier(source, destination);
 //                  Path source = Paths.get(getClass().getResource("/twisk/ressources/codeC/" + nom).getPath());
