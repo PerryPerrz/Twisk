@@ -55,9 +55,6 @@ public class Simulation {
                 }
                 System.out.println();
             }
-            for (Client cl : gestCli) {
-                System.out.println("Cl : " + cl);
-            }
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             try {
                 Thread.sleep(500);

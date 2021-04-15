@@ -92,6 +92,28 @@ public class ClientTwisk {
 
         //Simulation n°2
         monde = clientTwisk.ConstruMonde2();
-        
+
+        //Début de la simulation du second monde
+        classLoaderPerso = new ClassLoaderPerso(ClientTwisk.class.getClassLoader());
+        try {
+            Class<?> clS = classLoaderPerso.loadClass("twisk.simulation.Simulation");
+            Constructor<?> constructeur = clS.getDeclaredConstructor();
+            Object instanceSim = constructeur.newInstance();
+            Method fonctionSetNbClients = clS.getMethod("setNbClients", int.class);
+            fonctionSetNbClients.invoke(instanceSim, 5);
+            Method fonctionSimuler = clS.getMethod("simuler", Monde.class);
+            fonctionSimuler.invoke(instanceSim, monde);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Erreur lors du chargement de la classe twisk.simulation.Simulation !");
+        } catch (NoSuchMethodException e) {
+            System.out.println("Erreur, fonction non trouvée dans la classe twisk.simulation.Simulation !");
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+            //System.out.println("Erreur lors de l'appel d'une fonction de la classe twisk.simulation.Simulation !");
+        } catch (IllegalAccessException e) {
+            System.out.println("Erreur, appel illegal d'une fonction de la classe twisk.simulation.Simulation !");
+        } catch (InstantiationException e) {
+            System.out.println("Erreur lors de l'instanciation de la classe twisk.simulation.Simulation !");
+        }
     }
 }
