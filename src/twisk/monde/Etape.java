@@ -122,4 +122,11 @@ public abstract class Etape implements Iterable<Etape> {
      * @return le nombre de ticket
      */
     public abstract int getNbTicketSiGuichet();
+
+    /**
+     * Fonction qui retourne le numérp de sémaphore d'un guichet.
+     *
+     * @return le numéro de sémaphore
+     */
+    public abstract int getNumSem();
 }

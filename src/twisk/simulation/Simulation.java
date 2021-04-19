@@ -34,7 +34,7 @@ public class Simulation {
         System.load("/tmp/twisk/libTwisk" + fab.consulterNumeroLibraire() + ".so");
         int[] tabJetonsGuichet = new int[monde.nbGuichets()];
         for (int i = 0; i < monde.nbGuichets(); i++) {
-            tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i);
+            tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i + 1); //num de Sémaphore commence à 1
             System.out.println(tabJetonsGuichet[i]);
         }
         int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);

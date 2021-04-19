@@ -93,4 +93,9 @@ public class Activite extends Etape {
     public int getNbTicketSiGuichet() {
         return 0; //Une activité ne contient pas de tickets
     }
+
+    @Override
+    public int getNumSem() {
+        return 0; //Une activité ne contient pas de numéro de sémaphore
+    }
 }

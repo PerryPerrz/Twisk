@@ -95,4 +95,9 @@ public class Guichet extends Etape {
         return nbJetons;
     }
 
+    @Override
+    public int getNumSem() {
+        return this.numSemaphore;
+    }
+
 }

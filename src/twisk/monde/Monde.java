@@ -102,12 +102,10 @@ public class Monde implements Iterable<Etape> {
      * @return le nombre de ticket du guichet i
      */
     public int getNbTicketsGuichetI(int i) {
-        int cpt = 0;
         for (Etape e : ge) {
             if (e.estUnGuichet()) {
-                if (cpt == i)
+                if (e.getNumSem() == i)
                     return e.getNbTicketSiGuichet();
-                cpt++;
             }
         }
         return 0; //Le guichet n'existe pas
