@@ -1,6 +1,7 @@
 package twisk.simulation;
 
 import twisk.monde.Monde;
+import twisk.outils.FabriqueNumero;
 import twisk.outils.KitC;
 
 /**
@@ -22,6 +23,7 @@ public class Simulation {
      * @param monde le monde utilisé pour la simulation
      */
     public void simuler(Monde monde) {
+        FabriqueNumero fab = FabriqueNumero.getInstance();
         System.out.println(monde.toString() + "\n");
         KitC kitC = new KitC();
         kitC.creerEnvironnement();
@@ -29,10 +31,12 @@ public class Simulation {
         kitC.compiler();
         kitC.construireLaLibrairie();
         //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
-        System.load("/tmp/twisk/libTwisk.so");
+        System.load("/tmp/twisk/libTwisk" + fab.consulterNumeroLibraire() + ".so");
         int[] tabJetonsGuichet = new int[monde.nbGuichets()];
-        for (int i = 0; i < monde.nbGuichets(); i++)
+        for (int i = 0; i < monde.nbGuichets(); i++) {
             tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i);
+            System.out.println(tabJetonsGuichet[i]);
+        }
         int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);
         System.out.print("PID des clients : ");
         for (int i = 0; i < nbClients; i++) {

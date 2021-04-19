@@ -95,9 +95,10 @@ public class KitC {
      * Construit la librairie à partir des fichiers en c.
      */
     public void construireLaLibrairie() {
+        FabriqueNumero fab = FabriqueNumero.getInstance();
         try {
             Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
-            Process p = runtime.exec("gcc -shared /tmp/twisk/programmeC.o /tmp/twisk/codeNatif.o /tmp/twisk/client.o -o /tmp/twisk/libTwisk.so");//On demande l’exécution de la compilation
+            Process p = runtime.exec("gcc -shared /tmp/twisk/programmeC.o /tmp/twisk/codeNatif.o /tmp/twisk/client.o -o /tmp/twisk/libTwisk" + fab.getNumeroLibrairie() + ".so");//On demande l’exécution de la compilation
             p.waitFor();
             // récupération des messages sur la sortie standard et la sortie d’erreur de la commande exécutée
             // à reprendre éventuellement et à adapter à votre code

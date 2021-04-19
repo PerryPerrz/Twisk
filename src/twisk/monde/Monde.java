@@ -1,5 +1,7 @@
 package twisk.monde;
 
+import twisk.outils.FabriqueNumero;
+
 import java.util.Iterator;
 
 /**
@@ -14,6 +16,8 @@ public class Monde implements Iterable<Etape> {
      * Constructeur de la classe Monde.
      */
     public Monde() {
+        FabriqueNumero fab = FabriqueNumero.getInstance();
+        fab.reset();
         sasE = new SasEntree();
         sasS = new SasSortie();
         ge = new GestionnaireEtapes();

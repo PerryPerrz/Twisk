@@ -6,10 +6,12 @@ package twisk.outils;
 public class FabriqueNumero {
     private int cptEtape;
     private int cptSemaphore;
+    private int cptLibrairie;
 
     private FabriqueNumero() {
         cptEtape = 0;
         cptSemaphore = 1;
+        cptLibrairie = 1;
     }
 
     private static final FabriqueNumero instance = new FabriqueNumero();
@@ -41,6 +43,20 @@ public class FabriqueNumero {
     public int getNumeroSemaphore() {
         cptSemaphore++;
         return cptSemaphore - 1;
+    }
+
+    /**
+     * Retourne un numero unique de librairie.
+     *
+     * @return le numero de librairie
+     */
+    public int getNumeroLibrairie() {
+        cptLibrairie++;
+        return cptLibrairie - 1;
+    }
+
+    public int consulterNumeroLibraire() {
+        return cptLibrairie - 1;
     }
 
     /**

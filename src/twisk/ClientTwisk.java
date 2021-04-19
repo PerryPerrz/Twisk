@@ -100,7 +100,7 @@ public class ClientTwisk {
             Constructor<?> constructeur = clS.getDeclaredConstructor();
             Object instanceSim = constructeur.newInstance();
             Method fonctionSetNbClients = clS.getMethod("setNbClients", int.class);
-            fonctionSetNbClients.invoke(instanceSim, 5);
+            fonctionSetNbClients.invoke(instanceSim, 10);
             Method fonctionSimuler = clS.getMethod("simuler", Monde.class);
             fonctionSimuler.invoke(instanceSim, monde);
         } catch (ClassNotFoundException e) {
