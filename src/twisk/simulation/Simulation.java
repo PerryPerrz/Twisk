@@ -33,10 +33,8 @@ public class Simulation {
         //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
         System.load("/tmp/twisk/libTwisk" + fab.consulterNumeroLibraire() + ".so");
         int[] tabJetonsGuichet = new int[monde.nbGuichets()];
-        for (int i = 0; i < monde.nbGuichets(); i++) {
+        for (int i = 0; i < monde.nbGuichets(); i++)
             tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i + 1); //num de Sémaphore commence à 1
-            System.out.println(tabJetonsGuichet[i]);
-        }
         int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);
         System.out.print("PID des clients : ");
         for (int i = 0; i < nbClients; i++) {
