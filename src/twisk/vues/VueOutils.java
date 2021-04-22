@@ -15,7 +15,8 @@ import twisk.outils.TailleComposants;
  */
 public class VueOutils extends TilePane implements Observateur {
     private final MondeIG monde;
-    private final Button bouton;
+    private final Button boutonActivite;
+    private final Button boutonGuichet;
 
     /**
      * Constructeur de la classe VueOutils.
@@ -25,16 +26,24 @@ public class VueOutils extends TilePane implements Observateur {
     public VueOutils(MondeIG monde) {
         this.monde = monde;
         monde.ajouterObservateur(this);
-        bouton = new Button();
-        bouton.setOnAction(actionEvent -> monde.ajouter("Activite"));
-        Tooltip tool = new Tooltip();
-        bouton.setTooltip(tool);
+        boutonActivite = new Button();
+        boutonGuichet = new Button();
+        boutonActivite.setOnAction(actionEvent -> monde.ajouter("Activite"));
+        boutonGuichet.setOnAction(actionEvent -> monde.ajouter("Guichet"));
+        Tooltip tool = new Tooltip("Ajouter une activité !");
+        Tooltip tool2 = new Tooltip("Ajouter un guichet !");
+        boutonActivite.setTooltip(tool);
+        boutonGuichet.setTooltip(tool2);
         TailleComposants tC = TailleComposants.getInstance();
-        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/add.png"), tC.getTailleBouton(), tC.getTailleBouton(), true, true); //Donne le chemin à partir de src
+        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/add_activite.png"), tC.getTailleBouton(), tC.getTailleBouton(), true, true); //Donne le chemin à partir de src
+        Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/add_guichet.png"), tC.getTailleBouton(), tC.getTailleBouton(), true, true);
         ImageView icon = new ImageView(image);
-        bouton.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
-        bouton.setGraphic(icon);
-        this.getChildren().add(bouton);
+        ImageView icon2 = new ImageView(image2);
+        boutonActivite.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
+        boutonActivite.setGraphic(icon);
+        boutonGuichet.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
+        boutonGuichet.setGraphic(icon2);
+        this.getChildren().addAll(boutonActivite, boutonGuichet);
     }
 
     @Override

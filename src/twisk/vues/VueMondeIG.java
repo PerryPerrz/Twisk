@@ -19,7 +19,7 @@ public class VueMondeIG extends Pane implements Observateur {
     private final MondeIG monde;
 
     /**
-     * Constructeur de la classe VueMOndeIG.
+     * Constructeur de la classe VueMondeIG.
      *
      * @param monde le monde
      */
@@ -78,9 +78,15 @@ public class VueMondeIG extends Pane implements Observateur {
         }
         for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
             EtapeIG etape = iter.next();
-            VueActiviteIG viewA = new VueActiviteIG(this.monde, etape);
-            viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
-            this.getChildren().add(viewA);
+            if (etape.estUneActivite()) {
+                VueActiviteIG viewA = new VueActiviteIG(this.monde, etape);
+                viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
+                this.getChildren().add(viewA);
+            } else {
+                VueGuichetIG viewG = new VueGuichetIG(this.monde, etape);
+                viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
+                this.getChildren().add(viewG);
+            }
             for (PointDeControleIG pdc : etape) {
                 VuePointDeControleIG viewPdc = new VuePointDeControleIG(this.monde, pdc);
                 this.getChildren().add(viewPdc);

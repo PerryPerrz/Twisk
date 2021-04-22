@@ -7,6 +7,7 @@ public class FabriqueIdentifiant {
     private static final FabriqueIdentifiant instance = new FabriqueIdentifiant();
     private int noEtape;
     private int noPdc;
+    private int numSem;
 
     /**
      * Constructeur de la classe FabriqueIdentifiant permettant d'initialiser les attributs noEtape et noPdc.
@@ -14,6 +15,7 @@ public class FabriqueIdentifiant {
     private FabriqueIdentifiant() {
         this.noEtape = 0;
         this.noPdc = 0;
+        this.numSem = 1;
     }
 
     /**
@@ -48,5 +50,14 @@ public class FabriqueIdentifiant {
      */
     public void reset() {
         this.noEtape = 0;
+    }
+
+    /**
+     * Fonction permettant de récupérer le numéro de sémaphore
+     *
+     * @return numéro semaphore
+     */
+    public int getNumSem() {
+        return this.numSem++;
     }
 }

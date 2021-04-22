@@ -38,13 +38,20 @@ public class MondeIG extends SujetObserve {
      * @param type le type
      */
     public void ajouter(String type) {
+        FabriqueIdentifiant fabID = FabriqueIdentifiant.getInstance();
+        String id = fabID.getIdentifiantEtape();
         switch (type) {
             case "Activite":
-                FabriqueIdentifiant fabID = FabriqueIdentifiant.getInstance();
-                String id = fabID.getIdentifiantEtape();
                 ActiviteIG activite = new ActiviteIG("Activité n°" + id, id);
                 this.etapes.put(id, activite);
                 this.notifierObservateurs();
+                break;
+
+            case "Guichet":
+                GuichetIG guichet = new GuichetIG("Guichet n°" + id, id);
+                this.etapes.put(id, guichet);
+                this.notifierObservateurs();
+                break;
         }
     }
 

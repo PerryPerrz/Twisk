@@ -13,4 +13,9 @@ public class ActiviteIG extends EtapeIG {
     public ActiviteIG(String nom, String idf) {
         super(nom, idf);
     }
+
+    @Override
+    public boolean estUneActivite() {
+        return true;
+    }
 }

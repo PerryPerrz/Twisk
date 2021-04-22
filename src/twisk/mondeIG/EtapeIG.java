@@ -250,4 +250,23 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     public boolean estUneSortie() {
         return sortie;
     }
+
+    /**
+     * Fonction qui retourne vrai si l'étape est une activité.
+     *
+     * @return un booléen
+     */
+    public boolean estUneActivite() {
+        return false;
+    }
+
+    /**
+     * Fonction qui retourne vrai si l'étape est un guichet.
+     *
+     * @return un booléen
+     */
+    public boolean estUnGuichet() {
+        return false;
+    }
+
 }
