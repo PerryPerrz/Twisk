@@ -403,4 +403,45 @@ public class MondeIG extends SujetObserve {
     public int getStyle() {
         return this.style;
     }
+
+    /**
+     * Procédure qui permet de définir le nombre de jeton(s) d'un guichet dans le monde
+     *
+     * @param nbJetons le nombre de jeton(s)
+     * @throws UncorrectSettingsException la uncorrect settings exception
+     */
+
+    public void setTokens(int nbJetons) throws UncorrectSettingsException {
+        try {
+            if (nbJetons < 0) {
+                throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être négatif!");
+            }
+            for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
+                EtapeIG eta = iter.next();
+                if (this.isSelectionned(eta) && eta.estUnGuichet()) {
+                    eta.siEstUnGuichetSetNbJetons(nbJetons);
+                }
+            }
+        } catch (NumberFormatException nFE) {
+            throw new UncorrectSettingsException("Les paramètres saisis pour le nombre de jetons sont erronés!");
+        }
+        notifierObservateurs();
+        this.effacerLaSelection();
+    }
+
+    /**
+     * Fonction qui retourne vrai si les étapes séléctionées sont des guichets
+     *
+     * @return un booléen
+     */
+    public boolean etapesSelectionneesSontDesGuichets() {
+        boolean sontDesGuichets = true;
+        for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
+            EtapeIG e = iter.next();
+            if (this.isSelectionned(e) && e.estUneActivite()) {
+                sontDesGuichets = false;
+            }
+        }
+        return sontDesGuichets;
+    }
 }

@@ -3,7 +3,7 @@ package twisk.mondeIG;
 import twisk.outils.FabriqueIdentifiant;
 
 public class GuichetIG extends EtapeIG {
-    private final int nbJetons;
+    private int nbJetons;
     private final int numSemaphore;
 
     /**
@@ -16,7 +16,7 @@ public class GuichetIG extends EtapeIG {
         super(nom, idf);
         FabriqueIdentifiant fab = FabriqueIdentifiant.getInstance();
         this.numSemaphore = fab.getNumSem();
-        this.nbJetons = 2;
+        this.nbJetons = 0;
     }
 
     /**
@@ -36,5 +36,15 @@ public class GuichetIG extends EtapeIG {
     @Override
     public boolean estUnGuichet() {
         return true;
+    }
+
+    @Override
+    public int siEstUnGuichetGetNbJetons() {
+        return this.nbJetons;
+    }
+
+    @Override
+    public void siEstUnGuichetSetNbJetons(int nbJetons) {
+        this.nbJetons = nbJetons;
     }
 }

@@ -34,7 +34,7 @@ public class MainTwisk extends Application {
         root.setBottom(viewO);
         root.setCenter(viewM);
         root.setTop(viewMe);
-        primaryStage.setTitle("twiskIG | Hugo Ipt");
+        primaryStage.setTitle("twisk | Iopeti & Yvoz");
         primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
         primaryStage.show();
     }

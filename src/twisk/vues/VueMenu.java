@@ -49,6 +49,7 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem jour = new MenuItem("Jour");
         MenuItem nuit = new MenuItem("Nuit");
         MenuItem reset = new MenuItem("Reset");
+        MenuItem jetons = new MenuItem("Nombre de jeton(s)");
 
         this.fichier.getItems().add(quitter);
         this.edition.getItems().add(supprimer);
@@ -61,6 +62,7 @@ public class VueMenu extends MenuBar implements Observateur {
         this.style.getItems().add(jour);
         this.style.getItems().add(nuit);
         this.style.getItems().add(reset);
+        this.parametres.getItems().add(jetons);
 
         quitter.setOnAction(actionEvent -> Platform.exit());
         supprimer.setOnAction(actionEvent -> monde.supprimerLaSelection());
@@ -73,6 +75,7 @@ public class VueMenu extends MenuBar implements Observateur {
         jour.setOnAction(actionEvent -> monde.setStyle(0));
         nuit.setOnAction(actionEvent -> monde.setStyle(1));
         reset.setOnAction(actionEvent -> monde.setStyle(2));
+        jetons.setOnAction(actionEvent -> this.jetons());
 
         TailleComposants tc = TailleComposants.getInstance();
         Image image1 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/file.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
@@ -145,6 +148,12 @@ public class VueMenu extends MenuBar implements Observateur {
         ImageView icon16 = new ImageView(image16);
         reset.setGraphic(icon16);
 
+        Image image17 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/token.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon17 = new ImageView(image17);
+        jetons.setGraphic(icon17);
+
+        jetons.setDisable(true);
+
         this.getMenus().addAll(fichier, edition, mondeMenu, parametres, style);
     }
 
@@ -153,6 +162,10 @@ public class VueMenu extends MenuBar implements Observateur {
         edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
         parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
         parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
+        if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
+            parametres.getItems().get(2).setDisable(true);
+        else //Si l'étape concernée est un guichet
+            parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
     }
 
     /**
@@ -235,6 +248,43 @@ public class VueMenu extends MenuBar implements Observateur {
                 dia.setTitle("UncorrectSettingsException");
                 dia.setHeaderText("Impossible de saisir cette écart");
                 dia.setContentText("Erreur : La saisie de l'écart est incorrecte\n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/warning.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
+            }
+        });
+    }
+
+    /**
+     * Jetons.
+     */
+    public void jetons() {
+        TextInputDialog dialog = new TextInputDialog("2");
+        dialog.setTitle("Nombre de jeton(s) d'un guichet");
+        dialog.setHeaderText("Entrez votre nombre de jeton(s) :");
+        dialog.setContentText("Jeton(s) :");
+
+        TailleComposants tc = TailleComposants.getInstance();
+        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/tools.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        ImageView icon = new ImageView(image);
+        dialog.setGraphic(icon);
+
+        Optional<String> result = dialog.showAndWait();
+
+        result.ifPresent(nbJet -> {
+            try {
+                this.monde.setTokens(Integer.parseInt(nbJet));
+            } catch (UncorrectSettingsException uSE) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("UncorrectSettingsException");
+                dia.setHeaderText("Impossible de saisir ce nombre de jeton(s)");
+                dia.setContentText("Erreur : La saisie du nombre de jeton(s) est incorrecte\n" +
                         "Veuillez ré-essayer");
                 Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/warning.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon2 = new ImageView(image2);

@@ -269,4 +269,17 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
         return false;
     }
 
+    /**
+     * Fonction qui retourne -1 si l'étape est n'est pas un guichet, et le nombre de jeton(s) si l'tétape est un guichet.
+     *
+     * @return un entier
+     */
+    public abstract int siEstUnGuichetGetNbJetons();
+
+    /**
+     * Procédure qui permet de set le nombre de jetons d'un guichet si l'étape concernée est bien un guichet
+     *
+     * @param nbJetons
+     */
+    public abstract void siEstUnGuichetSetNbJetons(int nbJetons);
 }
