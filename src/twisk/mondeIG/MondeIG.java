@@ -79,7 +79,7 @@ public class MondeIG extends SujetObserve {
     }
 
     /**
-     * Procédure qui ajoute 2 points de contrôles au monde.
+     * Procédure qui ajoute un arc au monde.
      *
      * @param pdc1 le pdc 1
      * @param pdc2 le pdc 2
@@ -129,6 +129,7 @@ public class MondeIG extends SujetObserve {
                     pdcIG.setClicked();
                     isCreated = true;
                     ajouter(pdcIG, pdc);
+                    etape.ajouterSuccesseur(pdc.getEtapeRattache());
                     this.notifierObservateurs();
                 }
                 //Si j'en trouve pas, le pdc en param est le premier.
@@ -194,6 +195,7 @@ public class MondeIG extends SujetObserve {
             ArcIG arc = iterA.next();
             if (arc.isSelected()) {
                 arc.setSelect(false);
+                arc.getEtapePdcDepart().supprimerSuccesseur(arc.getEtapePdcArrive());
                 iterA.remove();
                 this.arcs.remove(arc);
             }
@@ -274,7 +276,6 @@ public class MondeIG extends SujetObserve {
     public void selectionArc(ArcIG arc) {
         arc.setSelect(!arc.isSelected());
         notifierObservateurs();
-
     }
 
     /**

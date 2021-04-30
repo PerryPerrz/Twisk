@@ -70,4 +70,22 @@ public class ArcIG {
     public void setSelect(boolean select) {
         this.select = select;
     }
+
+    /**
+     * Fonction qui donne l'étape rattachée au point de contrôle de départ de l'arc.
+     *
+     * @return l'étape
+     */
+    public EtapeIG getEtapePdcDepart() {
+        return getPdcDepart().getEtapeRattache();
+    }
+
+    /**
+     * Fonction qui donne l'étape rattachée au point de contrôle d'arrivé de l'arc.
+     *
+     * @return l'étape
+     */
+    public EtapeIG getEtapePdcArrive() {
+        return getPdcArrive().getEtapeRattache();
+    }
 }

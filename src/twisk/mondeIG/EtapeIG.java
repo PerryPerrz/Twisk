@@ -3,6 +3,7 @@ package twisk.mondeIG;
 import twisk.outils.FabriqueIdentifiant;
 import twisk.outils.TailleComposants;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -46,6 +47,10 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      * Attribut correspondant au écart d'une étape.
      */
     protected int ecart;
+    /**
+     * Attribut correspondant aux successeurs de l'étape.
+     */
+    protected ArrayList<EtapeIG> succ;
 
     /**
      * Constructeur de la classe EtapeIG.
@@ -61,6 +66,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
         this.sortie = false;
         this.delai = 8;
         this.ecart = 4;
+        this.succ = new ArrayList<>(2);
         FabriqueIdentifiant fabrik = FabriqueIdentifiant.getInstance();
 
         for (int i = 0; i < this.pdc.length; ++i) {
@@ -282,4 +288,22 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      * @param nbJetons
      */
     public abstract void siEstUnGuichetSetNbJetons(int nbJetons);
+
+    /**
+     * Procédure qui ajoute une étape en tant que successeur
+     *
+     * @param e l'étape
+     */
+    public void ajouterSuccesseur(EtapeIG e) {
+        succ.add(e);
+    }
+
+    /**
+     * Procédure qui supprime un successeur de l'étape
+     *
+     * @param e l'étape
+     */
+    public void supprimerSuccesseur(EtapeIG e) {
+        succ.remove(e);
+    }
 }
