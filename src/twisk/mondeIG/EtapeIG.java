@@ -306,4 +306,47 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     public void supprimerSuccesseur(EtapeIG e) {
         succ.remove(e);
     }
+
+    /**
+     * Fonction qui retourne vrai si l'étape concernée possède un successeur
+     *
+     * @return un booléen
+     */
+    public boolean possedeUnSuccesseur() {
+        return succ.size() != 0;
+    }
+
+    /**
+     * Fonction qui retourne vrai si l'étape concernée est suivie d'une activité
+     *
+     * @return un booléen
+     */
+    public boolean estSuivieDUneActivite() {
+        boolean res = false;
+        for (EtapeIG e : succ)
+            if (e.estUneActivite())
+                res = true;
+        return res;
+    }
+
+    /**
+     * Procédure qui permet de transformer une activité en activité restreinte
+     *
+     * @param res
+     * @return un booléen, faux si il y a une erreur (c'est un guichet) et vrai si c'est une activité
+     */
+    public abstract boolean setActiviteRestreinte(boolean res);
+
+    /**
+     * Fonction qui transforme les activités qui succedent une étape en activités restreintes
+     *
+     * @return un booléen, faux si il y a une erreur, la transformation à échouer et vrai si tout c'est bien passé
+     */
+    public boolean actSuccIntoActRes() {
+        boolean res = true;
+        for (EtapeIG e : succ)
+            if (e.estUneActivite())
+                res = e.setActiviteRestreinte(true);
+        return res;
+    }
 }

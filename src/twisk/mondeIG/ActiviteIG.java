@@ -4,6 +4,8 @@ package twisk.mondeIG;
  * La classe ActiviteIG.
  */
 public class ActiviteIG extends EtapeIG {
+    private boolean estUneActiviteRestreinte;
+
     /**
      * Constructeur de la classe ActiviteIG.
      *
@@ -12,6 +14,7 @@ public class ActiviteIG extends EtapeIG {
      */
     public ActiviteIG(String nom, String idf) {
         super(nom, idf);
+        this.estUneActiviteRestreinte = false;
     }
 
     @Override
@@ -27,5 +30,11 @@ public class ActiviteIG extends EtapeIG {
     @Override
     public void siEstUnGuichetSetNbJetons(int nbJetons) {
         System.out.println("Attention, une activité ne possède pas de jeton(s) !");
+    }
+
+    @Override
+    public boolean setActiviteRestreinte(boolean res) {
+        this.estUneActiviteRestreinte = res;
+        return true;
     }
 }

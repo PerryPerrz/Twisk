@@ -47,4 +47,9 @@ public class GuichetIG extends EtapeIG {
     public void siEstUnGuichetSetNbJetons(int nbJetons) {
         this.nbJetons = nbJetons;
     }
+
+    @Override
+    public boolean setActiviteRestreinte(boolean res) {
+        return false;
+    }
 }

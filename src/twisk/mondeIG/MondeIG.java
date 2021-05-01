@@ -445,4 +445,42 @@ public class MondeIG extends SujetObserve {
         }
         return sontDesGuichets;
     }
+
+    /**
+     * Procédure qui verifie si le monde est valide.
+     *
+     * @throws MondeException
+     */
+    private void verifierMondeIG() throws MondeException {
+        boolean aUneEntree = false;
+        boolean aUneSortie = false;
+        boolean aUneEtape = this.nbEtapes() != 0;
+        boolean mankUnSucc = false; //Une étape n'a pas de succ
+        boolean nePossedePasUneActiviteRestreinte = false;
+        boolean transformationEffectuee = false;
+
+        for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
+            EtapeIG e = iter.next();
+            if (e.estUneEntree())
+                aUneEntree = true;
+            if (e.estUneSortie())
+                aUneSortie = true;
+            if (!e.possedeUnSuccesseur())
+                mankUnSucc = true;
+            if (e.estUnGuichet())
+                if (!e.estSuivieDUneActivite())
+                    nePossedePasUneActiviteRestreinte = true;
+                else
+                    transformationEffectuee = e.actSuccIntoActRes();
+        }
+
+        if (!aUneEntree || !aUneSortie || !aUneEtape)
+            throw new MondeException("Attention, le monde ne possède pas d'entrée, de sortie ou d'étape !");
+        if (mankUnSucc)
+            throw new MondeException("Attention, une étape n'a pas de successeur !");
+        if (nePossedePasUneActiviteRestreinte)
+            throw new MondeException("Attention, un guichet n'est pas suivie par une activité !");
+        if (!transformationEffectuee)
+            throw new MondeException("Erreur lors du passage d'une activité vers une activité restreinte !");
+    }
 }
