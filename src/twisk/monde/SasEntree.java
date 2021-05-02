@@ -21,7 +21,7 @@ public class SasEntree extends Activite {
             stB.append("transfert(").append(getNum()).append(", ").append(getSucc().getNum()).append(");\n");
             stB.append(getSucc().toC());
         } else {
-            stB.append("nb = (int) ((rand() / (float) RAND_MAX)*").append(nbSuccesseurs()).append(");\n");
+            stB.append("int nb").append(getNum()).append(" = (int) ((rand() / (float) RAND_MAX)*").append(nbSuccesseurs()).append(");\n");
             stB.append("switch(nb)\n");
             stB.append("{\n");
             for (int i = 0; i < nbSuccesseurs(); i++) {

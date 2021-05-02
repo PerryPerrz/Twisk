@@ -98,7 +98,6 @@ public class Monde implements Iterable<Etape> {
                 "#include <unistd.h>\n" +
                 "void simulation(int ids) {\n" +
                 "srand(getpid());\n" +
-                "int nb;\n" +
                 sasE.toC() + "}";
     }
 

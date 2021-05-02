@@ -95,7 +95,7 @@ public class Guichet extends Etape {
             stB.append("transfert(").append(getSucc().getNum()).append(", ").append(getSucc().getSucc().getNum()).append(");\n");
             stB.append(getSucc().getSucc().toC());
         } else {
-            stB.append("nb = (int) ((rand() / (float) RAND_MAX)*").append(getSucc().nbSuccesseurs()).append(");\n");
+            stB.append("int nb").append(getNum()).append(" = (int) ((rand() / (float) RAND_MAX)*").append(nbSuccesseurs()).append(");\n");
             stB.append("switch(nb)\n");
             stB.append("{\n");
             for (int i = 0; i < getSucc().nbSuccesseurs(); i++) {
