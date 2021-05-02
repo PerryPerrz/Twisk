@@ -33,7 +33,7 @@ public class ClientTwisk {
         Activite toboggan = new ActiviteRestreinte("toboggan");
         balade.ajouterSuccesseur(guichet);
         guichet.ajouterSuccesseur(toboggan);
-        monde.aCommeEntree(balade);
+        monde.aCommeEntree(balade, guichet);
         monde.aCommeSortie(toboggan);
         monde.ajouter(balade, guichet, toboggan);
         return monde;
@@ -48,11 +48,11 @@ public class ClientTwisk {
         Guichet guichet3 = new Guichet("guichet3", 3);
         Activite toboggan = new ActiviteRestreinte("toboggan");
         guichet3.ajouterSuccesseur(parking);
-        parking.ajouterSuccesseur(balade);
+        parking.ajouterSuccesseur(balade, guichet2);
         balade.ajouterSuccesseur(guichet2);
         guichet2.ajouterSuccesseur(toboggan);
         monde.aCommeEntree(guichet3);
-        monde.aCommeSortie(toboggan);
+        monde.aCommeSortie(toboggan, balade);
         monde.ajouter(guichet3, parking, balade, guichet2, toboggan);
         return monde;
     }

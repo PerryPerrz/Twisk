@@ -92,7 +92,14 @@ public class Monde implements Iterable<Etape> {
      * @return une chaine de caractère.
      */
     public String toC() {
-        return "#include \"def.h\"\nvoid simulation(int ids) {\n" + sasE.toC() + "}";
+        return "#include \"def.h\"\n" +
+                "#include <stdlib.h>\n" +
+                "#include <sys/types.h>\n" +
+                "#include <unistd.h>\n" +
+                "void simulation(int ids) {\n" +
+                "srand(getpid());\n" +
+                "int nb;\n" +
+                sasE.toC() + "}";
     }
 
     /**

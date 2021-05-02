@@ -87,7 +87,29 @@ public class Guichet extends Etape {
 
     @Override
     public String toC() { //On assume que le monde est correct et donc que l'étape suivant un guichet est bien une activité restreinte
-        return "P(ids, " + getNumSemaphore() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC() + "V(ids, " + getNumSemaphore() + ");\ntransfert(" + getSucc().getNum() + ", " + getSucc().getSucc().getNum() + ");\n" + getSucc().getSucc().toC();
+        StringBuilder stB = new StringBuilder(200);
+        if (getSucc().nbSuccesseurs() == 1) {
+            stB.append("P(ids, ").append(getNumSemaphore()).append(");\n");
+            stB.append("transfert(").append(getNum()).append(", ").append(getSucc().getNum()).append(");\n");
+            stB.append(getSucc().toC()).append("V(ids, ").append(getNumSemaphore()).append(");\n");
+            stB.append("transfert(").append(getSucc().getNum()).append(", ").append(getSucc().getSucc().getNum()).append(");\n");
+            stB.append(getSucc().getSucc().toC());
+        } else {
+            stB.append("nb = (int) ((rand() / (float) RAND_MAX)*").append(getSucc().nbSuccesseurs()).append(");\n");
+            stB.append("switch(nb)\n");
+            stB.append("{\n");
+            for (int i = 0; i < getSucc().nbSuccesseurs(); i++) {
+                stB.append("case ").append(i).append(" :\n");
+                stB.append("P(ids, ").append(getNumSemaphore()).append(");\n");
+                stB.append("transfert(").append(getNum()).append(", ").append(getSucc().getNum()).append(");\n");
+                stB.append(getSucc().toC()).append("V(ids, ").append(getNumSemaphore()).append(");\n");
+                stB.append("transfert(").append(getSucc().getNum()).append(", ").append(getSucc().getSuccI(i).getNum()).append(");\n");
+                stB.append(getSucc().getSuccI(i).toC());
+                stB.append("break;\n");
+            }
+            stB.append("}\n");
+        }
+        return stB.toString();
     }
 
     @Override

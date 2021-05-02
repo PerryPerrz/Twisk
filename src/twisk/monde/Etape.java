@@ -117,6 +117,15 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     /**
+     * Fonction qui retourne le succésseur n°i.
+     *
+     * @return le succésseur
+     */
+    public Etape getSuccI(int i) {
+        return getGestsucc().getSuccI(i);
+    }
+
+    /**
      * Fonction qui retourne le nombre de ticket d'un guichet.
      *
      * @return le nombre de ticket

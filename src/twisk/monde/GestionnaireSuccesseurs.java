@@ -51,6 +51,18 @@ public class GestionnaireSuccesseurs implements Iterable<Etape> {
             return null;
     }
 
+    /**
+     * Fonction qui retourne le successeur n°i du gestionnnaire de successeurs.
+     *
+     * @return le successeur
+     */
+    public Etape getSuccI(int i) {
+        if (nbEtapes() > i)
+            return succ.get(i);
+        else
+            return null;
+    }
+
     @Override
     public String toString() {
         if (this.nbEtapes() == 0)

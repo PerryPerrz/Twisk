@@ -86,7 +86,25 @@ public class Activite extends Etape {
 
     @Override
     public String toC() {
-        return "delai(" + getTemps() + ", " + getEcartTemps() + ");\ntransfert(" + getNum() + ", " + getSucc().getNum() + ");\n" + getSucc().toC();//On assume que le monde est correct et que l'activité n'a qu'un seul successeur
+        StringBuilder stB = new StringBuilder(200);
+        if (nbSuccesseurs() == 1) {
+            stB.append("delai(").append(getTemps()).append(", ").append(getEcartTemps()).append(");\n");
+            stB.append("transfert(").append(getNum()).append(", ").append(getSucc().getNum()).append(");\n");
+            stB.append(getSucc().toC());
+        } else {
+            stB.append("nb = (int) ((rand() / (float) RAND_MAX)*").append(nbSuccesseurs()).append(");\n");
+            stB.append("switch(nb)\n");
+            stB.append("{\n");
+            for (int i = 0; i < nbSuccesseurs(); i++) {
+                stB.append("case ").append(i).append(" :\n");
+                stB.append("delai(").append(getTemps()).append(", ").append(getEcartTemps()).append(");\n");
+                stB.append("transfert(").append(getNum()).append(", ").append(getSuccI(i).getNum()).append(");\n");
+                stB.append(getSuccI(i).toC());
+                stB.append("break;\n");
+            }
+            stB.append("}\n");
+        }
+        return stB.toString();
     }
 
     @Override
