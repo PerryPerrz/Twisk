@@ -2,6 +2,11 @@ package twisk.mondeIG;
 
 import twisk.designPattern.SujetObserve;
 import twisk.exceptions.*;
+import twisk.monde.Activite;
+import twisk.monde.ActiviteRestreinte;
+import twisk.monde.Guichet;
+import twisk.monde.Monde;
+import twisk.outils.CorrespondanceEtapes;
 import twisk.outils.FabriqueIdentifiant;
 
 import java.util.ArrayList;
@@ -449,7 +454,7 @@ public class MondeIG extends SujetObserve {
     /**
      * Procédure qui verifie si le monde est valide.
      *
-     * @throws MondeException
+     * @throws MondeException Erreur lors de la création du monde.
      */
     private void verifierMondeIG() throws MondeException {
         boolean aUneEntree = false;
@@ -482,5 +487,46 @@ public class MondeIG extends SujetObserve {
             throw new MondeException("Attention, un guichet n'est pas suivie par une activité !");
         if (!transformationEffectuee)
             throw new MondeException("Erreur lors du passage d'une activité vers une activité restreinte !");
+    }
+
+    /**
+     * Fonction qui crée un Monde à partir du mondeIG actuel
+     *
+     * @return Le monde
+     */
+    private Monde creerMonde() {
+        CorrespondanceEtapes corE = new CorrespondanceEtapes();
+        Monde monde = new Monde();
+        for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
+            EtapeIG e = iter.next();
+            if (e.estUneActiviteRestreinte()) {
+                ActiviteRestreinte actR = new ActiviteRestreinte(e.getNom(), e.getDelai(), e.getEcart());
+                monde.ajouter(actR);
+                corE.ajouter(e, actR);
+            } else if (e.estUneActivite()) {
+                Activite act = new Activite(e.getNom(), e.getDelai(), e.getEcart());
+                monde.ajouter(act);
+                corE.ajouter(e, act);
+            } else if (e.estUnGuichet()) {
+                Guichet gui = new Guichet(e.getNom(), e.siEstUnGuichetGetNbJetons());
+                monde.ajouter(gui);
+                corE.ajouter(e, gui);
+            }
+            if (e.estUneEntree())
+                monde.aCommeEntree(corE.get(e));
+            if (e.estUneSortie())
+                monde.aCommeSortie(corE.get(e));
+        }
+        //On fait une autre boucle pour les successeurs car il faut attendre que toutes les étapes soient implémentées
+        for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
+            EtapeIG e = iter.next();
+            if (e.possedeUnSuccesseur()) {
+                ArrayList<EtapeIG> succ = e.getSucc();
+                for (EtapeIG eIG : succ) {
+                    monde.getEtapeI(corE.get(e).getNum()).ajouterSuccesseur(corE.get(eIG));
+                }
+            }
+        }
+        return monde;
     }
 }

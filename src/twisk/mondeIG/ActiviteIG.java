@@ -23,6 +23,11 @@ public class ActiviteIG extends EtapeIG {
     }
 
     @Override
+    public boolean estUneActiviteRestreinte() {
+        return estUneActiviteRestreinte;
+    }
+
+    @Override
     public int siEstUnGuichetGetNbJetons() {
         return -1;
     }

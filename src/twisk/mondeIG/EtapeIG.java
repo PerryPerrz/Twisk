@@ -267,6 +267,15 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     }
 
     /**
+     * Fonction qui retourne vrai si l'étape est une activitéRestreinte.
+     *
+     * @return un booléen
+     */
+    public boolean estUneActiviteRestreinte() {
+        return false;
+    }
+
+    /**
      * Fonction qui retourne vrai si l'étape est un guichet.
      *
      * @return un booléen
@@ -285,7 +294,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     /**
      * Procédure qui permet de set le nombre de jetons d'un guichet si l'étape concernée est bien un guichet
      *
-     * @param nbJetons
+     * @param nbJetons le nombre de jetons
      */
     public abstract void siEstUnGuichetSetNbJetons(int nbJetons);
 
@@ -332,7 +341,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     /**
      * Procédure qui permet de transformer une activité en activité restreinte
      *
-     * @param res
+     * @param res un booléen représentant le fait que l'étape soit une activité restreinte ou non.
      * @return un booléen, faux si il y a une erreur (c'est un guichet) et vrai si c'est une activité
      */
     public abstract boolean setActiviteRestreinte(boolean res);
@@ -348,5 +357,14 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
             if (e.estUneActivite())
                 res = e.setActiviteRestreinte(true);
         return res;
+    }
+
+    /**
+     * Fonction qui retourne les successeurs de l'étape
+     *
+     * @return une arrayList contenant les successeurs
+     */
+    public ArrayList<EtapeIG> getSucc() {
+        return succ;
     }
 }
