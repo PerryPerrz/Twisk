@@ -59,7 +59,7 @@ public class VueOutils extends TilePane implements Observateur {
         });
         Tooltip tool = new Tooltip("Ajouter une activité !");
         Tooltip tool2 = new Tooltip("Ajouter un guichet !");
-        Tooltip tool3 = new Tooltip("Réalisez la simulation !");
+        Tooltip tool3 = new Tooltip("Réaliser une simulation !");
         boutonActivite.setTooltip(tool);
         boutonGuichet.setTooltip(tool2);
         boutonSimulation.setTooltip(tool3);
