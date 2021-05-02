@@ -8,6 +8,7 @@ import twisk.monde.Guichet;
 import twisk.monde.Monde;
 import twisk.outils.CorrespondanceEtapes;
 import twisk.outils.FabriqueIdentifiant;
+import twisk.simulation.Simulation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -528,5 +529,15 @@ public class MondeIG extends SujetObserve {
             }
         }
         return monde;
+    }
+
+    /**
+     * Procédure qui crée le monde et lance la simulation
+     */
+    public void simuler() throws MondeException {
+        verifierMondeIG();
+        Monde monde = creerMonde();
+        Simulation simulation = new Simulation();
+        simulation.simuler(monde);
     }
 }
