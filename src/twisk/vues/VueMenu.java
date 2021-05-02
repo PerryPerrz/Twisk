@@ -11,6 +11,7 @@ import twisk.exceptions.UncorrectSettingsException;
 import twisk.mondeIG.MondeIG;
 import twisk.outils.TailleComposants;
 
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -78,77 +79,77 @@ public class VueMenu extends MenuBar implements Observateur {
         jetons.setOnAction(actionEvent -> this.jetons());
 
         TailleComposants tc = TailleComposants.getInstance();
-        Image image1 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/file.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/file.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon1 = new ImageView(image1);
         fichier.setGraphic(icon1);
 
-        Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/edit.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/edit.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon2 = new ImageView(image2);
         edition.setGraphic(icon2);
 
-        Image image3 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/world.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon3 = new ImageView(image3);
         mondeMenu.setGraphic(icon3);
 
-        Image image4 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/settings.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/settings.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon4 = new ImageView(image4);
         parametres.setGraphic(icon4);
 
-        Image image5 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/brush.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/brush.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon5 = new ImageView(image5);
         style.setGraphic(icon5);
 
-        Image image6 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/exit.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/exit.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon6 = new ImageView(image6);
         quitter.setGraphic(icon6);
 
-        Image image7 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/delete.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image7 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/delete.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon7 = new ImageView(image7);
         supprimer.setGraphic(icon7);
 
-        Image image8 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/rename.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image8 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/rename.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon8 = new ImageView(image8);
         renommer.setGraphic(icon8);
 
         renommer.setDisable(true);
 
-        Image image9 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/select.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image9 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/select.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon9 = new ImageView(image9);
         effacer.setGraphic(icon9);
 
-        Image image10 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/entree.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image10 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/entree.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon10 = new ImageView(image10);
         entree.setGraphic(icon10);
 
-        Image image11 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/sortie.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image11 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/sortie.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon11 = new ImageView(image11);
         sortie.setGraphic(icon11);
 
-        Image image12 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/hourglass.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image12 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/hourglass.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon12 = new ImageView(image12);
         delai.setGraphic(icon12);
 
         delai.setDisable(true);
 
-        Image image13 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/hourglass.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image13 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/hourglass.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon13 = new ImageView(image13);
         ecart.setGraphic(icon13);
 
         ecart.setDisable(true);
 
-        Image image14 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/day.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image14 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/day.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon14 = new ImageView(image14);
         jour.setGraphic(icon14);
 
-        Image image15 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/night.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image15 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/night.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon15 = new ImageView(image15);
         nuit.setGraphic(icon15);
 
-        Image image16 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/reset.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image16 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/reset.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon16 = new ImageView(image16);
         reset.setGraphic(icon16);
 
-        Image image17 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/token.png"), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image17 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/token.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon17 = new ImageView(image17);
         jetons.setGraphic(icon17);
 
@@ -178,13 +179,13 @@ public class VueMenu extends MenuBar implements Observateur {
         dialog.setContentText("Nom :");
 
         TailleComposants tc = TailleComposants.getInstance();
-        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/tools.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/tools.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
         ImageView icon = new ImageView(image);
         dialog.setGraphic(icon);
 
         Optional<String> result = dialog.showAndWait();
         //Ce qu'on à donné à result est stocké dans name et on fait un appel un la fonction avec la variable name
-        result.ifPresent(name -> this.monde.renommerLaSelection(name));
+        result.ifPresent(this.monde::renommerLaSelection);
     }
 
     /**
@@ -197,7 +198,7 @@ public class VueMenu extends MenuBar implements Observateur {
         dialog.setContentText("Délai :");
 
         TailleComposants tc = TailleComposants.getInstance();
-        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/tools.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/tools.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
         ImageView icon = new ImageView(image);
         dialog.setGraphic(icon);
 
@@ -212,7 +213,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 dia.setHeaderText("Impossible de saisir ce délai");
                 dia.setContentText("Erreur : La saisie du délai est incorrecte\n" +
                         "Veuillez ré-essayer");
-                Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/warning.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon2 = new ImageView(image2);
                 dia.setGraphic(icon2);
                 dia.show();
@@ -234,7 +235,7 @@ public class VueMenu extends MenuBar implements Observateur {
         dialog.setContentText("Écart :");
 
         TailleComposants tc = TailleComposants.getInstance();
-        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/tools.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/tools.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
         ImageView icon = new ImageView(image);
         dialog.setGraphic(icon);
 
@@ -249,7 +250,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 dia.setHeaderText("Impossible de saisir cette écart");
                 dia.setContentText("Erreur : La saisie de l'écart est incorrecte\n" +
                         "Veuillez ré-essayer");
-                Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/warning.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon2 = new ImageView(image2);
                 dia.setGraphic(icon2);
                 dia.show();
@@ -271,7 +272,7 @@ public class VueMenu extends MenuBar implements Observateur {
         dialog.setContentText("Jeton(s) :");
 
         TailleComposants tc = TailleComposants.getInstance();
-        Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/tools.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/tools.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
         ImageView icon = new ImageView(image);
         dialog.setGraphic(icon);
 
@@ -286,7 +287,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 dia.setHeaderText("Impossible de saisir ce nombre de jeton(s)");
                 dia.setContentText("Erreur : La saisie du nombre de jeton(s) est incorrecte\n" +
                         "Veuillez ré-essayer");
-                Image image2 = new Image(getClass().getResourceAsStream("/twisk/ressources/images/warning.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon2 = new ImageView(image2);
                 dia.setGraphic(icon2);
                 dia.show();
