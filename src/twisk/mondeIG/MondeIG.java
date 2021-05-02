@@ -1,15 +1,19 @@
 package twisk.mondeIG;
 
+import twisk.ClientTwisk;
 import twisk.designPattern.SujetObserve;
 import twisk.exceptions.*;
 import twisk.monde.Activite;
 import twisk.monde.ActiviteRestreinte;
 import twisk.monde.Guichet;
 import twisk.monde.Monde;
+import twisk.outils.ClassLoaderPerso;
 import twisk.outils.CorrespondanceEtapes;
 import twisk.outils.FabriqueIdentifiant;
-import twisk.simulation.Simulation;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -537,7 +541,25 @@ public class MondeIG extends SujetObserve {
     public void simuler() throws MondeException {
         verifierMondeIG();
         Monde monde = creerMonde();
-        Simulation simulation = new Simulation();
-        simulation.simuler(monde);
+        ClassLoaderPerso classLoaderPerso = new ClassLoaderPerso(ClientTwisk.class.getClassLoader());
+        try {
+            Class<?> clS = classLoaderPerso.loadClass("twisk.simulation.Simulation");
+            Constructor<?> constructeur = clS.getDeclaredConstructor();
+            Object instanceSim = constructeur.newInstance();
+            Method fonctionSetNbClients = clS.getMethod("setNbClients", int.class);
+            fonctionSetNbClients.invoke(instanceSim, 5);
+            Method fonctionSimuler = clS.getMethod("simuler", Monde.class);
+            fonctionSimuler.invoke(instanceSim, monde);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Erreur lors du chargement de la classe twisk.simulation.Simulation !");
+        } catch (NoSuchMethodException e) {
+            System.out.println("Erreur, fonction non trouvée dans la classe twisk.simulation.Simulation !");
+        } catch (InvocationTargetException e) {
+            System.out.println("Erreur lors de l'appel d'une fonction de la classe twisk.simulation.Simulation !");
+        } catch (IllegalAccessException e) {
+            System.out.println("Erreur, appel illegal d'une fonction de la classe twisk.simulation.Simulation !");
+        } catch (InstantiationException e) {
+            System.out.println("Erreur lors de l'instanciation de la classe twisk.simulation.Simulation !");
+        }
     }
 }
