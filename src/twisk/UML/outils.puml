@@ -1,0 +1,76 @@
+@startuml
+class twisk.outils.KitC {
++ void creerEnvironnement()
+- void copier(InputStream,File)
++ void creerFichier(String)
++ void compiler()
++ void construireLaLibrairie()
+}
+class twisk.outils.FabriqueIdentifiant {
+- {static} FabriqueIdentifiant instance
+- int noEtape
+- int noPdc
+- int numSem
++ {static} FabriqueIdentifiant getInstance()
++ String getIdentifiantEtape()
++ String getIdentifiantPdc()
++ void reset()
++ int getNumSem()
+}
+class twisk.outils.CorrespondanceEtapes {
+- HashMap<EtapeIG,Etape> correspondances
++ void ajouter(EtapeIG,Etape)
++ Etape get(EtapeIG)
+}
+class twisk.outils.TailleComposants {
+- {static} TailleComposants instance
+- int largAct
+- int hautAct
+- int tailleBouton
+- int windowX
+- int windowY
+- int rad
+- int largLigne
+- int longTri
+- int largTri
+- int tailleIcons
+- int tailleIcons2
+- int tailleIcons3
++ {static} TailleComposants getInstance()
++ int getLargAct()
++ int getHautAct()
++ int getTailleBouton()
++ int getWindowX()
++ int getWindowY()
++ int getRad()
++ int getLargLigne()
++ int getLongTri()
++ int getLargTri()
++ int getTailleIcons()
++ int getTailleIcons2()
++ int getTailleIcons3()
+}
+class twisk.outils.FabriqueNumero {
+- int cptEtape
+- int cptSemaphore
+- int cptLibrairie
+- {static} FabriqueNumero instance
++ {static} FabriqueNumero getInstance()
++ int getNumeroEtape()
++ int getNumeroSemaphore()
++ int getNumeroLibrairie()
++ int consulterNumeroLibraire()
++ void reset()
+}
+class twisk.outils.ClassLoaderPerso {
++ Class<?> loadClass(String)
+- Class<?> getClass(String)
+- byte[] loadClassData(String)
++ void finalize()
+}
+class twisk.outils.CouleurComposants {
+}
+
+
+twisk.outils.ClassLoader <|-- twisk.outils.ClassLoaderPerso
+@enduml

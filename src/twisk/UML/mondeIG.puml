@@ -1,0 +1,127 @@
+@startuml
+class twisk.mondeIG.PointDeControleIG {
+- int centreX
+- int centreY
+- String id
+- EtapeIG etapeRattache
+- boolean clicked
++ void setCentre(int,int)
++ int getCentreX()
++ int getCentreY()
++ void setClicked()
++ boolean isClicked()
++ String getId()
++ EtapeIG getEtapeRattache()
+}
+abstract class twisk.mondeIG.EtapeIG {
+# String nom
+# String identifiant
+# int posX
+# int posY
+# PointDeControleIG[] pdc
+# boolean entree
+# boolean sortie
+# int delai
+# int ecart
+# ArrayList<EtapeIG> succ
++ void randomPositions()
++ void raffraichissementPdc()
++ String getIdentifiant()
++ int getPosX()
++ int getPosY()
++ Iterator<PointDeControleIG> iterator()
++ PointDeControleIG getPdcIndex(int)
++ String getNom()
++ void setNom(String)
++ void setPosXPosY(int,int)
++ void invEntree()
++ void invSortie()
++ int getDelai()
++ int getEcart()
++ void setDelai(int)
++ void setEcart(int)
++ boolean estUneEntree()
++ boolean estUneSortie()
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ boolean estUnGuichet()
++ {abstract}int siEstUnGuichetGetNbJetons()
++ {abstract}void siEstUnGuichetSetNbJetons(int)
++ void ajouterSuccesseur(EtapeIG)
++ void supprimerSuccesseur(EtapeIG)
++ boolean possedeUnSuccesseur()
++ boolean estSuivieDUneActivite()
++ {abstract}boolean setActiviteRestreinte(boolean)
++ boolean actSuccIntoActRes()
++ ArrayList<EtapeIG> getSucc()
+}
+class twisk.mondeIG.ArcIG {
+- PointDeControleIG PdcDepart
+- PointDeControleIG PdcArrive
+- boolean select
++ PointDeControleIG getPdcDepart()
++ PointDeControleIG getPdcArrive()
++ boolean isLinkedToStage(EtapeIG)
++ boolean isSelected()
++ void setSelect(boolean)
++ EtapeIG getEtapePdcDepart()
++ EtapeIG getEtapePdcArrive()
+}
+class twisk.mondeIG.MondeIG {
+- HashMap<String,EtapeIG> etapes
+- ArrayList<EtapeIG> etapesSelectionnees
+- ArrayList<ArcIG> arcs
+- int style
++ void ajouter(String)
++ Iterator<EtapeIG> iterator()
++ int nbEtapes()
++ void ajouter(PointDeControleIG,PointDeControleIG)
++ Iterator<ArcIG> iteratorArcs()
++ void creationArc(PointDeControleIG)
++ EtapeIG getEtapeIndice(String)
++ int getNbArcs()
++ void ajouterEtapeSelectionnee(EtapeIG)
++ boolean isSelectionned(EtapeIG)
++ void supprimerLaSelection()
++ void supprimer(Iterator<EtapeIG>)
++ void renommerLaSelection(String)
++ int nbEtapesSelectionnees()
++ void changerEmplacementEtape(String,int,int)
++ void selectionArc(ArcIG)
++ boolean isSelectionned(ArcIG)
++ void effacerLaSelection()
++ void setEntree()
++ void setSortie()
++ void setDelai(String)
++ void setEcart(String)
++ void setStyle(int)
++ int getStyle()
++ void setTokens(int)
++ boolean etapesSelectionneesSontDesGuichets()
+- void verifierMondeIG()
+- Monde creerMonde()
++ void simuler()
+}
+class twisk.mondeIG.ActiviteIG {
+- boolean estUneActiviteRestreinte
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ boolean setActiviteRestreinte(boolean)
+}
+class twisk.mondeIG.GuichetIG {
+- int nbJetons
+- int numSemaphore
++ boolean estUnGuichet()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ boolean setActiviteRestreinte(boolean)
+}
+
+
+twisk.mondeIG.Iterable <|.. twisk.mondeIG.EtapeIG
+twisk.designPattern.SujetObserve <|-- twisk.mondeIG.MondeIG
+twisk.mondeIG.EtapeIG <|-- twisk.mondeIG.ActiviteIG
+twisk.mondeIG.EtapeIG <|-- twisk.mondeIG.GuichetIG
+@enduml

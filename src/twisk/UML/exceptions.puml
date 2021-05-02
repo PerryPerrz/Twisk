@@ -1,0 +1,22 @@
+@startuml
+class twisk.exceptions.SameActivityException {
+}
+abstract class twisk.exceptions.TwiskException {
+}
+class twisk.exceptions.ArcAlreadyCreateException {
+}
+class twisk.exceptions.MondeException {
+}
+class twisk.exceptions.CreateArcWithEndPdcException {
+}
+class twisk.exceptions.UncorrectSettingsException {
+}
+
+
+twisk.exceptions.TwiskException <|-- twisk.exceptions.SameActivityException
+twisk.exceptions.Exception <|-- twisk.exceptions.TwiskException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.ArcAlreadyCreateException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.MondeException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.CreateArcWithEndPdcException
+twisk.exceptions.Exception <|-- twisk.exceptions.UncorrectSettingsException
+@enduml

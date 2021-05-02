@@ -1,0 +1,10 @@
+@startuml
+interface twisk.designPattern.Observateur {
+~ void reagir()
+}
+class twisk.designPattern.SujetObserve {
+- ArrayList<Observateur> observateurs
++ void ajouterObservateur(Observateur)
++ void notifierObservateurs()
+}
+@enduml
