@@ -467,7 +467,7 @@ public class MondeIG extends SujetObserve {
         boolean aUneEtape = this.nbEtapes() != 0;
         boolean mankUnSucc = false; //Une étape n'a pas de succ
         boolean nePossedePasUneActiviteRestreinte = false;
-        boolean transformationEffectuee = false;
+        boolean transformationEffectuee = true;
 
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
@@ -475,7 +475,7 @@ public class MondeIG extends SujetObserve {
                 aUneEntree = true;
             if (e.estUneSortie())
                 aUneSortie = true;
-            if (!e.possedeUnSuccesseur())
+            else if (!e.possedeUnSuccesseur())
                 mankUnSucc = true;
             if (e.estUnGuichet())
                 if (!e.estSuivieDUneActivite())
@@ -485,13 +485,13 @@ public class MondeIG extends SujetObserve {
         }
 
         if (!aUneEntree || !aUneSortie || !aUneEtape)
-            throw new MondeException("Attention, le monde ne possède pas d'entrée, de sortie ou d'étape !");
+            throw new MondeException("Le monde ne possède pas d'entrée, de sortie ou d'étape");
         if (mankUnSucc)
-            throw new MondeException("Attention, une étape n'a pas de successeur !");
+            throw new MondeException("Une étape n'a pas de successeur");
         if (nePossedePasUneActiviteRestreinte)
-            throw new MondeException("Attention, un guichet n'est pas suivie par une activité !");
+            throw new MondeException("Un guichet n'est pas suivie par une activité");
         if (!transformationEffectuee)
-            throw new MondeException("Erreur lors du passage d'une activité vers une activité restreinte !");
+            throw new MondeException("Transformartion d'une activité échouée");
     }
 
     /**

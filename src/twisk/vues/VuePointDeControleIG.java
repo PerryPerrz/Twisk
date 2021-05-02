@@ -16,6 +16,8 @@ import twisk.mondeIG.MondeIG;
 import twisk.mondeIG.PointDeControleIG;
 import twisk.outils.TailleComposants;
 
+import java.util.Objects;
+
 /**
  * La classe VuePointDeControleIG.
  */
@@ -45,7 +47,7 @@ public class VuePointDeControleIG extends Circle implements Observateur {
                 dialog.setHeaderText("Impossible de créer cet arc!");
                 dialog.setContentText("Erreur : On ne peut pas créer un arc déjà créer!\n" +
                         "Veuillez ré-essayer");
-                Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/warning.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon = new ImageView(image);
                 dialog.setGraphic(icon);
                 dialog.show();
@@ -58,7 +60,7 @@ public class VuePointDeControleIG extends Circle implements Observateur {
                 dialog.setTitle("CreateArcWithEndPdcException");
                 dialog.setHeaderText("Impossible de créer cet arc!");
                 dialog.setContentText("Erreur : Un arc ne peut pas partir du point d'arrivé d'un autre arc!\n Veuillez ré-essayer");
-                Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/cone.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/cone.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon = new ImageView(image);
                 dialog.setGraphic(icon);
                 dialog.show();
@@ -71,7 +73,7 @@ public class VuePointDeControleIG extends Circle implements Observateur {
                 dialog.setTitle("SameActivityException");
                 dialog.setHeaderText("Impossible de créer cet arc!");
                 dialog.setContentText("Erreur : Vous ne pouvez pas créer d'arcs entre 2 points de controle identiques!\nVeuillez ré-essayer");
-                Image image = new Image(getClass().getResourceAsStream("/twisk/ressources/images/siren.png"), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/siren.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon = new ImageView(image);
                 dialog.setGraphic(icon);
                 dialog.show();
