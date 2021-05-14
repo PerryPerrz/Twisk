@@ -92,13 +92,29 @@ public class Monde implements Iterable<Etape> {
      * @return une chaine de caractère.
      */
     public String toC() {
-        return "#include \"def.h\"\n" +
-                "#include <stdlib.h>\n" +
-                "#include <sys/types.h>\n" +
-                "#include <unistd.h>\n" +
-                "void simulation(int ids) {\n" +
-                "srand(getpid());\n" +
-                sasE.toC() + "}";
+        StringBuilder strBuilder = new StringBuilder(100);
+        //On s'occupe des include
+        strBuilder.append("#include \"def.h\"\n");
+        strBuilder.append("#include <stdlib.h>\n");
+        strBuilder.append("#include <sys/types.h>\n");
+        strBuilder.append("#include <unistd.h>\n");
+
+        //On s'occupe des define
+        for (Etape e : ge) {
+            strBuilder.append("#define ");
+            if (e.estUnGuichet()) {
+                strBuilder.append("SEM_").append(e.getNomMaj()).append(" ").append(e.getNumSem());
+                strBuilder.append("\n#define ");
+            }
+            strBuilder.append(e.getNomMaj()).append(" ").append(e.getNum()).append("\n");
+        }
+
+        //On s'occupe du corps de la fonction main
+        strBuilder.append("void simulation(int ids) {\n");
+        strBuilder.append("srand(getpid());\n");
+        strBuilder.append(sasE.toC()).append("}");
+
+        return strBuilder.toString();
     }
 
     /**

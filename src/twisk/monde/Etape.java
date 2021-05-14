@@ -3,6 +3,7 @@ package twisk.monde;
 import twisk.outils.FabriqueNumero;
 
 import java.util.Iterator;
+import java.util.Locale;
 
 /**
  * La classe Etape.
@@ -138,4 +139,13 @@ public abstract class Etape implements Iterable<Etape> {
      * @return le numéro de sémaphore
      */
     public abstract int getNumSem();
+
+    /**
+     * Fonction qui retourne le nom de l'étape en majuscules (utiles pour les defines du code c) (utile pour clarifier le code)
+     *
+     * @return le nom en majuscules
+     */
+    public String getNomMaj() {
+        return getNom().toUpperCase(Locale.ROOT);
+    }
 }

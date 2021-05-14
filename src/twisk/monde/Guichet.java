@@ -89,21 +89,21 @@ public class Guichet extends Etape {
     public String toC() { //On assume que le monde est correct et donc que l'étape suivant un guichet est bien une activité restreinte
         StringBuilder stB = new StringBuilder(200);
         if (getSucc().nbSuccesseurs() == 1) {
-            stB.append("P(ids, ").append(getNumSemaphore()).append(");\n");
-            stB.append("transfert(").append(getNum()).append(", ").append(getSucc().getNum()).append(");\n");
-            stB.append(getSucc().toC()).append("V(ids, ").append(getNumSemaphore()).append(");\n");
-            stB.append("transfert(").append(getSucc().getNum()).append(", ").append(getSucc().getSucc().getNum()).append(");\n");
+            stB.append("P(ids, ").append("SEM_").append(getNomMaj()).append(");\n");
+            stB.append("transfert(").append(getNomMaj()).append(", ").append(getSucc().getNomMaj()).append(");\n");
+            stB.append(getSucc().toC()).append("V(ids, ").append("SEM_").append(getNomMaj()).append(");\n");
+            stB.append("transfert(").append(getSucc().getNomMaj()).append(", ").append(getSucc().getSucc().getNomMaj()).append(");\n");
             stB.append(getSucc().getSucc().toC());
         } else {
             stB.append("int nb").append(getNum()).append(" = (int) ((rand() / (float) RAND_MAX)*").append(nbSuccesseurs()).append(");\n");
-            stB.append("switch(nb)\n");
+            stB.append("switch(nb").append(getNum()).append(")\n");
             stB.append("{\n");
             for (int i = 0; i < getSucc().nbSuccesseurs(); i++) {
                 stB.append("case ").append(i).append(" :\n");
-                stB.append("P(ids, ").append(getNumSemaphore()).append(");\n");
-                stB.append("transfert(").append(getNum()).append(", ").append(getSucc().getNum()).append(");\n");
-                stB.append(getSucc().toC()).append("V(ids, ").append(getNumSemaphore()).append(");\n");
-                stB.append("transfert(").append(getSucc().getNum()).append(", ").append(getSucc().getSuccI(i).getNum()).append(");\n");
+                stB.append("P(ids, ").append("SEM_").append(getNomMaj()).append(");\n");
+                stB.append("transfert(").append(getNomMaj()).append(", ").append(getSucc().getNomMaj()).append(");\n");
+                stB.append(getSucc().toC()).append("V(ids, ").append("SEM_").append(getNomMaj()).append(");\n");
+                stB.append("transfert(").append(getSucc().getNomMaj()).append(", ").append(getSucc().getSuccI(i).getNomMaj()).append(");\n");
                 stB.append(getSucc().getSuccI(i).toC());
                 stB.append("break;\n");
             }

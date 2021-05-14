@@ -16,7 +16,7 @@ public class GuichetIG extends EtapeIG {
         super(nom, idf);
         FabriqueIdentifiant fab = FabriqueIdentifiant.getInstance();
         this.numSemaphore = fab.getNumSem();
-        this.nbJetons = 0;
+        this.nbJetons = 2;
     }
 
     /**

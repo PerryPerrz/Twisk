@@ -37,7 +37,7 @@ public class MondeIG extends SujetObserve {
         etapesSelectionnees = new ArrayList<>(10);
         arcs = new ArrayList<>(10);
         String id = fabID.getIdentifiantEtape();
-        ActiviteIG activite = new ActiviteIG("Activité n°" + id, id);
+        ActiviteIG activite = new ActiviteIG("Activite" + id, id);
         this.etapes.put(id, activite);
         this.style = 2;
     }
@@ -52,13 +52,13 @@ public class MondeIG extends SujetObserve {
         String id = fabID.getIdentifiantEtape();
         switch (type) {
             case "Activite":
-                ActiviteIG activite = new ActiviteIG("Activité n°" + id, id);
+                ActiviteIG activite = new ActiviteIG("Activite" + id, id);
                 this.etapes.put(id, activite);
                 this.notifierObservateurs();
                 break;
 
             case "Guichet":
-                GuichetIG guichet = new GuichetIG("Guichet n°" + id, id);
+                GuichetIG guichet = new GuichetIG("Guichet" + id, id);
                 this.etapes.put(id, guichet);
                 this.notifierObservateurs();
                 break;
