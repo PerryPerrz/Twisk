@@ -19,4 +19,14 @@ public class CorrespondanceEtapes {
     public Etape get(EtapeIG e) {
         return correspondances.get(e);
     }
+
+    public EtapeIG get(Etape e) {
+        EtapeIG eig = null;
+        for (EtapeIG eIG : this.correspondances.keySet()) {
+            if (this.correspondances.get(eIG) == e) {
+                eig = eIG;
+            }
+        }
+        return eig;
+    }
 }

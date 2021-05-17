@@ -148,4 +148,22 @@ public abstract class Etape implements Iterable<Etape> {
     public String getNomMaj() {
         return getNom().toUpperCase(Locale.ROOT);
     }
+
+    /**
+     * Fonction qui retourne vrai si l'étape est le sas entrée
+     *
+     * @return un booléen
+     */
+    public boolean estUnSasEntree() {
+        return false;
+    }
+
+    /**
+     * Fonction qui retourne vrai si l'étape est le sas sortie
+     *
+     * @return un booléen
+     */
+    public boolean estUnSasSortie() {
+        return false;
+    }
 }

@@ -27,6 +27,7 @@ public class MondeIG extends SujetObserve implements Observateur {
     private final ArrayList<EtapeIG> etapesSelectionnees;
     private final ArrayList<ArcIG> arcs;
     private int style;
+    private CorrespondanceEtapes corE;
     private Object simulation;
 
     /**
@@ -502,7 +503,7 @@ public class MondeIG extends SujetObserve implements Observateur {
      * @return Le monde
      */
     private Monde creerMonde() {
-        CorrespondanceEtapes corE = new CorrespondanceEtapes();
+        this.corE = new CorrespondanceEtapes();
         Monde monde = new Monde();
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
@@ -571,6 +572,15 @@ public class MondeIG extends SujetObserve implements Observateur {
         } catch (InstantiationException e) {
             System.out.println("Erreur lors de l'instanciation de la classe twisk.simulation.Simulation !");
         }
+    }
+
+    /**
+     * Fonction qui retourne la correspondance étape du monde
+     *
+     * @return la correspondance étape
+     */
+    public CorrespondanceEtapes getCorE() {
+        return corE;
     }
 
     @Override

@@ -16,4 +16,9 @@ public class SasSortie extends Activite {
     public String toC() {
         return "";
     }
+
+    @Override
+    public boolean estUnSasSortie() {
+        return true;
+    }
 }

@@ -36,4 +36,9 @@ public class SasEntree extends Activite {
         }
         return stB.toString();
     }
+
+    @Override
+    public boolean estUnSasEntree() {
+        return true;
+    }
 }

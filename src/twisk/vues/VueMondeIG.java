@@ -70,7 +70,7 @@ public class VueMondeIG extends Pane implements Observateur {
     public void reagir() {
         this.getChildren().clear();
         TailleComposants tC = TailleComposants.getInstance();
-        //il demande un iterator sur les arcs au monde puis parours les arcs avec un for
+        //Il demande un iterator sur les arcs au monde puis parcours les arcs avec un for
         for (Iterator<ArcIG> it = monde.iteratorArcs(); it.hasNext(); ) {
             ArcIG a = it.next();
             VueArcIG viewArk = new VueArcIG(monde, a);
