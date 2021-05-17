@@ -1,5 +1,6 @@
 package twisk.simulation;
 
+import twisk.designPattern.SujetObserve;
 import twisk.monde.Monde;
 import twisk.outils.FabriqueNumero;
 import twisk.outils.KitC;
@@ -7,7 +8,7 @@ import twisk.outils.KitC;
 /**
  * La classe Simulation.
  */
-public class Simulation {
+public class Simulation extends SujetObserve {
     private int nbClients;
     private GestionnaireClients gestCli;
 
@@ -15,6 +16,7 @@ public class Simulation {
      * Constructeur de la classe Simulation.
      */
     public Simulation() {
+        super();
     }
 
     /**
@@ -57,6 +59,7 @@ public class Simulation {
                 }
                 System.out.println();
             }
+            notifierObservateurs();
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             try {
                 Thread.sleep(500);

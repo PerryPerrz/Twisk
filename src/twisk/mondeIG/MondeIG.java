@@ -1,6 +1,7 @@
 package twisk.mondeIG;
 
 import twisk.ClientTwisk;
+import twisk.designPattern.Observateur;
 import twisk.designPattern.SujetObserve;
 import twisk.exceptions.*;
 import twisk.monde.Activite;
@@ -21,11 +22,12 @@ import java.util.Iterator;
 /**
  * La classe MondeIG.
  */
-public class MondeIG extends SujetObserve {
+public class MondeIG extends SujetObserve implements Observateur {
     private final HashMap<String, EtapeIG> etapes;
     private final ArrayList<EtapeIG> etapesSelectionnees;
     private final ArrayList<ArcIG> arcs;
     private int style;
+    private Object simulation;
 
     /**
      * Constructeur de la classe MondeIG.
@@ -543,9 +545,17 @@ public class MondeIG extends SujetObserve {
         Monde monde = creerMonde();
         ClassLoaderPerso classLoaderPerso = new ClassLoaderPerso(ClientTwisk.class.getClassLoader());
         try {
+            //On récupère une instance de Simulation par le biais de notre ClassLoader
             Class<?> clS = classLoaderPerso.loadClass("twisk.simulation.Simulation");
             Constructor<?> constructeur = clS.getDeclaredConstructor();
             Object instanceSim = constructeur.newInstance();
+
+            //On stocke l'instance dans la classe et on définit la classe comme observateur de l'instance de Simulation
+            this.simulation = instanceSim;
+            Method procedureAjouterObs = clS.getMethod("ajouterObservateur", Observateur.class);
+            procedureAjouterObs.invoke(this.simulation, this);
+
+            //On lance la simulation
             Method fonctionSetNbClients = clS.getMethod("setNbClients", int.class);
             fonctionSetNbClients.invoke(instanceSim, 5);
             Method fonctionSimuler = clS.getMethod("simuler", Monde.class);
@@ -561,5 +571,10 @@ public class MondeIG extends SujetObserve {
         } catch (InstantiationException e) {
             System.out.println("Erreur lors de l'instanciation de la classe twisk.simulation.Simulation !");
         }
+    }
+
+    @Override
+    public void reagir() {
+        notifierObservateurs();
     }
 }
