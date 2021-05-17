@@ -55,7 +55,7 @@ public class Simulation extends SujetObserve {
                 System.out.print("" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
                 for (int j = 0; j < temp; j++) {//On parcourt les clients qu'il y a dans l'étape.
                     System.out.print(tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
-                    gestCli.allerA(tabClientsEtapes[(i * nbClients) + i + j + 1], monde.getEtapeI(i), i);
+                    gestCli.allerA(tabClientsEtapes[(i * nbClients) + i + j + 1], monde.getEtapeI(i), j);
                 }
                 System.out.println();
             }
