@@ -11,12 +11,14 @@ import twisk.outils.KitC;
 public class Simulation extends SujetObserve {
     private int nbClients;
     private GestionnaireClients gestCli;
+    private boolean simulationFinie;
 
     /**
      * Constructeur de la classe Simulation.
      */
     public Simulation() {
         super();
+        this.simulationFinie = false;
     }
 
     /**
@@ -25,6 +27,7 @@ public class Simulation extends SujetObserve {
      * @param monde le monde utilisé pour la simulation
      */
     public void simuler(Monde monde) {
+        this.simulationFinie = false;
         FabriqueNumero fab = FabriqueNumero.getInstance();
         System.out.println(monde.toString() + "\n");
         KitC kitC = new KitC();
@@ -69,6 +72,8 @@ public class Simulation extends SujetObserve {
         }
         System.out.println("Simulation terminee, tous les clients sont dans le sas de sortie !");
         nettoyage();
+        this.simulationFinie = true;
+        notifierObservateurs();
     }
 
     /**
@@ -103,5 +108,23 @@ public class Simulation extends SujetObserve {
      */
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;
+    }
+
+    /**
+     * Fonction qui retourne le gestionnaire de clients de la simulation
+     *
+     * @return le gestionnaire de client
+     */
+    public GestionnaireClients getGestCli() {
+        return gestCli;
+    }
+
+    /**
+     * Fonction qui retourne vrai si la simulation est finie.
+     *
+     * @return un booléen
+     */
+    public boolean isSimulationFinie() {
+        return simulationFinie;
     }
 }

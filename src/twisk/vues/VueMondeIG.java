@@ -9,6 +9,7 @@ import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
 import twisk.mondeIG.PointDeControleIG;
 import twisk.outils.TailleComposants;
+import twisk.simulation.Client;
 
 import java.util.Iterator;
 
@@ -90,6 +91,14 @@ public class VueMondeIG extends Pane implements Observateur {
             for (PointDeControleIG pdc : etape) {
                 VuePointDeControleIG viewPdc = new VuePointDeControleIG(this.monde, pdc);
                 this.getChildren().add(viewPdc);
+            }
+        }
+        if (this.monde.simulationACommencee()) {
+            for (Client cl : this.monde.getGestionnaireClientDeSimulation()) {
+                VueClient viewC = new VueClient(this.monde, cl);
+                this.getChildren().add(viewC);
+                System.out.println(viewC.getCenterX());
+                System.out.println(viewC.getCenterY());
             }
         }
         switch (monde.getStyle()) {

@@ -11,6 +11,7 @@ import twisk.monde.Monde;
 import twisk.outils.ClassLoaderPerso;
 import twisk.outils.CorrespondanceEtapes;
 import twisk.outils.FabriqueIdentifiant;
+import twisk.simulation.GestionnaireClients;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -581,6 +582,38 @@ public class MondeIG extends SujetObserve implements Observateur {
      */
     public CorrespondanceEtapes getCorE() {
         return corE;
+    }
+
+    public GestionnaireClients getGestionnaireClientDeSimulation() {
+        GestionnaireClients ge = null;
+        if (simulationACommencee()) { //On vérifie si la simulation est déjà commencée
+            try {
+                Method fonctionGetGestClient = simulation.getClass().getMethod("getGestCli");
+                ge = (GestionnaireClients) fonctionGetGestClient.invoke(this.simulation); //On donne l'objet sur lequel on appel la fonction fonctionGetGestClient soit ici this.simulation.
+            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        }
+        return ge;
+    }
+
+    /**
+     * Fonction qui retourne true si la simulation à commencée
+     *
+     * @return un booléen
+     */
+    public boolean simulationACommencee() {
+        boolean isSimuled = this.simulation != null;
+        Method fonctionEstSimulee = null;
+        if (isSimuled) {
+            try {
+                fonctionEstSimulee = simulation.getClass().getMethod("isSimulationFinie");
+                isSimuled = (boolean) fonctionEstSimulee.invoke(this.simulation);
+            } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+        return isSimuled;
     }
 
     @Override
