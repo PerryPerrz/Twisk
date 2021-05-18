@@ -1,8 +1,10 @@
 package twisk.simulation;
 
+import javafx.concurrent.Task;
 import twisk.designPattern.SujetObserve;
 import twisk.monde.Monde;
 import twisk.outils.FabriqueNumero;
+import twisk.outils.GestionnaireThreads;
 import twisk.outils.KitC;
 
 /**
@@ -27,53 +29,59 @@ public class Simulation extends SujetObserve {
      * @param monde le monde utilisé pour la simulation
      */
     public void simuler(Monde monde) {
-        this.simulationFinie = false;
-        FabriqueNumero fab = FabriqueNumero.getInstance();
-        System.out.println(monde.toString() + "\n");
-        KitC kitC = new KitC();
-        kitC.creerEnvironnement();
-        kitC.creerFichier(monde.toC());
-        kitC.compiler();
-        kitC.construireLaLibrairie();
-        //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
-        System.load("/tmp/twisk/libTwisk" + fab.consulterNumeroLibraire() + ".so");
-        int[] tabJetonsGuichet = new int[monde.nbGuichets()];
-        for (int i = 0; i < monde.nbGuichets(); i++)
-            tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i + 1); //num de Sémaphore commence à 1
-        int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);
-        System.out.print("PID des clients : ");
-        for (int i = 0; i < nbClients; i++) {
-            System.out.print(numProc[i] + ", ");
-        }
-        System.out.println("\n");
-        this.gestCli = new GestionnaireClients(nbClients);
-        gestCli.setClients(numProc);
+        Task<Void> task = new Task<>() {
+            @Override
+            protected Void call() throws Exception {
+                try {
+                    simulationFinie = false;
+                    FabriqueNumero fab = FabriqueNumero.getInstance();
+                    System.out.println(monde.toString() + "\n");
+                    KitC kitC = new KitC();
+                    kitC.creerEnvironnement();
+                    kitC.creerFichier(monde.toC());
+                    kitC.compiler();
+                    kitC.construireLaLibrairie();
+                    //On charge la libraire C pour utiliser les fonctions natives définies ci-dessous
+                    System.load("/tmp/twisk/libTwisk" + fab.consulterNumeroLibraire() + ".so");
+                    int[] tabJetonsGuichet = new int[monde.nbGuichets()];
+                    for (int i = 0; i < monde.nbGuichets(); i++)
+                        tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i + 1); //num de Sémaphore commence à 1
+                    int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);
+                    System.out.print("PID des clients : ");
+                    for (int i = 0; i < nbClients; i++) {
+                        System.out.print(numProc[i] + ", ");
+                    }
+                    System.out.println("\n");
+                    gestCli = new GestionnaireClients(nbClients);
+                    gestCli.setClients(numProc);
 
-        //On affiche les clients dans les étapes
-        int[] tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
-        while (nbClients != tabClientsEtapes[monde.getNumSasSortie() * nbClients + monde.getNumSasSortie()]) {
-            tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
-            for (int i = 0; i < monde.nbEtapes(); i++) {
-                int temp = tabClientsEtapes[(i * nbClients) + i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
-                System.out.print("" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
-                for (int j = 0; j < temp; j++) {//On parcourt les clients qu'il y a dans l'étape.
-                    System.out.print(tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
-                    gestCli.allerA(tabClientsEtapes[(i * nbClients) + i + j + 1], monde.getEtapeI(i), j);
+                    //On affiche les clients dans les étapes
+                    int[] tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
+                    while (nbClients != tabClientsEtapes[monde.getNumSasSortie() * nbClients + monde.getNumSasSortie()]) {
+                        tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
+                        for (int i = 0; i < monde.nbEtapes(); i++) {
+                            int temp = tabClientsEtapes[(i * nbClients) + i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
+                            System.out.print("" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
+                            for (int j = 0; j < temp; j++) {//On parcourt les clients qu'il y a dans l'étape.
+                                System.out.print(tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
+                                gestCli.allerA(tabClientsEtapes[(i * nbClients) + i + j + 1], monde.getEtapeI(i), j);
+                            }
+                            System.out.println();
+                        }
+                        notifierObservateurs();
+                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        Thread.sleep(500);
+                    }
+                    System.out.println("Simulation terminee, tous les clients sont dans le sas de sortie !");
+                    nettoyage();
+                    simulationFinie = true;
+                    notifierObservateurs();
+                } catch (InterruptedException e) {
                 }
-                System.out.println();
+                return null;
             }
-            notifierObservateurs();
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("Simulation terminee, tous les clients sont dans le sas de sortie !");
-        nettoyage();
-        this.simulationFinie = true;
-        notifierObservateurs();
+        };
+        GestionnaireThreads.getInstance().lancer(task);
     }
 
     /**

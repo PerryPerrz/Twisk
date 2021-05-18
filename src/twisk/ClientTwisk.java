@@ -5,6 +5,7 @@ import twisk.monde.ActiviteRestreinte;
 import twisk.monde.Guichet;
 import twisk.monde.Monde;
 import twisk.outils.ClassLoaderPerso;
+import twisk.outils.GestionnaireThreads;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -115,5 +116,6 @@ public class ClientTwisk {
         } catch (InstantiationException e) {
             System.out.println("Erreur lors de l'instanciation de la classe twisk.simulation.Simulation !");
         }
+        GestionnaireThreads.getInstance().detruireTout();
     }
 }

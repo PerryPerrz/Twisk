@@ -9,6 +9,7 @@ import javafx.util.Duration;
 import twisk.designPattern.Observateur;
 import twisk.exceptions.UncorrectSettingsException;
 import twisk.mondeIG.MondeIG;
+import twisk.outils.GestionnaireThreads;
 import twisk.outils.TailleComposants;
 
 import java.util.Objects;
@@ -65,7 +66,10 @@ public class VueMenu extends MenuBar implements Observateur {
         this.style.getItems().add(reset);
         this.parametres.getItems().add(jetons);
 
-        quitter.setOnAction(actionEvent -> Platform.exit());
+        quitter.setOnAction(actionEvent -> {
+            GestionnaireThreads.getInstance().detruireTout();
+            Platform.exit();
+        });
         supprimer.setOnAction(actionEvent -> monde.supprimerLaSelection());
         renommer.setOnAction(actionEvent -> this.rename());
         effacer.setOnAction(actionEvent -> monde.effacerLaSelection());

@@ -568,6 +568,7 @@ public class MondeIG extends SujetObserve implements Observateur {
             System.out.println("Erreur, fonction non trouvée dans la classe twisk.simulation.Simulation !");
         } catch (InvocationTargetException e) {
             System.out.println("Erreur lors de l'appel d'une fonction de la classe twisk.simulation.Simulation !");
+            e.printStackTrace();
         } catch (IllegalAccessException e) {
             System.out.println("Erreur, appel illegal d'une fonction de la classe twisk.simulation.Simulation !");
         } catch (InstantiationException e) {
