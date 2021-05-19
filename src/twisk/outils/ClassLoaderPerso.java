@@ -21,7 +21,7 @@ public class ClassLoaderPerso extends ClassLoader {
      */
     @Override
     public Class<?> loadClass(String name) throws ClassNotFoundException {
-        if (name.equals("twisk.simulation.Simulation")) {
+        if (name.startsWith("twisk.simulation.Simulation")) {
             return getClass(name);
         }
         return super.loadClass(name);
@@ -44,7 +44,6 @@ public class ClassLoaderPerso extends ClassLoader {
 
             Class<?> c = defineClass(name, byteArr, 0, byteArr.length);
             resolveClass(c);
-            System.out.println("la classe retournée : " + c);
             return c;
         } catch (IOException e) {
             e.printStackTrace();

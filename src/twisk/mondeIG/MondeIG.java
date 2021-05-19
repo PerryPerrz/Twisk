@@ -549,6 +549,7 @@ public class MondeIG extends SujetObserve implements Observateur {
         try {
             //On récupère une instance de Simulation par le biais de notre ClassLoader
             Class<?> clS = classLoaderPerso.loadClass("twisk.simulation.Simulation");
+            Class<?> clS1 = classLoaderPerso.loadClass("twisk.simulation.Simulation$1");
             Constructor<?> constructeur = clS.getDeclaredConstructor();
             Object instanceSim = constructeur.newInstance();
 
@@ -605,10 +606,9 @@ public class MondeIG extends SujetObserve implements Observateur {
      */
     public boolean simulationACommencee() {
         boolean isSimuled = this.simulation != null;
-        Method fonctionEstSimulee = null;
         if (isSimuled) {
             try {
-                fonctionEstSimulee = simulation.getClass().getMethod("isSimulationFinie");
+                Method fonctionEstSimulee = simulation.getClass().getMethod("isSimulationFinie");
                 isSimuled = (boolean) fonctionEstSimulee.invoke(this.simulation);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                 e.printStackTrace();

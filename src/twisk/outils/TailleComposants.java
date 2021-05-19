@@ -23,7 +23,7 @@ public class TailleComposants {
      */
     private TailleComposants() {
         this.largAct = 120;
-        this.hautAct = 44;
+        this.hautAct = 88;
         this.tailleBouton = 35;
         this.windowX = 700;
         this.windowY = 600;
