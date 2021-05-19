@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -90,8 +91,15 @@ public class VuePointDeControleIG extends Circle implements Observateur {
 
     @Override
     public void reagir() {
-        //On change les coordonnées du cercle à la nouvelle place du pdc
-        this.setCenterX(this.pdc.getCentreX());
-        this.setCenterY(this.pdc.getCentreY());
+        Runnable command = () -> {
+            //On change les coordonnées du cercle à la nouvelle place du pdc
+            this.setCenterX(this.pdc.getCentreX());
+            this.setCenterY(this.pdc.getCentreY());
+        };
+        if (Platform.isFxApplicationThread()) {
+            command.run();
+        } else {
+            Platform.runLater(command);
+        }
     }
 }

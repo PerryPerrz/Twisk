@@ -81,6 +81,7 @@ public class Simulation extends SujetObserve {
                 return null;
             }
         };
+        //On lance la fonction dans un Thread différent du Thread graphique car il y a trop de fonctions s'exécutant en même temps
         GestionnaireThreads.getInstance().lancer(task);
     }
 

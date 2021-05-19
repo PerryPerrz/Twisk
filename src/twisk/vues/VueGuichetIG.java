@@ -1,5 +1,6 @@
 package twisk.vues;
 
+import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import twisk.designPattern.Observateur;
@@ -27,9 +28,16 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
 
     @Override
     public void reagir() {
-        this.relocate(etape.getPosX(), etape.getPosY());
-        if (monde.isSelectionned(etape)) {
-            this.setStyle("-fx-border-color: #f4abc4;-fx-border-width: 2px;-fx-background-color: #f4abc4;");
+        Runnable command = () -> {
+            this.relocate(etape.getPosX(), etape.getPosY());
+            if (monde.isSelectionned(etape)) {
+                this.setStyle("-fx-border-color: #f4abc4;-fx-border-width: 2px;-fx-background-color: #f4abc4;");
+            }
+        };
+        if (Platform.isFxApplicationThread()) {
+            command.run();
+        } else {
+            Platform.runLater(command);
         }
     }
 }

@@ -164,13 +164,20 @@ public class VueMenu extends MenuBar implements Observateur {
 
     @Override
     public void reagir() {
-        edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
-        parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
-        parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
-        if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
-            parametres.getItems().get(2).setDisable(true);
-        else //Si l'étape concernée est un guichet
-            parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
+        Runnable command = () -> {
+            edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
+            parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
+            parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
+            if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
+                parametres.getItems().get(2).setDisable(true);
+            else //Si l'étape concernée est un guichet
+                parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
+        };
+        if (Platform.isFxApplicationThread()) {
+            command.run();
+        } else {
+            Platform.runLater(command);
+        }
     }
 
     /**

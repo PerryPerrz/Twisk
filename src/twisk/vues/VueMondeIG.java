@@ -70,51 +70,48 @@ public class VueMondeIG extends Pane implements Observateur {
 
     @Override
     public void reagir() {
-        Runnable command = new Runnable() {
-            @Override
-            public void run() {
-                getChildren().clear();
-                TailleComposants tC = TailleComposants.getInstance();
-                //Il demande un iterator sur les arcs au monde puis parcours les arcs avec un for
-                for (Iterator<ArcIG> it = monde.iteratorArcs(); it.hasNext(); ) {
-                    ArcIG a = it.next();
-                    VueArcIG viewArk = new VueArcIG(monde, a);
-                    getChildren().add(viewArk);
+        Runnable command = () -> {
+            getChildren().clear();
+            TailleComposants tC = TailleComposants.getInstance();
+            //Il demande un iterator sur les arcs au monde puis parcours les arcs avec un for
+            for (Iterator<ArcIG> it = monde.iteratorArcs(); it.hasNext(); ) {
+                ArcIG a = it.next();
+                VueArcIG viewArk = new VueArcIG(monde, a);
+                getChildren().add(viewArk);
+            }
+            for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
+                EtapeIG etape = iter.next();
+                if (etape.estUneActivite()) {
+                    VueActiviteIG viewA = new VueActiviteIG(monde, etape);
+                    viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
+                    getChildren().add(viewA);
+                } else {
+                    VueGuichetIG viewG = new VueGuichetIG(monde, etape);
+                    viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
+                    getChildren().add(viewG);
                 }
-                for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
-                    EtapeIG etape = iter.next();
-                    if (etape.estUneActivite()) {
-                        VueActiviteIG viewA = new VueActiviteIG(monde, etape);
-                        viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
-                        getChildren().add(viewA);
-                    } else {
-                        VueGuichetIG viewG = new VueGuichetIG(monde, etape);
-                        viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
-                        getChildren().add(viewG);
-                    }
-                    for (PointDeControleIG pdc : etape) {
-                        VuePointDeControleIG viewPdc = new VuePointDeControleIG(monde, pdc);
-                        getChildren().add(viewPdc);
-                    }
+                for (PointDeControleIG pdc : etape) {
+                    VuePointDeControleIG viewPdc = new VuePointDeControleIG(monde, pdc);
+                    getChildren().add(viewPdc);
                 }
-                if (monde.simulationACommencee()) {
-                    for (Client cl : monde.getGestionnaireClientDeSimulation()) {
-                        VueClient viewC = new VueClient(monde, cl);
-                        getChildren().add(viewC);
-                        System.out.println(viewC.getCenterX());
-                        System.out.println(viewC.getCenterY());
-                    }
+            }
+            if (monde.simulationACommencee()) {
+                for (Client cl : monde.getGestionnaireClientDeSimulation()) {
+                    VueClient viewC = new VueClient(monde, cl);
+                    getChildren().add(viewC);
+                    System.out.println(viewC.getCenterX());
+                    System.out.println(viewC.getCenterY());
                 }
-                switch (monde.getStyle()) {
-                    case 0:
-                        getParent().setStyle("-fx-background-color : #ffe268");
-                        break;
-                    case 1:
-                        getParent().setStyle("-fx-background-color : #151515");
-                        break;
-                    case 2:
-                        getParent().setStyle("-fx-background-color : #FFFFFF");
-                }
+            }
+            switch (monde.getStyle()) {
+                case 0:
+                    getParent().setStyle("-fx-background-color : #ffe268");
+                    break;
+                case 1:
+                    getParent().setStyle("-fx-background-color : #151515");
+                    break;
+                case 2:
+                    getParent().setStyle("-fx-background-color : #FFFFFF");
             }
         };
         if (Platform.isFxApplicationThread()) {

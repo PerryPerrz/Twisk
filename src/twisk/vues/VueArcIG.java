@@ -1,5 +1,6 @@
 package twisk.vues;
 
+import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
@@ -46,14 +47,22 @@ public class VueArcIG extends Pane implements Observateur {
     }
 
     public void reagir() {
-        this.getChildren().clear();
-        this.apparitionDeLaLigne(this.arc.getPdcArrive(), this.arc.getPdcDepart());
-        this.apparitionDuTriangle();
-        this.getChildren().addAll(ligne, triangle);
-        if (monde.isSelectionned(arc)) {
-            ligne.setStroke(Color.valueOf("#f4abc4"));
-            triangle.setStroke(Color.valueOf("#f4abc4"));
-            triangle.setFill(Color.valueOf("#f4abc4"));
+        //On force l'exécution dans le Thread Graphique car c'est une fonction graphique appelée par le modèle
+        Runnable command = () -> {
+            this.getChildren().clear();
+            this.apparitionDeLaLigne(this.arc.getPdcArrive(), this.arc.getPdcDepart());
+            this.apparitionDuTriangle();
+            this.getChildren().addAll(ligne, triangle);
+            if (monde.isSelectionned(arc)) {
+                ligne.setStroke(Color.valueOf("#f4abc4"));
+                triangle.setStroke(Color.valueOf("#f4abc4"));
+                triangle.setFill(Color.valueOf("#f4abc4"));
+            }
+        };
+        if (Platform.isFxApplicationThread()) {
+            command.run();
+        } else {
+            Platform.runLater(command);
         }
     }
 
