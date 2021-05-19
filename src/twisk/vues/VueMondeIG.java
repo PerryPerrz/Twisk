@@ -96,6 +96,7 @@ public class VueMondeIG extends Pane implements Observateur {
                 }
             }
             if (monde.simulationACommencee()) {
+                System.out.println("AAAAAAAAAAAAAH");
                 for (Client cl : monde.getGestionnaireClientDeSimulation()) {
                     VueClient viewC = new VueClient(monde, cl);
                     getChildren().add(viewC);

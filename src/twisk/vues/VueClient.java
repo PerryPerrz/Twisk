@@ -5,6 +5,7 @@ import javafx.scene.shape.Circle;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
+import twisk.outils.TailleComposants;
 import twisk.simulation.Client;
 
 /**
@@ -25,6 +26,7 @@ public class VueClient extends Circle implements Observateur {
             e = monde.getCorE().get(this.client.getEtape());
             this.setCenterX(e.getPosX());
             this.setCenterY(e.getPosY());
+            this.setRadius(TailleComposants.getInstance().getRad());
         }
     }
 

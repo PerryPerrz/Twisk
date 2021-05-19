@@ -608,7 +608,7 @@ public class MondeIG extends SujetObserve implements Observateur {
         boolean isSimuled = this.simulation != null;
         if (isSimuled) {
             try {
-                Method fonctionEstSimulee = simulation.getClass().getMethod("isSimulationFinie");
+                Method fonctionEstSimulee = simulation.getClass().getMethod("isEnCoursDeSimulation");
                 isSimuled = (boolean) fonctionEstSimulee.invoke(this.simulation);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                 e.printStackTrace();

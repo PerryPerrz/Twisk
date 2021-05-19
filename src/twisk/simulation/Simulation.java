@@ -13,14 +13,14 @@ import twisk.outils.KitC;
 public class Simulation extends SujetObserve {
     private int nbClients;
     private GestionnaireClients gestCli;
-    private boolean simulationFinie;
+    private boolean enCoursDeSimulation;
 
     /**
      * Constructeur de la classe Simulation.
      */
     public Simulation() {
         super();
-        this.simulationFinie = false;
+        this.enCoursDeSimulation = false;
     }
 
     /**
@@ -33,7 +33,7 @@ public class Simulation extends SujetObserve {
             @Override
             protected Void call() throws Exception {
                 try {
-                    simulationFinie = false;
+                    enCoursDeSimulation = true;
                     FabriqueNumero fab = FabriqueNumero.getInstance();
                     System.out.println(monde.toString() + "\n");
                     KitC kitC = new KitC();
@@ -74,7 +74,7 @@ public class Simulation extends SujetObserve {
                     }
                     System.out.println("Simulation terminee, tous les clients sont dans le sas de sortie !");
                     nettoyage();
-                    simulationFinie = true;
+                    enCoursDeSimulation = false;
                     notifierObservateurs();
                 } catch (InterruptedException e) {
                 }
@@ -129,11 +129,11 @@ public class Simulation extends SujetObserve {
     }
 
     /**
-     * Fonction qui retourne vrai si la simulation est finie.
+     * Fonction qui retourne vrai si la simulation est en cours.
      *
      * @return un booléen
      */
-    public boolean isSimulationFinie() {
-        return simulationFinie;
+    public boolean isEnCoursDeSimulation() {
+        return enCoursDeSimulation;
     }
 }
