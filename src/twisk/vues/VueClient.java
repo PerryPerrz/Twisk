@@ -24,10 +24,12 @@ public class VueClient extends Circle implements Observateur {
             this.setVisible(false);
         else {
             e = monde.getCorE().get(this.client.getEtape());
-            this.setCenterX(e.getPosX());
-            this.setCenterY(e.getPosY());
             this.setRadius(TailleComposants.getInstance().getRad());
         }
+    }
+
+    public EtapeIG getE() {
+        return e;
     }
 
     @Override

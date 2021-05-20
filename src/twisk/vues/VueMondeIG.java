@@ -12,6 +12,7 @@ import twisk.mondeIG.PointDeControleIG;
 import twisk.outils.TailleComposants;
 import twisk.simulation.Client;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -70,6 +71,8 @@ public class VueMondeIG extends Pane implements Observateur {
 
     @Override
     public void reagir() {
+        //La fonction réagir de VueMondeIG est la première à être appelée et elle réinstancie toutes les autres vues qu'elle contient.
+        //De ce fait, toutes les autres vues n'ont pas besoin de réagir car elle sont supprimées à chaque fois que l'on est sur le point de les faire réagir.
         Runnable command = () -> {
             getChildren().clear();
             TailleComposants tC = TailleComposants.getInstance();
@@ -79,16 +82,19 @@ public class VueMondeIG extends Pane implements Observateur {
                 VueArcIG viewArk = new VueArcIG(monde, a);
                 getChildren().add(viewArk);
             }
+            ArrayList<VueEtapeIG> vueEtapeIGS = new ArrayList<>(10); //Stockage des vues pour permettre aux clients de se poser dedans
             for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
                 EtapeIG etape = iter.next();
                 if (etape.estUneActivite()) {
                     VueActiviteIG viewA = new VueActiviteIG(monde, etape);
                     viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewA);
+                    vueEtapeIGS.add(viewA);
                 } else {
                     VueGuichetIG viewG = new VueGuichetIG(monde, etape);
                     viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewG);
+                    vueEtapeIGS.add(viewG);
                 }
                 for (PointDeControleIG pdc : etape) {
                     VuePointDeControleIG viewPdc = new VuePointDeControleIG(monde, pdc);
@@ -96,12 +102,13 @@ public class VueMondeIG extends Pane implements Observateur {
                 }
             }
             if (monde.simulationACommencee()) {
-                System.out.println("AAAAAAAAAAAAAH");
                 for (Client cl : monde.getGestionnaireClientDeSimulation()) {
                     VueClient viewC = new VueClient(monde, cl);
                     getChildren().add(viewC);
-                    System.out.println(viewC.getCenterX());
-                    System.out.println(viewC.getCenterY());
+                    for (VueEtapeIG vueE : vueEtapeIGS) {
+                        if (vueE.getEtape().equals(viewC.getE()))
+                            vueE.ajouterVueClient(viewC);
+                    }
                 }
             }
             switch (monde.getStyle()) {
