@@ -67,6 +67,10 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
 
         this.setMinSize(tc.getLargAct(), tc.getHautAct()); //Taille min de l'activité
         this.setMaxSize(tc.getLargAct(), tc.getHautAct()); //Taille max de l'activité
+        relocate(etape.getPosX(), etape.getPosY());
+        if (monde.isSelectionned(etape)) {
+            setStyle("-fx-border-color: #f4abc4;-fx-border-width: 2px;-fx-background-color: #f4abc4;");
+        }
     }
 
     /**
