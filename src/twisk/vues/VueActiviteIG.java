@@ -1,6 +1,5 @@
 package twisk.vues;
 
-import javafx.application.Platform;
 import javafx.scene.layout.HBox;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
@@ -27,21 +26,10 @@ public class VueActiviteIG extends VueEtapeIG implements Observateur {
         box.setPrefHeight(TailleComposants.getInstance().getHautAct());
         this.getChildren().add(box);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));
+        System.out.println(etape.getPosX() + ", " + etape.getPosY() + " de " + etape.getNom());
     }
 
     @Override
     public void reagir() {
-        //On force l'exécution dans le Thread Graphique car c'est une fonction graphique appelée par le modèle
-        Runnable command = () -> {
-            relocate(etape.getPosX(), etape.getPosY());
-            if (monde.isSelectionned(etape)) {
-                setStyle("-fx-border-color: #f4abc4;-fx-border-width: 2px;-fx-background-color: #f4abc4;");
-            }
-        };
-        if (Platform.isFxApplicationThread()) {
-            command.run();
-        } else {
-            Platform.runLater(command);
-        }
     }
 }
