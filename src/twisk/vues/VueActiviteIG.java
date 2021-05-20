@@ -23,10 +23,14 @@ public class VueActiviteIG extends VueEtapeIG implements Observateur {
         box = new HBox();
         this.label.setStyle("-fx-text-fill: #138D75");
         box.setStyle("-fx-border-color: #8F00FF; -fx-background-insets: 0 0 -1 0, 0, 1, 2; -fx-background-radius: 3px, 3px, 2px, 1px; -fx-border-width: 3px; -fx-background-color: #a2d5f2 ;");
-        box.setPrefHeight(TailleComposants.getInstance().getHautAct());
+        box.setPrefSize(TailleComposants.getInstance().getHautAct(), TailleComposants.getInstance().getLargAct());
         this.getChildren().add(box);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));
-        System.out.println(etape.getPosX() + ", " + etape.getPosY() + " de " + etape.getNom());
+    }
+
+    @Override
+    public void ajouterVueClient(VueClient viewC) {
+        box.getChildren().add(viewC);
     }
 
     @Override

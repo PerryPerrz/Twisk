@@ -87,4 +87,10 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
         dragboard.setContent(content);
         mouseEvent.consume(); //Cet event est finit.
     }
+
+    public EtapeIG getEtape() {
+        return etape;
+    }
+
+    public abstract void ajouterVueClient(VueClient viewC);
 }
