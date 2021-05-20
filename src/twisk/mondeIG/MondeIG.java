@@ -503,7 +503,7 @@ public class MondeIG extends SujetObserve implements Observateur {
      *
      * @return Le monde
      */
-    private Monde creerMonde() {
+    public Monde creerMonde() {
         this.corE = new CorrespondanceEtapes();
         Monde monde = new Monde();
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
