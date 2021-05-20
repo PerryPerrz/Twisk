@@ -11,6 +11,7 @@ import twisk.monde.Monde;
 import twisk.outils.ClassLoaderPerso;
 import twisk.outils.CorrespondanceEtapes;
 import twisk.outils.FabriqueIdentifiant;
+import twisk.outils.GestionnaireThreads;
 import twisk.simulation.GestionnaireClients;
 
 import java.lang.reflect.Constructor;
@@ -620,5 +621,23 @@ public class MondeIG extends SujetObserve implements Observateur {
     @Override
     public void reagir() {
         notifierObservateurs();
+    }
+
+    /**
+     * Procédure qui arrête la simulation
+     */
+    public void arretDeLaSimulation() {
+        GestionnaireThreads.getInstance().detruireTout();
+        //On tue les processus C des clients
+    }
+
+    public void lavageDesClients() {
+        try {
+            Method lavage = this.simulation.getClass().getMethod("nettoyage");
+            lavage.invoke(this.simulation);
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
     }
 }

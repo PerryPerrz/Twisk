@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
@@ -81,6 +82,20 @@ public class VueOutils extends TilePane implements Observateur {
 
     @Override
     public void reagir() {
-
+        Runnable command = () -> {
+            TailleComposants tC = TailleComposants.getInstance();
+            if (monde.simulationACommencee()) {
+                Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/arret.png")), tC.getTailleBouton(), tC.getTailleBouton(), true, true);
+                ImageView icon = new ImageView(image);
+                boutonSimulation.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
+                boutonSimulation.setGraphic(icon);
+                this.boutonSimulation.setOnAction(actionEvent -> monde.arretDeLaSimulation());
+            }
+        };
+        if (Platform.isFxApplicationThread()) {
+            command.run();
+        } else {
+            Platform.runLater(command);
+        }
     }
 }

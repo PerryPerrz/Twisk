@@ -1,6 +1,8 @@
 package twisk.outils;
 
 
+import twisk.mondeIG.MondeIG;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -114,5 +116,14 @@ public class KitC {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Procédure qui tue tout les processus C
+     *
+     * @param monde, le monde
+     */
+    void tuerLesProcessusC(MondeIG monde) {
+        monde.lavageDesClients();
     }
 }
