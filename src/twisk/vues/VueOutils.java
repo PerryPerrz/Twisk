@@ -89,7 +89,19 @@ public class VueOutils extends TilePane implements Observateur {
                 ImageView icon = new ImageView(image);
                 boutonSimulation.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
                 boutonSimulation.setGraphic(icon);
-                this.boutonSimulation.setOnAction(actionEvent -> monde.arretDeLaSimulation());
+                this.boutonSimulation.setOnAction(actionEvent -> monde.lavageDesClients());
+            } else {
+                Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/play.png")), tC.getTailleBouton(), tC.getTailleBouton(), true, true);
+                ImageView icon = new ImageView(image);
+                boutonSimulation.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
+                boutonSimulation.setGraphic(icon);
+                this.boutonSimulation.setOnAction(actionEvent -> {
+                    try {
+                        monde.simuler();
+                    } catch (MondeException e) {
+                        e.printStackTrace();
+                    }
+                });
             }
         };
         if (Platform.isFxApplicationThread()) {

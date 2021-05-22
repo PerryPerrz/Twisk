@@ -1,7 +1,8 @@
 package twisk.outils;
 
 
-import twisk.mondeIG.MondeIG;
+import twisk.simulation.Client;
+import twisk.simulation.GestionnaireClients;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -119,11 +120,22 @@ public class KitC {
     }
 
     /**
-     * Procédure qui tue tout les processus C
+     * Procédure qui tue tous les processus C
      *
-     * @param monde, le monde
+     * @param gestCli le gestionnaire de clients
      */
-    void tuerLesProcessusC(MondeIG monde) {
-        monde.lavageDesClients();
+    public void tuerLesProcessusC(GestionnaireClients gestCli) {
+        //On s'occupe de tuer les processus C
+        Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
+        for (Client c : gestCli) {
+            Process p = null;//On demande l’exécution de la compilation
+            try {
+                p = runtime.exec("kill " + c.getNumeroClient());
+                p.waitFor();
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(c.getNumeroClient());
+        }
     }
 }
