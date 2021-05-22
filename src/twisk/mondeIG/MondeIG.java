@@ -1,5 +1,6 @@
 package twisk.mondeIG;
 
+import javafx.concurrent.Task;
 import twisk.ClientTwisk;
 import twisk.designPattern.Observateur;
 import twisk.designPattern.SujetObserve;
@@ -624,16 +625,24 @@ public class MondeIG extends SujetObserve implements Observateur {
      * Procédure qui arrête la simulation
      */
     public void lavageDesClients() {
-        //On s'occupe de nettoyer les structures de données en C avec l'aide de la fonction "nettoyer"
-        Method lavage = null;
-        try {
-            lavage = this.simulation.getClass().getMethod("nettoyage");
-            lavage.invoke(this.simulation);
-        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        KitC kit = new KitC();
-        kit.tuerLesProcessusC(this.getGestionnaireClientDeSimulation());
-        GestionnaireThreads.getInstance().detruireTout();
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                //On s'occupe de nettoyer les structures de données en C avec l'aide de la fonction "nettoyer"
+                Method lavage = null;
+                try {
+                    lavage = simulation.getClass().getMethod("nettoyage");
+                    lavage.invoke(simulation);
+                } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+                KitC kit = new KitC();
+                kit.tuerLesProcessusC(getGestionnaireClientDeSimulation());
+                GestionnaireThreads.getInstance().detruireTout();
+                return null;
+            }
+        };
+        //On lance la fonction dans le Thread de la simulation car c'est une fonction d'arrêt de la simulation
+        GestionnaireThreads.getInstance().lancer(task);
     }
 }
