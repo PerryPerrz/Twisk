@@ -92,10 +92,17 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      */
     public void raffraichissementPdc() {
         TailleComposants tc = TailleComposants.getInstance();
-        pdc[0].setCentre(this.posX + tc.getLargAct() / 2, this.posY);
-        pdc[1].setCentre(this.posX + tc.getLargAct() / 2, this.posY + tc.getHautAct());
-        pdc[2].setCentre(this.posX, this.posY + tc.getHautAct() / 2);
-        pdc[3].setCentre(this.posX + tc.getLargAct(), this.posY + tc.getHautAct() / 2);
+        if (this.estUneActivite()) {
+            pdc[0].setCentre(this.posX + tc.getLargAct() / 2, this.posY - tc.getRad()); //Haut
+            pdc[1].setCentre(this.posX + tc.getLargAct() / 2, this.posY + tc.getHautAct() + tc.getRad() - tc.getMargeSelection()); //Bas
+            pdc[2].setCentre(this.posX - tc.getRad(), this.posY + tc.getHautAct() / 2 + tc.getMargeSelection() / 2); //Gauche
+            pdc[3].setCentre(this.posX + tc.getLargAct() + tc.getRad() - tc.getMargeSelection(), this.posY + tc.getHautAct() / 2 + tc.getMargeSelection() / 2); //Droite
+        } else {
+            pdc[0].setCentre(this.posX + tc.getLargGuichet() / 2, this.posY - tc.getRad());
+            pdc[1].setCentre(this.posX + tc.getLargGuichet() / 2, this.posY + tc.getHautGuichet() + tc.getRad() + tc.getMargeSelection());
+            pdc[2].setCentre(this.posX - tc.getRad(), this.posY + tc.getHautGuichet() / 2 + tc.getMargeSelection() / 2);
+            pdc[3].setCentre(this.posX + tc.getLargGuichet() + tc.getRad() - tc.getMargeSelection(), this.posY + tc.getHautGuichet() / 2 + tc.getMargeSelection() / 2);
+        }
     }
 
     /**
@@ -183,10 +190,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
         this.posY = posY;
 
         //On raffraichit les points de contrôles lors du drag and drop
-        pdc[0].setCentre(this.posX + tc.getLargAct() / 2, this.posY);
-        pdc[1].setCentre(this.posX + tc.getLargAct() / 2, this.posY + tc.getHautAct());
-        pdc[2].setCentre(this.posX, this.posY + tc.getHautAct() / 2);
-        pdc[3].setCentre(this.posX + tc.getLargAct(), this.posY + tc.getHautAct() / 2);
+        this.raffraichissementPdc();
     }
 
     /**

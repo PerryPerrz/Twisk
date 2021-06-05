@@ -27,13 +27,20 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
         paneLibre = 0;
         box = new HBox();
 
+        TailleComposants tc = TailleComposants.getInstance();
         CouleurComposants cc = CouleurComposants.getInstance();
 
         this.label.setStyle("-fx-text-fill: " + cc.getCouleurLabelGuichet());
         box.setStyle("-fx-border-color: " + cc.getCouleurBorderGuichet() + "; -fx-background-insets: 0 0 -1 0, 0, 1, 2; -fx-background-radius: 3px, 3px, 2px, 1px; -fx-border-width: 3px; -fx-background-color:" + cc.getCouleurBackgroundGuichet() + " ;");
-        box.setPrefSize(TailleComposants.getInstance().getHautAct(), TailleComposants.getInstance().getLargAct());
+
+        this.setMinSize(tc.getLargGuichet(), tc.getHautGuichet()); //Taille min du guichet
+        this.setMaxSize(tc.getLargGuichet(), tc.getHautGuichet()); //Taille max du guichet
+        box.setMinSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape() - tc.getMargeSelection());
+        box.setMaxSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape() - tc.getMargeSelection());
+
         box.setPadding(new Insets(5));
         box.setSpacing(5);
+
         ajouterPane();
         this.getChildren().add(box);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));

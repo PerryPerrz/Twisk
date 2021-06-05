@@ -11,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
@@ -45,15 +46,20 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
     public VueEtapeIG(MondeIG monde, EtapeIG etape) {
         this.monde = monde;
         this.etape = etape;
-        HBox hBox = new HBox();
-        monde.ajouterObservateur(this);
-        this.setId(etape.getIdentifiant()); //L'id de VueEtape = l'id de Etape
-        label = new Label(this.etape.getNom());
-        this.setOnDragDetected(this::setMouse);
 
         TailleComposants tc = TailleComposants.getInstance();
         CouleurComposants cc = CouleurComposants.getInstance();
 
+        HBox hBox = new HBox();
+        monde.ajouterObservateur(this);
+        this.setId(etape.getIdentifiant()); //L'id de VueEtape = l'id de Etape
+        label = new Label(this.etape.getNom());
+        label.setFont(new Font("Serif", tc.getFont()));
+
+        this.label.setMinHeight(tc.getHautLabelEtape());
+        this.label.setMaxHeight(tc.getHautLabelEtape());
+
+        this.setOnDragDetected(this::setMouse);
         hBox.getChildren().add(label);
         if (this.etape.estUneEntree()) {
             Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/entree_visu.png")), tc.getTailleIcons3(), tc.getTailleIcons3(), true, true);
@@ -66,9 +72,6 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
             hBox.getChildren().add(icon);
         }
         this.getChildren().add(hBox);
-
-        this.setMinSize(tc.getLargAct(), tc.getHautAct()); //Taille min de l'activité
-        this.setMaxSize(tc.getLargAct(), tc.getHautAct()); //Taille max de l'activité
         relocate(etape.getPosX(), etape.getPosY());
         if (monde.isSelectionned(etape)) {
             setStyle("-fx-border-color: " + cc.getCouleurBorderEtapeIsSelected() + ";-fx-border-width: 2px;-fx-background-color: " + cc.getCouleurBackgroundEtapeIsSelected());

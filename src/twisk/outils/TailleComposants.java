@@ -17,23 +17,33 @@ public class TailleComposants {
     private final int tailleIcons;
     private final int tailleIcons2;
     private final int tailleIcons3;
+    private final int largGuichet;
+    private final int hautGuichet;
+    private final int hautLabelEtape;
+    private final int margeSelection;
+    private final int font;
 
     /**
      * Constructeur de la classe TailleComposants, il permet d'initialiser toutes les tailles utilisées dans l'application twiskIG.
      */
     private TailleComposants() {
-        this.largAct = 120;
-        this.hautAct = 88;
-        this.tailleBouton = 35;
-        this.windowX = 700;
-        this.windowY = 600;
-        this.rad = 6;
-        this.largLigne = 2;
-        this.longTri = 18;
-        this.largTri = 6;
+        this.largAct = 150;
+        this.hautAct = 118;
+        this.tailleBouton = 50;
+        this.windowX = 1400;
+        this.windowY = 900;
+        this.rad = 10;
+        this.largLigne = 4;
+        this.longTri = 36;
+        this.largTri = 12;
         this.tailleIcons = 50;
-        this.tailleIcons2 = 25;
-        this.tailleIcons3 = 15;
+        this.tailleIcons2 = 50;
+        this.tailleIcons3 = 20;
+        this.largGuichet = 270;
+        this.hautGuichet = 74;
+        this.hautLabelEtape = 18;
+        this.margeSelection = 4;
+        this.font = 18;
     }
 
     /**
@@ -151,5 +161,50 @@ public class TailleComposants {
      */
     public int getTailleIcons3() {
         return tailleIcons3;
+    }
+
+    /**
+     * Fonction qui retourne la largeur d'un guichet
+     *
+     * @return la largeur d'un guichet
+     */
+    public int getLargGuichet() {
+        return largGuichet;
+    }
+
+    /**
+     * Fonction qui retourne la hauteur d'un guichet
+     *
+     * @return la hauteur d'un guichet
+     */
+    public int getHautGuichet() {
+        return hautGuichet;
+    }
+
+    /**
+     * Fonction qui retourne la taille du label d'une étape
+     *
+     * @return la taille du label d'une étape
+     */
+    public int getHautLabelEtape() {
+        return hautLabelEtape;
+    }
+
+    /**
+     * Fonction qui retourne la marge d'une étape lors de sa seléction
+     *
+     * @return la marge d'une étape lors de sa seléction
+     */
+    public int getMargeSelection() {
+        return margeSelection;
+    }
+
+    /**
+     * Fonction qui retourne la taille de la police utilisée pour les activités et les guichets
+     *
+     * @return la taille de la police
+     */
+    public int getFont() {
+        return font;
     }
 }

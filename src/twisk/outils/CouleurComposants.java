@@ -48,7 +48,7 @@ public class CouleurComposants {
         this.couleurBackgroundJourMonde = "#ffe268";
         this.couleurBackgroundNuitMonde = "#151515";
         this.couleurBackgroundResetMonde = "#FFFFFF";
-        this.couleurPointDeControle = "#6284FF";
+        this.couleurPointDeControle = "#8F00FF";
     }
 
     /**

@@ -89,12 +89,12 @@ public class VueMondeIG extends Pane implements Observateur {
                 EtapeIG etape = iter.next();
                 if (etape.estUneActivite()) {
                     VueActiviteIG viewA = new VueActiviteIG(monde, etape);
-                    viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
+                    //viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewA);
                     vueEtapeIGS.add(viewA);
                 } else {
                     VueGuichetIG viewG = new VueGuichetIG(monde, etape);
-                    viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
+                    //viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewG);
                     vueEtapeIGS.add(viewG);
                 }
