@@ -1,5 +1,7 @@
 package twisk.mondeIG;
 
+import twisk.exceptions.PasUnGuichetException;
+
 /**
  * La classe ActiviteIG.
  */
@@ -33,13 +35,23 @@ public class ActiviteIG extends EtapeIG {
     }
 
     @Override
-    public void siEstUnGuichetSetNbJetons(int nbJetons) {
-        System.out.println("Attention, une activité ne possède pas de jeton(s) !");
+    public void siEstUnGuichetSetNbJetons(int nbJetons) throws PasUnGuichetException {
+        throw new PasUnGuichetException("Attention, une activité ne possède pas de jeton(s) !");
+    }
+
+    @Override
+    public void siEstUnGuichetSetVersLaDroite(Boolean versLaDroite) throws PasUnGuichetException {
+        throw new PasUnGuichetException("Attention une activité ne possède pas de sens !");
     }
 
     @Override
     public boolean setActiviteRestreinte(boolean res) {
         this.estUneActiviteRestreinte = res;
         return true;
+    }
+
+    @Override
+    public Boolean siEstUnGuichetGetVersLaDroite() {
+        return null;
     }
 }

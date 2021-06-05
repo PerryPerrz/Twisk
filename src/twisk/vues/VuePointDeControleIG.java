@@ -95,6 +95,34 @@ public class VuePointDeControleIG extends Circle implements Observateur {
                 PauseTransition pt = new PauseTransition(Duration.seconds(5));
                 pt.setOnFinished(Event -> dialog.close());
                 pt.play();
+            } catch (PasUnGuichetException e) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("PasUnGuichetException");
+                dia.setHeaderText("Impossible de changer le nombre de jetons d'une activité !");
+                dia.setContentText("Erreur : L'étape choisie n'est pas un guichet\n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
+            } catch (WrongDirectionException e) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("WrongDirectionException");
+                dia.setHeaderText("Impossible de créer un arc vers un guichet alors qu'un autre arc va dans le sens opposé !");
+                dia.setContentText("Erreur : Mauvais sens de création d'arc \n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
             } catch (TwiskException e) {
                 e.printStackTrace();
             }

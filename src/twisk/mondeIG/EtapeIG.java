@@ -1,5 +1,6 @@
 package twisk.mondeIG;
 
+import twisk.exceptions.PasUnGuichetException;
 import twisk.outils.FabriqueIdentifiant;
 import twisk.outils.TailleComposants;
 
@@ -51,6 +52,10 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      * Attribut correspondant aux successeurs de l'étape.
      */
     protected ArrayList<EtapeIG> succ;
+    /**
+     * Attribut correspondant au nombre d'étapes qui précèdent cette étape.
+     */
+    protected int nbPrec;
 
     /**
      * Constructeur de la classe EtapeIG.
@@ -64,6 +69,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
         pdc = new PointDeControleIG[4];
         this.entree = false;
         this.sortie = false;
+        this.nbPrec = 0;
         this.delai = 8;
         this.ecart = 4;
         this.succ = new ArrayList<>(2);
@@ -92,17 +98,10 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      */
     public void raffraichissementPdc() {
         TailleComposants tc = TailleComposants.getInstance();
-        if (this.estUneActivite()) {
-            pdc[0].setCentre(this.posX + tc.getLargAct() / 2, this.posY - tc.getRad()); //Haut
-            pdc[1].setCentre(this.posX + tc.getLargAct() / 2, this.posY + tc.getHautAct() + tc.getRad() - tc.getMargeSelection()); //Bas
-            pdc[2].setCentre(this.posX - tc.getRad(), this.posY + tc.getHautAct() / 2 + tc.getMargeSelection() / 2); //Gauche
-            pdc[3].setCentre(this.posX + tc.getLargAct() + tc.getRad() - tc.getMargeSelection(), this.posY + tc.getHautAct() / 2 + tc.getMargeSelection() / 2); //Droite
-        } else {
-            pdc[0].setCentre(this.posX + tc.getLargGuichet() / 2, this.posY - tc.getRad());
-            pdc[1].setCentre(this.posX + tc.getLargGuichet() / 2, this.posY + tc.getHautGuichet() + tc.getRad() + tc.getMargeSelection());
-            pdc[2].setCentre(this.posX - tc.getRad(), this.posY + tc.getHautGuichet() / 2 + tc.getMargeSelection() / 2);
-            pdc[3].setCentre(this.posX + tc.getLargGuichet() + tc.getRad() - tc.getMargeSelection(), this.posY + tc.getHautGuichet() / 2 + tc.getMargeSelection() / 2);
-        }
+        pdc[0].setCentre(this.posX + tc.getLargAct() / 2, this.posY);
+        pdc[1].setCentre(this.posX + tc.getLargAct() / 2, this.posY + tc.getHautAct());
+        pdc[2].setCentre(this.posX, this.posY + tc.getHautAct() / 2);
+        pdc[3].setCentre(this.posX + tc.getLargAct(), this.posY + tc.getHautAct() / 2);
     }
 
     /**
@@ -190,7 +189,10 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
         this.posY = posY;
 
         //On raffraichit les points de contrôles lors du drag and drop
-        this.raffraichissementPdc();
+        pdc[0].setCentre(this.posX + tc.getLargAct() / 2, this.posY);
+        pdc[1].setCentre(this.posX + tc.getLargAct() / 2, this.posY + tc.getHautAct());
+        pdc[2].setCentre(this.posX, this.posY + tc.getHautAct() / 2);
+        pdc[3].setCentre(this.posX + tc.getLargAct(), this.posY + tc.getHautAct() / 2);
     }
 
     /**
@@ -299,8 +301,17 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      * Procédure qui permet de set le nombre de jetons d'un guichet si l'étape concernée est bien un guichet
      *
      * @param nbJetons le nombre de jetons
+     * @throws PasUnGuichetException Exception se déclenchant quand on essaie de changer les paramètres d'un guichet sur une activité
      */
-    public abstract void siEstUnGuichetSetNbJetons(int nbJetons);
+    public abstract void siEstUnGuichetSetNbJetons(int nbJetons) throws PasUnGuichetException;
+
+    /**
+     * Procédure qui permet de set le sens d'un guichet si l'étape concernée est bien un guichet
+     *
+     * @param versLaDroite booléen indiquant si le sens du guichet est vers la droite
+     * @throws PasUnGuichetException Exception se déclenchant quand on essaie de changer les paramètres d'un guichet sur une activité
+     */
+    public abstract void siEstUnGuichetSetVersLaDroite(Boolean versLaDroite) throws PasUnGuichetException;
 
     /**
      * Procédure qui ajoute une étape en tant que successeur
@@ -387,4 +398,29 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
                     return true;
         return false;
     }
+
+    /**
+     * Fonction qui retourne le nombre de prédécesseurs de l'étape.
+     *
+     * @return le nombre de prédécesseurs
+     */
+    public int getNbPrec() {
+        return nbPrec;
+    }
+
+    /**
+     * Procédure qui incrémente le nombre de prédécesseurs de l'étape.
+     */
+    public void incrementeNbPrec() {
+        nbPrec++;
+    }
+
+    /**
+     * Procédure qui décrémente le nombre de prédécesseurs de l'étape.
+     */
+    public void decrementeNbPrec() {
+        nbPrec--;
+    }
+
+    public abstract Boolean siEstUnGuichetGetVersLaDroite();
 }

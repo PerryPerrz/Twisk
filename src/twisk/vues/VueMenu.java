@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import twisk.designPattern.Observateur;
+import twisk.exceptions.PasUnGuichetException;
 import twisk.exceptions.UncorrectSettingsException;
 import twisk.mondeIG.MondeIG;
 import twisk.outils.GestionnaireThreads;
@@ -72,7 +73,7 @@ public class VueMenu extends MenuBar implements Observateur {
             GestionnaireThreads.getInstance().detruireTout();
             Platform.exit();
         });
-        supprimer.setOnAction(actionEvent -> monde.supprimerLaSelection());
+        supprimer.setOnAction(actionEvent -> this.supprimer());
         renommer.setOnAction(actionEvent -> this.rename());
         effacer.setOnAction(actionEvent -> monde.effacerLaSelection());
         entree.setOnAction(actionEvent -> monde.setEntree());
@@ -167,6 +168,27 @@ public class VueMenu extends MenuBar implements Observateur {
         clients.setGraphic(icon18);
 
         this.getMenus().addAll(fichier, edition, mondeMenu, parametres, style);
+    }
+
+    private void supprimer() {
+        try {
+            monde.supprimerLaSelection();
+        } catch (PasUnGuichetException e) {
+            TailleComposants tc = TailleComposants.getInstance();
+            Alert dia = new Alert(Alert.AlertType.ERROR);
+            dia.setTitle("PasUnGuichetException");
+            dia.setHeaderText("Impossible de changer le sens d'une activité !");
+            dia.setContentText("Erreur : L'étape choisie n'est pas un guichet\n" +
+                    "Veuillez ré-essayer");
+            Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+            ImageView icon2 = new ImageView(image2);
+            dia.setGraphic(icon2);
+            dia.show();
+            //Le chronomètre
+            PauseTransition pt = new PauseTransition(Duration.seconds(5));
+            pt.setOnFinished(Event -> dia.close());
+            pt.play();
+        }
     }
 
     @Override
@@ -304,6 +326,20 @@ public class VueMenu extends MenuBar implements Observateur {
                 dia.setTitle("UncorrectSettingsException");
                 dia.setHeaderText("Impossible de saisir ce nombre de jeton(s)");
                 dia.setContentText("Erreur : La saisie du nombre de jeton(s) est incorrecte\n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
+            } catch (PasUnGuichetException e) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("PasUnGuichetException");
+                dia.setHeaderText("Impossible de changer le nombre de jetons d'une activité !");
+                dia.setContentText("Erreur : L'étape choisie n'est pas un guichet\n" +
                         "Veuillez ré-essayer");
                 Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon2 = new ImageView(image2);

@@ -118,6 +118,13 @@ public class MondeIG extends SujetObserve implements Observateur {
             throw new SameActivityException("Vous ne pouvez pas, créer d'arcs entre 2 points de controle identiques! où créer un arc entre 2 points d'une même étape!");
         if (pdc1.getEtapeRattache().estAccessibleDepuis(pdc2.getEtapeRattache()))
             throw new CreateLoopException("On peut pas créer un circuit entre deux étapes !");
+        if (pdc2.getEtapeRattache().estUnGuichet())
+            if (pdc2.getEtapeRattache().getNbPrec() == 0)
+                pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(pdc2.getCentreX() <= pdc1.getCentreX());
+            else if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.getCentreX() <= pdc1.getCentreX()))
+                throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
+        if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.getCentreX() <= pdc1.getCentreX())
+            throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
         ArcIG ark = new ArcIG(pdc1, pdc2);
         this.arcs.add(ark);
     }
@@ -149,6 +156,7 @@ public class MondeIG extends SujetObserve implements Observateur {
                     isCreated = true;
                     ajouter(pdcIG, pdc);
                     etape.ajouterSuccesseur(pdc.getEtapeRattache());
+                    pdc.getEtapeRattache().incrementeNbPrec();
                     this.notifierObservateurs();
                 }
                 //Si j'en trouve pas, le pdc en param est le premier.
@@ -205,7 +213,7 @@ public class MondeIG extends SujetObserve implements Observateur {
     /**
      * Procédure qui supprime la sélection d'arcs dans le monde.
      */
-    public void supprimerLaSelection() {
+    public void supprimerLaSelection() throws PasUnGuichetException {
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             supprimer(iter);
         }
@@ -214,6 +222,10 @@ public class MondeIG extends SujetObserve implements Observateur {
             if (arc.isSelected()) {
                 arc.setSelect(false);
                 arc.getEtapePdcDepart().supprimerSuccesseur(arc.getEtapePdcArrive());
+                arc.getEtapePdcArrive().decrementeNbPrec();
+                if (arc.getEtapePdcArrive().estUnGuichet())
+                    if (arc.getEtapePdcArrive().getNbPrec() == 0)
+                        arc.getEtapePdcArrive().siEstUnGuichetSetVersLaDroite(null);
                 iterA.remove();
                 this.arcs.remove(arc);
             }
@@ -429,7 +441,7 @@ public class MondeIG extends SujetObserve implements Observateur {
      * @param nbJetons le nombre de jeton(s)
      * @throws UncorrectSettingsException la uncorrect settings exception
      */
-    public void setTokens(int nbJetons) throws UncorrectSettingsException {
+    public void setTokens(int nbJetons) throws UncorrectSettingsException, PasUnGuichetException {
         try {
             if (nbJetons <= 0) {
                 throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être nul ou négatif!");

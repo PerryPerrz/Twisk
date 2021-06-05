@@ -8,6 +8,7 @@ import twisk.outils.FabriqueIdentifiant;
 public class GuichetIG extends EtapeIG {
     private int nbJetons;
     private final int numSemaphore;
+    private Boolean versLaDroite;
 
     /**
      * Constructeur de la classe EtapeIG.
@@ -20,6 +21,7 @@ public class GuichetIG extends EtapeIG {
         FabriqueIdentifiant fab = FabriqueIdentifiant.getInstance();
         this.numSemaphore = fab.getNumSem();
         this.nbJetons = 2;
+        this.versLaDroite = null;
     }
 
     /**
@@ -34,6 +36,7 @@ public class GuichetIG extends EtapeIG {
         FabriqueIdentifiant fab = FabriqueIdentifiant.getInstance();
         this.numSemaphore = fab.getNumSem();
         this.nbJetons = nbJetons;
+        this.versLaDroite = null;
     }
 
     @Override
@@ -52,7 +55,25 @@ public class GuichetIG extends EtapeIG {
     }
 
     @Override
+    public void siEstUnGuichetSetVersLaDroite(Boolean versLaDroite) {
+        setVersLaDroite(versLaDroite);
+    }
+
+    @Override
     public boolean setActiviteRestreinte(boolean res) {
         return false;
+    }
+
+    @Override
+    public Boolean siEstUnGuichetGetVersLaDroite() {
+        return versLaDroite;
+    }
+
+    public Boolean isVersLaDroite() {
+        return versLaDroite;
+    }
+
+    public void setVersLaDroite(Boolean versLaDroite) {
+        this.versLaDroite = versLaDroite;
     }
 }
