@@ -11,6 +11,8 @@ import javafx.scene.layout.TilePane;
 import javafx.util.Duration;
 import twisk.designPattern.Observateur;
 import twisk.exceptions.MondeException;
+import twisk.exceptions.PasUnGuichetException;
+import twisk.exceptions.TwiskException;
 import twisk.mondeIG.MondeIG;
 import twisk.outils.TailleComposants;
 
@@ -42,7 +44,7 @@ public class VueOutils extends TilePane implements Observateur {
         boutonSimulation.setOnAction(actionEvent -> {
             try {
                 monde.simuler();
-            } catch (MondeException e) {
+            } catch (MondeException | PasUnGuichetException e) {
                 lancerFenetreErreurSimu(e);
             }
         });
@@ -90,7 +92,7 @@ public class VueOutils extends TilePane implements Observateur {
                 this.boutonSimulation.setOnAction(actionEvent -> {
                     try {
                         monde.simuler();
-                    } catch (MondeException e) {
+                    } catch (MondeException | PasUnGuichetException e) {
                         lancerFenetreErreurSimu(e);
                     }
                 });
@@ -103,7 +105,7 @@ public class VueOutils extends TilePane implements Observateur {
         }
     }
 
-    private void lancerFenetreErreurSimu(MondeException e) {
+    private void lancerFenetreErreurSimu(TwiskException e) {
         TailleComposants tc = TailleComposants.getInstance();
         Alert dialog = new Alert(Alert.AlertType.ERROR);
         dialog.setTitle("MondeException");

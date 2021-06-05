@@ -120,11 +120,11 @@ public class MondeIG extends SujetObserve implements Observateur {
             throw new CreateLoopException("On peut pas créer un circuit entre deux étapes !");
         if (pdc2.getEtapeRattache().estUnGuichet()) {
             if (pdc2.getEtapeRattache().getNbPrec() == 0)
-                pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(!(pdc2.getCentreX() <= pdc1.getCentreX()));
+                pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)));
             else {
-                if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.getCentreX() <= pdc1.getCentreX()))
+                if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3))))
                     throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
-                if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.getCentreX() <= pdc1.getCentreX())
+                if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)))
                     throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
             }
         }
@@ -521,7 +521,7 @@ public class MondeIG extends SujetObserve implements Observateur {
      *
      * @return Le monde
      */
-    public Monde creerMonde() {
+    public Monde creerMonde() throws PasUnGuichetException {
         this.corE = new CorrespondanceEtapes();
         Monde monde = new Monde();
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
@@ -535,6 +535,14 @@ public class MondeIG extends SujetObserve implements Observateur {
                 monde.ajouter(act);
                 corE.ajouter(e, act);
             } else if (e.estUnGuichet()) {
+                if (e.estUneEntree() && e.getNbPrec() == 0) {
+                    for (Iterator<ArcIG> iterArc = this.iteratorArcs(); iterArc.hasNext(); ) {
+                        ArcIG arcIG = iterArc.next();
+                        if (arcIG.getEtapePdcDepart().equals(e))
+                            e.siEstUnGuichetSetVersLaDroite(arcIG.getPdcDepart().equals(e.getPdcIndex(2)));
+                        System.out.println(e.siEstUnGuichetGetVersLaDroite());
+                    }
+                }
                 Guichet gui = new Guichet(e.getNom(), e.siEstUnGuichetGetNbJetons());
                 monde.ajouter(gui);
                 corE.ajouter(e, gui);
@@ -562,7 +570,7 @@ public class MondeIG extends SujetObserve implements Observateur {
      *
      * @throws MondeException the monde exception
      */
-    public void simuler() throws MondeException {
+    public void simuler() throws MondeException, PasUnGuichetException {
         verifierMondeIG();
         Monde monde = creerMonde();
         ClassLoaderPerso classLoaderPerso = new ClassLoaderPerso(ClientTwisk.class.getClassLoader());

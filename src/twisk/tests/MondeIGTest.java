@@ -2,6 +2,7 @@ package twisk.tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import twisk.exceptions.PasUnGuichetException;
 import twisk.monde.Monde;
 import twisk.mondeIG.MondeIG;
 
@@ -39,22 +40,27 @@ class MondeIGTest {
     @Test
     void creerMonde() {
         Monde monde1, monde2, monde3;
-        monde1 = mondeIG1.creerMonde();
-        assertTrue(monde1.getEtapeI(0).estUnSasEntree());
-        assertTrue(monde1.getEtapeI(1).estUnSasSortie());
+        try {
+            monde1 = mondeIG1.creerMonde();
+            assertTrue(monde1.getEtapeI(0).estUnSasEntree());
+            assertTrue(monde1.getEtapeI(1).estUnSasSortie());
 
-        mondeIG2.ajouter("Guichet");
-        assertDoesNotThrow(() -> mondeIG2.ajouter(mondeIG2.getEtapeIndice("0").getPdcIndex(0), mondeIG2.getEtapeIndice("1").getPdcIndex(0)));
-        monde2 = mondeIG2.creerMonde();
-        assertTrue(monde2.getEtapeI(0).estUnSasEntree());
-        assertTrue(monde2.getEtapeI(1).estUnSasSortie());
-        assertTrue(monde2.getEtapeI(2).estUnGuichet());
+            mondeIG2.ajouter("Guichet");
+            assertDoesNotThrow(() -> mondeIG2.ajouter(mondeIG2.getEtapeIndice("0").getPdcIndex(0), mondeIG2.getEtapeIndice("1").getPdcIndex(0)));
+            monde2 = mondeIG2.creerMonde();
+            assertTrue(monde2.getEtapeI(0).estUnSasEntree());
+            assertTrue(monde2.getEtapeI(1).estUnSasSortie());
+            assertTrue(monde2.getEtapeI(2).estUnGuichet());
 
-        mondeIG2.ajouter("Activite");
-        monde3 = mondeIG3.creerMonde();
-        assertTrue(monde3.getEtapeI(0).estUnSasEntree());
-        assertTrue(monde3.getEtapeI(1).estUnSasSortie());
-        assertTrue(monde3.getEtapeI(2).estUneActivite());
+            mondeIG2.ajouter("Activite");
+            monde3 = mondeIG3.creerMonde();
+            assertTrue(monde3.getEtapeI(0).estUnSasEntree());
+            assertTrue(monde3.getEtapeI(1).estUnSasSortie());
+            assertTrue(monde3.getEtapeI(2).estUneActivite());
+        } catch (PasUnGuichetException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
