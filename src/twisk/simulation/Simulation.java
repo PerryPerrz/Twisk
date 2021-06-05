@@ -32,11 +32,12 @@ public class Simulation extends SujetObserve {
         Task<Void> task = new Task<>() {
             @Override
             protected Void call() throws Exception {
+                KitC kitC = null;
                 try {
                     enCoursDeSimulation = true;
                     FabriqueNumero fab = FabriqueNumero.getInstance();
                     System.out.println(monde.toString() + "\n");
-                    KitC kitC = new KitC();
+                    kitC = new KitC();
                     kitC.creerEnvironnement();
                     kitC.creerFichier(monde.toC());
                     kitC.compiler();
@@ -73,10 +74,15 @@ public class Simulation extends SujetObserve {
                         Thread.sleep(500);
                     }
                     System.out.println("Simulation terminee, tous les clients sont dans le sas de sortie !");
+                    kitC.tuerLesProcessusC(gestCli);
+                    gestCli.reset();
                     nettoyage();
                     enCoursDeSimulation = false;
                     notifierObservateurs();
                 } catch (InterruptedException e) {
+                    kitC.tuerLesProcessusC(gestCli);
+                    gestCli.reset();
+                    nettoyage();
                     enCoursDeSimulation = false;
                     notifierObservateurs();
                 }
@@ -138,4 +144,5 @@ public class Simulation extends SujetObserve {
     public boolean isEnCoursDeSimulation() {
         return enCoursDeSimulation;
     }
+
 }

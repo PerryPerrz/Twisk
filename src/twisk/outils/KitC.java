@@ -8,6 +8,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 
 /**
  * La classe KitC.
@@ -23,7 +24,7 @@ public class KitC {
             // copie des deux fichiers programmeC.o et def.h depuis le projet sous /tmp/twisk
             String[] liste = {"programmeC.o", "def.h", "codeNatif.o"};
             for (String nom : liste) {
-                InputStream source = getClass().getResource("/twisk/ressources/codeC/" + nom).openStream();
+                InputStream source = Objects.requireNonNull(getClass().getResource("/twisk/ressources/codeC/" + nom)).openStream();
                 File destination = new File("/tmp/twisk/" + nom);
                 copier(source, destination);
 //                  Path source = Paths.get(getClass().getResource("/twisk/ressources/codeC/" + nom).getPath());
@@ -37,16 +38,15 @@ public class KitC {
 
     private void copier(InputStream source, File dest) {
         try {
-            InputStream sourceFile = source;
             OutputStream destinationFile = new FileOutputStream(dest);
             // Lecture par segment de 0.5Mo
             byte[] buffer = new byte[512 * 1024];
             int nbLecture;
-            while ((nbLecture = sourceFile.read(buffer)) != -1) {
+            while ((nbLecture = source.read(buffer)) != -1) {
                 destinationFile.write(buffer, 0, nbLecture);
             }
             destinationFile.close();
-            sourceFile.close();
+            source.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -127,11 +127,9 @@ public class KitC {
     public void tuerLesProcessusC(GestionnaireClients gestCli) {
         //On s'occupe de tuer les processus C
         Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
-        for (Client c : gestCli) {
-            Process p = null;//On demande l’exécution de la compilation
+        for (Client c : gestCli) {//On demande l’exécution de la compilation
             try {
-                p = runtime.exec("kill " + c.getNumeroClient()); //Le numéro du client correspond à son numéro de processus
-                System.out.println(c.getNumeroClient());
+                Process p = runtime.exec("kill " + c.getNumeroClient()); //Le numéro du client correspond à son numéro de processus
                 p.waitFor();
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();

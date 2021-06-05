@@ -37,16 +37,6 @@ public class GestionnaireThreads {
     public void detruireTout() {
         for (Thread thread : threads)
             thread.interrupt();
+        threads.clear();
     }
-
-    /**
-     * Procédure qui lance le Thread stocké à l'indice donné.
-     *
-     * @param i l'indice du Thread à lancer.
-     */
-    public void lancerThreadI(int i) {
-        threads.get(i).start();
-    }
-
-
 }

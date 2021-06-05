@@ -9,7 +9,10 @@ import twisk.monde.Activite;
 import twisk.monde.ActiviteRestreinte;
 import twisk.monde.Guichet;
 import twisk.monde.Monde;
-import twisk.outils.*;
+import twisk.outils.ClassLoaderPerso;
+import twisk.outils.CorrespondanceEtapes;
+import twisk.outils.FabriqueIdentifiant;
+import twisk.outils.GestionnaireThreads;
 import twisk.simulation.GestionnaireClients;
 
 import java.lang.reflect.Constructor;
@@ -625,26 +628,13 @@ public class MondeIG extends SujetObserve implements Observateur {
      * Procédure qui arrête la simulation
      */
     public void lavageDesClients() {
-        Task<Void> task = new Task<Void>() {
+        Task<Void> task = new Task<>() {
             @Override
-            protected Void call() throws Exception {
-                KitC kit = new KitC();
-                System.out.println("BBBBBBBBBBBBBBBBBBBBBB");
-                kit.tuerLesProcessusC(getGestionnaireClientDeSimulation());
-                //On s'occupe de nettoyer les structures de données en C avec l'aide de la fonction "nettoyer"
-                try {
-                    System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-                    Method lavage = simulation.getClass().getMethod("nettoyage");
-                    lavage.invoke(simulation);
-                } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("CCC");
+            protected Void call() {
                 GestionnaireThreads.getInstance().detruireTout();
                 return null;
             }
         };
-        //On lance la fonction dans le Thread de la simulation car c'est une fonction d'arrêt de la simulation
         GestionnaireThreads.getInstance().lancer(task);
     }
 }
