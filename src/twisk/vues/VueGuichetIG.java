@@ -24,7 +24,10 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
      */
     public VueGuichetIG(MondeIG monde, EtapeIG etape) {
         super(monde, etape);
-        paneLibre = 0;
+        if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())
+            paneLibre = 0;
+        else
+            paneLibre = monde.getNbClients() - etape.siEstUnGuichetGetNbJetons() - 1;
         box = new HBox();
 
         TailleComposants tc = TailleComposants.getInstance();
@@ -52,7 +55,10 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
         viewC.setCenterX(pane.getWidth() / 2);
         viewC.setCenterY(pane.getHeight() / 2);
         pane.getChildren().add(viewC);
-        paneLibre++;
+        if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())
+            paneLibre++;
+        else
+            paneLibre--;
     }
 
     private void ajouterPane() {

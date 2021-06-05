@@ -92,15 +92,18 @@ public class VueMondeIG extends Pane implements Observateur {
                     //viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewA);
                     vueEtapeIGS.add(viewA);
+                    for (PointDeControleIG pdc : etape) {
+                        VuePointDeControleIG viewPdc = new VuePointDeControleIG(monde, pdc);
+                        getChildren().add(viewPdc);
+                    }
                 } else {
                     VueGuichetIG viewG = new VueGuichetIG(monde, etape);
                     //viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewG);
                     vueEtapeIGS.add(viewG);
-                }
-                for (PointDeControleIG pdc : etape) {
-                    VuePointDeControleIG viewPdc = new VuePointDeControleIG(monde, pdc);
-                    getChildren().add(viewPdc);
+                    VuePointDeControleIG viewPdc = new VuePointDeControleIG(monde, etape.getPdcIndex(2));
+                    VuePointDeControleIG viewPdc2 = new VuePointDeControleIG(monde, etape.getPdcIndex(3));
+                    getChildren().addAll(viewPdc, viewPdc2);
                 }
             }
             if (monde.simulationACommencee()) {

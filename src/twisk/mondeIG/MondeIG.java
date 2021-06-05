@@ -118,13 +118,16 @@ public class MondeIG extends SujetObserve implements Observateur {
             throw new SameActivityException("Vous ne pouvez pas, créer d'arcs entre 2 points de controle identiques! où créer un arc entre 2 points d'une même étape!");
         if (pdc1.getEtapeRattache().estAccessibleDepuis(pdc2.getEtapeRattache()))
             throw new CreateLoopException("On peut pas créer un circuit entre deux étapes !");
-        if (pdc2.getEtapeRattache().estUnGuichet())
+        if (pdc2.getEtapeRattache().estUnGuichet()) {
             if (pdc2.getEtapeRattache().getNbPrec() == 0)
-                pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(pdc2.getCentreX() <= pdc1.getCentreX());
-            else if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.getCentreX() <= pdc1.getCentreX()))
-                throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
-        if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.getCentreX() <= pdc1.getCentreX())
-            throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
+                pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(!(pdc2.getCentreX() <= pdc1.getCentreX()));
+            else {
+                if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.getCentreX() <= pdc1.getCentreX()))
+                    throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
+                if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.getCentreX() <= pdc1.getCentreX())
+                    throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
+            }
+        }
         ArcIG ark = new ArcIG(pdc1, pdc2);
         this.arcs.add(ark);
     }
