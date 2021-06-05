@@ -39,7 +39,7 @@ public class TailleComposants {
     /**
      * Fonction permettant de réaliser une instance du singleton TailleComposants.
      *
-     * @return instance
+     * @return instance instance
      */
     public static TailleComposants getInstance() {
         return instance;
@@ -93,7 +93,7 @@ public class TailleComposants {
     /**
      * Fonction qui retourne la taille du rayon des points de contrôles.
      *
-     * @return rad
+     * @return rad rad
      */
     public int getRad() {
         return rad;

@@ -71,7 +71,7 @@ public class PointDeControleIG {
     /**
      * Fonction qui retourne l'id du point de contrôle.
      *
-     * @return l'id
+     * @return l 'id
      */
     public String getId() {
         return id;
@@ -80,7 +80,7 @@ public class PointDeControleIG {
     /**
      * Fonction qui retourne l'étape rattachée à un point de contrôle.
      *
-     * @return l'etape rattache
+     * @return l 'etape rattache
      */
     public EtapeIG getEtapeRattache() {
         return etapeRattache;

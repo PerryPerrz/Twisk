@@ -7,6 +7,9 @@ import twisk.mondeIG.MondeIG;
 import twisk.outils.CouleurComposants;
 import twisk.outils.TailleComposants;
 
+/**
+ * La classe VueGuichetIG
+ */
 public class VueGuichetIG extends VueEtapeIG implements Observateur {
     private final HBox box;
 

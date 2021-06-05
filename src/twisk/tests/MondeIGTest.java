@@ -8,9 +8,24 @@ import twisk.mondeIG.MondeIG;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * The type Monde ig test.
+ */
 class MondeIGTest {
-    MondeIG mondeIG1, mondeIG2, mondeIG3;
+    /**
+     * The Monde ig 1.
+     */
+    MondeIG mondeIG1, /**
+     * The Monde ig 2.
+     */
+    mondeIG2, /**
+     * The Monde ig 3.
+     */
+    mondeIG3;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         mondeIG1 = new MondeIG();
@@ -18,6 +33,9 @@ class MondeIGTest {
         mondeIG3 = new MondeIG();
     }
 
+    /**
+     * Creer monde.
+     */
     @Test
     void creerMonde() {
         Monde monde1, monde2, monde3;

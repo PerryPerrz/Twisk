@@ -40,7 +40,7 @@ public class Activite extends Etape {
     /**
      * Retourne le temps.
      *
-     * @return the temps
+     * @return le temps
      */
     public int getTemps() {
         return temps;
@@ -58,7 +58,7 @@ public class Activite extends Etape {
     /**
      * Retourne l'écart temps.
      *
-     * @return l'écart temps
+     * @return l 'écart temps
      */
     public int getEcartTemps() {
         return ecartTemps;

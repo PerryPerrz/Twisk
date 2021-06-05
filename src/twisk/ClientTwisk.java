@@ -41,6 +41,11 @@ public class ClientTwisk {
     }
 
 
+    /**
+     * Constru monde 2 monde.
+     *
+     * @return le monde
+     */
     public Monde ConstruMonde2() {
         Monde monde = new Monde();
         Activite balade = new Activite("balade au zoo");

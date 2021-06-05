@@ -11,11 +11,56 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class EtapeTest {
 
-    protected Activite act1, act2, act3;
-    protected Guichet gui1, gui2, gui3;
-    protected ActiviteRestreinte actRes1, actRes2, actRes3;
-    protected SasEntree sasE1, sasE2, sasE3;
-    protected SasSortie sasS1, sasS2, sasS3;
+    /**
+     * The Act 1.
+     */
+    protected Activite act1, /**
+     * The Act 2.
+     */
+    act2, /**
+     * The Act 3.
+     */
+    act3;
+    /**
+     * The Gui 1.
+     */
+    protected Guichet gui1, /**
+     * The Gui 2.
+     */
+    gui2, /**
+     * The Gui 3.
+     */
+    gui3;
+    /**
+     * The Act res 1.
+     */
+    protected ActiviteRestreinte actRes1, /**
+     * The Act res 2.
+     */
+    actRes2, /**
+     * The Act res 3.
+     */
+    actRes3;
+    /**
+     * The Sas e 1.
+     */
+    protected SasEntree sasE1, /**
+     * The Sas e 2.
+     */
+    sasE2, /**
+     * The Sas e 3.
+     */
+    sasE3;
+    /**
+     * The Sas s 1.
+     */
+    protected SasSortie sasS1, /**
+     * The Sas s 2.
+     */
+    sasS2, /**
+     * The Sas s 3.
+     */
+    sasS3;
 
     /**
      * Mise en place des tests.

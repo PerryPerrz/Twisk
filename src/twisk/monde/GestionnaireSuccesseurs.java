@@ -54,6 +54,7 @@ public class GestionnaireSuccesseurs implements Iterable<Etape> {
     /**
      * Fonction qui retourne le successeur n°i du gestionnnaire de successeurs.
      *
+     * @param i l'indice du successeur
      * @return le successeur
      */
     public Etape getSuccI(int i) {

@@ -2,6 +2,9 @@ package twisk.mondeIG;
 
 import twisk.outils.FabriqueIdentifiant;
 
+/**
+ * The type Guichet ig.
+ */
 public class GuichetIG extends EtapeIG {
     private int nbJetons;
     private final int numSemaphore;

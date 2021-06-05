@@ -78,7 +78,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
     /**
      * Sets mouse.
      *
-     * @param mouseEvent the mouse event
+     * @param mouseEvent le mouse event
      */
     public void setMouse(MouseEvent mouseEvent) {
         Dragboard dragboard = this.startDragAndDrop(TransferMode.MOVE); //Presse-papier qui contient les infos du drag'n drop
@@ -90,9 +90,19 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
         mouseEvent.consume(); //Cet event est finit.
     }
 
+    /**
+     * Gets etape.
+     *
+     * @return l'étape de la VueEtape
+     */
     public EtapeIG getEtape() {
         return etape;
     }
 
+    /**
+     * Ajouter vue client.
+     *
+     * @param viewC la VueCLient que l'on veut ajouter
+     */
     public abstract void ajouterVueClient(VueClient viewC);
 }

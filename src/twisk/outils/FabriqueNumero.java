@@ -19,7 +19,7 @@ public class FabriqueNumero {
     /**
      * Retourne l'instance de FabriqueNumero.
      *
-     * @return l'instance
+     * @return l 'instance
      */
     public static FabriqueNumero getInstance() {
         return instance;
@@ -55,6 +55,11 @@ public class FabriqueNumero {
         return cptLibrairie - 1;
     }
 
+    /**
+     * Consulter numero libraire int.
+     *
+     * @return the int
+     */
     public int consulterNumeroLibraire() {
         return cptLibrairie - 1;
     }

@@ -84,7 +84,7 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     /**
-     * Fonction qui retourne le nom d'une étape.
+     * Fonction qui retourne le num d'une étape.
      *
      * @return le num
      */
@@ -100,9 +100,9 @@ public abstract class Etape implements Iterable<Etape> {
     public abstract String toC();
 
     /**
-     * Fonction qui retourne le gestionnaire de succésseur.
+     * Fonction qui retourne le gestionnaire de successeur.
      *
-     * @return le gestionnaire de succésseur
+     * @return le gestionnaire de successeur
      */
     public GestionnaireSuccesseurs getGestsucc() {
         return gestsucc;
@@ -118,9 +118,10 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     /**
-     * Fonction qui retourne le succésseur n°i.
+     * Fonction qui retourne le successeur n°i.
      *
-     * @return le succésseur
+     * @param i l'indice du successeur
+     * @return le successeur
      */
     public Etape getSuccI(int i) {
         return getGestsucc().getSuccI(i);
@@ -134,7 +135,7 @@ public abstract class Etape implements Iterable<Etape> {
     public abstract int getNbTicketSiGuichet();
 
     /**
-     * Fonction qui retourne le numérp de sémaphore d'un guichet.
+     * Fonction qui retourne le numéro de sémaphore d'un guichet.
      *
      * @return le numéro de sémaphore
      */

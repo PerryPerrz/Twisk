@@ -74,7 +74,7 @@ public class MondeIG extends SujetObserve implements Observateur {
     /**
      * Itérateur d'étape. On peut donc itérer sur les étapes contenues dans un monde.
      *
-     * @return l'iterator
+     * @return l 'iterator
      */
     public Iterator<EtapeIG> iterator() {
         return etapes.values().iterator(); //On itère sur les valeurs de la HashMap.
@@ -83,7 +83,7 @@ public class MondeIG extends SujetObserve implements Observateur {
     /**
      * Fonction qui retourne le nombre d'étapes contenue dans le monde.
      *
-     * @return l'int
+     * @return l 'int
      */
 //Fonctions nécessaires aux tests de MondeIG (fonction "ajouter", "iterator")
     public int nbEtapes() {
@@ -122,7 +122,7 @@ public class MondeIG extends SujetObserve implements Observateur {
     /**
      * Itérateur d'arcs. On peut donc itérer sur les arcs contenues dans un monde.
      *
-     * @return l'iterator
+     * @return l 'iterator
      */
     public Iterator<ArcIG> iteratorArcs() {
         return arcs.iterator();
@@ -160,9 +160,8 @@ public class MondeIG extends SujetObserve implements Observateur {
      * Fonction qui retourne une étape du monde à l'aide d'un indice.
      *
      * @param indice l'indice
-     * @return l'etape indice
+     * @return l 'etape indice
      */
-
     public EtapeIG getEtapeIndice(String indice) {
         return this.etapes.get(indice);
     }
@@ -427,7 +426,6 @@ public class MondeIG extends SujetObserve implements Observateur {
      * @param nbJetons le nombre de jeton(s)
      * @throws UncorrectSettingsException la uncorrect settings exception
      */
-
     public void setTokens(int nbJetons) throws UncorrectSettingsException {
         try {
             if (nbJetons < 0) {
@@ -543,6 +541,8 @@ public class MondeIG extends SujetObserve implements Observateur {
 
     /**
      * Procédure qui crée le monde et lance la simulation
+     *
+     * @throws MondeException the monde exception
      */
     public void simuler() throws MondeException {
         verifierMondeIG();
@@ -588,6 +588,11 @@ public class MondeIG extends SujetObserve implements Observateur {
         return corE;
     }
 
+    /**
+     * Gets gestionnaire client de simulation.
+     *
+     * @return the gestionnaire client de simulation
+     */
     public GestionnaireClients getGestionnaireClientDeSimulation() {
         GestionnaireClients ge = null;
         if (simulationACommencee()) { //On vérifie si la simulation est déjà commencée

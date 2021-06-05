@@ -42,7 +42,7 @@ public class ArcIG {
      * Fonction qui retourne vrai si des arcs relis cette étape.
      *
      * @param e le e
-     * @return boolean
+     * @return boolean boolean
      */
     public boolean isLinkedToStage(EtapeIG e) {
         for (PointDeControleIG pdc : e) {
@@ -56,7 +56,7 @@ public class ArcIG {
     /**
      * Fonction qui test si un arc est selectionné (Elle retourne vrai si l'arc que l'on teste est selectionné par l'utilisateur).
      *
-     * @return boolean
+     * @return boolean boolean
      */
     public boolean isSelected() {
         return this.select;
@@ -74,7 +74,7 @@ public class ArcIG {
     /**
      * Fonction qui donne l'étape rattachée au point de contrôle de départ de l'arc.
      *
-     * @return l'étape
+     * @return l 'étape
      */
     public EtapeIG getEtapePdcDepart() {
         return getPdcDepart().getEtapeRattache();
@@ -83,7 +83,7 @@ public class ArcIG {
     /**
      * Fonction qui donne l'étape rattachée au point de contrôle d'arrivé de l'arc.
      *
-     * @return l'étape
+     * @return l 'étape
      */
     public EtapeIG getEtapePdcArrive() {
         return getPdcArrive().getEtapeRattache();

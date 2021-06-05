@@ -21,7 +21,7 @@ public class FabriqueIdentifiant {
     /**
      * Fonction permettant de réaliser une instance du singleton FabriqueIdentifiant.
      *
-     * @return instance
+     * @return instance instance
      */
     public static FabriqueIdentifiant getInstance() {
         return instance;

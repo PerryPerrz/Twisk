@@ -101,7 +101,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     /**
      * Fonction qui retourne l'identifiant d'une étape.
      *
-     * @return l'identifiant
+     * @return l 'identifiant
      */
     public String getIdentifiant() {
         return identifiant;
@@ -215,7 +215,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     /**
      * Fonction qui retourne l'écart d'une étape.
      *
-     * @return l'ecart
+     * @return l 'ecart
      */
     public int getEcart() {
         return ecart;

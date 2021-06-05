@@ -76,7 +76,7 @@ public class VueArcIG extends Pane implements Observateur {
     /**
      * Apparition du triangle.
      */
-    //Fonction qui calcule l'orientation de la flèche
+//Fonction qui calcule l'orientation de la flèche
     public void apparitionDuTriangle() {
         TailleComposants tc = TailleComposants.getInstance();
         double pointDepX = arc.getPdcDepart().getCentreX();

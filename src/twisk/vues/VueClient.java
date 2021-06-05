@@ -17,6 +17,12 @@ public class VueClient extends Circle implements Observateur {
     private final MondeIG monde;
     private EtapeIG e;
 
+    /**
+     * Constructeur de la classe VueClient
+     *
+     * @param monde  le monde
+     * @param client le client
+     */
     public VueClient(MondeIG monde, Client client) {
         this.monde = monde;
         this.client = client;
@@ -30,6 +36,11 @@ public class VueClient extends Circle implements Observateur {
         }
     }
 
+    /**
+     * Gets e.
+     *
+     * @return l'étape du client
+     */
     public EtapeIG getE() {
         return e;
     }

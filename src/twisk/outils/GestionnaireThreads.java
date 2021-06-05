@@ -4,6 +4,9 @@ import javafx.concurrent.Task;
 
 import java.util.ArrayList;
 
+/**
+ * The type Gestionnaire threads.
+ */
 public class GestionnaireThreads {
     private final ArrayList<Thread> threads;
 
@@ -13,6 +16,11 @@ public class GestionnaireThreads {
 
     private static final GestionnaireThreads instance = new GestionnaireThreads();
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static GestionnaireThreads getInstance() {
         return instance;
     }
@@ -21,7 +29,7 @@ public class GestionnaireThreads {
      * Fonction qui lance un nouveau Thread à partir d'une Task et qui stocke ce Thread dans le gestionnaire
      *
      * @param task La Task à lancer
-     * @return l'indice du Thread pour pouvoir le réutiliser plus tard
+     * @return l 'indice du Thread pour pouvoir le réutiliser plus tard
      */
     public int lancer(Task task) {
         Thread thread = new Thread(task);

@@ -87,66 +87,146 @@ public class CouleurComposants {
         return couleurBackgroudnActivite;
     }
 
+    /**
+     * Fonction qui retourne la couleur du stroke de la ligne de la flèche
+     *
+     * @return la couleur du stroke de la ligne de la flèche
+     */
     public String getCouleurLigneStroke() {
         return couleurLigneStroke;
     }
 
+    /**
+     * Fonction qui retourne la couleur du stroke du triangle de la flèche
+     *
+     * @return la couleur du stroke du triangle de la flèche
+     */
     public String getCouleurTriangleStroke() {
         return couleurTriangleStroke;
     }
 
+    /**
+     * Fonction qui retourne la couleur du fill du triangle de la flèche
+     *
+     * @return la couleur du fill du triangle de la flèche
+     */
     public String getCouleurTriangleFill() {
         return couleurTriangleFill;
     }
 
+    /**
+     * Fonction qui retourne la couleur du stroke de la ligne de la flèche lorsqu'elle est selectionnée
+     *
+     * @return la couleur du stroke de la ligne de la flèche lorsqu'elle est selectionnée
+     */
     public String getCouleurLigneStrokeIsSelected() {
         return couleurLigneStrokeIsSelected;
     }
 
+    /**
+     * Fonction qui retourne la couleur du stroke du triangle de la flèche lorsqu'elle est selectionnée
+     *
+     * @return la couleur du stroke du triangle de la flèche lorsqu'elle est selectionnée
+     */
     public String getCouleurTriangleStrokeIsSelected() {
         return couleurTriangleStrokeIsSelected;
     }
 
+    /**
+     * Fonction qui retourne la couleur du fill du triangle de la flèche lorsqu'elle est selectionnée
+     *
+     * @return la couleur du fill du triangle de la flèche lorsqu'elle est selectionnée
+     */
     public String getCouleurTriangleFillIsSelected() {
         return couleurTriangleFillIsSelected;
     }
 
+    /**
+     * Fonction qui retourne la couleur du client
+     *
+     * @return la couleur du client
+     */
     public String getCouleurClient() {
         return couleurClient;
     }
 
+    /**
+     * Fonction qui retourne la couleur du background d'une étape lorsqu'elle est selectionnée
+     *
+     * @return la couleur du background d'une étape lorsqu'elle est selectionnée
+     */
     public String getCouleurBackgroundEtapeIsSelected() {
         return couleurBackgroundEtapeIsSelected;
     }
 
+    /**
+     * Fonction qui retourne la couleur des borders d'une étape lorsqu'elle est selectionnée
+     *
+     * @return la couleur des borders d'une étape lorsqu'elle est selectionnée
+     */
     public String getCouleurBorderEtapeIsSelected() {
         return couleurBorderEtapeIsSelected;
     }
 
+    /**
+     * Fonction qui retourne la couleur du label d'un guichet
+     *
+     * @return la couleur du label d'un guichet
+     */
     public String getCouleurLabelGuichet() {
         return couleurLabelGuichet;
     }
 
+    /**
+     * Fonction qui retourne la couleur des borders d'un guichet
+     *
+     * @return la couleur des borders d'un guichet
+     */
     public String getCouleurBorderGuichet() {
         return couleurBorderGuichet;
     }
 
+    /**
+     * Fonction qui retourne la couleur du background d'un guichet
+     *
+     * @return la couleur du background d'un guichet
+     */
     public String getCouleurBackgroundGuichet() {
         return couleurBackgroundGuichet;
     }
 
+    /**
+     * Fonction qui retourne la couleur du background du monde si le style correspond à celui du "jour"
+     *
+     * @return la couleur du background du monde si le style correspond à celui du "jour"
+     */
     public String getCouleurBackgroundJourMonde() {
         return couleurBackgroundJourMonde;
     }
 
+    /**
+     * Fonction qui retourne la couleur du background du monde si le style correspond à celui de la "nuit"
+     *
+     * @return la couleur du background du monde si le style correspond à celui de la "nuit"
+     */
     public String getCouleurBackgroundNuitMonde() {
         return couleurBackgroundNuitMonde;
     }
 
+    /**
+     * Fonction qui retourne la couleur du background du monde si le style correspond à celui du "reset"
+     *
+     * @return la couleur du background du monde si le style correspond à celui du "reset"
+     */
     public String getCouleurBackgroundResetMonde() {
         return couleurBackgroundResetMonde;
     }
 
+    /**
+     * Fonction qui retourne la couleur du point de contrôle
+     *
+     * @return la couleur du point de contrôle
+     */
     public String getCouleurPointDeControle() {
         return couleurPointDeControle;
     }
