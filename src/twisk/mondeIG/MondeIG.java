@@ -112,9 +112,10 @@ public class MondeIG extends SujetObserve implements Observateur {
                 throw new CreateArcWithEndPdcException("Un arc ne peut pas partir du point d'arrivé d'un autre arc!");
             }
         }
-        if (pdc1.getEtapeRattache() == pdc2.getEtapeRattache()) {
+        if (pdc1.getEtapeRattache() == pdc2.getEtapeRattache())
             throw new SameActivityException("Vous ne pouvez pas, créer d'arcs entre 2 points de controle identiques! où créer un arc entre 2 points d'une même étape!");
-        }
+        if (pdc1.getEtapeRattache().estAccessibleDepuis(pdc2.getEtapeRattache()))
+            throw new CreateLoopException("On peut pas créer un circuit entre deux étapes !");
         ArcIG ark = new ArcIG(pdc1, pdc2);
         this.arcs.add(ark);
     }
