@@ -10,6 +10,7 @@ import java.util.Iterator;
  */
 public class GestionnaireClients implements Iterable<Client> {
     private final Client[] clients;
+    private final int nbClients;
 
     /**
      * Instancie un nouveau Gestionnaire clients.
@@ -18,6 +19,7 @@ public class GestionnaireClients implements Iterable<Client> {
      */
     public GestionnaireClients(int nbClients) {
         clients = new Client[nbClients];
+        this.nbClients = nbClients;
     }
 
     /**
@@ -64,5 +66,14 @@ public class GestionnaireClients implements Iterable<Client> {
      */
     public Client getClientI(int i) {
         return clients[i];
+    }
+
+    /**
+     * Fonction qui retourne le nombre de clients de la simulation actuelle.
+     *
+     * @return le nombre de clients
+     */
+    public int getNbClients() {
+        return nbClients;
     }
 }

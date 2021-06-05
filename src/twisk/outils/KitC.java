@@ -129,7 +129,7 @@ public class KitC {
         Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
         for (Client c : gestCli) {//On demande l’exécution de la compilation
             try {
-                Process p = runtime.exec("kill " + c.getNumeroClient()); //Le numéro du client correspond à son numéro de processus
+                Process p = runtime.exec("kill -9 " + c.getNumeroClient()); //Le numéro du client correspond à son numéro de processus
                 p.waitFor();
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();

@@ -52,6 +52,7 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem nuit = new MenuItem("Nuit");
         MenuItem reset = new MenuItem("Reset");
         MenuItem jetons = new MenuItem("Nombre de jeton(s)");
+        MenuItem clients = new MenuItem("Nombre de client(s)");
 
         this.fichier.getItems().add(quitter);
         this.edition.getItems().add(supprimer);
@@ -65,6 +66,7 @@ public class VueMenu extends MenuBar implements Observateur {
         this.style.getItems().add(nuit);
         this.style.getItems().add(reset);
         this.parametres.getItems().add(jetons);
+        this.parametres.getItems().add(clients);
 
         quitter.setOnAction(actionEvent -> {
             GestionnaireThreads.getInstance().detruireTout();
@@ -81,6 +83,7 @@ public class VueMenu extends MenuBar implements Observateur {
         nuit.setOnAction(actionEvent -> monde.setStyle(1));
         reset.setOnAction(actionEvent -> monde.setStyle(2));
         jetons.setOnAction(actionEvent -> this.jetons());
+        clients.setOnAction(actionEvent -> this.clients());
 
         TailleComposants tc = TailleComposants.getInstance();
         Image image1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/file.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
@@ -158,6 +161,10 @@ public class VueMenu extends MenuBar implements Observateur {
         jetons.setGraphic(icon17);
 
         jetons.setDisable(true);
+
+        Image image18 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/client.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon18 = new ImageView(image18);
+        clients.setGraphic(icon18);
 
         this.getMenus().addAll(fichier, edition, mondeMenu, parametres, style);
     }
@@ -297,6 +304,43 @@ public class VueMenu extends MenuBar implements Observateur {
                 dia.setTitle("UncorrectSettingsException");
                 dia.setHeaderText("Impossible de saisir ce nombre de jeton(s)");
                 dia.setContentText("Erreur : La saisie du nombre de jeton(s) est incorrecte\n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
+            }
+        });
+    }
+
+    /**
+     * Clients.
+     */
+    public void clients() {
+        TextInputDialog dialog = new TextInputDialog("5");
+        dialog.setTitle("Nombre de client(s) dans la simulation");
+        dialog.setHeaderText("Entrez votre nombre de client(s) :");
+        dialog.setContentText("Client(s) :");
+
+        TailleComposants tc = TailleComposants.getInstance();
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/tools.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        ImageView icon = new ImageView(image);
+        dialog.setGraphic(icon);
+
+        Optional<String> result = dialog.showAndWait();
+
+        result.ifPresent(nbJet -> {
+            try {
+                this.monde.setNbClients(Integer.parseInt(nbJet));
+            } catch (UncorrectSettingsException uSE) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("UncorrectSettingsException");
+                dia.setHeaderText("Impossible de saisir ce nombre de client(s)");
+                dia.setContentText("Erreur : La saisie du nombre de client(s) est incorrecte\n" +
                         "Veuillez ré-essayer");
                 Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon2 = new ImageView(image2);

@@ -32,6 +32,7 @@ public class MondeIG extends SujetObserve implements Observateur {
     private int style;
     private CorrespondanceEtapes corE;
     private Object simulation;
+    private int nbClients;
 
     /**
      * Constructeur de la classe MondeIG.
@@ -46,6 +47,7 @@ public class MondeIG extends SujetObserve implements Observateur {
         ActiviteIG activite = new ActiviteIG("Activite" + id, id);
         this.etapes.put(id, activite);
         this.style = 2;
+        this.nbClients = 5;
     }
 
     /**
@@ -429,8 +431,8 @@ public class MondeIG extends SujetObserve implements Observateur {
      */
     public void setTokens(int nbJetons) throws UncorrectSettingsException {
         try {
-            if (nbJetons < 0) {
-                throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être négatif!");
+            if (nbJetons <= 0) {
+                throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être nul ou négatif!");
             }
             for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
                 EtapeIG eta = iter.next();
@@ -563,7 +565,7 @@ public class MondeIG extends SujetObserve implements Observateur {
 
             //On lance la simulation
             Method fonctionSetNbClients = clS.getMethod("setNbClients", int.class);
-            fonctionSetNbClients.invoke(instanceSim, 5);
+            fonctionSetNbClients.invoke(instanceSim, getNbClients());
             Method fonctionSimuler = clS.getMethod("simuler", Monde.class);
             fonctionSimuler.invoke(instanceSim, monde);
         } catch (ClassNotFoundException e) {
@@ -642,5 +644,31 @@ public class MondeIG extends SujetObserve implements Observateur {
             }
         };
         GestionnaireThreads.getInstance().lancer(task);
+    }
+
+    /**
+     * Fonction qui retourne le nombre de clients utilisés dans la simulation actuelle ou à venir.
+     *
+     * @return le nombre de clients
+     */
+    public int getNbClients() {
+        return nbClients;
+    }
+
+    /**
+     * Procédure qui change le nombre de clients utilisés dans la simulation actuelle ou à venir.
+     *
+     * @param nbClients Le nouveau nombre de clients
+     * @throws UncorrectSettingsException exception déclenchée quand le nombre de clients est incorrect.
+     */
+    public void setNbClients(int nbClients) throws UncorrectSettingsException {
+        try {
+            if (nbClients <= 0)
+                throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être nul ou négatif!");
+            this.nbClients = nbClients;
+        } catch (NumberFormatException nFE) {
+            throw new UncorrectSettingsException("Les paramètres saisis pour le nombre de jetons sont erronés!");
+        }
+        notifierObservateurs();
     }
 }
