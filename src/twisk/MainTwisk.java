@@ -36,7 +36,7 @@ public class MainTwisk extends Application {
         root.setCenter(viewM);
         root.setTop(viewMe);
         primaryStage.setTitle("twisk | Iopeti & Yvoz");
-        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/icon.png"))));
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("ressources/images/icon.png"))));
         primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
         primaryStage.show();
     }
