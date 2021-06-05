@@ -2,7 +2,7 @@ package twisk.vues;
 
 import javafx.geometry.Insets;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
@@ -51,10 +51,9 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
 
     @Override
     public void ajouterVueClient(VueClient viewC) {
-        Pane pane = (Pane) box.getChildren().get(paneLibre);
-        viewC.setCenterX(pane.getWidth() / 2);
-        viewC.setCenterY(pane.getHeight() / 2);
-        pane.getChildren().add(viewC);
+        //Utilisation d'un StackPane pour pouvoir afficher les clients au centre du rectangle.
+        StackPane sp = (StackPane) box.getChildren().get(paneLibre);
+        sp.getChildren().add(viewC);
         if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())
             paneLibre++;
         else
@@ -63,10 +62,10 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
 
     private void ajouterPane() {
         for (int i = 0; i < monde.getNbClients() - etape.siEstUnGuichetGetNbJetons(); i++) {
-            Pane pane = new Pane();
-            pane.setStyle("-fx-border-color: " + CouleurComposants.getInstance().getCouleurBorderGuichet() + "; -fx-border-width: 3px; -fx-background-color:" + CouleurComposants.getInstance().getCouleurBackgroundGuichet() + ";");
-            pane.setPrefSize(TailleComposants.getInstance().getHautAct(), TailleComposants.getInstance().getRad() * 2);
-            box.getChildren().add(pane);
+            StackPane sp = new StackPane();
+            sp.setStyle("-fx-border-color: " + CouleurComposants.getInstance().getCouleurBorderGuichet() + "; -fx-border-width: 3px; -fx-background-color:" + CouleurComposants.getInstance().getCouleurBackgroundGuichet() + ";");
+            sp.setPrefSize(TailleComposants.getInstance().getHautAct(), TailleComposants.getInstance().getRad() * 2);
+            box.getChildren().add(sp);
         }
     }
 
