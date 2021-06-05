@@ -367,4 +367,20 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
     public ArrayList<EtapeIG> getSucc() {
         return succ;
     }
+
+    /**
+     * Fonction qui regarde si l'étape est accessible par l'étape donnée en paramêtres.
+     *
+     * @param etape l'étape donnée
+     * @return un booléen indiquant si elle est accessible ou non
+     */
+    public boolean estAccessibleDepuis(EtapeIG etape) {
+        if (etape.equals(this))
+            return true;
+        if (etape.possedeUnSuccesseur())
+            for (EtapeIG e : etape.getSucc())
+                if (this.estAccessibleDepuis(e))
+                    return true;
+        return false;
+    }
 }

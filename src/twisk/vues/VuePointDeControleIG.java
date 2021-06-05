@@ -8,10 +8,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 import twisk.designPattern.Observateur;
-import twisk.exceptions.ArcAlreadyCreateException;
-import twisk.exceptions.CreateArcWithEndPdcException;
-import twisk.exceptions.SameActivityException;
-import twisk.exceptions.TwiskException;
+import twisk.exceptions.*;
 import twisk.mondeIG.MondeIG;
 import twisk.mondeIG.PointDeControleIG;
 import twisk.outils.CouleurComposants;
@@ -78,6 +75,19 @@ public class VuePointDeControleIG extends Circle implements Observateur {
                 dialog.setHeaderText("Impossible de créer cet arc!");
                 dialog.setContentText("Erreur : Vous ne pouvez pas créer d'arcs entre 2 points de controle identiques!\nVeuillez ré-essayer");
                 Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/siren.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+                ImageView icon = new ImageView(image);
+                dialog.setGraphic(icon);
+                dialog.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dialog.close());
+                pt.play();
+            } catch (CreateLoopException cle) {
+                Alert dialog = new Alert(Alert.AlertType.ERROR);
+                dialog.setTitle("CreateLoopException");
+                dialog.setHeaderText("Impossible de créer cet arc!");
+                dialog.setContentText("Erreur : Vous ne pouvez pas créer de circuit entre deux étapes !\nVeuillez ré-essayer");
+                Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
                 ImageView icon = new ImageView(image);
                 dialog.setGraphic(icon);
                 dialog.show();
