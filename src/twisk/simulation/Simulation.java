@@ -77,6 +77,8 @@ public class Simulation extends SujetObserve {
                     enCoursDeSimulation = false;
                     notifierObservateurs();
                 } catch (InterruptedException e) {
+                    enCoursDeSimulation = false;
+                    notifierObservateurs();
                 }
                 return null;
             }

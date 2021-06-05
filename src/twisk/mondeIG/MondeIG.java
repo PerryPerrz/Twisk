@@ -628,16 +628,18 @@ public class MondeIG extends SujetObserve implements Observateur {
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
+                KitC kit = new KitC();
+                System.out.println("BBBBBBBBBBBBBBBBBBBBBB");
+                kit.tuerLesProcessusC(getGestionnaireClientDeSimulation());
                 //On s'occupe de nettoyer les structures de données en C avec l'aide de la fonction "nettoyer"
-                Method lavage = null;
                 try {
-                    lavage = simulation.getClass().getMethod("nettoyage");
+                    System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+                    Method lavage = simulation.getClass().getMethod("nettoyage");
                     lavage.invoke(simulation);
                 } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                     e.printStackTrace();
                 }
-                KitC kit = new KitC();
-                kit.tuerLesProcessusC(getGestionnaireClientDeSimulation());
+                System.out.println("CCC");
                 GestionnaireThreads.getInstance().detruireTout();
                 return null;
             }

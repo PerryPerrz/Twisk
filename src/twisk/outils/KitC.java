@@ -130,12 +130,12 @@ public class KitC {
         for (Client c : gestCli) {
             Process p = null;//On demande l’exécution de la compilation
             try {
-                p = runtime.exec("kill " + c.getNumeroClient());
+                p = runtime.exec("kill " + c.getNumeroClient()); //Le numéro du client correspond à son numéro de processus
+                System.out.println(c.getNumeroClient());
                 p.waitFor();
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(c.getNumeroClient());
         }
     }
 }
