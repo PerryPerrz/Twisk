@@ -1,10 +1,11 @@
 package twisk.vues;
 
-import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
+import twisk.outils.CouleurComposants;
 import twisk.outils.TailleComposants;
 import twisk.simulation.Client;
 
@@ -19,7 +20,8 @@ public class VueClient extends Circle implements Observateur {
     public VueClient(MondeIG monde, Client client) {
         this.monde = monde;
         this.client = client;
-        this.setFill(Color.PINK);
+        CouleurComposants cc = CouleurComposants.getInstance();
+        this.setFill(Paint.valueOf(cc.getCouleurClient()));
         if (this.client.getEtape().estUnSasEntree() || this.client.getEtape().estUnSasSortie())
             this.setVisible(false);
         else {

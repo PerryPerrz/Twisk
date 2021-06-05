@@ -14,6 +14,7 @@ import javafx.scene.layout.VBox;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
+import twisk.outils.CouleurComposants;
 import twisk.outils.TailleComposants;
 
 import java.util.Objects;
@@ -51,6 +52,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
         this.setOnDragDetected(this::setMouse);
 
         TailleComposants tc = TailleComposants.getInstance();
+        CouleurComposants cc = CouleurComposants.getInstance();
 
         hBox.getChildren().add(label);
         if (this.etape.estUneEntree()) {
@@ -69,7 +71,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
         this.setMaxSize(tc.getLargAct(), tc.getHautAct()); //Taille max de l'activité
         relocate(etape.getPosX(), etape.getPosY());
         if (monde.isSelectionned(etape)) {
-            setStyle("-fx-border-color: #f4abc4;-fx-border-width: 2px;-fx-background-color: #f4abc4;");
+            setStyle("-fx-border-color: " + cc.getCouleurBorderEtapeIsSelected() + ";-fx-border-width: 2px;-fx-background-color: " + cc.getCouleurBackgroundEtapeIsSelected());
         }
     }
 

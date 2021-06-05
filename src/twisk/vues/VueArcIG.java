@@ -2,6 +2,7 @@ package twisk.vues;
 
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polyline;
 import javafx.scene.transform.Rotate;
@@ -9,6 +10,7 @@ import twisk.designPattern.Observateur;
 import twisk.mondeIG.ArcIG;
 import twisk.mondeIG.MondeIG;
 import twisk.mondeIG.PointDeControleIG;
+import twisk.outils.CouleurComposants;
 import twisk.outils.TailleComposants;
 
 /**
@@ -33,15 +35,16 @@ public class VueArcIG extends Pane implements Observateur {
         this.ligne = new Line();
         this.triangle = new Polyline();
         TailleComposants tc = TailleComposants.getInstance();
+        CouleurComposants cc = CouleurComposants.getInstance();
 
-        ligne.setStroke(Color.BLUEVIOLET);
+        ligne.setStroke(Paint.valueOf(cc.getCouleurLigneStroke()));
         ligne.setStrokeWidth(tc.getLargLigne());
-        triangle.setStroke(Color.BLUEVIOLET);
-        triangle.setFill(Color.BLUEVIOLET);
+        triangle.setStroke(Paint.valueOf(cc.getCouleurTriangleStroke()));
+        triangle.setFill(Paint.valueOf(cc.getCouleurTriangleFill()));
         if (monde.isSelectionned(arc)) {
-            ligne.setStroke(Color.valueOf("#f4abc4"));
-            triangle.setStroke(Color.valueOf("#f4abc4"));
-            triangle.setFill(Color.valueOf("#f4abc4"));
+            ligne.setStroke(Color.valueOf(cc.getCouleurLigneStrokeIsSelected()));
+            triangle.setStroke(Color.valueOf(cc.getCouleurTriangleStrokeIsSelected()));
+            triangle.setFill(Color.valueOf(cc.getCouleurTriangleFillIsSelected()));
         }
         triangle.setStrokeWidth(tc.getLargLigne());
 

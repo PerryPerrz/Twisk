@@ -9,6 +9,7 @@ import twisk.mondeIG.ArcIG;
 import twisk.mondeIG.EtapeIG;
 import twisk.mondeIG.MondeIG;
 import twisk.mondeIG.PointDeControleIG;
+import twisk.outils.CouleurComposants;
 import twisk.outils.TailleComposants;
 import twisk.simulation.Client;
 
@@ -71,6 +72,7 @@ public class VueMondeIG extends Pane implements Observateur {
 
     @Override
     public void reagir() {
+        CouleurComposants cc = CouleurComposants.getInstance();
         //La fonction réagir de VueMondeIG est la première à être appelée et elle réinstancie toutes les autres vues qu'elle contient.
         //De ce fait, toutes les autres vues n'ont pas besoin de réagir car elle sont supprimées à chaque fois que l'on est sur le point de les faire réagir.
         Runnable command = () -> {
@@ -113,13 +115,13 @@ public class VueMondeIG extends Pane implements Observateur {
             }
             switch (monde.getStyle()) {
                 case 0:
-                    getParent().setStyle("-fx-background-color : #ffe268");
+                    getParent().setStyle("-fx-background-color : " + cc.getCouleurBackgroundJourMonde());
                     break;
                 case 1:
-                    getParent().setStyle("-fx-background-color : #151515");
+                    getParent().setStyle("-fx-background-color : " + cc.getCouleurBackgroundNuitMonde());
                     break;
                 case 2:
-                    getParent().setStyle("-fx-background-color : #FFFFFF");
+                    getParent().setStyle("-fx-background-color : " + cc.getCouleurBackgroundResetMonde());
             }
         };
         if (Platform.isFxApplicationThread()) {

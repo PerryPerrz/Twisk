@@ -4,7 +4,7 @@ import javafx.animation.PauseTransition;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 import twisk.designPattern.Observateur;
@@ -14,6 +14,7 @@ import twisk.exceptions.SameActivityException;
 import twisk.exceptions.TwiskException;
 import twisk.mondeIG.MondeIG;
 import twisk.mondeIG.PointDeControleIG;
+import twisk.outils.CouleurComposants;
 import twisk.outils.TailleComposants;
 
 import java.util.Objects;
@@ -33,10 +34,11 @@ public class VuePointDeControleIG extends Circle implements Observateur {
      */
     public VuePointDeControleIG(MondeIG monde, PointDeControleIG pdc) {
         TailleComposants tc = TailleComposants.getInstance();
+        CouleurComposants cc = CouleurComposants.getInstance();
         this.monde = monde;
         monde.ajouterObservateur(this);
         this.pdc = pdc;
-        this.setFill(Color.SLATEBLUE);
+        this.setFill(Paint.valueOf(cc.getCouleurPointDeControle()));
         this.setRadius(tc.getRad());
         this.setCenterX(this.pdc.getCentreX());
         this.setCenterY(this.pdc.getCentreY());
