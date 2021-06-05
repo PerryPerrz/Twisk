@@ -2,6 +2,7 @@ package twisk;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import twisk.mondeIG.MondeIG;
@@ -35,6 +36,7 @@ public class MainTwisk extends Application {
         root.setCenter(viewM);
         root.setTop(viewMe);
         primaryStage.setTitle("twisk | Iopeti & Yvoz");
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/icon.png"))));
         primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
         primaryStage.show();
     }
