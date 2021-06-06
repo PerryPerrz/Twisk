@@ -694,8 +694,8 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      */
     public void setNbClients(int nbClients) throws UncorrectSettingsException {
         try {
-            if (nbClients <= 0)
-                throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être nul ou négatif!");
+            if (nbClients <= 0 || nbClients > 49)
+                throw new UncorrectSettingsException("Attention, un nombre de jeton(s) ne peut pas être nul, négatif ou supérieur à 49 !");
             this.nbClients = nbClients;
         } catch (NumberFormatException nFE) {
             throw new UncorrectSettingsException("Les paramètres saisis pour le nombre de jetons sont erronés!");

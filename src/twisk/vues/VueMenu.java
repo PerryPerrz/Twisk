@@ -328,7 +328,7 @@ public class VueMenu extends MenuBar implements Observateur {
     public void clients() {
         TextInputDialog dialog = new TextInputDialog("5");
         dialog.setTitle("Nombre de client(s) dans la simulation");
-        dialog.setHeaderText("Entrez votre nombre de client(s) :");
+        dialog.setHeaderText("Entrez votre nombre de client(s) (max : 49) :");
         dialog.setContentText("Client(s) :");
 
         TailleComposants tc = TailleComposants.getInstance();
