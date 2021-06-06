@@ -29,7 +29,6 @@ public class Activite extends Etape {
         super(nom);
         this.temps = t;
         this.ecartTemps = e;
-
     }
 
     @Override

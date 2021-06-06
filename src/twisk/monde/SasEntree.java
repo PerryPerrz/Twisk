@@ -12,6 +12,8 @@ public class SasEntree extends Activite {
     public SasEntree() {
         super("SasEntree");
         loi = "Uni";
+        this.setTemps(10);
+        this.setEcartTemps(4);
     }
 
     @Override

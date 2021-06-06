@@ -713,5 +713,10 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
 
     public void setLoi(String loi) {
         this.loi = loi;
+        notifierObservateurs();
+    }
+
+    public String getLoi() {
+        return loi;
     }
 }

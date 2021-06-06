@@ -3,7 +3,6 @@ package twisk.vues;
 import animatefx.animation.BounceIn;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -75,7 +74,7 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem reset = new MenuItem("Reset");
         MenuItem jetons = new MenuItem("Nombre de jeton(s)");
         MenuItem clients = new MenuItem("Nombre de client(s)");
-        MenuItem ajouter = new MenuItem("Ajouter");
+        MenuItem ajouterMonde = new MenuItem("Ajouter");
         MenuItem supprimerMonde = new MenuItem("Supprimer");
         MenuItem loiUniforme = new MenuItem("Loi Uniforme");
         MenuItem loiGaussienne = new MenuItem("Loi Gaussienne");
@@ -86,9 +85,8 @@ public class VueMenu extends MenuBar implements Observateur {
         this.accesAuMonde.getItems().addAll(entree, sortie);
         this.parametres.getItems().addAll(delai, ecart, jetons, clients);
         this.style.getItems().addAll(jour, nuit, reset);
-        this.mondes.getItems().addAll(ajouter, supprimerMonde);
+        this.mondes.getItems().addAll(ajouterMonde, supprimerMonde);
         this.lois.getItems().addAll(loiUniforme, loiGaussienne, loiExponentielle);
-
 
         nouveau.setOnAction(actionEvent -> this.nouveau());
         ouvrir.setOnAction(actionEvent -> this.restaurer());
@@ -109,7 +107,7 @@ public class VueMenu extends MenuBar implements Observateur {
         reset.setOnAction(actionEvent -> monde.setStyle(2));
         jetons.setOnAction(actionEvent -> this.jetons());
         clients.setOnAction(actionEvent -> this.clients());
-        ajouter.setOnAction(actionEvent -> this.ajouter());
+        ajouterMonde.setOnAction(actionEvent -> this.ajouter());
         supprimerMonde.setOnAction(actionEvent -> this.supprimerMonde());
         loiUniforme.setOnAction(actionEvent -> monde.setLoi("Uni"));
         loiGaussienne.setOnAction(actionEvent -> monde.setLoi("Gauss"));
@@ -145,12 +143,14 @@ public class VueMenu extends MenuBar implements Observateur {
         this.gestionDesImages(ouvrir, "open");
         this.gestionDesImages(sauvegarder, "save");
         this.gestionDesImages(mondes, "world");
-        this.gestionDesImages(ajouter, "ajouterMonde");
-        this.gestionDesImages(supprimer, "supprimerMonde");
-        this.gestionDesImages(lois, "save");
-        this.gestionDesImages(loiUniforme, "save");
-        this.gestionDesImages(loiGaussienne, "save");
-        this.gestionDesImages(loiExponentielle, "save");
+        this.gestionDesImages(ajouterMonde, "ajouterMonde");
+        this.gestionDesImages(supprimerMonde, "supprimerMonde");
+        this.gestionDesImages(lois, "probabilite");
+        this.gestionDesImages(loiUniforme, "loi");
+        this.gestionDesImages(loiGaussienne, "loi");
+        this.gestionDesImages(loiExponentielle, "loi");
+
+        this.gestionDuCheckmarkDesLois();
 
         ajouterMenuItemsMondes();
 
@@ -388,7 +388,6 @@ public class VueMenu extends MenuBar implements Observateur {
     /**
      * Procédure qui demande à l'utilisateur quel monde sauvegardé ouvrir et qui l'ouvre.
      */
-    @FXML
     void restaurer() {
         //On crée une nouvelle fenêtre avec le nouveau monde
         try {
@@ -615,6 +614,24 @@ public class VueMenu extends MenuBar implements Observateur {
         menuItem.setGraphic(icon);
     }
 
+    /**
+     * Procédure qui gère le checkmark des lois, lorsque l'utilisateur selectionne une lois, un checkmark s'ajoute dans le menu
+     */
+    public void gestionDuCheckmarkDesLois() {
+        if (monde.getLoi().equals("Uni"))
+            this.lois.getItems().get(0).setText("Loi Uniforme ◄");
+        else
+            this.lois.getItems().get(0).setText("Loi Uniforme");
+        if (monde.getLoi().equals("Gauss"))
+            this.lois.getItems().get(1).setText("Loi Gaussienne ◄");
+        else
+            this.lois.getItems().get(1).setText("Loi Gaussienne");
+        if (monde.getLoi().equals("Expo"))
+            this.lois.getItems().get(2).setText("Loi Exponentielle ◄");
+        else
+            this.lois.getItems().get(2).setText("Loi Exponentielle");
+    }
+
     @Override
     public void reagir() {
         Runnable command = () -> {
@@ -626,6 +643,8 @@ public class VueMenu extends MenuBar implements Observateur {
             else //Si l'étape concernée est un guichet
                 parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
             ajouterMenuItemsMondes();
+
+            this.gestionDuCheckmarkDesLois();
         };
         if (Platform.isFxApplicationThread()) {
             command.run();
