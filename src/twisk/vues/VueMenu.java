@@ -37,7 +37,7 @@ public class VueMenu extends MenuBar implements Observateur {
     private final MondeIG monde;
     private final Menu fichier;
     private final Menu edition;
-    private final Menu sas;
+    private final Menu accesAuMonde;
     private final Menu parametres;
     private final Menu style;
     private final Menu mondes;
@@ -53,7 +53,7 @@ public class VueMenu extends MenuBar implements Observateur {
 
         fichier = new Menu("Fichier");
         edition = new Menu("Edition");
-        sas = new Menu("Sas");
+        accesAuMonde = new Menu("Accès");
         parametres = new Menu("Paramètres");
         style = new Menu("Style");
         mondes = new Menu("Mondes");
@@ -76,7 +76,6 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem ajouter = new MenuItem("Ajouter");
         MenuItem supprimerMonde = new MenuItem("Supprimer");
 
-
         this.fichier.getItems().add(nouveau);
         this.fichier.getItems().add(ouvrir);
         this.fichier.getItems().add(sauvegarder);
@@ -84,8 +83,8 @@ public class VueMenu extends MenuBar implements Observateur {
         this.edition.getItems().add(supprimer);
         this.edition.getItems().add(renommer);
         this.edition.getItems().add(effacer);
-        this.sas.getItems().add(entree);
-        this.sas.getItems().add(sortie);
+        this.accesAuMonde.getItems().add(entree);
+        this.accesAuMonde.getItems().add(sortie);
         this.parametres.getItems().add(delai);
         this.parametres.getItems().add(ecart);
         this.style.getItems().add(jour);
@@ -118,114 +117,42 @@ public class VueMenu extends MenuBar implements Observateur {
         ajouter.setOnAction(actionEvent -> this.ajouter());
         supprimerMonde.setOnAction(actionEvent -> this.supprimerMonde());
 
-        TailleComposants tc = TailleComposants.getInstance();
-        Image image1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/file.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon1 = new ImageView(image1);
-        fichier.setGraphic(icon1);
-
-        Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/edit.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon2 = new ImageView(image2);
-        edition.setGraphic(icon2);
-
-        Image image3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/porte.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon3 = new ImageView(image3);
-        sas.setGraphic(icon3);
-
-        Image image4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/settings.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon4 = new ImageView(image4);
-        parametres.setGraphic(icon4);
-
-        Image image5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/brush.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon5 = new ImageView(image5);
-        style.setGraphic(icon5);
-
-        Image image6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/exit.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon6 = new ImageView(image6);
-        quitter.setGraphic(icon6);
-
-        Image image7 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/delete.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon7 = new ImageView(image7);
-        supprimer.setGraphic(icon7);
-
-        Image image8 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/rename.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon8 = new ImageView(image8);
-        renommer.setGraphic(icon8);
-
+        this.gestionDesImages(fichier, "file");
+        this.gestionDesImages(edition, "edit");
+        this.gestionDesImages(accesAuMonde, "porte");
+        this.gestionDesImages(parametres, "settings");
+        this.gestionDesImages(style, "brush");
+        this.gestionDesImages(quitter, "exit");
+        this.gestionDesImages(supprimer, "delete");
+        this.gestionDesImages(renommer, "rename");
         renommer.setDisable(true);
 
-        Image image9 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/select.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon9 = new ImageView(image9);
-        effacer.setGraphic(icon9);
-
-        Image image10 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/entree.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon10 = new ImageView(image10);
-        entree.setGraphic(icon10);
-
-        Image image11 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/sortie.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon11 = new ImageView(image11);
-        sortie.setGraphic(icon11);
-
-        Image image12 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/hourglass.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon12 = new ImageView(image12);
-        delai.setGraphic(icon12);
-
+        this.gestionDesImages(effacer, "select");
+        this.gestionDesImages(entree, "entree");
+        this.gestionDesImages(sortie, "sortie");
+        this.gestionDesImages(delai, "hourglass");
         delai.setDisable(true);
 
-        Image image13 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/hourglass.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon13 = new ImageView(image13);
-        ecart.setGraphic(icon13);
-
+        this.gestionDesImages(ecart, "hourglass");
         ecart.setDisable(true);
 
-        Image image14 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/day.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon14 = new ImageView(image14);
-        jour.setGraphic(icon14);
-
-        Image image15 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/night.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon15 = new ImageView(image15);
-        nuit.setGraphic(icon15);
-
-        Image image16 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/reset.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon16 = new ImageView(image16);
-        reset.setGraphic(icon16);
-
-        Image image17 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/token.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon17 = new ImageView(image17);
-        jetons.setGraphic(icon17);
-
+        this.gestionDesImages(jour, "day");
+        this.gestionDesImages(nuit, "night");
+        this.gestionDesImages(reset, "reset");
+        this.gestionDesImages(jetons, "token");
         jetons.setDisable(true);
 
-        Image image18 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/client.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon18 = new ImageView(image18);
-        clients.setGraphic(icon18);
-
-        Image image19 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/new.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon19 = new ImageView(image19);
-        nouveau.setGraphic(icon19);
-
-        Image image20 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/open.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon20 = new ImageView(image20);
-        ouvrir.setGraphic(icon20);
-
-        Image image21 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/save.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon21 = new ImageView(image21);
-        sauvegarder.setGraphic(icon21);
-
-        Image image22 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon22 = new ImageView(image22);
-        mondes.setGraphic(icon22);
-
-        Image image23 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon23 = new ImageView(image23);
-        ajouter.setGraphic(icon23);
-
-        Image image24 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
-        ImageView icon24 = new ImageView(image24);
-        supprimerMonde.setGraphic(icon24);
+        this.gestionDesImages(clients, "client");
+        this.gestionDesImages(nouveau, "new");
+        this.gestionDesImages(ouvrir, "open");
+        this.gestionDesImages(sauvegarder, "save");
+        this.gestionDesImages(mondes, "world");
+        this.gestionDesImages(ajouter, "ajouterMonde");
+        this.gestionDesImages(supprimer, "supprimerMonde");
 
         ajouterMenuItemsMondes();
 
-        this.getMenus().addAll(fichier, edition, sas, parametres, style, mondes);
+        this.getMenus().addAll(fichier, edition, accesAuMonde, parametres, style, mondes);
     }
 
     private void supprimer() {
@@ -574,7 +501,7 @@ public class VueMenu extends MenuBar implements Observateur {
                             e.printStackTrace();
                         }
                     });
-                    Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), TailleComposants.getInstance().getTailleIcons2(), TailleComposants.getInstance().getTailleIcons2(), true, true);
+                    Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/mondesDef.png")), TailleComposants.getInstance().getTailleIcons2(), TailleComposants.getInstance().getTailleIcons2(), true, true);
                     ImageView icon = new ImageView(image);
                     menuItem.setGraphic(icon);
                 }
@@ -671,6 +598,19 @@ public class VueMenu extends MenuBar implements Observateur {
         primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
         primaryStage.show();
         monde.notifierObservateurs();
+    }
+
+    /**
+     * Procédure qui permet de gérer les images, plus facilement et plus proprement
+     *
+     * @param menuItem                  le menuItem sur lequel je veux accrocher une image
+     * @param nomDeLImageSansLExtension le nom de l'image sans son extension
+     */
+    public void gestionDesImages(MenuItem menuItem, String nomDeLImageSansLExtension) {
+        TailleComposants tc = TailleComposants.getInstance();
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/" + nomDeLImageSansLExtension + ".png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon = new ImageView(image);
+        menuItem.setGraphic(icon);
     }
 
     @Override
