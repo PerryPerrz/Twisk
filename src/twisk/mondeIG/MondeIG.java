@@ -34,7 +34,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     private final ArrayList<EtapeIG> etapesSelectionnees;
     private final ArrayList<ArcIG> arcs;
     private int style;
-    private CorrespondanceEtapes corE;
+    private transient CorrespondanceEtapes corE;
     private transient Object simulation;
     private int nbClients;
     private final FabriqueIdentifiant fabId;
