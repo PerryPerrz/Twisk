@@ -38,6 +38,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     private transient Object simulation;
     private int nbClients;
     private final FabriqueIdentifiant fabId;
+    private String nom;
 
     /**
      * Constructeur de la classe MondeIG.
@@ -53,6 +54,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         this.etapes.put(id, activite);
         this.style = 2;
         this.nbClients = 5;
+        this.nom = "Monde";
     }
 
     /**
@@ -697,5 +699,13 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             throw new UncorrectSettingsException("Les paramètres saisis pour le nombre de jetons sont erronés!");
         }
         notifierObservateurs();
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 }

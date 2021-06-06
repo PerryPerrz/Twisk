@@ -26,6 +26,7 @@ import twisk.outils.TailleComposants;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -36,9 +37,10 @@ public class VueMenu extends MenuBar implements Observateur {
     private final MondeIG monde;
     private final Menu fichier;
     private final Menu edition;
-    private final Menu mondeMenu;
+    private final Menu sas;
     private final Menu parametres;
     private final Menu style;
+    private final Menu mondes;
 
     /**
      * Constructeur de la classe VueMenu.
@@ -51,9 +53,10 @@ public class VueMenu extends MenuBar implements Observateur {
 
         fichier = new Menu("Fichier");
         edition = new Menu("Edition");
-        mondeMenu = new Menu("Monde");
+        sas = new Menu("Sas");
         parametres = new Menu("Paramètres");
         style = new Menu("Style");
+        mondes = new Menu("Mondes");
         MenuItem nouveau = new MenuItem("Nouveau");
         MenuItem ouvrir = new MenuItem("Ouvrir");
         MenuItem sauvegarder = new MenuItem("Sauvegarder");
@@ -70,6 +73,9 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem reset = new MenuItem("Reset");
         MenuItem jetons = new MenuItem("Nombre de jeton(s)");
         MenuItem clients = new MenuItem("Nombre de client(s)");
+        MenuItem ajouter = new MenuItem("Ajouter");
+        MenuItem supprimerMonde = new MenuItem("Supprimer");
+
 
         this.fichier.getItems().add(nouveau);
         this.fichier.getItems().add(ouvrir);
@@ -78,8 +84,8 @@ public class VueMenu extends MenuBar implements Observateur {
         this.edition.getItems().add(supprimer);
         this.edition.getItems().add(renommer);
         this.edition.getItems().add(effacer);
-        this.mondeMenu.getItems().add(entree);
-        this.mondeMenu.getItems().add(sortie);
+        this.sas.getItems().add(entree);
+        this.sas.getItems().add(sortie);
         this.parametres.getItems().add(delai);
         this.parametres.getItems().add(ecart);
         this.style.getItems().add(jour);
@@ -87,6 +93,8 @@ public class VueMenu extends MenuBar implements Observateur {
         this.style.getItems().add(reset);
         this.parametres.getItems().add(jetons);
         this.parametres.getItems().add(clients);
+        this.mondes.getItems().add(ajouter);
+        this.mondes.getItems().add(supprimerMonde);
 
         nouveau.setOnAction(actionEvent -> this.nouveau());
         ouvrir.setOnAction(actionEvent -> this.restaurer());
@@ -107,6 +115,8 @@ public class VueMenu extends MenuBar implements Observateur {
         reset.setOnAction(actionEvent -> monde.setStyle(2));
         jetons.setOnAction(actionEvent -> this.jetons());
         clients.setOnAction(actionEvent -> this.clients());
+        ajouter.setOnAction(actionEvent -> this.ajouter());
+        supprimerMonde.setOnAction(actionEvent -> this.supprimerMonde());
 
         TailleComposants tc = TailleComposants.getInstance();
         Image image1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/file.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
@@ -117,9 +127,9 @@ public class VueMenu extends MenuBar implements Observateur {
         ImageView icon2 = new ImageView(image2);
         edition.setGraphic(icon2);
 
-        Image image3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/porte.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon3 = new ImageView(image3);
-        mondeMenu.setGraphic(icon3);
+        sas.setGraphic(icon3);
 
         Image image4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/settings.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon4 = new ImageView(image4);
@@ -201,7 +211,21 @@ public class VueMenu extends MenuBar implements Observateur {
         ImageView icon21 = new ImageView(image21);
         sauvegarder.setGraphic(icon21);
 
-        this.getMenus().addAll(fichier, edition, mondeMenu, parametres, style);
+        Image image22 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon22 = new ImageView(image22);
+        mondes.setGraphic(icon22);
+
+        Image image23 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon23 = new ImageView(image23);
+        ajouter.setGraphic(icon23);
+
+        Image image24 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon24 = new ImageView(image24);
+        supprimerMonde.setGraphic(icon24);
+
+        ajouterMenuItemsMondes();
+
+        this.getMenus().addAll(fichier, edition, sas, parametres, style, mondes);
     }
 
     private void supprimer() {
@@ -229,9 +253,9 @@ public class VueMenu extends MenuBar implements Observateur {
      * Rename.
      */
     public void rename() {
-        TextInputDialog dialog = new TextInputDialog("Balançoire");
+        TextInputDialog dialog = new TextInputDialog("Tobbogan");
         dialog.setTitle("Renommer la sélection");
-        dialog.setHeaderText("Entrez votre nouveau nom :");
+        dialog.setHeaderText("Entrez votre nouveau nom (pas de caractères spéciaux) :");
         dialog.setContentText("Nom :");
 
         TailleComposants tc = TailleComposants.getInstance();
@@ -447,23 +471,7 @@ public class VueMenu extends MenuBar implements Observateur {
             if (selectedFile == null)
                 throw new ChargementSauvegardeException("Fichier non sélectionné ou introuvable");
             MondeIG monde = OutilsSerializable.getInstance().mondeFromSer(selectedFile);
-
-            BorderPane root = new BorderPane();
-            VueOutils viewO = new VueOutils(monde);
-            VueMondeIG viewM = new VueMondeIG(monde);
-            VueMenu viewMe = new VueMenu(monde);
-            TailleComposants tc = TailleComposants.getInstance();
-            root.setBottom(viewO);
-            root.setCenter(viewM);
-            root.setTop(viewMe);
-            //Animation
-            new BounceIn(root).play();
-            Stage primaryStage = (Stage) this.getScene().getWindow();
-            primaryStage.setTitle("twisk | Iopeti & Yvoz");
-            primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/twisk/ressources/images/icon.png"))));
-            primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
-            primaryStage.show();
-            monde.notifierObservateurs();
+            ouvrirFenetreNouveauMonde(monde);
         } catch (ChargementSauvegardeException | IOException | ClassNotFoundException e) {
             Alert dialog = new Alert(Alert.AlertType.ERROR);
             dialog.setTitle(e.getClass().getSimpleName());
@@ -529,6 +537,142 @@ public class VueMenu extends MenuBar implements Observateur {
         }
     }
 
+    private void ajouterMenuItemsMondes() {
+        mondes.getItems().removeIf(menuItem -> !(menuItem.getText().equals("Ajouter") || menuItem.getText().equals("Supprimer")));
+        //On s'occupe des menuItem correspondant aux mondes prédéterminés
+        try {
+            MondeIG[] mondesPredetermines = OutilsSerializable.getInstance().mondesPredetermines();
+            if (!(mondesPredetermines == null)) {
+                for (MondeIG mondeIG : mondesPredetermines) {
+                    MenuItem menuItem = new MenuItem(mondeIG.getNom());
+                    mondes.getItems().add(menuItem);
+                    menuItem.setOnAction(actionEvent -> {
+                        try {
+                            ClassLoader loader = Thread.currentThread().getContextClassLoader();
+                            URL url = loader.getResource("mondes");
+                            assert url != null;
+                            String path = url.getPath();
+                            File dossier = new File(path);
+                            File[] fichiers = dossier.listFiles((dir, name) -> name.endsWith(".ser"));
+                            assert fichiers != null;
+                            File dossierTmp = new File("/tmp/");
+                            File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
+                            File file = null;
+                            for (File f : fichiers) {
+                                if (f.getName().equals(mondeIG.getNom() + ".ser"))
+                                    file = f;
+                            }
+                            if (fichiersTemp != null) {
+                                for (File f : fichiersTemp) {
+                                    if (f.getName().equals(mondeIG.getNom() + ".ser"))
+                                        file = f;
+                                }
+                            }
+                            assert file != null;
+                            ouvrirFenetreNouveauMonde(OutilsSerializable.getInstance().mondeFromSer(file));
+                        } catch (IOException | ClassNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                    Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/world.png")), TailleComposants.getInstance().getTailleIcons2(), TailleComposants.getInstance().getTailleIcons2(), true, true);
+                    ImageView icon = new ImageView(image);
+                    menuItem.setGraphic(icon);
+                }
+            }
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void ajouter() {
+        TextInputDialog dialog = new TextInputDialog("sauvegardeMonde");
+        dialog.setTitle("Nommez le monde à sauvegarder");
+        dialog.setHeaderText("Entrez le nouveau nom :");
+        dialog.setContentText("Nom :");
+
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(s -> {
+            try {
+                OutilsSerializable.getInstance().mondeToSerInMondesPredetermines(monde, s);
+            } catch (IOException e) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("IOException");
+                dia.setHeaderText(e.getMessage());
+                dia.setContentText("Erreur : Le monde ne peut pas être sauvegarder \n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
+            }
+        });
+        monde.notifierObservateurs();
+    }
+
+    private void supprimerMonde() {
+        try {
+            MondeIG[] mondesPredeterminesTemp = OutilsSerializable.getInstance().mondesPredeterminesTemp();
+            if (mondesPredeterminesTemp != null) {
+                String[] choices = new String[mondesPredeterminesTemp.length];
+                for (int i = 0; i < mondesPredeterminesTemp.length; i++)
+                    choices[i] = mondesPredeterminesTemp[i].getNom();
+                ChoiceDialog<String> dialog = new ChoiceDialog<>(choices[0], choices);
+                dialog.setTitle("Une fenêtre de Choix");
+                dialog.setHeaderText("Choisissez le monde à supprimer");
+                dialog.setContentText("Monde:");
+
+                Optional<String> result = dialog.showAndWait();
+                result.ifPresent(s -> {
+                    try {
+                        OutilsSerializable.getInstance().supprimerSer(s);
+                    } catch (IOException e) {
+                        Alert dia = new Alert(Alert.AlertType.ERROR);
+                        dia.setTitle("IOException");
+                        dia.setHeaderText("Impossible de supprimer le monde");
+                        dia.setContentText("Erreur : Le monde ne peut pas être supprimé \n" +
+                                "Veuillez ré-essayer");
+                        Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
+                        ImageView icon2 = new ImageView(image2);
+                        dia.setGraphic(icon2);
+                        dia.show();
+                        //Le chronomètre
+                        PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                        pt.setOnFinished(Event -> dia.close());
+                        pt.play();
+                    }
+                });
+                monde.notifierObservateurs();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void ouvrirFenetreNouveauMonde(MondeIG monde) {
+        BorderPane root = new BorderPane();
+        VueOutils viewO = new VueOutils(monde);
+        VueMondeIG viewM = new VueMondeIG(monde);
+        VueMenu viewMe = new VueMenu(monde);
+        TailleComposants tc = TailleComposants.getInstance();
+        root.setBottom(viewO);
+        root.setCenter(viewM);
+        root.setTop(viewMe);
+        //Animation
+        new BounceIn(root).play();
+        Stage primaryStage = (Stage) this.getScene().getWindow();
+        primaryStage.setTitle("twisk | Iopeti & Yvoz");
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/twisk/ressources/images/icon.png"))));
+        primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
+        primaryStage.show();
+        monde.notifierObservateurs();
+    }
+
     @Override
     public void reagir() {
         Runnable command = () -> {
@@ -539,6 +683,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 parametres.getItems().get(2).setDisable(true);
             else //Si l'étape concernée est un guichet
                 parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
+            ajouterMenuItemsMondes();
         };
         if (Platform.isFxApplicationThread()) {
             command.run();
