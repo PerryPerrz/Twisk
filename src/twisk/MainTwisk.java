@@ -1,5 +1,6 @@
 package twisk;
 
+import animatefx.animation.BounceIn;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -35,6 +36,10 @@ public class MainTwisk extends Application {
         root.setBottom(viewO);
         root.setCenter(viewM);
         root.setTop(viewMe);
+
+        //Animation
+        new BounceIn(root).play();
+
         primaryStage.setTitle("twisk | Iopeti & Yvoz");
         primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("ressources/images/icon.png"))));
         primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));

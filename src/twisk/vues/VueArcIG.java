@@ -1,5 +1,6 @@
 package twisk.vues;
 
+import animatefx.animation.Pulse;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -47,10 +48,15 @@ public class VueArcIG extends Pane implements Observateur {
             triangle.setFill(Color.valueOf(cc.getCouleurTriangleFillIsSelected()));
         }
         triangle.setStrokeWidth(tc.getLargLigne());
-
         this.apparitionDeLaLigne(this.arc.getPdcArrive(), this.arc.getPdcDepart());
         this.apparitionDuTriangle();
         this.getChildren().addAll(ligne, triangle);
+
+        if (!monde.simulationACommencee()) {
+            //Animation
+            new Pulse(ligne).play();
+            new Pulse(triangle).play();
+        }
 
         ligne.setOnMouseClicked(MouseEvent -> monde.selectionArc(this.arc));
         triangle.setOnMouseClicked(MouseEvent -> monde.selectionArc(this.arc));

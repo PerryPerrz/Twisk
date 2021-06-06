@@ -2,6 +2,7 @@ package twisk.vues;
 
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
+import javafx.scene.Cursor;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
@@ -67,6 +68,10 @@ public class VueOutils extends TilePane implements Observateur {
         boutonGuichet.setGraphic(icon2);
         boutonSimulation.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
         boutonSimulation.setGraphic(icon3);
+
+        boutonActivite.setCursor(Cursor.HAND);
+        boutonGuichet.setCursor(Cursor.HAND);
+        boutonSimulation.setCursor(Cursor.HAND);
         this.getChildren().addAll(boutonActivite, boutonGuichet, boutonSimulation);
     }
 
@@ -79,8 +84,9 @@ public class VueOutils extends TilePane implements Observateur {
                 ImageView icon = new ImageView(image);
                 boutonSimulation.setStyle("-fx-background-color:transparent; -fx-focus-color: transparent;");
                 boutonSimulation.setGraphic(icon);
-                Tooltip tool = new Tooltip("Stopper une simulation !");
+                Tooltip tool = new Tooltip("Stopper la simulation !");
                 boutonSimulation.setTooltip(tool);
+                boutonSimulation.setCursor(Cursor.WAIT);
                 this.boutonSimulation.setOnAction(actionEvent -> monde.lavageDesClients());
             } else {
                 Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/play.png")), tC.getTailleBouton(), tC.getTailleBouton(), true, true);
@@ -89,6 +95,7 @@ public class VueOutils extends TilePane implements Observateur {
                 boutonSimulation.setGraphic(icon);
                 Tooltip tool = new Tooltip("Réaliser une simulation !");
                 boutonSimulation.setTooltip(tool);
+                boutonSimulation.setCursor(Cursor.HAND);
                 this.boutonSimulation.setOnAction(actionEvent -> {
                     try {
                         monde.simuler();
