@@ -4,12 +4,14 @@ package twisk.monde;
  * La classe SasEntree.
  */
 public class SasEntree extends Activite {
+    private String loi;
 
     /**
      * Constructeur de la classe SasEntree.
      */
     public SasEntree() {
         super("SasEntree");
+        loi = "Uni";
     }
 
     @Override
@@ -17,7 +19,17 @@ public class SasEntree extends Activite {
         StringBuilder stB = new StringBuilder(200);
         if (nbSuccesseurs() == 1) {
             stB.append("entrer(").append(getNomMaj()).append(");\n");
-            stB.append("delai(").append(getTemps()).append(", ").append(getEcartTemps()).append(");\n");
+            switch (loi) {
+                case "Uni":
+                    stB.append("delaiUniforme(").append(this.getTemps()).append(", ").append(this.getEcartTemps()).append(");\n");
+                    break;
+                case "Gauss":
+                    stB.append("delaiGauss(").append(this.getTemps()).append(".0, ").append(this.getEcartTemps()).append(".0);\n");
+                    break;
+                case "Expo":
+                    stB.append("delaiExponentiel(1.0/").append(this.getTemps()).append(".0);\n");
+                    break;
+            }
             stB.append("transfert(").append(getNomMaj()).append(", ").append(getSucc().getNomMaj()).append(");\n");
             stB.append(getSucc().toC());
         } else {
@@ -40,5 +52,14 @@ public class SasEntree extends Activite {
     @Override
     public boolean estUnSasEntree() {
         return true;
+    }
+
+    /**
+     * Procédure qui change la loi de probabilités utilisée pour déterminer le délai d'entrée dans la première étape.
+     *
+     * @param loi la loi utilisée (Uni, Gauss, Expo)
+     */
+    public void setLoi(String loi) {
+        this.loi = loi;
     }
 }

@@ -22,7 +22,7 @@ public class KitC {
             // création du répertoire twisk sous /tmp. Ne déclenche pas d’erreur si le répertoire existe déjà
             Path directories = Files.createDirectories(Paths.get("/tmp/twisk"));
             // copie des deux fichiers programmeC.o et def.h depuis le projet sous /tmp/twisk
-            String[] liste = {"programmeC.o", "def.h", "codeNatif.o"};
+            String[] liste = {"programmeC.o", "def.h", "codeNatif.o", "loi.c", "loi.h"};
             for (String nom : liste) {
                 InputStream source = Objects.requireNonNull(getClass().getResource("/twisk/ressources/codeC/" + nom)).openStream();
                 File destination = new File("/tmp/twisk/" + nom);
@@ -81,6 +81,8 @@ public class KitC {
             // récupération des messages sur la sortie standard et la sortie d’erreur de la commande exécutée
             // à reprendre éventuellement et à adapter à votre code
             BufferedReader output = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            Process p2 = runtime.exec("gcc -Wall -fPIC -c /tmp/twisk/loi.c -o /tmp/twisk/loi.o -lm");
+            p2.waitFor();
             BufferedReader error = new BufferedReader(new InputStreamReader(p.getErrorStream()));
             String ligne;
             while ((ligne = output.readLine()) != null) {
@@ -101,7 +103,7 @@ public class KitC {
         FabriqueNumero fab = FabriqueNumero.getInstance();
         try {
             Runtime runtime = Runtime.getRuntime();//Il faut récupérer l’environnement d’exécution de java
-            Process p = runtime.exec("gcc -shared /tmp/twisk/programmeC.o /tmp/twisk/codeNatif.o /tmp/twisk/client.o -o /tmp/twisk/libTwisk" + fab.getNumeroLibrairie() + ".so");//On demande l’exécution de la compilation
+            Process p = runtime.exec("gcc -shared /tmp/twisk/programmeC.o /tmp/twisk/codeNatif.o /tmp/twisk/loi.o /tmp/twisk/client.o -o /tmp/twisk/libTwisk" + fab.getNumeroLibrairie() + ".so");//On demande l’exécution de la compilation
             p.waitFor();
             // récupération des messages sur la sortie standard et la sortie d’erreur de la commande exécutée
             // à reprendre éventuellement et à adapter à votre code

@@ -39,6 +39,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     private int nbClients;
     private final FabriqueIdentifiant fabId;
     private String nom;
+    private String loi;
 
     /**
      * Constructeur de la classe MondeIG.
@@ -55,6 +56,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         this.style = 2;
         this.nbClients = 5;
         this.nom = "Monde";
+        this.loi = "Uni";
     }
 
     /**
@@ -568,6 +570,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
                 }
             }
         }
+        monde.getSasE().setLoi(loi);
         return monde;
     }
 
@@ -591,7 +594,6 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             this.simulation = instanceSim;
             Method procedureAjouterObs = clS.getMethod("ajouterObservateur", Observateur.class);
             procedureAjouterObs.invoke(this.simulation, this);
-
             //On lance la simulation
             Method fonctionSetNbClients = clS.getMethod("setNbClients", int.class);
             fonctionSetNbClients.invoke(instanceSim, getNbClients());
@@ -707,5 +709,9 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public void setLoi(String loi) {
+        this.loi = loi;
     }
 }

@@ -98,6 +98,7 @@ public class Monde implements Iterable<Etape> {
         strBuilder.append("#include <stdlib.h>\n");
         strBuilder.append("#include <sys/types.h>\n");
         strBuilder.append("#include <unistd.h>\n");
+        strBuilder.append("#include \"loi.h\"\n");
 
         //On s'occupe des define
         for (Etape e : ge) {
@@ -166,5 +167,9 @@ public class Monde implements Iterable<Etape> {
             if (i == e.getNum())
                 return e;
         return null;
+    }
+
+    public SasEntree getSasE() {
+        return sasE;
     }
 }

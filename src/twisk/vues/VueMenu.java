@@ -41,6 +41,7 @@ public class VueMenu extends MenuBar implements Observateur {
     private final Menu parametres;
     private final Menu style;
     private final Menu mondes;
+    private final Menu lois;
 
     /**
      * Constructeur de la classe VueMenu.
@@ -57,6 +58,7 @@ public class VueMenu extends MenuBar implements Observateur {
         parametres = new Menu("Paramètres");
         style = new Menu("Style");
         mondes = new Menu("Mondes");
+        lois = new Menu("Lois");
         MenuItem nouveau = new MenuItem("Nouveau");
         MenuItem ouvrir = new MenuItem("Ouvrir");
         MenuItem sauvegarder = new MenuItem("Sauvegarder");
@@ -75,25 +77,18 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem clients = new MenuItem("Nombre de client(s)");
         MenuItem ajouter = new MenuItem("Ajouter");
         MenuItem supprimerMonde = new MenuItem("Supprimer");
+        MenuItem loiUniforme = new MenuItem("Loi Uniforme");
+        MenuItem loiGaussienne = new MenuItem("Loi Gaussienne");
+        MenuItem loiExponentielle = new MenuItem("Loi Exponentielle");
 
-        this.fichier.getItems().add(nouveau);
-        this.fichier.getItems().add(ouvrir);
-        this.fichier.getItems().add(sauvegarder);
-        this.fichier.getItems().add(quitter);
-        this.edition.getItems().add(supprimer);
-        this.edition.getItems().add(renommer);
-        this.edition.getItems().add(effacer);
-        this.accesAuMonde.getItems().add(entree);
-        this.accesAuMonde.getItems().add(sortie);
-        this.parametres.getItems().add(delai);
-        this.parametres.getItems().add(ecart);
-        this.style.getItems().add(jour);
-        this.style.getItems().add(nuit);
-        this.style.getItems().add(reset);
-        this.parametres.getItems().add(jetons);
-        this.parametres.getItems().add(clients);
-        this.mondes.getItems().add(ajouter);
-        this.mondes.getItems().add(supprimerMonde);
+        this.fichier.getItems().addAll(nouveau, ouvrir, sauvegarder, quitter);
+        this.edition.getItems().addAll(supprimer, renommer, effacer);
+        this.accesAuMonde.getItems().addAll(entree, sortie);
+        this.parametres.getItems().addAll(delai, ecart, jetons, clients);
+        this.style.getItems().addAll(jour, nuit, reset);
+        this.mondes.getItems().addAll(ajouter, supprimerMonde);
+        this.lois.getItems().addAll(loiUniforme, loiGaussienne, loiExponentielle);
+
 
         nouveau.setOnAction(actionEvent -> this.nouveau());
         ouvrir.setOnAction(actionEvent -> this.restaurer());
@@ -116,6 +111,9 @@ public class VueMenu extends MenuBar implements Observateur {
         clients.setOnAction(actionEvent -> this.clients());
         ajouter.setOnAction(actionEvent -> this.ajouter());
         supprimerMonde.setOnAction(actionEvent -> this.supprimerMonde());
+        loiUniforme.setOnAction(actionEvent -> monde.setLoi("Uni"));
+        loiGaussienne.setOnAction(actionEvent -> monde.setLoi("Gauss"));
+        loiExponentielle.setOnAction(actionEvent -> monde.setLoi("Expo"));
 
         this.gestionDesImages(fichier, "file");
         this.gestionDesImages(edition, "edit");
@@ -149,10 +147,14 @@ public class VueMenu extends MenuBar implements Observateur {
         this.gestionDesImages(mondes, "world");
         this.gestionDesImages(ajouter, "ajouterMonde");
         this.gestionDesImages(supprimer, "supprimerMonde");
+        this.gestionDesImages(lois, "save");
+        this.gestionDesImages(loiUniforme, "save");
+        this.gestionDesImages(loiGaussienne, "save");
+        this.gestionDesImages(loiExponentielle, "save");
 
         ajouterMenuItemsMondes();
 
-        this.getMenus().addAll(fichier, edition, accesAuMonde, parametres, style, mondes);
+        this.getMenus().addAll(fichier, edition, accesAuMonde, parametres, style, mondes, lois);
     }
 
     private void supprimer() {
