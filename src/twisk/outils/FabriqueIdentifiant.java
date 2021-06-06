@@ -55,6 +55,8 @@ public class FabriqueIdentifiant implements Serializable {
      */
     public void reset() {
         this.noEtape = 0;
+        this.noPdc = 0;
+        this.numSem = 1;
     }
 
     /**

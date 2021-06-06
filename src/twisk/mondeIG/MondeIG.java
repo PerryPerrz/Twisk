@@ -698,13 +698,4 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         }
         notifierObservateurs();
     }
-
-    /**
-     * Fonction qui renvoie l'insance de la fabrique d'identifiant de ce monde.
-     *
-     * @return l'instance
-     */
-    public FabriqueIdentifiant getFabId() {
-        return fabId;
-    }
 }
