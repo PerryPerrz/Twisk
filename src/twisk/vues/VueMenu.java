@@ -575,6 +575,19 @@ public class VueMenu extends MenuBar implements Observateur {
                     }
                 });
                 monde.notifierObservateurs();
+            } else {
+                Alert dia = new Alert(Alert.AlertType.WARNING);
+                dia.setTitle("Attention !");
+                dia.setHeaderText("Impossible de supprimer un monde prédefini !");
+                dia.setContentText("Attention, il n'existe aucun monde à supprimer !");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

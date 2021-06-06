@@ -1,5 +1,6 @@
 package twisk.vues;
 
+import animatefx.animation.Pulse;
 import javafx.animation.PauseTransition;
 import javafx.scene.Cursor;
 import javafx.scene.control.Alert;
@@ -41,6 +42,12 @@ public class VuePointDeControleIG extends Circle implements Observateur {
         this.setCursor(Cursor.HAND);
         this.setCenterX(this.pdc.getCentreX());
         this.setCenterY(this.pdc.getCentreY());
+
+        if (!monde.simulationACommencee()) {
+            //Animation
+            new Pulse(this).play();
+        }
+
         this.setOnMouseClicked(ActionEvent -> {
             try {
                 monde.creationArc(pdc);
