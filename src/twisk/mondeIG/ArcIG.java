@@ -1,9 +1,14 @@
 package twisk.mondeIG;
 
+import java.io.Serializable;
+
 /**
  * La classe ArcIG.
  */
-public class ArcIG {
+public class ArcIG implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private final PointDeControleIG PdcDepart;
     private final PointDeControleIG PdcArrive;
     private boolean select; //Variable booléenne indiquant si un arc à été selectionné ou non par l'utilisateur.

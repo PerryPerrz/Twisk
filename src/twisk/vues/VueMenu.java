@@ -1,18 +1,30 @@
 package twisk.vues;
 
+import animatefx.animation.BounceIn;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.util.Duration;
 import twisk.designPattern.Observateur;
+import twisk.exceptions.ChargementSauvegardeException;
 import twisk.exceptions.PasUnGuichetException;
 import twisk.exceptions.UncorrectSettingsException;
 import twisk.mondeIG.MondeIG;
 import twisk.outils.GestionnaireThreads;
+import twisk.outils.OutilsSerializable;
 import twisk.outils.TailleComposants;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -41,6 +53,8 @@ public class VueMenu extends MenuBar implements Observateur {
         mondeMenu = new Menu("Monde");
         parametres = new Menu("Paramètres");
         style = new Menu("Style");
+        MenuItem sauvegarder = new MenuItem("Sauvegarder");
+        MenuItem ouvrir = new MenuItem("Ouvrir");
         MenuItem quitter = new MenuItem("Quitter");
         MenuItem supprimer = new MenuItem("Supprimer");
         MenuItem renommer = new MenuItem("Renommer");
@@ -55,6 +69,8 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem jetons = new MenuItem("Nombre de jeton(s)");
         MenuItem clients = new MenuItem("Nombre de client(s)");
 
+        this.fichier.getItems().add(sauvegarder);
+        this.fichier.getItems().add(ouvrir);
         this.fichier.getItems().add(quitter);
         this.edition.getItems().add(supprimer);
         this.edition.getItems().add(renommer);
@@ -69,6 +85,8 @@ public class VueMenu extends MenuBar implements Observateur {
         this.parametres.getItems().add(jetons);
         this.parametres.getItems().add(clients);
 
+        sauvegarder.setOnAction(actionEvent -> this.enregistrer());
+        ouvrir.setOnAction(actionEvent -> this.restaurer());
         quitter.setOnAction(actionEvent -> {
             GestionnaireThreads.getInstance().detruireTout();
             Platform.exit();
@@ -166,6 +184,14 @@ public class VueMenu extends MenuBar implements Observateur {
         Image image18 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/client.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon18 = new ImageView(image18);
         clients.setGraphic(icon18);
+
+        Image image19 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/save.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon19 = new ImageView(image19);
+        sauvegarder.setGraphic(icon19);
+
+        Image image20 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/open.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        ImageView icon20 = new ImageView(image20);
+        ouvrir.setGraphic(icon20);
 
         this.getMenus().addAll(fichier, edition, mondeMenu, parametres, style);
     }
@@ -388,5 +414,87 @@ public class VueMenu extends MenuBar implements Observateur {
                 pt.play();
             }
         });
+    }
+
+    /**
+     * Procédure qui demande à l'utilisateur des informations sur la façon de sauvegarder le monde et qui le sauvegarde.
+     */
+    private void enregistrer() {
+        Window mainStage = this.getScene().getWindow();
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Choisissez le répertoire de sauvegarde");
+        File selectedDir = directoryChooser.showDialog(mainStage);
+
+        TextInputDialog dialog = new TextInputDialog("sauvegardeMonde");
+        dialog.setTitle("Nommez le fichier de sauvegarde");
+        dialog.setHeaderText("Entrez le nouveau nom :");
+        dialog.setContentText("Nom :");
+
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(s -> {
+            try {
+                OutilsSerializable.getInstance().mondeToSer(monde, selectedDir, s);
+            } catch (IOException e) {
+                Alert dia = new Alert(Alert.AlertType.ERROR);
+                dia.setTitle("IOException");
+                dia.setHeaderText("Impossible de sauvegarder le monde");
+                dia.setContentText("Erreur : Le monde ne peut pas être sauvegarder \n" +
+                        "Veuillez ré-essayer");
+                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
+                ImageView icon2 = new ImageView(image2);
+                dia.setGraphic(icon2);
+                dia.show();
+                //Le chronomètre
+                PauseTransition pt = new PauseTransition(Duration.seconds(5));
+                pt.setOnFinished(Event -> dia.close());
+                pt.play();
+            }
+        });
+    }
+
+    /**
+     * Procédure qui demande à l'utilisateur quel monde sauvegardé ouvrir et qui l'ouvre.
+     */
+    @FXML
+    void restaurer() {
+        //On crée une nouvelle fenêtre avec le nouveau monde
+        try {
+            Window mainStage = this.getScene().getWindow();
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Ouvrez le fichier de sauvegarde");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Save Files", "*.ser"));
+            File selectedFile = fileChooser.showOpenDialog(mainStage);
+            if (selectedFile == null)
+                throw new ChargementSauvegardeException("Fichier non sélectionné ou introuvable");
+            MondeIG monde = OutilsSerializable.getInstance().mondeFromSer(selectedFile);
+
+            BorderPane root = new BorderPane();
+            VueOutils viewO = new VueOutils(monde);
+            VueMondeIG viewM = new VueMondeIG(monde);
+            VueMenu viewMe = new VueMenu(monde);
+            TailleComposants tc = TailleComposants.getInstance();
+            root.setBottom(viewO);
+            root.setCenter(viewM);
+            root.setTop(viewMe);
+            //Animation
+            new BounceIn(root).play();
+            Stage primaryStage = (Stage) this.getScene().getWindow();
+            primaryStage.setTitle("twisk | Iopeti & Yvoz");
+            primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/twisk/ressources/images/icon.png"))));
+            primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
+            primaryStage.show();
+            monde.notifierObservateurs();
+        } catch (ChargementSauvegardeException | IOException | ClassNotFoundException e) {
+            Alert dialog = new Alert(Alert.AlertType.ERROR);
+            dialog.setTitle(e.getClass().getSimpleName());
+            dialog.setHeaderText("Erreur lors du chargement d'une sauvegarde !");
+            dialog.setContentText("Erreur : " + e.getMessage());
+            dialog.show();
+            //Le chronomètre
+            PauseTransition pt = new PauseTransition(Duration.seconds(5));
+            pt.setOnFinished(Event -> dialog.close());
+            pt.play();
+        }
+
     }
 }

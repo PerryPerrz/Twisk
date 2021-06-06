@@ -15,6 +15,7 @@ import twisk.outils.FabriqueIdentifiant;
 import twisk.outils.GestionnaireThreads;
 import twisk.simulation.GestionnaireClients;
 
+import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -25,7 +26,10 @@ import java.util.Iterator;
 /**
  * La classe MondeIG.
  */
-public class MondeIG extends SujetObserve implements Observateur {
+public class MondeIG extends SujetObserve implements Observateur, Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private final HashMap<String, EtapeIG> etapes;
     private final ArrayList<EtapeIG> etapesSelectionnees;
     private final ArrayList<ArcIG> arcs;
@@ -33,17 +37,18 @@ public class MondeIG extends SujetObserve implements Observateur {
     private CorrespondanceEtapes corE;
     private Object simulation;
     private int nbClients;
+    private final FabriqueIdentifiant fabId;
 
     /**
      * Constructeur de la classe MondeIG.
      */
     public MondeIG() {
         super();
-        FabriqueIdentifiant fabID = FabriqueIdentifiant.getInstance();
+        fabId = FabriqueIdentifiant.getInstance();
         etapes = new HashMap<>(10);
         etapesSelectionnees = new ArrayList<>(10);
         arcs = new ArrayList<>(10);
-        String id = fabID.getIdentifiantEtape();
+        String id = fabId.getIdentifiantEtape();
         ActiviteIG activite = new ActiviteIG("Activite" + id, id);
         this.etapes.put(id, activite);
         this.style = 2;
@@ -56,8 +61,7 @@ public class MondeIG extends SujetObserve implements Observateur {
      * @param type le type
      */
     public void ajouter(String type) {
-        FabriqueIdentifiant fabID = FabriqueIdentifiant.getInstance();
-        String id = fabID.getIdentifiantEtape();
+        String id = fabId.getIdentifiantEtape();
         switch (type) {
             case "Activite":
                 ActiviteIG activite = new ActiviteIG("Activite" + id, id);

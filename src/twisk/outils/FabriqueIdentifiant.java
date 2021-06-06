@@ -1,9 +1,14 @@
 package twisk.outils;
 
+import java.io.Serializable;
+
 /**
  * La classe FabriqueIdentifiant.
  */
-public class FabriqueIdentifiant {
+public class FabriqueIdentifiant implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private static final FabriqueIdentifiant instance = new FabriqueIdentifiant();
     private int noEtape;
     private int noPdc;

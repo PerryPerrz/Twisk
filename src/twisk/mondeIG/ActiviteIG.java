@@ -2,10 +2,15 @@ package twisk.mondeIG;
 
 import twisk.exceptions.PasUnGuichetException;
 
+import java.io.Serializable;
+
 /**
  * La classe ActiviteIG.
  */
-public class ActiviteIG extends EtapeIG {
+public class ActiviteIG extends EtapeIG implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private boolean estUneActiviteRestreinte;
 
     /**

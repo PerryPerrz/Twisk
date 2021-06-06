@@ -4,6 +4,7 @@ import twisk.exceptions.PasUnGuichetException;
 import twisk.outils.FabriqueIdentifiant;
 import twisk.outils.TailleComposants;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -11,7 +12,10 @@ import java.util.Random;
 /**
  * La classe EtapeIG.
  */
-public abstract class EtapeIG implements Iterable<PointDeControleIG> {
+public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * Attribut correspondant au nom d'une étape.
      */
@@ -56,6 +60,10 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
      * Attribut correspondant au nombre d'étapes qui précèdent cette étape.
      */
     protected int nbPrec;
+    /**
+     * Attribut correspondant à la fabrique de numéro.
+     */
+    protected FabriqueIdentifiant fabrik;
 
     /**
      * Constructeur de la classe EtapeIG.
@@ -73,7 +81,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG> {
         this.delai = 8;
         this.ecart = 4;
         this.succ = new ArrayList<>(2);
-        FabriqueIdentifiant fabrik = FabriqueIdentifiant.getInstance();
+        fabrik = FabriqueIdentifiant.getInstance();
 
         for (int i = 0; i < this.pdc.length; ++i) {
             pdc[i] = new PointDeControleIG(fabrik.getIdentifiantPdc(), this);

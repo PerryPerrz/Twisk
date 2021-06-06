@@ -1,9 +1,14 @@
 package twisk.mondeIG;
 
+import java.io.Serializable;
+
 /**
  * La classe PointDeControleIG.
  */
-public class PointDeControleIG {
+public class PointDeControleIG implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private int centreX;
     private int centreY;
     private final String id;

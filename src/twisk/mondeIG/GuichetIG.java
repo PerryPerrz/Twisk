@@ -2,13 +2,19 @@ package twisk.mondeIG;
 
 import twisk.outils.FabriqueIdentifiant;
 
+import java.io.Serializable;
+
 /**
  * The type Guichet ig.
  */
-public class GuichetIG extends EtapeIG {
+public class GuichetIG extends EtapeIG implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private int nbJetons;
     private final int numSemaphore;
     private Boolean versLaDroite;
+    private FabriqueIdentifiant fab;
 
     /**
      * Constructeur de la classe EtapeIG.
@@ -18,7 +24,7 @@ public class GuichetIG extends EtapeIG {
      */
     public GuichetIG(String nom, String idf) {
         super(nom, idf);
-        FabriqueIdentifiant fab = FabriqueIdentifiant.getInstance();
+        fab = FabriqueIdentifiant.getInstance();
         this.numSemaphore = fab.getNumSem();
         this.nbJetons = 2;
         this.versLaDroite = null;
@@ -33,7 +39,6 @@ public class GuichetIG extends EtapeIG {
      */
     public GuichetIG(String nom, String idf, int nbJetons) {
         super(nom, idf);
-        FabriqueIdentifiant fab = FabriqueIdentifiant.getInstance();
         this.numSemaphore = fab.getNumSem();
         this.nbJetons = nbJetons;
         this.versLaDroite = null;
