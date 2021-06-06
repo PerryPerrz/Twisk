@@ -35,7 +35,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     private final ArrayList<ArcIG> arcs;
     private int style;
     private CorrespondanceEtapes corE;
-    private Object simulation;
+    private transient Object simulation;
     private int nbClients;
     private final FabriqueIdentifiant fabId;
 
@@ -697,5 +697,14 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             throw new UncorrectSettingsException("Les paramètres saisis pour le nombre de jetons sont erronés!");
         }
         notifierObservateurs();
+    }
+
+    /**
+     * Fonction qui renvoie l'insance de la fabrique d'identifiant de ce monde.
+     *
+     * @return l'instance
+     */
+    public FabriqueIdentifiant getFabId() {
+        return fabId;
     }
 }
