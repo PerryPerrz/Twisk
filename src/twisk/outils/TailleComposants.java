@@ -22,6 +22,7 @@ public class TailleComposants {
     private final int hautLabelEtape;
     private final int margeSelection;
     private final int font;
+    private final int radCLient;
 
     /**
      * Constructeur de la classe TailleComposants, il permet d'initialiser toutes les tailles utilisées dans l'application twiskIG.
@@ -44,6 +45,7 @@ public class TailleComposants {
         this.hautLabelEtape = 18;
         this.margeSelection = 4;
         this.font = 18;
+        this.radCLient = 6;
     }
 
     /**
@@ -206,5 +208,14 @@ public class TailleComposants {
      */
     public int getFont() {
         return font;
+    }
+
+    /**
+     * Fonction qui retourne le rayon c'un client
+     *
+     * @return le rayon d'un client
+     */
+    public int getRadClient() {
+        return radCLient;
     }
 }
