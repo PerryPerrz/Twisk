@@ -19,7 +19,7 @@ public class MainTwisk extends Application {
     /**
      * Procédure main qui permet de lancer l'application
      *
-     * @param args the input arguments
+     * @param args les arguments d'entrée
      */
     public static void main(String[] args) {
         launch(args);
