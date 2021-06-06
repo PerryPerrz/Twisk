@@ -26,9 +26,41 @@ public class VueClient extends Circle implements Observateur {
     public VueClient(MondeIG monde, Client client) {
         this.monde = monde;
         this.client = client;
-        TailleComposants tc = TailleComposants.getInstance();
         CouleurComposants cc = CouleurComposants.getInstance();
-        this.setFill(Paint.valueOf(cc.getCouleurClient()));
+        //On récupère le dernier chiffre du pid des client
+        int nb = this.client.getNumeroClient() % 10;
+        switch (nb) {
+            case 0:
+                this.setFill(Paint.valueOf("#E74C3C"));
+                break;
+            case 1:
+                this.setFill(Paint.valueOf("#9B59B6"));
+                break;
+            case 2:
+                this.setFill(Paint.valueOf("#2980B9"));
+                break;
+            case 3:
+                this.setFill(Paint.valueOf("#16A085"));
+                break;
+            case 4:
+                this.setFill(Paint.valueOf("#27AE60"));
+                break;
+            case 5:
+                this.setFill(Paint.valueOf("#F39C12"));
+                break;
+            case 6:
+                this.setFill(Paint.valueOf("#E67E22"));
+                break;
+            case 7:
+                this.setFill(Paint.valueOf("#BDC3C7"));
+                break;
+            case 8:
+                this.setFill(Paint.valueOf("#34495E"));
+                break;
+            case 9:
+                this.setFill(Paint.valueOf("#2C3E50"));
+                break;
+        }
         if (this.client.getEtape().estUnSasEntree() || this.client.getEtape().estUnSasSortie())
             this.setVisible(false);
         else {

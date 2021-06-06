@@ -37,9 +37,9 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
         flowPane.setStyle("-fx-border-color: " + cc.getCouleurBorderGuichet() + "; -fx-background-insets: 0 0 -1 0, 0, 1, 2; -fx-background-radius: 3px, 3px, 2px, 1px; -fx-border-width: 3px; -fx-background-color:" + cc.getCouleurBackgroundGuichet() + " ;");
 
         this.setMinSize(tc.getLargGuichet(), tc.getHautGuichet()); //Taille min du guichet
-        this.setMaxSize(tc.getLargGuichet(), tc.getHautGuichet() * 3); //Taille max du guichet
+        this.setMaxSize(tc.getLargGuichet(), tc.getHautGuichet() * 4); //Taille max du guichet
         flowPane.setMinSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape() - tc.getMargeSelection());
-        flowPane.setMaxSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), (TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape()) * 3 - tc.getMargeSelection());
+        flowPane.setMaxSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), (TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape()) * 4 - tc.getMargeSelection());
 
         flowPane.setPadding(new Insets(5));
         flowPane.setHgap(5);
@@ -54,7 +54,7 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
         //Utilisation d'un StackPane pour pouvoir afficher les clients au centre du rectangle.
         StackPane sp = new StackPane();
         sp.setStyle("-fx-border-color: " + CouleurComposants.getInstance().getCouleurBorderGuichet() + "; -fx-border-width: 3px; -fx-background-color:" + CouleurComposants.getInstance().getCouleurBackgroundGuichet() + ";");
-        sp.setPrefSize(TailleComposants.getInstance().getRadClient() * 2, TailleComposants.getInstance().getRadClient() * 4);
+        sp.setPrefSize(TailleComposants.getInstance().getRadClient() * 3, TailleComposants.getInstance().getRadClient() * 6);
         flowPane.getChildren().add(sp);
         sp.getChildren().add(viewC);
         if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())

@@ -14,7 +14,6 @@ public class CouleurComposants {
     private final String couleurLigneStrokeIsSelected;
     private final String couleurTriangleStrokeIsSelected;
     private final String couleurTriangleFillIsSelected;
-    private final String couleurClient;
     private final String couleurBackgroundEtapeIsSelected;
     private final String couleurBorderEtapeIsSelected;
     private final String couleurLabelGuichet;
@@ -39,7 +38,6 @@ public class CouleurComposants {
         this.couleurLigneStrokeIsSelected = "#f4abc4";
         this.couleurTriangleFillIsSelected = "#f4abc4";
         this.couleurTriangleStrokeIsSelected = "#f4abc4";
-        this.couleurClient = "f4abc4";
         this.couleurBackgroundEtapeIsSelected = "#f4abc4";
         this.couleurBorderEtapeIsSelected = "#f4abc4";
         this.couleurLabelGuichet = "#138D75";
@@ -139,15 +137,6 @@ public class CouleurComposants {
      */
     public String getCouleurTriangleFillIsSelected() {
         return couleurTriangleFillIsSelected;
-    }
-
-    /**
-     * Fonction qui retourne la couleur du client
-     *
-     * @return la couleur du client
-     */
-    public String getCouleurClient() {
-        return couleurClient;
     }
 
     /**
