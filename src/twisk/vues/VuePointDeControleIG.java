@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import javafx.animation.PauseTransition;
+import javafx.scene.Cursor;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -37,6 +38,7 @@ public class VuePointDeControleIG extends Circle implements Observateur {
         this.pdc = pdc;
         this.setFill(Paint.valueOf(cc.getCouleurPointDeControle()));
         this.setRadius(tc.getRad());
+        this.setCursor(Cursor.HAND);
         this.setCenterX(this.pdc.getCentreX());
         this.setCenterY(this.pdc.getCentreY());
         this.setOnMouseClicked(ActionEvent -> {

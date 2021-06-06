@@ -1,6 +1,5 @@
 package twisk.vues;
 
-import animatefx.animation.Pulse;
 import javafx.scene.layout.HBox;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
@@ -34,11 +33,6 @@ public class VueActiviteIG extends VueEtapeIG implements Observateur {
 
         this.label.setStyle("-fx-text-fill: " + cc.getCouleurLabelActivite());
         box.setStyle("-fx-border-color: " + cc.getCouleurActivite() + "; -fx-background-insets: 0 0 -1 0, 0, 1, 2; -fx-background-radius: 3px, 3px, 2px, 1px; -fx-border-width: 3px; -fx-background-color: " + cc.getCouleurBackgroudnActivite() + ";");
-
-        if (!monde.simulationACommencee()) {
-            //Animation
-            new Pulse(box).play();
-        }
 
         this.getChildren().add(box);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));

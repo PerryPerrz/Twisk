@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import animatefx.animation.Pulse;
+import javafx.scene.Cursor;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -42,6 +43,10 @@ public class VueArcIG extends Pane implements Observateur {
         ligne.setStrokeWidth(tc.getLargLigne());
         triangle.setStroke(Paint.valueOf(cc.getCouleurTriangleStroke()));
         triangle.setFill(Paint.valueOf(cc.getCouleurTriangleFill()));
+
+        ligne.setCursor(Cursor.HAND);
+        triangle.setCursor(Cursor.HAND);
+
         if (monde.isSelectionned(arc)) {
             ligne.setStroke(Color.valueOf(cc.getCouleurLigneStrokeIsSelected()));
             triangle.setStroke(Color.valueOf(cc.getCouleurTriangleStrokeIsSelected()));

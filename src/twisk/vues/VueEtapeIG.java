@@ -1,5 +1,7 @@
 package twisk.vues;
 
+import animatefx.animation.Pulse;
+import javafx.scene.Cursor;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -58,6 +60,12 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
 
         this.label.setMinHeight(tc.getHautLabelEtape());
         this.label.setMaxHeight(tc.getHautLabelEtape());
+
+        this.setCursor(Cursor.HAND);
+        if (!monde.simulationACommencee()) {
+            //Animation
+            new Pulse(this).play();
+        }
 
         this.setOnDragDetected(this::setMouse);
         hBox.getChildren().add(label);

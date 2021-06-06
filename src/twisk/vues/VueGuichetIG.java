@@ -1,6 +1,5 @@
 package twisk.vues;
 
-import animatefx.animation.Pulse;
 import javafx.geometry.Insets;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -44,11 +43,6 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
 
         box.setPadding(new Insets(5));
         box.setSpacing(5);
-
-        if (!monde.simulationACommencee()) {
-            //Animation
-            new Pulse(box).play();
-        }
 
         ajouterPane();
         this.getChildren().add(box);

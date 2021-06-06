@@ -75,6 +75,22 @@ public class VueOutils extends TilePane implements Observateur {
         this.getChildren().addAll(boutonActivite, boutonGuichet, boutonSimulation);
     }
 
+    private void lancerFenetreErreurSimu(TwiskException e) {
+        TailleComposants tc = TailleComposants.getInstance();
+        Alert dialog = new Alert(Alert.AlertType.ERROR);
+        dialog.setTitle("MondeException");
+        dialog.setHeaderText("Impossible de simuler le monde !");
+        dialog.setContentText("Erreur : " + e.getMessage());
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        ImageView icon = new ImageView(image);
+        dialog.setGraphic(icon);
+        dialog.show();
+        //Le chronomètre
+        PauseTransition pt = new PauseTransition(Duration.seconds(5));
+        pt.setOnFinished(Event -> dialog.close());
+        pt.play();
+    }
+
     @Override
     public void reagir() {
         Runnable command = () -> {
@@ -110,21 +126,5 @@ public class VueOutils extends TilePane implements Observateur {
         } else {
             Platform.runLater(command);
         }
-    }
-
-    private void lancerFenetreErreurSimu(TwiskException e) {
-        TailleComposants tc = TailleComposants.getInstance();
-        Alert dialog = new Alert(Alert.AlertType.ERROR);
-        dialog.setTitle("MondeException");
-        dialog.setHeaderText("Impossible de simuler le monde !");
-        dialog.setContentText("Erreur : " + e.getMessage());
-        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-        ImageView icon = new ImageView(image);
-        dialog.setGraphic(icon);
-        dialog.show();
-        //Le chronomètre
-        PauseTransition pt = new PauseTransition(Duration.seconds(5));
-        pt.setOnFinished(Event -> dialog.close());
-        pt.play();
     }
 }

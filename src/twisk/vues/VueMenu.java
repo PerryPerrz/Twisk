@@ -189,7 +189,7 @@ public class VueMenu extends MenuBar implements Observateur {
         ImageView icon18 = new ImageView(image18);
         clients.setGraphic(icon18);
 
-        Image image19 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/open.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
+        Image image19 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/new.png")), tc.getTailleIcons2(), tc.getTailleIcons2(), true, true);
         ImageView icon19 = new ImageView(image19);
         nouveau.setGraphic(icon19);
 
