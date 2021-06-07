@@ -670,14 +670,12 @@ public class VueMenu extends MenuBar implements Observateur {
             parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
             parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
             //Si aucune étapes n'est selectionnées, on disable le bouton supprimer
-            edition.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0);
-
+            edition.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
             if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
                 parametres.getItems().get(2).setDisable(true);
             else //Si l'étape concernée est un guichet
                 parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
             ajouterMenuItemsMondes();
-
             this.gestionDuCheckmarkDesLois();
         };
         if (Platform.isFxApplicationThread()) {
