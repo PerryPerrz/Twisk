@@ -18,10 +18,7 @@ import twisk.exceptions.ChargementSauvegardeException;
 import twisk.exceptions.PasUnGuichetException;
 import twisk.exceptions.UncorrectSettingsException;
 import twisk.mondeIG.MondeIG;
-import twisk.outils.FabriqueIdentifiant;
-import twisk.outils.GestionnaireThreads;
-import twisk.outils.OutilsSerializable;
-import twisk.outils.TailleComposants;
+import twisk.outils.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -369,6 +366,7 @@ public class VueMenu extends MenuBar implements Observateur {
         FabriqueIdentifiant.getInstance().reset();
         try {
             OutilsSerializable.getInstance().initializeSer();
+            CreationLogs.getInstance().initializelogs();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -621,6 +619,7 @@ public class VueMenu extends MenuBar implements Observateur {
     private void ouvrirFenetreNouveauMonde(MondeIG monde) {
         try {
             OutilsSerializable.getInstance().initializeSer();
+            CreationLogs.getInstance().initializelogs();
         } catch (IOException e) {
             e.printStackTrace();
         }

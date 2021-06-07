@@ -7,11 +7,13 @@ public class FabriqueNumero {
     private int cptEtape;
     private int cptSemaphore;
     private int cptLibrairie;
+    private int cptLog;
 
     private FabriqueNumero() {
         cptEtape = 0;
         cptSemaphore = 1;
         cptLibrairie = 1;
+        cptLog = 1;
     }
 
     private static final FabriqueNumero instance = new FabriqueNumero();
@@ -56,12 +58,22 @@ public class FabriqueNumero {
     }
 
     /**
-     * Consulter numero libraire int.
+     * Procédure qui renvoie le numéro de la librairie en cours d'utilisation.
      *
-     * @return the int
+     * @return le numéro
      */
     public int consulterNumeroLibraire() {
         return cptLibrairie - 1;
+    }
+
+    /**
+     * Retourne un numero unique de librairie.
+     *
+     * @return le numero de librairie
+     */
+    public int getNumeroLog() {
+        cptLog++;
+        return cptLog - 1;
     }
 
     /**

@@ -147,7 +147,7 @@ public abstract class Etape implements Iterable<Etape> {
      * @return le nom en majuscules
      */
     public String getNomMaj() {
-        return getNom().toUpperCase(Locale.ROOT);
+        return getNom().toUpperCase(Locale.ROOT).replace(" ", "_");
     }
 
     /**

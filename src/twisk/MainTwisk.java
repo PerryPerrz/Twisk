@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import twisk.mondeIG.MondeIG;
+import twisk.outils.CreationLogs;
 import twisk.outils.OutilsSerializable;
 import twisk.outils.TailleComposants;
 import twisk.vues.VueMenu;
@@ -29,6 +30,7 @@ public class MainTwisk extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         OutilsSerializable.getInstance().initializeSer();
+        CreationLogs.getInstance().initializelogs();
         MondeIG monde = new MondeIG();
         BorderPane root = new BorderPane();
         VueOutils viewO = new VueOutils(monde);

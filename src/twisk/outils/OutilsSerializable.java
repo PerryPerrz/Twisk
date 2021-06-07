@@ -24,6 +24,15 @@ public class OutilsSerializable {
     }
 
     /**
+     * Procédure qui crée le dossier contenant les fichiers de sauvegarde temporaires.
+     *
+     * @throws IOException Erreur envoyée si la création du dossier n'est pas réussie.
+     */
+    public void initializeSer() throws IOException {
+        Files.createDirectories(Paths.get("/tmp/twisk/mondes"));
+    }
+
+    /**
      * Procédure qui crée une sauvegarde d'un mondeIG au format serializable.
      *
      * @param monde Le mondeIG à sauvegarder
@@ -50,7 +59,7 @@ public class OutilsSerializable {
         ObjectInputStream objectIn = new ObjectInputStream(fileIn);
         MondeIG monde = (MondeIG) objectIn.readObject();
         if (monde == null)
-            throw new IOException("aaaaaaaaaaaaaa");
+            throw new IOException("Monde null donc écriture impossible !");
         objectIn.close();
         return monde;
     }
@@ -148,14 +157,5 @@ public class OutilsSerializable {
                 if (!file.delete())
                     throw new IOException();
         }
-    }
-
-    /**
-     * Procédure qui crée le dossier contenant les fichiers de sauvegarde temporaires.
-     *
-     * @throws IOException Erreur envoyée si la création du dossier n'est pas réussie.
-     */
-    public void initializeSer() throws IOException {
-        Files.createDirectories(Paths.get("/tmp/twisk/mondes"));
     }
 }

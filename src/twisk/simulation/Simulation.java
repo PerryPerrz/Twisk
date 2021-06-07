@@ -3,6 +3,7 @@ package twisk.simulation;
 import javafx.concurrent.Task;
 import twisk.designPattern.SujetObserve;
 import twisk.monde.Monde;
+import twisk.outils.CreationLogs;
 import twisk.outils.FabriqueNumero;
 import twisk.outils.GestionnaireThreads;
 import twisk.outils.KitC;
@@ -31,12 +32,14 @@ public class Simulation extends SujetObserve {
     public void simuler(Monde monde) {
         Task<Void> task = new Task<>() {
             @Override
-            protected Void call() throws Exception {
+            protected Void call() {
                 KitC kitC = null;
                 try {
                     enCoursDeSimulation = true;
                     FabriqueNumero fab = FabriqueNumero.getInstance();
-                    System.out.println(monde.toString() + "\n");
+                    CreationLogs creaLogs = CreationLogs.getInstance();
+                    int numeroLog = fab.getNumeroLog();
+                    creaLogs.ecrireContenuDansLog(numeroLog, monde.toString() + "\n\n");
                     kitC = new KitC();
                     kitC.creerEnvironnement();
                     kitC.creerFichier(monde.toC());
@@ -48,11 +51,11 @@ public class Simulation extends SujetObserve {
                     for (int i = 0; i < monde.nbGuichets(); i++)
                         tabJetonsGuichet[i] = monde.getNbTicketsGuichetI(i + 1); //num de Sémaphore commence à 1
                     int[] numProc = start_simulation(monde.nbEtapes(), monde.nbGuichets(), nbClients, tabJetonsGuichet);
-                    System.out.print("PID des clients : ");
+                    creaLogs.ecrireContenuDansLog(numeroLog, "PID des clients : ");
                     for (int i = 0; i < nbClients; i++) {
-                        System.out.print(numProc[i] + ", ");
+                        creaLogs.ecrireContenuDansLog(numeroLog, numProc[i] + ", ");
                     }
-                    System.out.println("\n");
+                    creaLogs.ecrireContenuDansLog(numeroLog, "\n\n");
                     gestCli = new GestionnaireClients(nbClients);
                     gestCli.setClients(numProc);
 
@@ -62,18 +65,18 @@ public class Simulation extends SujetObserve {
                         tabClientsEtapes = ou_sont_les_clients(monde.nbEtapes(), nbClients);
                         for (int i = 0; i < monde.nbEtapes(); i++) {
                             int temp = tabClientsEtapes[(i * nbClients) + i];  //Variable qui permet de réduire la charge visuelle et les accès au tableau (contient les clients dans l'étape actuelle)
-                            System.out.print("" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
+                            creaLogs.ecrireContenuDansLog(numeroLog, "" + monde.getNomEtapeI(i) + ", " + temp + " clients : ");
                             for (int j = 0; j < temp; j++) {//On parcourt les clients qu'il y a dans l'étape.
-                                System.out.print(tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
+                                creaLogs.ecrireContenuDansLog(numeroLog, tabClientsEtapes[(i * nbClients) + i + j + 1] + ", ");
                                 gestCli.allerA(tabClientsEtapes[(i * nbClients) + i + j + 1], monde.getEtapeI(i), j);
                             }
-                            System.out.println();
+                            creaLogs.ecrireContenuDansLog(numeroLog, "\n");
                         }
                         notifierObservateurs();
-                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        creaLogs.ecrireContenuDansLog(numeroLog, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
                         Thread.sleep(500);
                     }
-                    System.out.println("Simulation terminee, tous les clients sont dans le sas de sortie !");
+                    creaLogs.ecrireContenuDansLog(numeroLog, "Simulation terminee, tous les clients sont dans le sas de sortie !\n");
                     kitC.tuerLesProcessusC(gestCli);
                     gestCli.reset();
                     nettoyage();
