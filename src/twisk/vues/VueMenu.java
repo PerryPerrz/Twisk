@@ -289,30 +289,8 @@ public class VueMenu extends MenuBar implements Observateur {
     public void nouveau() {
         //On reset le compteur des étapes
         FabriqueIdentifiant.getInstance().reset();
-        try {
-            OutilsSerializable.getInstance().initializeSer();
-            CreationLogs.getInstance().initializelogs();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         MondeIG monde = new MondeIG();
-        BorderPane root = new BorderPane();
-        VueOutils viewO = new VueOutils(monde);
-        VueMondeIG viewM = new VueMondeIG(monde);
-        VueMenu viewMe = new VueMenu(monde);
-        TailleComposants tc = TailleComposants.getInstance();
-        root.setBottom(viewO);
-        root.setCenter(viewM);
-        root.setTop(viewMe);
-        //Animation
-        new BounceIn(root).play();
-        Stage primaryStage = (Stage) this.getScene().getWindow();
-        primaryStage.setTitle("twisk | Iopeti & Yvoz");
-        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/twisk/ressources/images/icon.png"))));
-        primaryStage.setScene(new Scene(root, tc.getWindowX(), tc.getWindowY()));
-        primaryStage.show();
-        monde.notifierObservateurs();
+        ouvrirFenetreNouveauMonde(monde);
     }
 
     /**
@@ -486,7 +464,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 pt.play();
             }
         } catch (IOException | ClassNotFoundException | MondeNullException e) {
-            e.printStackTrace();
+            this.gestionDesAlertes(e, "Suppression du monde impossible !", e.getMessage(), "warning");
         }
 
     }
@@ -501,7 +479,7 @@ public class VueMenu extends MenuBar implements Observateur {
             OutilsSerializable.getInstance().initializeSer();
             CreationLogs.getInstance().initializelogs();
         } catch (IOException e) {
-            e.printStackTrace();
+            this.gestionDesAlertes(e, "Initialisation de l'environnement impossible", e.getMessage(), "warning");
         }
         BorderPane root = new BorderPane();
         VueOutils viewO = new VueOutils(monde);
