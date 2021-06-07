@@ -73,6 +73,7 @@ public class VueOutils extends TilePane implements Observateur {
         boutonGuichet.setCursor(Cursor.HAND);
         boutonSimulation.setCursor(Cursor.HAND);
         this.getChildren().addAll(boutonActivite, boutonGuichet, boutonSimulation);
+        this.setPickOnBounds(false);
     }
 
     private void lancerFenetreErreurSimu(TwiskException e) {
@@ -120,6 +121,7 @@ public class VueOutils extends TilePane implements Observateur {
                     }
                 });
             }
+            this.setPickOnBounds(false);
         };
         if (Platform.isFxApplicationThread()) {
             command.run();

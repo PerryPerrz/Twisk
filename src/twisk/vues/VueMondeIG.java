@@ -67,6 +67,7 @@ public class VueMondeIG extends Pane implements Observateur {
             dragEvent.setDropCompleted(success);
             dragEvent.consume();
         });
+        this.setPickOnBounds(false);
     }
 
     @Override
