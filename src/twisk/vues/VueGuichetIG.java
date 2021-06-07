@@ -63,6 +63,15 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
             paneLibre--;
     }
 
+    /**
+     * Fonction qui retourne le nombre de vue clients contenues dans cette activités
+     *
+     * @return le nombre de vue client.
+     */
+    public int getNbVueClients() {
+        return flowPane.getChildren().size();
+    }
+
     @Override
     public void reagir() {
     }

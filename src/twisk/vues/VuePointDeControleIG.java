@@ -139,20 +139,6 @@ public class VuePointDeControleIG extends Circle implements Observateur {
         monde.ajouterObservateur(this);
     }
 
-    /**
-     * Procédure qui repositionne le point de contrôle du bas en fonction des coordonnées de son activité.
-     *
-     * @param x abscisse de l'activité
-     * @param y ordonné de l'activité
-     * @param w largeur de l'activité
-     * @param h hauteur de l'activité
-     */
-    public void setCoord(double x, double y, double w, double h) {
-        System.out.println("x : " + x + ",y : " + y + ", w :" + w + ", h : " + h);
-        this.setCenterX(x + w / 2);
-        this.setCenterY(y + h + this.getRadius());
-    }
-
     @Override
     public void reagir() {
     }
