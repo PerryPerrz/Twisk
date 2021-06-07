@@ -1,0 +1,11 @@
+---------- Projet de Synthèse ----------
+
+Twisk | 07/06/2021
+Hugo Iopeti & Ludovic Yvoz
+
+-----------------------------
+
+Voici les options de la JVM : --module-path /chemin/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/ --add-modules javafx.controls,javafx.graphics,javafx.media -Djdk.gtk.version=2 -Dprism.forceGPU=true
+
+
+-----------------------------
