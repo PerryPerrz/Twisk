@@ -1,5 +1,8 @@
 package twisk.outils;
 
+import twisk.exceptions.FichierNullException;
+import twisk.exceptions.MondeNullException;
+import twisk.exceptions.URLIncorrectException;
 import twisk.mondeIG.MondeIG;
 
 import java.io.*;
@@ -54,12 +57,12 @@ public class OutilsSerializable {
      * @return Le mondeIG
      * @throws IOException erreur déclenchée si le fichier ne peut pas s'ouvrir
      */
-    public MondeIG mondeFromSer(File file) throws IOException, ClassNotFoundException {
+    public MondeIG mondeFromSer(File file) throws IOException, ClassNotFoundException, MondeNullException {
         FileInputStream fileIn = new FileInputStream(file);
         ObjectInputStream objectIn = new ObjectInputStream(fileIn);
         MondeIG monde = (MondeIG) objectIn.readObject();
         if (monde == null)
-            throw new IOException("Monde null donc écriture impossible !");
+            throw new MondeNullException("Monde récupéré de la sauvegarde null !");
         objectIn.close();
         return monde;
     }
@@ -71,14 +74,16 @@ public class OutilsSerializable {
      * @throws IOException            Erreur renvoyée quand la lecture du fichier à échoué.
      * @throws ClassNotFoundException Erreur renvoyée quand le fichier ne correspond pas à un mondeIG.
      */
-    public MondeIG[] mondesPredetermines() throws IOException, ClassNotFoundException {
+    public MondeIG[] mondesPredetermines() throws IOException, ClassNotFoundException, MondeNullException, URLIncorrectException, FichierNullException {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         URL url = loader.getResource("mondes");
-        assert url != null;
+        if (url == null)
+            throw new URLIncorrectException("Le chemin des mondes sauvegardés temporairement est incorrect !");
         String path = url.getPath();
         File dossier = new File(path);
         File[] fichiers = dossier.listFiles((dir, name) -> name.endsWith(".ser"));
-        assert fichiers != null;
+        if (fichiers == null)
+            throw new FichierNullException("La liste de fichiers de sauvegarde est nulle !");
         File dossierTmp = new File("/tmp/twisk/mondes/");
         File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
         MondeIG[] mondes;
@@ -112,7 +117,7 @@ public class OutilsSerializable {
      * @return Un tableau contenant les mondes ou null si il n'y a pas de fichiers dans le dossier de sauvegardetemporaire
      * @throws ClassNotFoundException Erreur renvoyée quand le fichier ne correspond pas à un mondeIG.
      */
-    public MondeIG[] mondesPredeterminesTemp() throws IOException, ClassNotFoundException {
+    public MondeIG[] mondesPredeterminesTemp() throws IOException, ClassNotFoundException, MondeNullException {
         File dossierTmp = new File("/tmp/twisk/mondes/");
         File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
         MondeIG[] mondes = null;
@@ -148,10 +153,11 @@ public class OutilsSerializable {
      * @param nom le nom du fichier .ser sans extension
      * @throws IOException Erreur envoyée si la suppression du fichier à échoué.
      */
-    public void supprimerSer(String nom) throws IOException {
+    public void supprimerSer(String nom) throws IOException, FichierNullException {
         File dossierTmp = new File("/tmp/twisk/mondes/");
         File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
-        assert fichiersTemp != null;
+        if (fichiersTemp == null)
+            throw new FichierNullException("La liste de fichiers de sauvegarde est nulle !");
         for (File file : fichiersTemp) {
             if (file.getName().equals(nom + ".ser"))
                 if (!file.delete())

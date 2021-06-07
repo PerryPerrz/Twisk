@@ -14,9 +14,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 import twisk.designPattern.Observateur;
-import twisk.exceptions.ChargementSauvegardeException;
-import twisk.exceptions.PasUnGuichetException;
-import twisk.exceptions.UncorrectSettingsException;
+import twisk.exceptions.*;
 import twisk.mondeIG.MondeIG;
 import twisk.outils.*;
 
@@ -332,7 +330,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 throw new ChargementSauvegardeException("Fichier non sélectionné ou introuvable");
             MondeIG monde = OutilsSerializable.getInstance().mondeFromSer(selectedFile);
             ouvrirFenetreNouveauMonde(monde);
-        } catch (ChargementSauvegardeException | IOException | ClassNotFoundException e) {
+        } catch (ChargementSauvegardeException | IOException | ClassNotFoundException | MondeNullException e) {
             this.gestionDesAlertes(e, "Erreur lors du chargement d'une sauvegarde !", "Erreur : " + e.getMessage(), "warning");
         }
     }
@@ -415,7 +413,7 @@ public class VueMenu extends MenuBar implements Observateur {
                             }
                             assert file != null;
                             ouvrirFenetreNouveauMonde(OutilsSerializable.getInstance().mondeFromSer(file));
-                        } catch (IOException | ClassNotFoundException e) {
+                        } catch (IOException | ClassNotFoundException | MondeNullException e) {
                             e.printStackTrace();
                         }
                     });
@@ -424,7 +422,7 @@ public class VueMenu extends MenuBar implements Observateur {
                     menuItem.setGraphic(icon);
                 }
             }
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException | MondeNullException | URLIncorrectException | FichierNullException e) {
             this.gestionDesAlertes(e, e.getMessage(), "Erreur lors de la recherche des monde sauvegardés", "warning");
         }
     }
@@ -468,7 +466,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 result.ifPresent(s -> {
                     try {
                         OutilsSerializable.getInstance().supprimerSer(s);
-                    } catch (IOException e) {
+                    } catch (IOException | FichierNullException e) {
                         this.gestionDesAlertes(e, "Impossible de supprimer le monde", "Erreur : Le monde ne peut pas être supprimé \nVeuillez ré-essayer", "warning");
                     }
                 });
@@ -487,7 +485,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 pt.setOnFinished(Event -> dia.close());
                 pt.play();
             }
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException | MondeNullException e) {
             e.printStackTrace();
         }
 

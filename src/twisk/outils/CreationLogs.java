@@ -32,7 +32,7 @@ public class CreationLogs {
     }
 
     /**
-     * Procédure qui crée écris du texte dans un fichier log créé dans le dossier temporaire.
+     * Procédure qui écris du texte dans un fichier log créé dans le dossier temporaire.
      *
      * @param numLog  Le numéro du log sur lequel on écrit
      * @param contenu Le contenu à écrire
