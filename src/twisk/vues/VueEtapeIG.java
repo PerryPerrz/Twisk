@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import animatefx.animation.Pulse;
+import javafx.beans.property.BooleanProperty;
 import javafx.scene.Cursor;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Label;
@@ -38,7 +39,10 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * Le Label.
      */
     protected final Label label;
-    protected VueMondeIG vueMondeIG;
+    /**
+     * Le BooleanProperty correspondant au champ pickOnBounds de VueMenu.
+     */
+    protected BooleanProperty pickOnBoundsPropertyVueMenu;
 
     /**
      * Constructeur de la classe VueEtapeIG.
@@ -46,10 +50,9 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * @param monde le monde
      * @param etape l'etape
      */
-    public VueEtapeIG(MondeIG monde, EtapeIG etape, VueMondeIG vueMondeIG) {
+    public VueEtapeIG(MondeIG monde, EtapeIG etape) {
         this.monde = monde;
         this.etape = etape;
-        this.vueMondeIG = vueMondeIG;
 
         TailleComposants tc = TailleComposants.getInstance();
         CouleurComposants cc = CouleurComposants.getInstance();
@@ -94,7 +97,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * @param mouseEvent le mouse event
      */
     public void setMouse(MouseEvent mouseEvent) {
-        vueMondeIG.setPickOnBounds(true);
+        this.pickOnBoundsPropertyVueMenu.set(true);
         Dragboard dragboard = this.startDragAndDrop(TransferMode.MOVE); //Presse-papier qui contient les infos du drag'n drop
         WritableImage snapShot = this.snapshot(new SnapshotParameters(), null);
         dragboard.setDragView(snapShot);
@@ -119,4 +122,8 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * @param viewC la VueCLient que l'on veut ajouter
      */
     public abstract void ajouterVueClient(VueClient viewC);
+
+    public void setPoBVueMondeIG(BooleanProperty pickOnBoundsProperty) {
+        this.pickOnBoundsPropertyVueMenu = pickOnBoundsProperty;
+    }
 }
