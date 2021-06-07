@@ -105,6 +105,8 @@ public class VueOutils extends TilePane implements Observateur {
                 boutonSimulation.setTooltip(tool);
                 boutonSimulation.setCursor(Cursor.WAIT);
                 this.boutonSimulation.setOnAction(actionEvent -> monde.lavageDesClients());
+                boutonActivite.setDisable(true);
+                boutonGuichet.setDisable(true);
             } else {
                 Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/play.png")), tC.getTailleBouton(), tC.getTailleBouton(), true, true);
                 ImageView icon = new ImageView(image);
@@ -120,6 +122,8 @@ public class VueOutils extends TilePane implements Observateur {
                         lancerFenetreErreurSimu(e);
                     }
                 });
+                boutonActivite.setDisable(false);
+                boutonGuichet.setDisable(false);
             }
             this.setPickOnBounds(false);
         };

@@ -480,6 +480,8 @@ public class VueMenu extends MenuBar implements Observateur {
                 for (MondeIG mondeIG : mondesPredetermines) {
                     MenuItem menuItem = new MenuItem(mondeIG.getNom());
                     mondes.getItems().add(menuItem);
+                    if (monde.simulationACommencee())
+                        menuItem.setDisable(true);
                     menuItem.setOnAction(actionEvent -> {
                         try {
                             ClassLoader loader = Thread.currentThread().getContextClassLoader();
@@ -665,21 +667,40 @@ public class VueMenu extends MenuBar implements Observateur {
     @Override
     public void reagir() {
         Runnable command = () -> {
-            edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
-            parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
-            parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
-            //Si aucune étape n'est selectionnée, on disable le bouton supprimer
-            edition.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
-            edition.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
-            //Si aucune étape n'est seléctionnée, on ne peut pas donner d'entrée ou de sortie
-            accesAuMonde.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0);
-            accesAuMonde.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() == 0 || monde.etapesSelectionneesContientUnGuichet());
-            if (!monde.etapesSelectionneesSontDesGuichets())//Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
-                parametres.getItems().get(2).setDisable(true);
-            else { //Si l'étape concernée est un guichet
+            if (!monde.simulationACommencee()) {
+                edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
+                parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
+                parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
+                //Si aucune étape n'est selectionnée, on disable le bouton supprimer
+                edition.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
+                edition.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
+                //Si aucune étape n'est seléctionnée, on ne peut pas donner d'entrée ou de sortie
+                accesAuMonde.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0);
+                accesAuMonde.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() == 0 || monde.etapesSelectionneesContientUnGuichet());
+                if (!monde.etapesSelectionneesSontDesGuichets())//Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
+                    parametres.getItems().get(2).setDisable(true);
+                else { //Si l'étape concernée est un guichet
+                    parametres.getItems().get(0).setDisable(true);
+                    parametres.getItems().get(1).setDisable(true);
+                    parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1); //Si plus d'un guichet est selectionné on disable jetons
+                }
+            } else {
+                fichier.getItems().get(0).setDisable(true);
+                fichier.getItems().get(1).setDisable(true);
+                edition.getItems().get(0).setDisable(true);
+                edition.getItems().get(1).setDisable(true);
+                edition.getItems().get(2).setDisable(true);
+                accesAuMonde.getItems().get(0).setDisable(true);
+                accesAuMonde.getItems().get(1).setDisable(true);
                 parametres.getItems().get(0).setDisable(true);
                 parametres.getItems().get(1).setDisable(true);
-                parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1); //Si plus d'un guichet est selectionné on disable jetons
+                parametres.getItems().get(2).setDisable(true);
+                parametres.getItems().get(3).setDisable(true);
+                mondes.getItems().get(0).setDisable(true);
+                mondes.getItems().get(1).setDisable(true);
+                lois.getItems().get(0).setDisable(true);
+                lois.getItems().get(1).setDisable(true);
+                lois.getItems().get(2).setDisable(true);
             }
             ajouterMenuItemsMondes();
             this.gestionDuCheckmarkDesLois();
