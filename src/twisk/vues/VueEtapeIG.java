@@ -97,13 +97,15 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * @param mouseEvent le mouse event
      */
     public void setMouse(MouseEvent mouseEvent) {
-        this.pickOnBoundsPropertyVueMenu.set(true);
-        Dragboard dragboard = this.startDragAndDrop(TransferMode.MOVE); //Presse-papier qui contient les infos du drag'n drop
-        WritableImage snapShot = this.snapshot(new SnapshotParameters(), null);
-        dragboard.setDragView(snapShot);
-        ClipboardContent content = new ClipboardContent(); //On créer un clipboard qui contient l'id de l'étape
-        content.putString(etape.getIdentifiant());
-        dragboard.setContent(content);
+        if (!monde.simulationACommencee()) {
+            this.pickOnBoundsPropertyVueMenu.set(true);
+            Dragboard dragboard = this.startDragAndDrop(TransferMode.MOVE); //Presse-papier qui contient les infos du drag'n drop
+            WritableImage snapShot = this.snapshot(new SnapshotParameters(), null);
+            dragboard.setDragView(snapShot);
+            ClipboardContent content = new ClipboardContent(); //On créer un clipboard qui contient l'id de l'étape
+            content.putString(etape.getIdentifiant());
+            dragboard.setContent(content);
+        }
         mouseEvent.consume(); //Cet event est finit.
     }
 

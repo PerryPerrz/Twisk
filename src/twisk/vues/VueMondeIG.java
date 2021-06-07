@@ -46,30 +46,34 @@ public class VueMondeIG extends Pane implements Observateur {
             }
         }
         this.setOnDragOver(dragEvent -> {
-            if (dragEvent.getDragboard().hasString()) { //Si le dragDropped renvoie bien un string, je peux bouger
-                //On fait réapparaitre la hitbox de VueMondeIG par dessus la hitbox de VueOutils pour drag'n'drop donc on ne peut pas appuyer sur les boutons pendant le drag'n'drop
-                this.setPickOnBounds(true);
-                dragEvent.acceptTransferModes(TransferMode.MOVE);
+            if (!monde.simulationACommencee()) {
+                if (dragEvent.getDragboard().hasString()) { //Si le dragDropped renvoie bien un string, je peux bouger
+                    //On fait réapparaitre la hitbox de VueMondeIG par dessus la hitbox de VueOutils pour drag'n'drop donc on ne peut pas appuyer sur les boutons pendant le drag'n'drop
+                    this.setPickOnBounds(true);
+                    dragEvent.acceptTransferModes(TransferMode.MOVE);
+                }
             }
             dragEvent.consume();
         });
 
         this.setOnDragDropped(dragEvent -> {
-            Dragboard db = dragEvent.getDragboard();
-            // Get item id here, which was stored when the drag started.
-            boolean success = false;
-            if (db.hasString()) {
-                String indice = db.getString();
-                VueEtapeIG image = (VueEtapeIG) this.lookup("#" + indice); //On cherche dans la VueMondeIG, la VueEtapeIG qui s'est fait drag and drop
-                if (image != null) { //Si l'objet drag n drop existe et si c'est bien une VueEtapeIG
-                    //On change l'emplacement de l'étape
-                    monde.changerEmplacementEtape(indice, (int) dragEvent.getX(), (int) dragEvent.getY());
-                    success = true;
+            if (!monde.simulationACommencee()) {
+                Dragboard db = dragEvent.getDragboard();
+                // Get item id here, which was stored when the drag started.
+                boolean success = false;
+                if (db.hasString()) {
+                    String indice = db.getString();
+                    VueEtapeIG image = (VueEtapeIG) this.lookup("#" + indice); //On cherche dans la VueMondeIG, la VueEtapeIG qui s'est fait drag and drop
+                    if (image != null) { //Si l'objet drag n drop existe et si c'est bien une VueEtapeIG
+                        //On change l'emplacement de l'étape
+                        monde.changerEmplacementEtape(indice, (int) dragEvent.getX(), (int) dragEvent.getY());
+                        success = true;
+                    }
                 }
+                //On autorise plus le drag'n'drop pour empêcher les conflits de hitbox avec les boutons de vueOutils.
+                this.setPickOnBounds(false);
+                dragEvent.setDropCompleted(success);
             }
-            //On autorise plus le drag'n'drop pour empêcher les conflits de hitbox avec les boutons de vueOutils.
-            this.setPickOnBounds(false);
-            dragEvent.setDropCompleted(success);
             dragEvent.consume();
         });
         //On passe la hitbox de VueMondeIG en dessous ou pas au même endroit que celle de VueOutils pour permettre de cliquer sur les boutons lorsqu'une activité les recouvrent ou est à côté mais on ne peut plus drag'n'drop
