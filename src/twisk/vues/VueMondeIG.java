@@ -46,6 +46,7 @@ public class VueMondeIG extends Pane implements Observateur {
         }
         this.setOnDragOver(dragEvent -> {
             if (dragEvent.getDragboard().hasString()) { //Si le dragDropped renvoie bien un string, je peux bouger
+                this.setPickOnBounds(true);
                 dragEvent.acceptTransferModes(TransferMode.MOVE);
             }
             dragEvent.consume();
@@ -64,6 +65,7 @@ public class VueMondeIG extends Pane implements Observateur {
                     success = true;
                 }
             }
+            this.setPickOnBounds(false);
             dragEvent.setDropCompleted(success);
             dragEvent.consume();
         });
