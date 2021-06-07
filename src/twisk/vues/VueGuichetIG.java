@@ -27,7 +27,7 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
         if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())
             paneLibre = 0;
         else
-            paneLibre = monde.getNbClients() - etape.siEstUnGuichetGetNbJetons() - 1;
+            paneLibre = 10;
         flowPane = new FlowPane();
 
         TailleComposants tc = TailleComposants.getInstance();
@@ -51,16 +51,25 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
 
     @Override
     public void ajouterVueClient(VueClient viewC) {
+        if (getNbVueClients() % 11 == 0) {
+            for (int i = 0; i < 11; i++) {
+                StackPane sp = new StackPane();
+                sp.setStyle("-fx-border-color: " + CouleurComposants.getInstance().getCouleurBorderGuichet() + "; -fx-border-width: 3px; -fx-background-color:" + CouleurComposants.getInstance().getCouleurBackgroundGuichet() + ";");
+                sp.setPrefSize(TailleComposants.getInstance().getRadClient() * 3, TailleComposants.getInstance().getRadClient() * 6);
+                flowPane.getChildren().add(sp);
+            }
+        }
         //Utilisation d'un StackPane pour pouvoir afficher les clients au centre du rectangle.
-        StackPane sp = new StackPane();
-        sp.setStyle("-fx-border-color: " + CouleurComposants.getInstance().getCouleurBorderGuichet() + "; -fx-border-width: 3px; -fx-background-color:" + CouleurComposants.getInstance().getCouleurBackgroundGuichet() + ";");
-        sp.setPrefSize(TailleComposants.getInstance().getRadClient() * 3, TailleComposants.getInstance().getRadClient() * 6);
-        flowPane.getChildren().add(sp);
+        StackPane sp = (StackPane) flowPane.getChildren().get(paneLibre);
         sp.getChildren().add(viewC);
         if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())
             paneLibre++;
-        else
-            paneLibre--;
+        else {
+            if (paneLibre % 11 == 0)
+                paneLibre += 21;
+            else
+                paneLibre--;
+        }
     }
 
     /**
@@ -69,7 +78,13 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
      * @return le nombre de vue client.
      */
     public int getNbVueClients() {
-        return flowPane.getChildren().size();
+        int res = 0;
+        for (int i = 0; i < flowPane.getChildren().size(); i++) {
+            StackPane sp = (StackPane) flowPane.getChildren().get(i);
+            if (sp.getChildren().size() != 0)
+                res++;
+        }
+        return res;
     }
 
     @Override
