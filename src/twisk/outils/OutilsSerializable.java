@@ -125,7 +125,7 @@ public class OutilsSerializable {
      * @param file le fichier
      * @return le mondeIG
      */
-    public MondeIG ChargerMondePredetermine(InputStream file) {
+    public MondeIG chargerMondePredetermine(InputStream file) {
         try {
             ObjectInputStream ois = new ObjectInputStream(file);
             return (MondeIG) ois.readObject();

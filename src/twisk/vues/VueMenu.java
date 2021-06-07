@@ -560,7 +560,7 @@ public class VueMenu extends MenuBar implements Observateur {
      */
     private void chargerMonde(String nom) {
         InputStream file = getClass().getResourceAsStream("/twisk/ressources/mondes/" + nom + ".ser");
-        MondeIG monde = OutilsSerializable.getInstance().ChargerMondePredetermine(file);
+        MondeIG monde = OutilsSerializable.getInstance().chargerMondePredetermine(file);
         ouvrirFenetreNouveauMonde(monde);
     }
 
