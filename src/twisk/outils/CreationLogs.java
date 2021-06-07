@@ -6,6 +6,9 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * La classe CreationLogs.
+ */
 public class CreationLogs {
 
     private CreationLogs() {
@@ -16,7 +19,7 @@ public class CreationLogs {
     /**
      * Fonction qui donne une instance de OutilsSerializable.
      *
-     * @return l'instance
+     * @return l 'instance
      */
     public static CreationLogs getInstance() {
         return instance;

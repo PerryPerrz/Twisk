@@ -1,0 +1,620 @@
+@startuml
+class twisk.monde.Activite {
+- int temps
+- int ecartTemps
++ boolean estUneActivite()
++ int getTemps()
++ void setTemps(int)
++ int getEcartTemps()
++ void setEcartTemps(int)
++ String toString()
++ String toC()
++ int getNbTicketSiGuichet()
++ int getNumSem()
+}
+class twisk.exceptions.SameActivityException {
+}
+abstract class twisk.exceptions.TwiskException {
+}
+class twisk.exceptions.MondeNullException {
+}
+class twisk.simulation.Client {
+- int numeroClient
+- int rang
++ void allerA(Etape,int)
++ Etape getEtape()
++ int getNumeroClient()
++ int getRang()
++ String toString()
+}
+twisk.simulation.Client --"1" twisk.monde.Etape
+class twisk.outils.OutilsSerializable {
+- {static} OutilsSerializable instance
++ {static} OutilsSerializable getInstance()
++ void initializeSer()
++ void mondeToSer(MondeIG,File,String)
++ MondeIG mondeFromSer(File)
++ MondeIG[] mondesPredeterminesTemp()
++ void mondeToSerInMondesPredetermines(MondeIG,String)
++ void supprimerSer(String)
++ MondeIG chargerMondePredetermine(InputStream file)
+}
+class twisk.exceptions.GuichetToGuichetException {
+}
+class twisk.exceptions.URLIncorrectException {
+}
+
+class twisk.outils.ClassLoaderPerso {
++ Class<?> loadClass(String)
+- Class<?> getClass(String)
+- byte[] loadClassData(String)
++ void finalize()
+}
+class twisk.outils.FabriqueIdentifiant {
+- {static} long serialVersionUID
+- {static} FabriqueIdentifiant instance
+- int noEtape
+- int noPdc
+- int numSem
++ {static} FabriqueIdentifiant getInstance()
++ String getIdentifiantEtape()
++ String getIdentifiantPdc()
++ void reset()
++ int getNumSem()
+}
+class twisk.outils.TailleComposants {
+- {static} TailleComposants instance
+- int largAct
+- int hautAct
+- int tailleBouton
+- int windowX
+- int windowY
+- int rad
+- int largLigne
+- int longTri
+- int largTri
+- int tailleIcons
+- int tailleIcons2
+- int tailleIcons3
+- int largGuichet
+- int hautGuichet
+- int hautLabelEtape
+- int margeSelection
+- int font
+- int radCLient
+- int ecartHV
++ {static} TailleComposants getInstance()
++ int getLargAct()
++ int getHautAct()
++ int getTailleBouton()
++ int getWindowX()
++ int getWindowY()
++ int getRad()
++ int getLargLigne()
++ int getLongTri()
++ int getLargTri()
++ int getTailleIcons()
++ int getTailleIcons2()
++ int getTailleIcons3()
++ int getLargGuichet()
++ int getHautGuichet()
++ int getHautLabelEtape()
++ int getMargeSelection()
++ int getFont()
++ int getRadClient()
++ int getEcartHV()
+}
+class twisk.outils.FabriqueNumero {
+- int cptEtape
+- int cptSemaphore
+- int cptLibrairie
+- int cptLog
+- {static} FabriqueNumero instance
++ {static} FabriqueNumero getInstance()
++ int getNumeroEtape()
++ int getNumeroSemaphore()
++ int getNumeroLibrairie()
++ int consulterNumeroLibraire()
++ int getNumeroLog()
++ void reset()
+}
+class twisk.outils.CouleurComposants {
+- {static} CouleurComposants instance
+- String couleurLabelActivite
+- String couleurActivite
+- String couleurBackgroudnActivite
+- String couleurLigneStroke
+- String couleurTriangleStroke
+- String couleurTriangleFill
+- String couleurLigneStrokeIsSelected
+- String couleurTriangleStrokeIsSelected
+- String couleurTriangleFillIsSelected
+- String couleurBackgroundEtapeIsSelected
+- String couleurBorderEtapeIsSelected
+- String couleurLabelGuichet
+- String couleurBorderGuichet
+- String couleurBackgroundGuichet
+- String couleurBackgroundJourMonde
+- String couleurBackgroundNuitMonde
+- String couleurBackgroundResetMonde
+- String couleurPointDeControle
++ {static} CouleurComposants getInstance()
++ String getCouleurActivite()
++ String getCouleurLabelActivite()
++ String getCouleurBackgroudnActivite()
++ String getCouleurLigneStroke()
++ String getCouleurTriangleStroke()
++ String getCouleurTriangleFill()
++ String getCouleurLigneStrokeIsSelected()
++ String getCouleurTriangleStrokeIsSelected()
++ String getCouleurTriangleFillIsSelected()
++ String getCouleurBackgroundEtapeIsSelected()
++ String getCouleurBorderEtapeIsSelected()
++ String getCouleurLabelGuichet()
++ String getCouleurBorderGuichet()
++ String getCouleurBackgroundGuichet()
++ String getCouleurBackgroundJourMonde()
++ String getCouleurBackgroundNuitMonde()
++ String getCouleurBackgroundResetMonde()
++ String getCouleurPointDeControle()
+}
+abstract class twisk.mondeIG.EtapeIG {
+- {static} long serialVersionUID
+# String nom
+# String identifiant
+# int posX
+# int posY
+# boolean entree
+# boolean sortie
+# int delai
+# int ecart
+# int nbPrec
+# FabriqueIdentifiant fabrik
++ void randomPositions()
++ void raffraichissementPdc()
++ String getIdentifiant()
++ int getPosX()
++ int getPosY()
++ Iterator<PointDeControleIG> iterator()
++ PointDeControleIG getPdcIndex(int)
++ String getNom()
++ void setNom(String)
++ void setPosXPosY(int,int)
++ void invEntree()
++ void invSortie()
++ int getDelai()
++ int getEcart()
++ void setDelai(int)
++ void setEcart(int)
++ boolean estUneEntree()
++ boolean estUneSortie()
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ boolean estUnGuichet()
++ {abstract}int siEstUnGuichetGetNbJetons()
++ {abstract}void siEstUnGuichetSetNbJetons(int)
++ {abstract}void siEstUnGuichetSetVersLaDroite(Boolean)
++ void ajouterSuccesseur(EtapeIG)
++ void supprimerSuccesseur(EtapeIG)
++ boolean possedeUnSuccesseur()
++ boolean estSuivieDUneActivite()
++ {abstract}boolean setActiviteRestreinte(boolean)
++ boolean actSuccIntoActRes()
++ ArrayList<EtapeIG> getSucc()
++ boolean estAccessibleDepuis(EtapeIG)
++ int getNbPrec()
++ void incrementeNbPrec()
++ void decrementeNbPrec()
++ {abstract}Boolean siEstUnGuichetGetVersLaDroite()
+}
+twisk.mondeIG.EtapeIG--"*" twisk.mondeIG.PointDeControleIG
+twisk.mondeIG.EtapeIG--"*" twisk.mondeIG.EtapeIG
+abstract class twisk.monde.Etape {
+# String nom
+# int num
++ void ajouterSuccesseur(Etape)
++ int nbSuccesseurs()
++ boolean estUneActivite()
++ boolean estUnGuichet()
++ Iterator<Etape> iterator()
++ String getNom()
++ int getNum()
++ {abstract}String toC()
++ GestionnaireSuccesseurs getGestsucc()
++ Etape getSucc()
++ Etape getSuccI(int)
++ {abstract}int getNbTicketSiGuichet()
++ {abstract}int getNumSem()
++ String getNomMaj()
++ boolean estUnSasEntree()
++ boolean estUnSasSortie()
+}
+twisk.monde.Etape--"1" twisk.monde.GestionnaireSuccesseurs
+class twisk.vues.VueClient {
++ EtapeIG getE()
++ void reagir()
+}
+twisk.vues.VueClient--"1" twisk.simulation.Client
+twisk.vues.VueClient--"1" twisk.mondeIG.MondeIG
+twisk.vues.VueClient--"1" twisk.mondeIG.EtapeIG
+interface twisk.designPattern.Observateur {
+~ void reagir()
+}
+class twisk.exceptions.PasUnGuichetException {
+}
+class twisk.monde.GestionnaireEtapes {
++ void ajouter(Etape)
++ int nbEtapes()
++ Iterator<Etape> iterator()
++ String toString()
+}
+twisk.monde.GestionnaireEtapes--"*" twisk.monde.Etape
+class twisk.vues.VueArcIG {
++ void apparitionDeLaLigne(PointDeControleIG,PointDeControleIG)
++ void apparitionDuTriangle()
++ void reagir()
+}
+twisk.vues.VueArcIG--"1" twisk.mondeIG.MondeIG
+twisk.vues.VueArcIG--"1" twisk.mondeIG.ArcIG
+twisk.vues.VueArcIG--"1" javafx.scene.shape.Line
+twisk.vues.VueArcIG--"1" javafx.scene.shape.Polyline
+class twisk.exceptions.UncorrectSettingsException {
+}
+
+class twisk.exceptions.ArcAlreadyCreateException {
+}
+class twisk.outils.KitC {
++ void creerEnvironnement()
+- void copier(InputStream,File)
++ void creerFichier(String)
++ void compiler()
++ void construireLaLibrairie()
++ void tuerLesProcessusC(GestionnaireClients)
+}
+class twisk.outils.CreationLogs {
+- {static} CreationLogs instance
++ {static} CreationLogs getInstance()
++ void initializelogs()
++ void ecrireContenuDansLog(int,String)
+}
+class twisk.vues.VueMondeIG {
++ void reagir()
+}
+twisk.vues.VueMondeIG --"1" twisk.mondeIG.MondeIG
+class twisk.monde.GestionnaireSuccesseurs {
++ void ajouter(Etape)
++ int nbEtapes()
++ Iterator<Etape> iterator()
++ Etape getSucc()
++ Etape getSuccI(int)
++ String toString()
+}
+twisk.monde.GestionnaireSuccesseurs --"*" twisk.monde.Etape
+class twisk.monde.SasEntree {
+- String loi
++ String toC()
++ boolean estUnSasEntree()
++ void setLoi(String)
+}
+class twisk.monde.Monde {
++ void aCommeEntree(Etape)
++ void aCommeSortie(Etape)
++ void ajouter(Etape)
++ int nbEtapes()
++ int nbGuichets()
++ Iterator<Etape> iterator()
++ String toString()
++ String toC()
++ int getNbTicketsGuichetI(int)
++ String getNomEtapeI(int)
++ int getNumSasSortie()
++ Etape getEtapeI(int)
++ SasEntree getSasE()
+}
+twisk.monde.Monde--"1" twisk.monde.SasEntree
+twisk.monde.Monde--"1" twisk.monde.SasSortie
+twisk.monde.Monde--"1" twisk.monde.GestionnaireEtapes
+class twisk.monde.SasSortie {
++ String toC()
++ boolean estUnSasSortie()
+}
+class twisk.exceptions.ChargementSauvegardeException {
+}
+class twisk.exceptions.MondeException {
+}
+class twisk.exceptions.WrongDirectionException {
+}
+class twisk.outils.GestionnaireThreads {
+- {static} GestionnaireThreads instance
++ {static} GestionnaireThreads getInstance()
++ int lancer(Task)
++ void detruireTout()
+}
+twisk.outils.GestionnaireThreads--"*" java.lang.Thread
+class twisk.ClientTwisk {
++ Monde ConstruMonde1()
++ Monde ConstruMonde2()
++ {static} void main(String[])
+}
+class twisk.simulation.Simulation {
+- int nbClients
+- boolean enCoursDeSimulation
++ void simuler(Monde)
++ int[] start_simulation(int,int,int,int[])
++ int[] ou_sont_les_clients(int,int)
++ void nettoyage()
++ void setNbClients(int)
++ GestionnaireClients getGestCli()
++ boolean isEnCoursDeSimulation()
+}
+twisk.simulation.Simulation --"1" twisk.simulation.GestionnaireClients
+class twisk.vues.VueGuichetIG {
+- int paneLibre
++ void ajouterVueClient(VueClient)
++ int getNbVueClients()
++ void reagir()
+}
+twisk.vues.VueGuichetIG--"1" javafx.scene.layout.FlowPane
+class twisk.mondeIG.ActiviteIG {
+- {static} long serialVersionUID
+- boolean estUneActiviteRestreinte
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ void siEstUnGuichetSetVersLaDroite(Boolean)
++ boolean setActiviteRestreinte(boolean)
++ Boolean siEstUnGuichetGetVersLaDroite()
+}
+class twisk.vues.VuePointDeControleIG {
++ void gestionDesAlertes(TwiskException,String,String,String)
++ void reagir()
+}
+twisk.vues.VuePointDeControleIG --"1" twisk.mondeIG.MondeIG
+twisk.vues.VuePointDeControleIG--"1" twisk.mondeIG.PointDeControleIG
+class twisk.vues.VueMenu {
+- void supprimer()
++ void rename()
++ void delai()
++ void ecart()
++ void jetons()
++ void clients()
++ void nouveau()
+~ void restaurer()
+- void enregistrer()
+- void ajouterMenuItemsMondes()
+- void ajouter()
+- void supprimerMonde()
+- void ouvrirFenetreNouveauMonde(MondeIG)
++ void gestionDesImages(MenuItem,String)
++ void gestionDuCheckmarkDesLois()
++ void gestionDesAlertes(Exception,String,String,String)
+- void chargerMonde(String nom)
++ void reagir()
+}
+twisk.vues.VueMenu--"1" twisk.mondeIG.MondeIG
+twisk.vues.VueMenu--"7" javafx.scene.control.Menu
+class twisk.exceptions.CreateLoopException {
+}
+abstract class twisk.vues.VueEtapeIG {
++ void setMouse(MouseEvent)
++ EtapeIG getEtape()
++ {abstract}void ajouterVueClient(VueClient)
++ void setPoBVueMondeIG(BooleanProperty)
+}
+twisk.vues.VueEtapeIG--"1" twisk.mondeIG.MondeIG
+twisk.vues.VueEtapeIG--"1" twisk.mondeIG.EtapeIG
+twisk.vues.VueEtapeIG--"1" javafx.scene.control.Label
+twisk.vues.VueEtapeIG--"1" java.lang.Boolean
+class twisk.MainTwisk {
++ {static} void main(String[])
++ void start(Stage)
+}
+class twisk.mondeIG.ArcIG {
+- {static} long serialVersionUID
+- boolean select
++ PointDeControleIG getPdcDepart()
++ PointDeControleIG getPdcArrive()
++ boolean isLinkedToStage(EtapeIG)
++ boolean isSelected()
++ void setSelect(boolean)
++ EtapeIG getEtapePdcDepart()
++ EtapeIG getEtapePdcArrive()
+}
+twisk.mondeIG.ArcIG --"2" twisk.mondeIG.PointDeControleIG
+class twisk.mondeIG.GuichetIG {
+- {static} long serialVersionUID
+- int nbJetons
+- int numSemaphore
+- Boolean versLaDroite
++ boolean estUnGuichet()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ void siEstUnGuichetSetVersLaDroite(Boolean)
++ boolean setActiviteRestreinte(boolean)
++ Boolean siEstUnGuichetGetVersLaDroite()
++ void setVersLaDroite(Boolean)
+}
+twisk.mondeIG.GuichetIG--"1"twisk.outils.FabriqueIdentifiant
+class twisk.exceptions.FichierNullException {
+}
+class twisk.mondeIG.PointDeControleIG {
+- {static} long serialVersionUID
+- int centreX
+- int centreY
+- String id
+- boolean clicked
++ void setCentre(int,int)
++ int getCentreX()
++ int getCentreY()
++ void setClicked()
++ boolean isClicked()
++ String getId()
++ EtapeIG getEtapeRattache()
+}
+twisk.mondeIG.PointDeControleIG--"1" twisk.mondeIG.EtapeIG
+class twisk.vues.VueActiviteIG {
++ void ajouterVueClient(VueClient)
++ void reagir()
+}
+twisk.vues.VueActiviteIG --"1" javafx.scene.layout.FlowPane
+class twisk.vues.VueOutils {
+- void lancerFenetreErreurSimu(TwiskException)
++ void reagir()
+}
+twisk.vues.VueOutils --"1" twisk.mondeIG.MondeIG
+twisk.vues.VueOutils --"3" javafx.scene.control.Button
+class twisk.exceptions.CreateArcWithEndPdcException {
+}
+class twisk.simulation.GestionnaireClients {
+- int nbClients
++ void setClients(int)
++ void allerA(int,Etape,int)
++ void reset()
++ Iterator<Client> iterator()
++ Client getClientI(int)
++ int getNbClients()
+}
+twisk.simulation.GestionnaireClients --"*" twisk.simulation.Client
+class twisk.designPattern.SujetObserve {
++ void ajouterObservateur(Observateur)
++ void notifierObservateurs()
+}
+twisk.designPattern.SujetObserve --"*" twisk.designPattern.Observateur
+twisk.mondeIG.MondeIG--"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.MondeIG--"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.MondeIG--"*" twisk.mondeIG.ArcIG
+twisk.mondeIG.MondeIG--"1" twisk.outils.CorrespondanceEtapes
+twisk.mondeIG.MondeIG--"1" twisk.outils.FabriqueIdentifiant
+class twisk.mondeIG.MondeIG {
+- {static} long serialVersionUID
+- int style
+- Object simulation
+- int nbClients
+- String nom
+- String loi
++ void ajouter(String)
++ Iterator<EtapeIG> iterator()
++ int nbEtapes()
++ void ajouter(PointDeControleIG,PointDeControleIG)
++ Iterator<ArcIG> iteratorArcs()
++ void creationArc(PointDeControleIG)
++ EtapeIG getEtapeIndice(String)
++ void ajouterEtapeSelectionnee(EtapeIG)
++ boolean isSelected(EtapeIG)
++ void supprimerLaSelection()
++ void supprimer(Iterator<EtapeIG>)
++ void renommerLaSelection(String)
++ int nbEtapesSelectionnees()
++ void changerEmplacementEtape(String,int,int)
++ void selectionArc(ArcIG)
++ boolean isSelected(ArcIG)
++ void effacerLaSelection()
++ void setEntree()
++ void setSortie()
++ void setDelai(String)
++ void setEcart(String)
++ void setStyle(int)
++ int getStyle()
++ void setTokens(int)
++ boolean etapesSelectionneesSontDesGuichets()
+- void verifierMondeIG()
++ Monde creerMonde()
++ void simuler()
++ CorrespondanceEtapes getCorE()
++ GestionnaireClients getGestionnaireClientDeSimulation()
++ boolean simulationACommencee()
++ void reagir()
++ void lavageDesClients()
++ int getNbClients()
++ void setNbClients(int)
++ String getNom()
++ void setNom(String)
++ void setLoi(String)
++ String getLoi()
++ int getNbArcsSelectionnes()
++ boolean etapesSelectionneesContientUnGuichet()
+}
+class twisk.monde.Guichet {
+- int nbJetons
+- int numSemaphore
++ boolean estUnGuichet()
++ int getNbJetons()
++ void setNbJetons(int)
++ int getNumSemaphore()
++ void setNumSemaphore(int)
++ String toString()
++ String toC()
++ int getNbTicketSiGuichet()
++ int getNumSem()
+}
+class twisk.outils.CorrespondanceEtapes {
++ void ajouter(EtapeIG,Etape)
++ Etape get(EtapeIG)
++ EtapeIG get(Etape)
+}
+twisk.outils.CorrespondanceEtapes--"*"twisk.mondeIG.EtapeIG
+twisk.outils.CorrespondanceEtapes--"*"twisk.monde.Etape
+class twisk.monde.ActiviteRestreinte {
++ String toC()
+}
+
+twisk.monde.Etape <|-- twisk.monde.Activite
+twisk.exceptions.TwiskException <|-- twisk.exceptions.SameActivityException
+twisk.exceptions.Exception <|-- twisk.exceptions.TwiskException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.MondeNullException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.GuichetToGuichetException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.URLIncorrectException
+twisk.outils.ClassLoader <|-- twisk.outils.ClassLoaderPerso
+java.io.Serializable <|.. twisk.outils.FabriqueIdentifiant
+twisk.mondeIG.Iterable <|.. twisk.mondeIG.EtapeIG
+java.io.Serializable <|.. twisk.mondeIG.EtapeIG
+twisk.monde.Iterable <|.. twisk.monde.Etape
+twisk.designPattern.Observateur <|.. twisk.vues.VueClient
+javafx.scene.shape.Circle <|-- twisk.vues.VueClient
+twisk.exceptions.TwiskException <|-- twisk.exceptions.PasUnGuichetException
+twisk.monde.Iterable <|.. twisk.monde.GestionnaireEtapes
+twisk.designPattern.Observateur <|.. twisk.vues.VueArcIG
+javafx.scene.layout.Pane <|-- twisk.vues.VueArcIG
+twisk.exceptions.Exception <|-- twisk.exceptions.UncorrectSettingsException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.ArcAlreadyCreateException
+twisk.designPattern.Observateur <|.. twisk.vues.VueMondeIG
+javafx.scene.layout.Pane <|-- twisk.vues.VueMondeIG
+twisk.monde.Iterable <|.. twisk.monde.GestionnaireSuccesseurs
+twisk.monde.Activite <|-- twisk.monde.SasEntree
+twisk.monde.Iterable <|.. twisk.monde.Monde
+twisk.monde.Activite <|-- twisk.monde.SasSortie
+twisk.exceptions.TwiskException <|-- twisk.exceptions.ChargementSauvegardeException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.MondeException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.WrongDirectionException
+twisk.designPattern.SujetObserve <|-- twisk.simulation.Simulation
+twisk.designPattern.Observateur <|.. twisk.vues.VueGuichetIG
+twisk.vues.VueEtapeIG <|-- twisk.vues.VueGuichetIG
+java.io.Serializable <|.. twisk.mondeIG.ActiviteIG
+twisk.mondeIG.EtapeIG <|-- twisk.mondeIG.ActiviteIG
+twisk.tests.EtapeTest <|-- twisk.tests.ActiviteTest
+twisk.designPattern.Observateur <|.. twisk.vues.VuePointDeControleIG
+javafx.scene.shape.Circle <|-- twisk.vues.VuePointDeControleIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueMenu
+twisk.vues.MenuBar <|-- twisk.vues.VueMenu
+twisk.exceptions.TwiskException <|-- twisk.exceptions.CreateLoopException
+twisk.designPattern.Observateur <|.. twisk.vues.VueEtapeIG
+javafx.scene.layout.VBox <|-- twisk.vues.VueEtapeIG
+javafx.application.Application <|-- twisk.MainTwisk
+java.io.Serializable <|.. twisk.mondeIG.ArcIG
+java.io.Serializable <|.. twisk.mondeIG.GuichetIG
+twisk.mondeIG.EtapeIG <|-- twisk.mondeIG.GuichetIG
+twisk.exceptions.TwiskException <|-- twisk.exceptions.FichierNullException
+java.io.Serializable <|.. twisk.mondeIG.PointDeControleIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueActiviteIG
+twisk.vues.VueEtapeIG <|-- twisk.vues.VueActiviteIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueOutils
+javafx.scene.layout.TilePane <|-- twisk.vues.VueOutils
+twisk.exceptions.TwiskException <|-- twisk.exceptions.CreateArcWithEndPdcException
+twisk.simulation.Iterable <|.. twisk.simulation.GestionnaireClients
+twisk.designPattern.Observateur <|.. twisk.mondeIG.MondeIG
+java.io.Serializable <|.. twisk.mondeIG.MondeIG
+twisk.designPattern.SujetObserve <|-- twisk.mondeIG.MondeIG
+twisk.monde.Etape <|-- twisk.monde.Guichet
+twisk.monde.Activite <|-- twisk.monde.ActiviteRestreinte
+@enduml

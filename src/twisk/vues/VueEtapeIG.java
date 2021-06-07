@@ -112,7 +112,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
     /**
      * Fonction qui retourne l'étape correspondant à la VueEtape
      *
-     * @return l'étape de la VueEtape
+     * @return l 'étape de la VueEtape
      */
     public EtapeIG getEtape() {
         return etape;
@@ -125,6 +125,11 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      */
     public abstract void ajouterVueClient(VueClient viewC);
 
+    /**
+     * Sets po b vue monde ig.
+     *
+     * @param pickOnBoundsProperty the pick on bounds property
+     */
     public void setPoBVueMondeIG(BooleanProperty pickOnBoundsProperty) {
         this.pickOnBoundsPropertyVueMenu = pickOnBoundsProperty;
     }

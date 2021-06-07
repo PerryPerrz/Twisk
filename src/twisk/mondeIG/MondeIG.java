@@ -216,6 +216,8 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
 
     /**
      * Procédure qui supprime la sélection d'arcs dans le monde.
+     *
+     * @throws PasUnGuichetException the pas un guichet exception
      */
     public void supprimerLaSelection() throws PasUnGuichetException {
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
@@ -444,6 +446,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      *
      * @param nbJetons le nombre de jeton(s)
      * @throws UncorrectSettingsException la uncorrect settings exception
+     * @throws PasUnGuichetException      the pas un guichet exception
      */
     public void setTokens(int nbJetons) throws UncorrectSettingsException, PasUnGuichetException {
         try {
@@ -521,6 +524,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      * Fonction qui crée un Monde à partir du mondeIG actuel
      *
      * @return Le monde
+     * @throws PasUnGuichetException the pas un guichet exception
      */
     public Monde creerMonde() throws PasUnGuichetException {
         this.corE = new CorrespondanceEtapes();
@@ -570,7 +574,8 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     /**
      * Procédure qui crée le monde et lance la simulation
      *
-     * @throws MondeException the monde exception
+     * @throws MondeException        the monde exception
+     * @throws PasUnGuichetException the pas un guichet exception
      */
     public void simuler() throws MondeException, PasUnGuichetException {
         verifierMondeIG();

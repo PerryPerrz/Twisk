@@ -8,6 +8,9 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * La classe OutilsSerializable
+ */
 public class OutilsSerializable {
 
     private OutilsSerializable() {
@@ -18,7 +21,7 @@ public class OutilsSerializable {
     /**
      * Fonction qui donne une instance de OutilsSerializable.
      *
-     * @return l'instance
+     * @return l 'instance
      */
     public static OutilsSerializable getInstance() {
         return instance;
@@ -53,7 +56,9 @@ public class OutilsSerializable {
      *
      * @param file le fichier de sauvegarde
      * @return Le mondeIG
-     * @throws IOException erreur déclenchée si le fichier ne peut pas s'ouvrir
+     * @throws IOException            erreur déclenchée si le fichier ne peut pas s'ouvrir
+     * @throws ClassNotFoundException l'exception ClassNotFound
+     * @throws MondeNullException     l'exception MondeNull
      */
     public MondeIG mondeFromSer(File file) throws IOException, ClassNotFoundException, MondeNullException {
         FileInputStream fileIn = new FileInputStream(file);
@@ -69,7 +74,9 @@ public class OutilsSerializable {
      * Fonction qui cherche si il existe des mondes prédéterminés temporaires et qui les retourne.
      *
      * @return Un tableau contenant les mondes ou null si il n'y a pas de fichiers dans le dossier de sauvegardetemporaire
+     * @throws IOException            l'exception E/S
      * @throws ClassNotFoundException Erreur renvoyée quand le fichier ne correspond pas à un mondeIG.
+     * @throws MondeNullException     l'exception MondeNull
      */
     public MondeIG[] mondesPredeterminesTemp() throws IOException, ClassNotFoundException, MondeNullException {
         File dossierTmp = new File("/tmp/twisk/mondes/");
@@ -105,7 +112,8 @@ public class OutilsSerializable {
      * Procédure qui supprime le fichier ser donné en paramètre.
      *
      * @param nom le nom du fichier .ser sans extension
-     * @throws IOException Erreur envoyée si la suppression du fichier à échoué.
+     * @throws IOException          Erreur envoyée si la suppression du fichier à échoué.
+     * @throws FichierNullException l'exception FichierNull
      */
     public void supprimerSer(String nom) throws IOException, FichierNullException {
         File dossierTmp = new File("/tmp/twisk/mondes/");

@@ -72,7 +72,7 @@ public class VueClient extends Circle implements Observateur {
     /**
      * Fonction qui retourne l'étape du client
      *
-     * @return l'étape du client
+     * @return l 'étape du client
      */
     public EtapeIG getE() {
         return e;

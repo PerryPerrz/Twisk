@@ -17,10 +17,12 @@ class MondeIGTest {
     /**
      * Le MondeIG 1
      */
-    MondeIG mondeIG1, /**
+    MondeIG mondeIG1,
+    /**
      * Le MondeIG 2.
      */
-    mondeIG2, /**
+    mondeIG2,
+    /**
      * Le MondeIG 3.
      */
     mondeIG3;

@@ -224,7 +224,7 @@ public class TailleComposants {
     /**
      * Fonction qui retourne l'écart utilisé dans le FlowPane (VueActivité)
      *
-     * @return l'écart horizontal & vertical
+     * @return l 'écart horizontal & vertical
      */
     public int getEcartHV() {
         return ecartHV;

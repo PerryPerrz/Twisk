@@ -232,7 +232,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializab
     /**
      * Fonction qui retourne l'écart d'une étape.
      *
-     * @return l'ecart
+     * @return l 'ecart
      */
     public int getEcart() {
         return ecart;
