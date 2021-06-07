@@ -120,6 +120,7 @@ public class VueMenu extends MenuBar implements Observateur {
         this.gestionDesImages(style, "brush");
         this.gestionDesImages(quitter, "exit");
         this.gestionDesImages(supprimer, "delete");
+        supprimer.setDisable(true);
         this.gestionDesImages(renommer, "rename");
         renommer.setDisable(true);
 
@@ -157,6 +158,9 @@ public class VueMenu extends MenuBar implements Observateur {
         this.getMenus().addAll(fichier, edition, accesAuMonde, parametres, style, mondes, lois);
     }
 
+    /**
+     * Procédure supprimer
+     */
     private void supprimer() {
         try {
             monde.supprimerLaSelection();
@@ -465,6 +469,9 @@ public class VueMenu extends MenuBar implements Observateur {
         }
     }
 
+    /**
+     * Procédure qui ajoute les menuItems aux mondes
+     */
     private void ajouterMenuItemsMondes() {
         mondes.getItems().removeIf(menuItem -> !(menuItem.getText().equals("Ajouter") || menuItem.getText().equals("Supprimer")));
         //On s'occupe des menuItem correspondant aux mondes prédéterminés
@@ -513,6 +520,9 @@ public class VueMenu extends MenuBar implements Observateur {
         }
     }
 
+    /**
+     * Procédure qui permet d'ajouter des mondes prédefini temporairement, ils sont stockés dans le repértoire tmp de la machine. (impossible des les stocker sans un jar)
+     */
     private void ajouter() {
         TextInputDialog dialog = new TextInputDialog("sauvegardeMonde");
         dialog.setTitle("Nommez le monde à sauvegarder");
@@ -542,6 +552,9 @@ public class VueMenu extends MenuBar implements Observateur {
         monde.notifierObservateurs();
     }
 
+    /**
+     * Procédure qui supprimer un monde
+     */
     private void supprimerMonde() {
         try {
             MondeIG[] mondesPredeterminesTemp = OutilsSerializable.getInstance().mondesPredeterminesTemp();
@@ -595,6 +608,11 @@ public class VueMenu extends MenuBar implements Observateur {
 
     }
 
+    /**
+     * Procédure qui ouvre une fenetre d'un nouveau monde
+     *
+     * @param monde le monde sur lequel on veut ouvrir la fenetre
+     */
     private void ouvrirFenetreNouveauMonde(MondeIG monde) {
         BorderPane root = new BorderPane();
         VueOutils viewO = new VueOutils(monde);
@@ -651,6 +669,9 @@ public class VueMenu extends MenuBar implements Observateur {
             edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
             parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
             parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
+            //Si aucune étapes n'est selectionnées, on disable le bouton supprimer
+            edition.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0);
+
             if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
                 parametres.getItems().get(2).setDisable(true);
             else //Si l'étape concernée est un guichet
