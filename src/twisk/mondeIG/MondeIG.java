@@ -127,10 +127,9 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         if (pdc1.getEtapeRattache().estAccessibleDepuis(pdc2.getEtapeRattache()))
             throw new CreateLoopException("On peut pas créer un circuit entre deux étapes !");
         if (pdc2.getEtapeRattache().estUnGuichet()) {
-            if (pdc2.getEtapeRattache().getNbPrec() == 0) {
-                System.out.println(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)));
+            if (pdc2.getEtapeRattache().getNbPrec() == 0)
                 pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)));
-            } else {
+            else {
                 if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3))))
                     throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
                 if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)))
