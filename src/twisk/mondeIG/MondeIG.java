@@ -191,15 +191,6 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     }
 
     /**
-     * Fonction qui retourne le nombre d'arcs d'un monde.
-     *
-     * @return le nb arcs
-     */
-    public int getNbArcs() {
-        return this.arcs.size();
-    }
-
-    /**
      * Procédure qui ajoute les étapes sélectionnées. (Cela permet de les sauvegarder dans une collection)
      *
      * @param etape l'etape
@@ -728,5 +719,21 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             if (arc.isSelected())
                 i++;
         return i;
+    }
+
+    /**
+     * Fonction qui retourne vrai si les étapes séléctionées contiennent un guichet
+     *
+     * @return un booléen
+     */
+    public boolean etapesSelectionneesContientUnGuichet() {
+        boolean contientUnGuichet = false;
+        for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
+            EtapeIG e = iter.next();
+            if (this.isSelectionned(e) && e.estUnGuichet()) {
+                contientUnGuichet = true;
+            }
+        }
+        return contientUnGuichet;
     }
 }

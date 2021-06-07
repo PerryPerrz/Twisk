@@ -673,8 +673,8 @@ public class VueMenu extends MenuBar implements Observateur {
             edition.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
             //Si aucune étape n'est seléctionnée, on ne peut pas donner d'entrée ou de sortie
             accesAuMonde.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0);
-            accesAuMonde.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() == 0);
-            if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
+            accesAuMonde.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() == 0 || monde.etapesSelectionneesContientUnGuichet());
+            if (!monde.etapesSelectionneesSontDesGuichets())//Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
                 parametres.getItems().get(2).setDisable(true);
             else { //Si l'étape concernée est un guichet
                 parametres.getItems().get(0).setDisable(true);
