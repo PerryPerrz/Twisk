@@ -264,8 +264,8 @@ public class VueMenu extends MenuBar implements Observateur {
     public void clients() {
         TextInputDialog dialog = new TextInputDialog("5");
         dialog.setTitle("Nombre de client(s) dans la simulation");
-        dialog.setHeaderText("Entrez votre nombre de client(s) (max : 49) :");
-        dialog.setContentText("Client(s) :");
+        dialog.setHeaderText("Nombre de clients actuels : " + monde.getNbClients() + " (max : 49)");
+        dialog.setContentText("Entrez le nouveau nombre de clients :");
 
         TailleComposants tc = TailleComposants.getInstance();
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/tools.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);

@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import javafx.geometry.Insets;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.FlowPane;
 import twisk.designPattern.Observateur;
 import twisk.mondeIG.EtapeIG;
@@ -40,6 +41,7 @@ public class VueActiviteIG extends VueEtapeIG implements Observateur {
 
         this.getChildren().add(flowPane);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));
+        label.setTooltip(new Tooltip("Temps : " + etape.getDelai() + "\nEcart-temps : " + etape.getEcart()));
     }
 
     @Override

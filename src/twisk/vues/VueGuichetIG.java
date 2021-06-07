@@ -1,6 +1,7 @@
 package twisk.vues;
 
 import javafx.geometry.Insets;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import twisk.designPattern.Observateur;
@@ -47,6 +48,7 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
 
         this.getChildren().add(flowPane);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));
+        label.setTooltip(new Tooltip("Nombre de tickets : " + etape.siEstUnGuichetGetNbJetons()));
     }
 
     @Override
