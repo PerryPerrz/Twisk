@@ -5,7 +5,7 @@ import twisk.outils.FabriqueIdentifiant;
 import java.io.Serializable;
 
 /**
- * The type Guichet ig.
+ * La classe Guichet ig.
  */
 public class GuichetIG extends EtapeIG implements Serializable {
 
@@ -74,10 +74,11 @@ public class GuichetIG extends EtapeIG implements Serializable {
         return versLaDroite;
     }
 
-    public Boolean isVersLaDroite() {
-        return versLaDroite;
-    }
-
+    /**
+     * Procédure qui change le sens du guichet.
+     *
+     * @param versLaDroite Le sens du guichet sous forme de Booleen
+     */
     public void setVersLaDroite(Boolean versLaDroite) {
         this.versLaDroite = versLaDroite;
     }

@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class CreateLoopException extends TwiskException {
     /**
-     * Constructeur de l'exception se déclanchant lorsque l'on crée un arc qui créer un circuit dans le monde.
+     * Constructeur de l'exception se déclanchant lorsque l'on crée un arc qui crée un circuit dans le monde.
      *
      * @param message le message
      */

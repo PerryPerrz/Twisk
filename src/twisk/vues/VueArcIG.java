@@ -48,7 +48,7 @@ public class VueArcIG extends Pane implements Observateur {
         ligne.setCursor(Cursor.HAND);
         triangle.setCursor(Cursor.HAND);
 
-        if (monde.isSelectionned(arc)) {
+        if (monde.isSelected(arc)) {
             ligne.setStroke(Color.valueOf(cc.getCouleurLigneStrokeIsSelected()));
             triangle.setStroke(Color.valueOf(cc.getCouleurTriangleStrokeIsSelected()));
             triangle.setFill(Color.valueOf(cc.getCouleurTriangleFillIsSelected()));

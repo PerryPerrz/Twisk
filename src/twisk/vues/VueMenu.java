@@ -400,7 +400,7 @@ public class VueMenu extends MenuBar implements Observateur {
                             File dossier = new File(path);
                             File[] fichiers = dossier.listFiles((dir, name) -> name.endsWith(".ser"));
                             assert fichiers != null;
-                            File dossierTmp = new File("/tmp/");
+                            File dossierTmp = new File("/tmp/twisk/mondes/");
                             File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
                             File file = null;
                             for (File f : fichiers) {

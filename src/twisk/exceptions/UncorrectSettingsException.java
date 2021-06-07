@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class UncorrectSettingsException extends Exception {
     /**
-     * Constructeur de l'exception se déclanchant lorsque l'utilisateur saisi des paramètres incorrects (Délai et écart).
+     * Constructeur de l'exception se déclenchant lorsque l'utilisateur saisit des paramètres incorrects (Délai et écart).
      *
      * @param message le message
      */

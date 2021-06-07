@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class ChargementSauvegardeException extends TwiskException {
     /**
-     * Constructeur de la classe ChargementSauvegardeException.
+     * Constructeur de l'exception se déclenchant lorsque le chargement d'une sauvegarde de monde échoue.
      *
      * @param message le message
      */

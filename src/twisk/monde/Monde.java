@@ -169,6 +169,11 @@ public class Monde implements Iterable<Etape> {
         return null;
     }
 
+    /**
+     * Fonction qui retourne le sas d'entrée du monde.
+     *
+     * @return le sas d'entrée
+     */
     public SasEntree getSasE() {
         return sasE;
     }

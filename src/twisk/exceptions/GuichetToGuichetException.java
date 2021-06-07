@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class GuichetToGuichetException extends TwiskException {
     /**
-     * Constructeur de l'exception se déclanchant lorsque l'on essai faire un arc entre deux guichets.
+     * Constructeur de l'exception se déclanchant lorsque l'on essaie de faire un arc entre deux guichets.
      *
      * @param message le message
      */

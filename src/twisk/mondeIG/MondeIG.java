@@ -109,7 +109,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      *
      * @param pdc1 le pdc 1
      * @param pdc2 le pdc 2
-     * @throws TwiskException le twisk exception
+     * @throws TwiskException Exceptions déclenchée si l'ajout d'un arc n'est pas possible.
      */
     public void ajouter(PointDeControleIG pdc1, PointDeControleIG pdc2) throws TwiskException {
         for (Iterator<ArcIG> it = this.iteratorArcs(); it.hasNext(); ) {
@@ -163,7 +163,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             EtapeIG etape = iter.next();
             for (PointDeControleIG pdcIG : etape) {
                 //Je cherche dans tous les pdc si il y en a un qui est true, le pdc en paramètre est le 2éme pdc qu'on à cliqué
-                //Si j'en trouve un, cela signifie que celui en paramètre est le second
+                //Si je n'en trouve un, cela signifie que celui en paramètre est le second
                 if (pdcIG.isClicked()) {
                     pdcIG.setClicked();
                     isCreated = true;
@@ -172,7 +172,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
                     pdc.getEtapeRattache().incrementeNbPrec();
                     this.notifierObservateurs();
                 }
-                //Si j'en trouve pas, le pdc en param est le premier.
+                //Si je n'en trouve pas, le pdc en param est le premier.
             }
         }
         if (!isCreated) {
@@ -196,7 +196,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      * @param etape l'etape
      */
     public void ajouterEtapeSelectionnee(EtapeIG etape) {
-        if (isSelectionned(etape)) {
+        if (isSelected(etape)) {
             etapesSelectionnees.remove(etape);
         } else {
             etapesSelectionnees.add(etape);
@@ -210,7 +210,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      * @param etape l'étape
      * @return le boolean
      */
-    public boolean isSelectionned(EtapeIG etape) {
+    public boolean isSelected(EtapeIG etape) {
         return etapesSelectionnees.contains(etape);
     }
 
@@ -245,7 +245,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     public void supprimer(Iterator<EtapeIG> iterE) {
         ArcIG arc;
         EtapeIG e = iterE.next();
-        if (isSelectionned(e)) {
+        if (isSelected(e)) {
             for (Iterator<ArcIG> iter = this.iteratorArcs(); iter.hasNext(); ) {
                 arc = iter.next();
                 if (arc.isLinkedToStage(e)) {
@@ -267,7 +267,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     public void renommerLaSelection(String newName) {
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
-            if (this.isSelectionned(e)) {
+            if (this.isSelected(e)) {
                 e.setNom(newName);
             }
         }
@@ -283,7 +283,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         int cpt = 0;
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
-            if (this.isSelectionned(e)) {
+            if (this.isSelected(e)) {
                 cpt++;
             }
         }
@@ -318,7 +318,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
      * @param arc l'arc
      * @return le boolean
      */
-    public boolean isSelectionned(ArcIG arc) {
+    public boolean isSelected(ArcIG arc) {
         return arc.isSelected();
     }
 
@@ -337,12 +337,12 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     }
 
     /**
-     * Procédure qui permet de rendre entrée une activité du monde.
+     * Procédure qui permet de définir une étape du monde comme entrée.
      */
     public void setEntree() {
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
-            if (this.isSelectionned(e)) {
+            if (this.isSelected(e)) {
                 e.invEntree();
             }
         }
@@ -351,12 +351,12 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     }
 
     /**
-     * Procédure qui permet de renre sortie une activité du monde.
+     * Procédure qui permet de définir une activité du monde comme sortie.
      */
     public void setSortie() {
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
-            if (this.isSelectionned(e)) {
+            if (this.isSelected(e)) {
                 e.invSortie();
             }
         }
@@ -365,10 +365,10 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     }
 
     /**
-     * Procédure qui permet de set le délai d'une activité du monde.
+     * Procédure qui permet de définir le délai des activités sélectionnées du monde.
      *
      * @param d La valeur du délai
-     * @throws UncorrectSettingsException la uncorrect settings exception
+     * @throws UncorrectSettingsException Exception déclenchée quand le délai donné n'est pas correct
      */
     public void setDelai(String d) throws UncorrectSettingsException {
         try {
@@ -378,7 +378,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             }
             for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
                 EtapeIG eta = iter.next();
-                if (this.isSelectionned(eta)) {
+                if (this.isSelected(eta)) {
                     if (dBis < eta.getEcart()) {
                         throw new UncorrectSettingsException("Attention, un délai ne peut pas être inférieur à un écart!");
                     }
@@ -393,10 +393,10 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     }
 
     /**
-     * Procédure qui permet de définir l'écart d'une activité du monde.
+     * Procédure qui permet de définir l'écart-temps des activités sélectionnées du monde.
      *
      * @param e La valeur de l'écart
-     * @throws UncorrectSettingsException la uncorrect settings exception
+     * @throws UncorrectSettingsException Exception déclenchée quand l'écart donné n'est pas correct
      */
     public void setEcart(String e) throws UncorrectSettingsException {
         try {
@@ -406,7 +406,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             }
             for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
                 EtapeIG eta = iter.next();
-                if (this.isSelectionned(eta)) {
+                if (this.isSelected(eta)) {
                     if (eBis > eta.getDelai()) {
                         throw new UncorrectSettingsException("Attention, un écart ne peut pas être supérieur à un délai!");
                     }
@@ -421,7 +421,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
     }
 
     /**
-     * Procédure qui permet de set le style de l'application.
+     * Procédure qui permet de définir le style de l'application.
      *
      * @param i la valeur du style
      */
@@ -452,7 +452,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
             }
             for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
                 EtapeIG eta = iter.next();
-                if (this.isSelectionned(eta) && eta.estUnGuichet()) {
+                if (this.isSelected(eta) && eta.estUnGuichet()) {
                     eta.siEstUnGuichetSetNbJetons(nbJetons);
                 }
             }
@@ -472,7 +472,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         boolean sontDesGuichets = true;
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
-            if (this.isSelectionned(e) && e.estUneActivite()) {
+            if (this.isSelected(e) && e.estUneActivite()) {
                 sontDesGuichets = false;
             }
         }
@@ -696,23 +696,48 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         notifierObservateurs();
     }
 
+    /**
+     * Fonction qui retourne le nom du monde.
+     *
+     * @return le nom
+     */
     public String getNom() {
         return nom;
     }
 
+    /**
+     * Procédure qui définit le nom du monde.
+     *
+     * @param nom le nouveau nom
+     */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
+    /**
+     * Procédure qui définit la loi de probabilité actuelle du monde.
+     *
+     * @param loi la loi de probabilités (Uni, Gauss, Expo)
+     */
     public void setLoi(String loi) {
         this.loi = loi;
         notifierObservateurs();
     }
 
+    /**
+     * Fonction qui retourne la loi de probabilité actuelle du monde
+     *
+     * @return la loi
+     */
     public String getLoi() {
         return loi;
     }
 
+    /**
+     * Fonction qui retourne le nombre d'arcs sélectionnés actuellement.
+     *
+     * @return le nombre d'arcs sélectionnés
+     */
     public int getNbArcsSelectionnes() {
         int i = 0;
         for (ArcIG arc : this.arcs)
@@ -730,7 +755,7 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         boolean contientUnGuichet = false;
         for (Iterator<EtapeIG> iter = iterator(); iter.hasNext(); ) {
             EtapeIG e = iter.next();
-            if (this.isSelectionned(e) && e.estUnGuichet()) {
+            if (this.isSelected(e) && e.estUnGuichet()) {
                 contientUnGuichet = true;
             }
         }

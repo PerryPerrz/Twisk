@@ -37,7 +37,7 @@ public class Activite extends Etape {
     }
 
     /**
-     * Retourne le temps.
+     * Focntion qui retourne le temps.
      *
      * @return le temps
      */
@@ -46,7 +46,7 @@ public class Activite extends Etape {
     }
 
     /**
-     * Définit le temps
+     * Procédure qui définit le temps
      *
      * @param temps le temps
      */
@@ -55,7 +55,7 @@ public class Activite extends Etape {
     }
 
     /**
-     * Retourne l'écart temps.
+     * Fonction qui retourne l'écart temps.
      *
      * @return l 'écart temps
      */
@@ -64,7 +64,7 @@ public class Activite extends Etape {
     }
 
     /**
-     * Définit l'écart temps.
+     * Procédure qui définit l'écart temps.
      *
      * @param ecartTemps l'écart temps
      */

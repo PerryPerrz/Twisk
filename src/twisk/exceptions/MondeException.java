@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class MondeException extends TwiskException {
     /**
-     * Constructeur de l'exception se déclanchant lorsque le monde que l'on regarde n'est pas correct.
+     * Constructeur de l'exception se déclenchant lorsque le monde que l'on regarde n'est pas correct.
      *
      * @param message le message
      */

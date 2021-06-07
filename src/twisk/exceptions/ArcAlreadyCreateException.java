@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class ArcAlreadyCreateException extends TwiskException {
     /**
-     * Constructeur de l'exception se déclanchant lorsque l'on essai de créer un arc déjà créer.
+     * Constructeur de l'exception se déclenchant lorsque l'on essai de créer un arc déjà créé.
      *
      * @param message le message
      */

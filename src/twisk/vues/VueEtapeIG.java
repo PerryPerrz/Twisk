@@ -86,7 +86,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
         }
         this.getChildren().add(hBox);
         relocate(etape.getPosX(), etape.getPosY());
-        if (monde.isSelectionned(etape)) {
+        if (monde.isSelected(etape)) {
             setStyle("-fx-border-color: " + cc.getCouleurBorderEtapeIsSelected() + ";-fx-border-width: 2px;-fx-background-color: " + cc.getCouleurBackgroundEtapeIsSelected());
         }
     }

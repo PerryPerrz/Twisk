@@ -40,7 +40,7 @@ public class GestionnaireSuccesseurs implements Iterable<Etape> {
     }
 
     /**
-     * Fonction qui retourne le successeur du gestionnnaire de successeurs.
+     * Fonction qui retourne le premier successeur de l'étape.
      *
      * @return le successeur
      */

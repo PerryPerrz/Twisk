@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * La classe SujetObserve.
  */
 public class SujetObserve {
-    private transient final ArrayList<Observateur> observateurs;
+    private final ArrayList<Observateur> observateurs;
 
     /**
      * Constructeur de SujetObserve, initialisation de la collection d'observateurs.

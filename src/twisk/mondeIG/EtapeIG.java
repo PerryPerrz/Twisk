@@ -49,7 +49,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializab
      */
     protected int delai;
     /**
-     * Attribut correspondant au écart d'une étape.
+     * Attribut correspondant à l'écart-temps d'une étape.
      */
     protected int ecart;
     /**
@@ -232,14 +232,14 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializab
     /**
      * Fonction qui retourne l'écart d'une étape.
      *
-     * @return l 'ecart
+     * @return l'ecart
      */
     public int getEcart() {
         return ecart;
     }
 
     /**
-     * Procédure qui set le délai d'une étape.
+     * Procédure qui définit le délai d'une étape.
      *
      * @param delai le delai
      */
@@ -309,7 +309,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializab
     public abstract int siEstUnGuichetGetNbJetons();
 
     /**
-     * Procédure qui permet de set le nombre de jetons d'un guichet si l'étape concernée est bien un guichet
+     * Procédure qui définit le nombre de jetons d'un guichet si l'étape concernée est bien un guichet
      *
      * @param nbJetons le nombre de jetons
      * @throws PasUnGuichetException Exception se déclenchant quand on essaie de changer les paramètres d'un guichet sur une activité
@@ -317,7 +317,7 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializab
     public abstract void siEstUnGuichetSetNbJetons(int nbJetons) throws PasUnGuichetException;
 
     /**
-     * Procédure qui permet de set le sens d'un guichet si l'étape concernée est bien un guichet
+     * Procédure qui définit le sens d'un guichet si l'étape concernée est bien un guichet
      *
      * @param versLaDroite booléen indiquant si le sens du guichet est vers la droite
      * @throws PasUnGuichetException Exception se déclenchant quand on essaie de changer les paramètres d'un guichet sur une activité
@@ -433,5 +433,10 @@ public abstract class EtapeIG implements Iterable<PointDeControleIG>, Serializab
         nbPrec--;
     }
 
+    /**
+     * Fonction qui retourne le sens d'un guichet si l'étape concernée est bien un guichet.
+     *
+     * @return un booléen représentant le sens ou null si l'étape est une Activité
+     */
     public abstract Boolean siEstUnGuichetGetVersLaDroite();
 }

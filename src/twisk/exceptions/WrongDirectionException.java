@@ -5,7 +5,7 @@ package twisk.exceptions;
  */
 public class WrongDirectionException extends TwiskException {
     /**
-     * Constructeur de l'exception se déclanchant lorsque l'on essaie d'ajouter un arc vers un guichet dans le mauvais sens.
+     * Constructeur de l'exception se déclenchant lorsque l'on essaie d'ajouter un arc vers un guichet dans le mauvais sens.
      *
      * @param message le message
      */
