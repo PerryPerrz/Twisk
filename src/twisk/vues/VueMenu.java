@@ -146,9 +146,9 @@ public class VueMenu extends MenuBar implements Observateur {
         this.gestionDesImages(mondes, "world");
         this.gestionDesImages(ajouterMonde, "ajouterMonde");
         this.gestionDesImages(supprimerMonde, "supprimerMonde");
-        this.gestionDesImages(mondeBasique, "world");
-        this.gestionDesImages(mondeSucre, "world");
-        this.gestionDesImages(fraispertuisCity, "world");
+        this.gestionDesImages(mondeBasique, "mondesDef");
+        this.gestionDesImages(mondeSucre, "mondesDef");
+        this.gestionDesImages(fraispertuisCity, "mondesDef");
         this.gestionDesImages(lois, "probabilite");
         this.gestionDesImages(loiUniforme, "loi");
         this.gestionDesImages(loiGaussienne, "loi");
@@ -589,6 +589,9 @@ public class VueMenu extends MenuBar implements Observateur {
                 parametres.getItems().get(3).setDisable(false);
                 mondes.getItems().get(0).setDisable(false);
                 mondes.getItems().get(1).setDisable(false);
+                mondes.getItems().get(2).setDisable(false);
+                mondes.getItems().get(3).setDisable(false);
+                mondes.getItems().get(4).setDisable(false);
                 lois.getItems().get(0).setDisable(false);
                 lois.getItems().get(1).setDisable(false);
                 lois.getItems().get(2).setDisable(false);
@@ -606,6 +609,9 @@ public class VueMenu extends MenuBar implements Observateur {
                 parametres.getItems().get(3).setDisable(true);
                 mondes.getItems().get(0).setDisable(true);
                 mondes.getItems().get(1).setDisable(true);
+                mondes.getItems().get(2).setDisable(true);
+                mondes.getItems().get(3).setDisable(true);
+                mondes.getItems().get(4).setDisable(true);
                 lois.getItems().get(0).setDisable(true);
                 lois.getItems().get(1).setDisable(true);
                 lois.getItems().get(2).setDisable(true);
