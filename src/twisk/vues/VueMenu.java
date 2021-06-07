@@ -159,21 +159,8 @@ public class VueMenu extends MenuBar implements Observateur {
     private void supprimer() {
         try {
             monde.supprimerLaSelection();
-        } catch (PasUnGuichetException e) {
-            TailleComposants tc = TailleComposants.getInstance();
-            Alert dia = new Alert(Alert.AlertType.ERROR);
-            dia.setTitle("PasUnGuichetException");
-            dia.setHeaderText("Impossible de changer le sens d'une activité !");
-            dia.setContentText("Erreur : L'étape choisie n'est pas un guichet\n" +
-                    "Veuillez ré-essayer");
-            Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-            ImageView icon2 = new ImageView(image2);
-            dia.setGraphic(icon2);
-            dia.show();
-            //Le chronomètre
-            PauseTransition pt = new PauseTransition(Duration.seconds(5));
-            pt.setOnFinished(Event -> dia.close());
-            pt.play();
+        } catch (PasUnGuichetException puge) {
+            this.gestionDesAlertes(puge, "Impossible de changer le sens d'une activité !", "Erreur : L'étape choisie n'est pas un guichet\nVeuillez ré-essayer", "warning");
         }
     }
 
@@ -216,19 +203,7 @@ public class VueMenu extends MenuBar implements Observateur {
             try {
                 this.monde.setDelai(d);
             } catch (UncorrectSettingsException uSE) {
-                Alert dia = new Alert(Alert.AlertType.ERROR);
-                dia.setTitle("UncorrectSettingsException");
-                dia.setHeaderText("Impossible de saisir ce délai");
-                dia.setContentText("Erreur : La saisie du délai est incorrecte\n" +
-                        "Veuillez ré-essayer");
-                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-                ImageView icon2 = new ImageView(image2);
-                dia.setGraphic(icon2);
-                dia.show();
-                //Le chronomètre
-                PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                pt.setOnFinished(Event -> dia.close());
-                pt.play();
+                this.gestionDesAlertes(uSE, "Impossible de saisir ce délai", "Erreur : La saisie du délai est incorrecte\nVeuillez ré-essayer", "warning");
             }
         });
     }
@@ -253,19 +228,7 @@ public class VueMenu extends MenuBar implements Observateur {
             try {
                 this.monde.setEcart(e);
             } catch (UncorrectSettingsException uSE) {
-                Alert dia = new Alert(Alert.AlertType.ERROR);
-                dia.setTitle("UncorrectSettingsException");
-                dia.setHeaderText("Impossible de saisir cette écart");
-                dia.setContentText("Erreur : La saisie de l'écart est incorrecte\n" +
-                        "Veuillez ré-essayer");
-                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-                ImageView icon2 = new ImageView(image2);
-                dia.setGraphic(icon2);
-                dia.show();
-                //Le chronomètre
-                PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                pt.setOnFinished(Event -> dia.close());
-                pt.play();
+                this.gestionDesAlertes(uSE, "Impossible de saisir cette écart", "Erreur : La saisie de l'écart est incorrecte\nVeuillez ré-essayer", "warning");
             }
         });
     }
@@ -290,33 +253,9 @@ public class VueMenu extends MenuBar implements Observateur {
             try {
                 this.monde.setTokens(Integer.parseInt(nbJet));
             } catch (UncorrectSettingsException uSE) {
-                Alert dia = new Alert(Alert.AlertType.ERROR);
-                dia.setTitle("UncorrectSettingsException");
-                dia.setHeaderText("Impossible de saisir ce nombre de jeton(s)");
-                dia.setContentText("Erreur : La saisie du nombre de jeton(s) est incorrecte\n" +
-                        "Veuillez ré-essayer");
-                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-                ImageView icon2 = new ImageView(image2);
-                dia.setGraphic(icon2);
-                dia.show();
-                //Le chronomètre
-                PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                pt.setOnFinished(Event -> dia.close());
-                pt.play();
+                this.gestionDesAlertes(uSE, "Impossible de saisir ce nombre de jeton(s)", "Erreur : La saisie du nombre de jeton(s) est incorrecte\nVeuillez ré-essayer", "warning");
             } catch (PasUnGuichetException e) {
-                Alert dia = new Alert(Alert.AlertType.ERROR);
-                dia.setTitle("PasUnGuichetException");
-                dia.setHeaderText("Impossible de changer le nombre de jetons d'une activité !");
-                dia.setContentText("Erreur : L'étape choisie n'est pas un guichet\n" +
-                        "Veuillez ré-essayer");
-                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-                ImageView icon2 = new ImageView(image2);
-                dia.setGraphic(icon2);
-                dia.show();
-                //Le chronomètre
-                PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                pt.setOnFinished(Event -> dia.close());
-                pt.play();
+                this.gestionDesAlertes(e, "Impossible de changer le nombre de jetons d'une activité !", "Erreur : L'étape choisie n'est pas un guichet\nVeuillez ré-essayer", "warning");
             }
         });
     }
@@ -341,19 +280,7 @@ public class VueMenu extends MenuBar implements Observateur {
             try {
                 this.monde.setNbClients(Integer.parseInt(nbJet));
             } catch (UncorrectSettingsException uSE) {
-                Alert dia = new Alert(Alert.AlertType.ERROR);
-                dia.setTitle("UncorrectSettingsException");
-                dia.setHeaderText("Impossible de saisir ce nombre de client(s)");
-                dia.setContentText("Erreur : La saisie du nombre de client(s) est incorrecte\n" +
-                        "Veuillez ré-essayer");
-                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
-                ImageView icon2 = new ImageView(image2);
-                dia.setGraphic(icon2);
-                dia.show();
-                //Le chronomètre
-                PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                pt.setOnFinished(Event -> dia.close());
-                pt.play();
+                this.gestionDesAlertes(uSE, "Impossible de saisir ce nombre de client(s)", "Erreur : La saisie du nombre de client(s) est incorrecte\nVeuillez ré-essayer", "warning");
             }
         });
     }
@@ -406,15 +333,7 @@ public class VueMenu extends MenuBar implements Observateur {
             MondeIG monde = OutilsSerializable.getInstance().mondeFromSer(selectedFile);
             ouvrirFenetreNouveauMonde(monde);
         } catch (ChargementSauvegardeException | IOException | ClassNotFoundException e) {
-            Alert dialog = new Alert(Alert.AlertType.ERROR);
-            dialog.setTitle(e.getClass().getSimpleName());
-            dialog.setHeaderText("Erreur lors du chargement d'une sauvegarde !");
-            dialog.setContentText("Erreur : " + e.getMessage());
-            dialog.show();
-            //Le chronomètre
-            PauseTransition pt = new PauseTransition(Duration.seconds(5));
-            pt.setOnFinished(Event -> dialog.close());
-            pt.play();
+            this.gestionDesAlertes(e, "Erreur lors du chargement d'une sauvegarde !", "Erreur : " + e.getMessage(), "warning");
         }
     }
 
@@ -438,19 +357,7 @@ public class VueMenu extends MenuBar implements Observateur {
                 try {
                     OutilsSerializable.getInstance().mondeToSer(monde, selectedDir, s);
                 } catch (IOException e) {
-                    Alert dia = new Alert(Alert.AlertType.ERROR);
-                    dia.setTitle("IOException");
-                    dia.setHeaderText("Impossible de sauvegarder le monde");
-                    dia.setContentText("Erreur : Le monde ne peut pas être sauvegarder \n" +
-                            "Veuillez ré-essayer");
-                    Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
-                    ImageView icon2 = new ImageView(image2);
-                    dia.setGraphic(icon2);
-                    dia.show();
-                    //Le chronomètre
-                    PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                    pt.setOnFinished(Event -> dia.close());
-                    pt.play();
+                    this.gestionDesAlertes(e, "Impossible de sauvegarder le monde", "Erreur : Le monde ne peut pas être sauvegarder \nVeuillez ré-essayer", "warning");
                 }
             });
         } else {
@@ -517,9 +424,8 @@ public class VueMenu extends MenuBar implements Observateur {
                     menuItem.setGraphic(icon);
                 }
             }
-
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            this.gestionDesAlertes(e, e.getMessage(), "Erreur lors de la recherche des monde sauvegardés", "warning");
         }
     }
 
@@ -537,19 +443,7 @@ public class VueMenu extends MenuBar implements Observateur {
             try {
                 OutilsSerializable.getInstance().mondeToSerInMondesPredetermines(monde, s);
             } catch (IOException e) {
-                Alert dia = new Alert(Alert.AlertType.ERROR);
-                dia.setTitle("IOException");
-                dia.setHeaderText(e.getMessage());
-                dia.setContentText("Erreur : Le monde ne peut pas être sauvegarder \n" +
-                        "Veuillez ré-essayer");
-                Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
-                ImageView icon2 = new ImageView(image2);
-                dia.setGraphic(icon2);
-                dia.show();
-                //Le chronomètre
-                PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                pt.setOnFinished(Event -> dia.close());
-                pt.play();
+                this.gestionDesAlertes(e, e.getMessage(), "Erreur : Le monde ne peut pas être sauvegarder \nVeuillez ré-essayer", "warning");
             }
         });
         monde.notifierObservateurs();
@@ -575,19 +469,7 @@ public class VueMenu extends MenuBar implements Observateur {
                     try {
                         OutilsSerializable.getInstance().supprimerSer(s);
                     } catch (IOException e) {
-                        Alert dia = new Alert(Alert.AlertType.ERROR);
-                        dia.setTitle("IOException");
-                        dia.setHeaderText("Impossible de supprimer le monde");
-                        dia.setContentText("Erreur : Le monde ne peut pas être supprimé \n" +
-                                "Veuillez ré-essayer");
-                        Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/warning.png")), TailleComposants.getInstance().getTailleIcons(), TailleComposants.getInstance().getTailleIcons(), true, true);
-                        ImageView icon2 = new ImageView(image2);
-                        dia.setGraphic(icon2);
-                        dia.show();
-                        //Le chronomètre
-                        PauseTransition pt = new PauseTransition(Duration.seconds(5));
-                        pt.setOnFinished(Event -> dia.close());
-                        pt.play();
+                        this.gestionDesAlertes(e, "Impossible de supprimer le monde", "Erreur : Le monde ne peut pas être supprimé \nVeuillez ré-essayer", "warning");
                     }
                 });
                 monde.notifierObservateurs();
@@ -670,6 +552,30 @@ public class VueMenu extends MenuBar implements Observateur {
             this.lois.getItems().get(2).setText("Loi Exponentielle ◄");
         else
             this.lois.getItems().get(2).setText("Loi Exponentielle");
+    }
+
+    /**
+     * Procédure qui permet de gèrer plus facilement et plus proprement les alertes
+     *
+     * @param e         l'exception
+     * @param hText     le headerText de la boite d'alerte
+     * @param cText     le contentText de la boite d'alerte
+     * @param nameImage le nom de l'image sans son extension
+     */
+    public void gestionDesAlertes(Exception e, String hText, String cText, String nameImage) {
+        Alert dia = new Alert(Alert.AlertType.ERROR);
+        dia.setTitle(e.getClass().getSimpleName());
+        dia.setHeaderText(hText);
+        dia.setContentText(cText);
+        TailleComposants tc = TailleComposants.getInstance();
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/" + nameImage + ".png")), tc.getTailleIcons(), tc.getTailleIcons(), true, true);
+        ImageView icon = new ImageView(image);
+        dia.setGraphic(icon);
+        dia.show();
+        //Le chronomètre
+        PauseTransition pt = new PauseTransition(Duration.seconds(5));
+        pt.setOnFinished(Event -> dia.close());
+        pt.play();
     }
 
     @Override
