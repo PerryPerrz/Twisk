@@ -22,8 +22,8 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
      * @param monde le monde
      * @param etape l'etape
      */
-    public VueGuichetIG(MondeIG monde, EtapeIG etape) {
-        super(monde, etape);
+    public VueGuichetIG(MondeIG monde, EtapeIG etape, VueMondeIG vueMondeIG) {
+        super(monde, etape, vueMondeIG);
         if (etape.siEstUnGuichetGetVersLaDroite() == null || etape.siEstUnGuichetGetVersLaDroite())
             paneLibre = 0;
         else

@@ -38,6 +38,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * Le Label.
      */
     protected final Label label;
+    protected VueMondeIG vueMondeIG;
 
     /**
      * Constructeur de la classe VueEtapeIG.
@@ -45,9 +46,10 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * @param monde le monde
      * @param etape l'etape
      */
-    public VueEtapeIG(MondeIG monde, EtapeIG etape) {
+    public VueEtapeIG(MondeIG monde, EtapeIG etape, VueMondeIG vueMondeIG) {
         this.monde = monde;
         this.etape = etape;
+        this.vueMondeIG = vueMondeIG;
 
         TailleComposants tc = TailleComposants.getInstance();
         CouleurComposants cc = CouleurComposants.getInstance();
@@ -92,6 +94,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
      * @param mouseEvent le mouse event
      */
     public void setMouse(MouseEvent mouseEvent) {
+        vueMondeIG.setPickOnBounds(true);
         Dragboard dragboard = this.startDragAndDrop(TransferMode.MOVE); //Presse-papier qui contient les infos du drag'n drop
         WritableImage snapShot = this.snapshot(new SnapshotParameters(), null);
         dragboard.setDragView(snapShot);

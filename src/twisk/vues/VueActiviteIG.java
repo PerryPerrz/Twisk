@@ -20,8 +20,8 @@ public class VueActiviteIG extends VueEtapeIG implements Observateur {
      * @param monde le monde
      * @param etape l'etape
      */
-    public VueActiviteIG(MondeIG monde, EtapeIG etape) {
-        super(monde, etape);
+    public VueActiviteIG(MondeIG monde, EtapeIG etape, VueMondeIG vueMondeIG) {
+        super(monde, etape, vueMondeIG);
         flowPane = new FlowPane();
         TailleComposants tc = TailleComposants.getInstance();
         CouleurComposants cc = CouleurComposants.getInstance();

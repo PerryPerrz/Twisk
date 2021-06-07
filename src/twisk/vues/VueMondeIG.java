@@ -34,7 +34,7 @@ public class VueMondeIG extends Pane implements Observateur {
         for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
             EtapeIG etape = iter.next();
             //On met à jour le modèle avant de mettre à jour la vue.
-            VueActiviteIG viewA = new VueActiviteIG(this.monde, etape);
+            VueActiviteIG viewA = new VueActiviteIG(this.monde, etape, this);
             viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
             this.getChildren().add(viewA);
             viewA.reagir();
@@ -93,7 +93,7 @@ public class VueMondeIG extends Pane implements Observateur {
             for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
                 EtapeIG etape = iter.next();
                 if (etape.estUneActivite()) {
-                    VueActiviteIG viewA = new VueActiviteIG(monde, etape);
+                    VueActiviteIG viewA = new VueActiviteIG(monde, etape, this);
                     //viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewA);
                     vueEtapeIGS.add(viewA);
@@ -102,7 +102,7 @@ public class VueMondeIG extends Pane implements Observateur {
                         getChildren().add(viewPdc);
                     }
                 } else {
-                    VueGuichetIG viewG = new VueGuichetIG(monde, etape);
+                    VueGuichetIG viewG = new VueGuichetIG(monde, etape, this);
                     //viewG.setMinSize(tC.getLargAct(), tC.getHautAct());
                     getChildren().add(viewG);
                     vueEtapeIGS.add(viewG);
