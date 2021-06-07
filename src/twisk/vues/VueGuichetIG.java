@@ -41,9 +41,9 @@ public class VueGuichetIG extends VueEtapeIG implements Observateur {
         flowPane.setMinSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape() - tc.getMargeSelection());
         flowPane.setMaxSize(TailleComposants.getInstance().getLargGuichet() - tc.getMargeSelection(), (TailleComposants.getInstance().getHautGuichet() - tc.getHautLabelEtape()) * 4 - tc.getMargeSelection());
 
-        flowPane.setPadding(new Insets(5));
-        flowPane.setHgap(5);
-        flowPane.setVgap(5);
+        flowPane.setPadding(new Insets(tc.getEcartHV()));
+        flowPane.setHgap(tc.getEcartHV());
+        flowPane.setVgap(tc.getEcartHV());
 
         this.getChildren().add(flowPane);
         this.setOnMouseClicked(actionEvent -> monde.ajouterEtapeSelectionnee(this.etape));

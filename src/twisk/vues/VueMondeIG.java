@@ -30,12 +30,12 @@ public class VueMondeIG extends Pane implements Observateur {
     public VueMondeIG(MondeIG monde) {
         this.monde = monde;
         monde.ajouterObservateur(this);
-        TailleComposants tC = TailleComposants.getInstance();
+        TailleComposants tc = TailleComposants.getInstance();
         for (Iterator<EtapeIG> iter = monde.iterator(); iter.hasNext(); ) {
             EtapeIG etape = iter.next();
             //On met à jour le modèle avant de mettre à jour la vue.
             VueActiviteIG viewA = new VueActiviteIG(this.monde, etape);
-            viewA.setMinSize(tC.getLargAct(), tC.getHautAct());
+            viewA.setMinSize(tc.getLargAct(), tc.getHautAct());
             viewA.setPoBVueMondeIG(this.pickOnBoundsProperty());
             this.getChildren().add(viewA);
             viewA.reagir();
@@ -59,7 +59,6 @@ public class VueMondeIG extends Pane implements Observateur {
         this.setOnDragDropped(dragEvent -> {
             if (!monde.simulationACommencee()) {
                 Dragboard db = dragEvent.getDragboard();
-                // Get item id here, which was stored when the drag started.
                 boolean success = false;
                 if (db.hasString()) {
                     String indice = db.getString();

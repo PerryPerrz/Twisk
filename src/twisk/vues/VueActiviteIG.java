@@ -31,9 +31,9 @@ public class VueActiviteIG extends VueEtapeIG implements Observateur {
         //box.setPrefSize(TailleComposants.getInstance().getLargAct(), TailleComposants.getInstance().getHautAct());
         flowPane.setMinSize(tc.getLargAct() - tc.getMargeSelection(), tc.getHautAct() - tc.getHautLabelEtape() - tc.getMargeSelection());
         flowPane.setMaxSize(tc.getLargAct() - tc.getMargeSelection(), (tc.getHautAct() - tc.getHautLabelEtape()) * 2 - tc.getMargeSelection());
-        flowPane.setPadding(new Insets(5));
-        flowPane.setHgap(5);
-        flowPane.setVgap(5);
+        flowPane.setPadding(new Insets(tc.getEcartHV()));
+        flowPane.setHgap(tc.getEcartHV());
+        flowPane.setVgap(tc.getEcartHV());
 
         this.label.setStyle("-fx-text-fill: " + cc.getCouleurLabelActivite());
         flowPane.setStyle("-fx-border-color: " + cc.getCouleurActivite() + "; -fx-background-insets: 0 0 -1 0, 0, 1, 2; -fx-background-radius: 3px, 3px, 2px, 1px; -fx-border-width: 3px; -fx-background-color: " + cc.getCouleurBackgroudnActivite() + ";");

@@ -138,6 +138,7 @@ public class VuePointDeControleIG extends Circle implements Observateur {
         });
         monde.ajouterObservateur(this);
     }
+    
 
     @Override
     public void reagir() {

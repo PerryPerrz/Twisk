@@ -151,7 +151,6 @@ public class VueMenu extends MenuBar implements Observateur {
         this.gestionDesImages(loiExponentielle, "loi");
 
         this.gestionDuCheckmarkDesLois();
-
         ajouterMenuItemsMondes();
 
         this.getMenus().addAll(fichier, edition, accesAuMonde, parametres, style, mondes, lois);

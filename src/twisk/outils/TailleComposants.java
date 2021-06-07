@@ -23,6 +23,7 @@ public class TailleComposants {
     private final int margeSelection;
     private final int font;
     private final int radCLient;
+    private final int ecartHV;
 
     /**
      * Constructeur de la classe TailleComposants, il permet d'initialiser toutes les tailles utilisées dans l'application twiskIG.
@@ -46,6 +47,7 @@ public class TailleComposants {
         this.margeSelection = 4;
         this.font = 18;
         this.radCLient = 6;
+        this.ecartHV = 5;
     }
 
     /**
@@ -217,5 +219,14 @@ public class TailleComposants {
      */
     public int getRadClient() {
         return radCLient;
+    }
+
+    /**
+     * Fonction qui retourne l'écart utilisé dans le FlowPane (VueActivité)
+     *
+     * @return l'écart horizontal & vertical
+     */
+    public int getEcartHV() {
+        return ecartHV;
     }
 }

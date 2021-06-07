@@ -44,6 +44,7 @@ public class VueArcIG extends Pane implements Observateur {
         triangle.setStroke(Paint.valueOf(cc.getCouleurTriangleStroke()));
         triangle.setFill(Paint.valueOf(cc.getCouleurTriangleFill()));
 
+        //Changement de curseur
         ligne.setCursor(Cursor.HAND);
         triangle.setCursor(Cursor.HAND);
 
@@ -57,8 +58,8 @@ public class VueArcIG extends Pane implements Observateur {
         this.apparitionDuTriangle();
         this.getChildren().addAll(ligne, triangle);
 
+        //Animation
         if (!monde.simulationACommencee()) {
-            //Animation
             new Pulse(ligne).play();
             new Pulse(triangle).play();
         }
@@ -66,9 +67,6 @@ public class VueArcIG extends Pane implements Observateur {
         ligne.setOnMouseClicked(MouseEvent -> monde.selectionArc(this.arc));
         triangle.setOnMouseClicked(MouseEvent -> monde.selectionArc(this.arc));
         this.setPickOnBounds(false);
-    }
-
-    public void reagir() {
     }
 
     /**
@@ -87,7 +85,7 @@ public class VueArcIG extends Pane implements Observateur {
     /**
      * Apparition du triangle.
      */
-//Fonction qui calcule l'orientation de la flèche
+    //Fonction qui calcule l'orientation de la flèche
     public void apparitionDuTriangle() {
         TailleComposants tc = TailleComposants.getInstance();
         double pointDepX = arc.getPdcDepart().getCentreX();
@@ -130,5 +128,9 @@ public class VueArcIG extends Pane implements Observateur {
         rotate.setPivotY(pointArrY);
 
         triangle.getTransforms().add(rotate);
+    }
+
+    @Override
+    public void reagir() {
     }
 }

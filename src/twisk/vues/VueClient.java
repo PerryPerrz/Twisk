@@ -70,7 +70,7 @@ public class VueClient extends Circle implements Observateur {
     }
 
     /**
-     * Gets e.
+     * Fonction qui retourne l'étape du client
      *
      * @return l'étape du client
      */
@@ -80,6 +80,5 @@ public class VueClient extends Circle implements Observateur {
 
     @Override
     public void reagir() {
-
     }
 }

@@ -110,7 +110,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
     }
 
     /**
-     * Gets etape.
+     * Fonction qui retourne l'étape correspondant à la VueEtape
      *
      * @return l'étape de la VueEtape
      */
@@ -119,7 +119,7 @@ public abstract class VueEtapeIG extends VBox implements Observateur {
     }
 
     /**
-     * Ajouter vue client.
+     * Procédure qui ajoute VueClient
      *
      * @param viewC la VueCLient que l'on veut ajouter
      */

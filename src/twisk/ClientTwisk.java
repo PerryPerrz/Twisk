@@ -40,7 +40,6 @@ public class ClientTwisk {
         return monde;
     }
 
-
     /**
      * Constru monde 2 monde.
      *
