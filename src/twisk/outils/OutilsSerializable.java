@@ -2,11 +2,9 @@ package twisk.outils;
 
 import twisk.exceptions.FichierNullException;
 import twisk.exceptions.MondeNullException;
-import twisk.exceptions.URLIncorrectException;
 import twisk.mondeIG.MondeIG;
 
 import java.io.*;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -68,50 +66,6 @@ public class OutilsSerializable {
     }
 
     /**
-     * Fonction qui cherche si il existe des mondes prédéterminés et qui les retourne.
-     *
-     * @return Un tableau contenant les mondes ou null si il n'y a pas de fichiers dans le dossier de sauvegarde.
-     * @throws IOException            Erreur renvoyée quand la lecture du fichier à échoué.
-     * @throws ClassNotFoundException Erreur renvoyée quand le fichier ne correspond pas à un mondeIG.
-     */
-    public MondeIG[] mondesPredetermines() throws IOException, ClassNotFoundException, MondeNullException, URLIncorrectException, FichierNullException {
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        URL url = loader.getResource("mondes");
-        if (url == null)
-            throw new URLIncorrectException("Le chemin des mondes sauvegardés temporairement est incorrect !");
-        String path = url.getPath();
-        File dossier = new File(path);
-        File[] fichiers = dossier.listFiles((dir, name) -> name.endsWith(".ser"));
-        if (fichiers == null)
-            throw new FichierNullException("La liste de fichiers de sauvegarde est nulle !");
-        File dossierTmp = new File("/tmp/twisk/mondes/");
-        File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
-        MondeIG[] mondes;
-        if (fichiersTemp != null) {
-            mondes = new MondeIG[fichiers.length + fichiersTemp.length];
-            for (int i = 0; i < fichiers.length; i++) {
-                mondes[i] = mondeFromSer(fichiers[i]);
-                mondes[i].setNom(fichiers[i].getName().replace(".ser", ""));
-            }
-            int i = fichiers.length;
-            for (File file : fichiersTemp) {
-                if (file != null) {
-                    mondes[i] = mondeFromSer(file);
-                    mondes[i].setNom(file.getName().replace(".ser", ""));
-                    i++;
-                }
-            }
-        } else {
-            mondes = new MondeIG[fichiers.length];
-            for (int i = 0; i < fichiers.length; i++) {
-                mondes[i] = mondeFromSer(fichiers[i]);
-                mondes[i].setNom(fichiers[i].getName().replace(".ser", ""));
-            }
-        }
-        return mondes;
-    }
-
-    /**
      * Fonction qui cherche si il existe des mondes prédéterminés temporaires et qui les retourne.
      *
      * @return Un tableau contenant les mondes ou null si il n'y a pas de fichiers dans le dossier de sauvegardetemporaire
@@ -163,5 +117,21 @@ public class OutilsSerializable {
                 if (!file.delete())
                     throw new IOException();
         }
+    }
+
+    /**
+     * Fonction qui retourne le monde prédéterminé liés au fichier donné en paramètre.
+     *
+     * @param file le fichier
+     * @return le mondeIG
+     */
+    public MondeIG ChargerMondePredetermine(InputStream file) {
+        try {
+            ObjectInputStream ois = new ObjectInputStream(file);
+            return (MondeIG) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -20,7 +20,7 @@ import twisk.outils.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
+import java.io.InputStream;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -71,6 +71,9 @@ public class VueMenu extends MenuBar implements Observateur {
         MenuItem clients = new MenuItem("Nombre de client(s)");
         MenuItem ajouterMonde = new MenuItem("Ajouter");
         MenuItem supprimerMonde = new MenuItem("Supprimer");
+        MenuItem mondeBasique = new MenuItem("MondeBasique");
+        MenuItem mondeSucre = new MenuItem("MondeSucre");
+        MenuItem fraispertuisCity = new MenuItem("FraispertuisCity");
         MenuItem loiUniforme = new MenuItem("Loi Uniforme");
         MenuItem loiGaussienne = new MenuItem("Loi Gaussienne");
         MenuItem loiExponentielle = new MenuItem("Loi Exponentielle");
@@ -80,7 +83,7 @@ public class VueMenu extends MenuBar implements Observateur {
         this.accesAuMonde.getItems().addAll(entree, sortie);
         this.parametres.getItems().addAll(delai, ecart, jetons, clients);
         this.style.getItems().addAll(jour, nuit, reset);
-        this.mondes.getItems().addAll(ajouterMonde, supprimerMonde);
+        this.mondes.getItems().addAll(ajouterMonde, supprimerMonde, mondeBasique, mondeSucre, fraispertuisCity);
         this.lois.getItems().addAll(loiUniforme, loiGaussienne, loiExponentielle);
 
         nouveau.setOnAction(actionEvent -> this.nouveau());
@@ -104,6 +107,9 @@ public class VueMenu extends MenuBar implements Observateur {
         clients.setOnAction(actionEvent -> this.clients());
         ajouterMonde.setOnAction(actionEvent -> this.ajouter());
         supprimerMonde.setOnAction(actionEvent -> this.supprimerMonde());
+        mondeBasique.setOnAction(actionEvent -> this.chargerMonde("mondeBasique"));
+        mondeSucre.setOnAction(actionEvent -> this.chargerMonde("mondeSucre"));
+        fraispertuisCity.setOnAction(actionEvent -> this.chargerMonde("FraispertuisCity"));
         loiUniforme.setOnAction(actionEvent -> monde.setLoi("Uni"));
         loiGaussienne.setOnAction(actionEvent -> monde.setLoi("Gauss"));
         loiExponentielle.setOnAction(actionEvent -> monde.setLoi("Expo"));
@@ -140,6 +146,9 @@ public class VueMenu extends MenuBar implements Observateur {
         this.gestionDesImages(mondes, "world");
         this.gestionDesImages(ajouterMonde, "ajouterMonde");
         this.gestionDesImages(supprimerMonde, "supprimerMonde");
+        this.gestionDesImages(mondeBasique, "world");
+        this.gestionDesImages(mondeSucre, "world");
+        this.gestionDesImages(fraispertuisCity, "world");
         this.gestionDesImages(lois, "probabilite");
         this.gestionDesImages(loiUniforme, "loi");
         this.gestionDesImages(loiGaussienne, "loi");
@@ -357,42 +366,32 @@ public class VueMenu extends MenuBar implements Observateur {
      * Procédure qui ajoute les menuItems aux mondes
      */
     private void ajouterMenuItemsMondes() {
-        mondes.getItems().removeIf(menuItem -> !(menuItem.getText().equals("Ajouter") || menuItem.getText().equals("Supprimer")));
+        mondes.getItems().removeIf(menuItem -> !(menuItem.getText().equals("Ajouter") || menuItem.getText().equals("Supprimer") || menuItem.getText().equals("MondeBasique") || menuItem.getText().equals("MondeSucre") || menuItem.getText().equals("FraispertuisCity")));
         //On s'occupe des menuItem correspondant aux mondes prédéterminés
         try {
-            MondeIG[] mondesPredetermines = OutilsSerializable.getInstance().mondesPredetermines();
-            if (!(mondesPredetermines == null)) {
-                for (MondeIG mondeIG : mondesPredetermines) {
+            MondeIG[] mondesPredeterminesTemp = OutilsSerializable.getInstance().mondesPredeterminesTemp();
+            if (!(mondesPredeterminesTemp == null)) {
+                for (MondeIG mondeIG : mondesPredeterminesTemp) {
                     MenuItem menuItem = new MenuItem(mondeIG.getNom());
                     mondes.getItems().add(menuItem);
                     if (monde.simulationACommencee())
                         menuItem.setDisable(true);
                     menuItem.setOnAction(actionEvent -> {
                         try {
-                            ClassLoader loader = Thread.currentThread().getContextClassLoader();
-                            URL url = loader.getResource("mondes");
-                            assert url != null;
-                            String path = url.getPath();
-                            File dossier = new File(path);
-                            File[] fichiers = dossier.listFiles((dir, name) -> name.endsWith(".ser"));
-                            assert fichiers != null;
                             File dossierTmp = new File("/tmp/twisk/mondes/");
                             File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
                             File file = null;
-                            for (File f : fichiers) {
-                                if (f.getName().equals(mondeIG.getNom() + ".ser"))
-                                    file = f;
-                            }
                             if (fichiersTemp != null) {
                                 for (File f : fichiersTemp) {
                                     if (f.getName().equals(mondeIG.getNom() + ".ser"))
                                         file = f;
                                 }
                             }
-                            assert file != null;
+                            if (file == null)
+                                throw new FichierNullException("Fichier correspondant à monde temporaire introuvable");
                             ouvrirFenetreNouveauMonde(OutilsSerializable.getInstance().mondeFromSer(file));
-                        } catch (IOException | ClassNotFoundException | MondeNullException e) {
-                            e.printStackTrace();
+                        } catch (IOException | ClassNotFoundException | MondeNullException | FichierNullException e) {
+                            gestionDesAlertes(e, "Impossible de charger l'affichage des mondes temporaires !", e.getMessage(), "warning");
                         }
                     });
                     Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/twisk/ressources/images/mondesDef.png")), TailleComposants.getInstance().getTailleIcons2(), TailleComposants.getInstance().getTailleIcons2(), true, true);
@@ -400,7 +399,7 @@ public class VueMenu extends MenuBar implements Observateur {
                     menuItem.setGraphic(icon);
                 }
             }
-        } catch (IOException | ClassNotFoundException | MondeNullException | URLIncorrectException | FichierNullException e) {
+        } catch (IOException | ClassNotFoundException | MondeNullException e) {
             this.gestionDesAlertes(e, e.getMessage(), "Erreur lors de la recherche des monde sauvegardés", "warning");
         }
     }
@@ -552,6 +551,17 @@ public class VueMenu extends MenuBar implements Observateur {
         PauseTransition pt = new PauseTransition(Duration.seconds(5));
         pt.setOnFinished(Event -> dia.close());
         pt.play();
+    }
+
+    /**
+     * Procédure qui cherche le monde dans les ressources et demande son chargement depuis son fichier de sauvegarde
+     *
+     * @param nom le nom du monde
+     */
+    private void chargerMonde(String nom) {
+        InputStream file = getClass().getResourceAsStream("/twisk/ressources/mondes/" + nom + ".ser");
+        MondeIG monde = OutilsSerializable.getInstance().ChargerMondePredetermine(file);
+        ouvrirFenetreNouveauMonde(monde);
     }
 
     @Override
