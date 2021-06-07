@@ -123,22 +123,21 @@ public class VueMenu extends MenuBar implements Observateur {
         supprimer.setDisable(true);
         this.gestionDesImages(renommer, "rename");
         renommer.setDisable(true);
-
         this.gestionDesImages(effacer, "select");
+        effacer.setDisable(true);
         this.gestionDesImages(entree, "entree");
+        entree.setDisable(true);
         this.gestionDesImages(sortie, "sortie");
+        sortie.setDisable(true);
         this.gestionDesImages(delai, "hourglass");
         delai.setDisable(true);
-
         this.gestionDesImages(ecart, "hourglass");
         ecart.setDisable(true);
-
         this.gestionDesImages(jour, "day");
         this.gestionDesImages(nuit, "night");
         this.gestionDesImages(reset, "reset");
         this.gestionDesImages(jetons, "token");
         jetons.setDisable(true);
-
         this.gestionDesImages(clients, "client");
         this.gestionDesImages(nouveau, "new");
         this.gestionDesImages(ouvrir, "open");
@@ -669,12 +668,19 @@ public class VueMenu extends MenuBar implements Observateur {
             edition.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1); //On set le disable à false lorsque le nombre d'étapes est égale à 1
             parametres.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable délai
             parametres.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable écart
-            //Si aucune étapes n'est selectionnées, on disable le bouton supprimer
+            //Si aucune étape n'est selectionnée, on disable le bouton supprimer
             edition.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
+            edition.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() == 0 && monde.getNbArcsSelectionnes() == 0);
+            //Si aucune étape n'est seléctionnée, on ne peut pas donner d'entrée ou de sortie
+            accesAuMonde.getItems().get(0).setDisable(monde.nbEtapesSelectionnees() == 0);
+            accesAuMonde.getItems().get(1).setDisable(monde.nbEtapesSelectionnees() == 0);
             if (!monde.etapesSelectionneesSontDesGuichets()) //Si l'étape concernée est une activité, on laisse le bouton "Nombre de jeton(s)" disable.
                 parametres.getItems().get(2).setDisable(true);
-            else //Si l'étape concernée est un guichet
-                parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1);//On disable jeton
+            else { //Si l'étape concernée est un guichet
+                parametres.getItems().get(0).setDisable(true);
+                parametres.getItems().get(1).setDisable(true);
+                parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1); //Si plus d'un guichet est selectionné on disable jetons
+            }
             ajouterMenuItemsMondes();
             this.gestionDuCheckmarkDesLois();
         };

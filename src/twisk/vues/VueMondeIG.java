@@ -71,7 +71,7 @@ public class VueMondeIG extends Pane implements Observateur {
             dragEvent.setDropCompleted(success);
             dragEvent.consume();
         });
-        //On passe la hitbox de VueMondeIG en dessous ou pas au même endroit que celle de VueOutils pour permettre de clique sur les boutons lorsqu'une activité les recouvre ou est à côté mais on ne peut plus drag'n'drop
+        //On passe la hitbox de VueMondeIG en dessous ou pas au même endroit que celle de VueOutils pour permettre de cliquer sur les boutons lorsqu'une activité les recouvrent ou est à côté mais on ne peut plus drag'n'drop
         this.setPickOnBounds(false);
     }
 
