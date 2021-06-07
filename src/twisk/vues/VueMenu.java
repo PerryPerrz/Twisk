@@ -368,6 +368,11 @@ public class VueMenu extends MenuBar implements Observateur {
     public void nouveau() {
         //On reset le compteur des étapes
         FabriqueIdentifiant.getInstance().reset();
+        try {
+            OutilsSerializable.getInstance().initializeSer();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         MondeIG monde = new MondeIG();
         BorderPane root = new BorderPane();
@@ -615,6 +620,11 @@ public class VueMenu extends MenuBar implements Observateur {
      * @param monde le monde sur lequel on veut ouvrir la fenetre
      */
     private void ouvrirFenetreNouveauMonde(MondeIG monde) {
+        try {
+            OutilsSerializable.getInstance().initializeSer();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         BorderPane root = new BorderPane();
         VueOutils viewO = new VueOutils(monde);
         VueMondeIG viewM = new VueMondeIG(monde);

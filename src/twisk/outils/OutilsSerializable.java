@@ -4,6 +4,8 @@ import twisk.mondeIG.MondeIG;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class OutilsSerializable {
 
@@ -68,7 +70,7 @@ public class OutilsSerializable {
         File dossier = new File(path);
         File[] fichiers = dossier.listFiles((dir, name) -> name.endsWith(".ser"));
         assert fichiers != null;
-        File dossierTmp = new File("/tmp/");
+        File dossierTmp = new File("/tmp/twisk/mondes/");
         File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
         MondeIG[] mondes;
         if (fichiersTemp != null) {
@@ -102,7 +104,7 @@ public class OutilsSerializable {
      * @throws ClassNotFoundException Erreur renvoyée quand le fichier ne correspond pas à un mondeIG.
      */
     public MondeIG[] mondesPredeterminesTemp() throws IOException, ClassNotFoundException {
-        File dossierTmp = new File("/tmp/");
+        File dossierTmp = new File("/tmp/twisk/mondes/");
         File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
         MondeIG[] mondes = null;
         if (fichiersTemp != null && fichiersTemp.length != 0) {
@@ -125,14 +127,20 @@ public class OutilsSerializable {
      * @throws IOException erreur déclenchée si l'écriture du fichier ne fonctionne pas
      */
     public void mondeToSerInMondesPredetermines(MondeIG monde, String nom) throws IOException {
-        FileOutputStream fileOut = new FileOutputStream("/tmp/" + nom + ".ser");
+        FileOutputStream fileOut = new FileOutputStream("/tmp/twisk/mondes/" + nom + ".ser");
         ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
         objectOut.writeObject(monde);
         objectOut.close();
     }
 
+    /**
+     * Procédure qui supprime le fichier ser donné en paramètre.
+     *
+     * @param nom le nom du fichier .ser sans extension
+     * @throws IOException Erreur envoyée si la suppression du fichier à échoué.
+     */
     public void supprimerSer(String nom) throws IOException {
-        File dossierTmp = new File("/tmp/");
+        File dossierTmp = new File("/tmp/twisk/mondes/");
         File[] fichiersTemp = dossierTmp.listFiles((dir, name) -> name.endsWith(".ser"));
         assert fichiersTemp != null;
         for (File file : fichiersTemp) {
@@ -140,5 +148,14 @@ public class OutilsSerializable {
                 if (!file.delete())
                     throw new IOException();
         }
+    }
+
+    /**
+     * Procédure qui crée le dossier contenant les fichiers de sauvegarde temporaires.
+     *
+     * @throws IOException Erreur envoyée si la création du dossier n'est pas réussie.
+     */
+    public void initializeSer() throws IOException {
+        Files.createDirectories(Paths.get("/tmp/twisk/mondes"));
     }
 }
