@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentScriptType="application/ecmascript" contentStyleType="text/css"
+     height="747px" preserveAspectRatio="none" style="width:3246px;height:747px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 3246 747" width="3246px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f2yz5q5wv2buu" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix"
+                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g><!--MD5=[16c89c94f664334bc7dbd34fd9b69706]
+cluster twisk.vues-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="1064,129,1156,129,1163,151.2969,2921,151.2969,2921,617,1064,617,1064,129"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="1064" x2="1163" y1="151.2969" y2="151.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="86" x="1068" y="143.9951">twisk.vues
+        </text><!--MD5=[d198cdd945e01b78e65ebc5a94d31c69]
+cluster javafx.scene.control-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="1903,641,2074,641,2081,663.2969,2203,663.2969,2203,740,1903,740,1903,641"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="1903" x2="2081" y1="663.2969" y2="663.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="165" x="1907" y="655.9951">javafx.scene.control
+        </text><!--MD5=[da2508b1d141bd918f2f9ce350c3536b]
+cluster twisk.mondeIG-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="16,403,142,403,149,425.2969,400,425.2969,400,502,16,502,16,403"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="149" y1="425.2969" y2="425.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="120" x="20" y="417.9951">twisk.mondeIG
+        </text><!--MD5=[832cfce525ca280bda851355cc57458b]
+cluster javafx.scene.shape-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="424,403,584,403,591,425.2969,726,425.2969,726,502,424,502,424,403"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="424" x2="591" y1="425.2969" y2="425.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="154" x="428" y="417.9951">javafx.scene.shape
+        </text><!--MD5=[b607c642081a2d8f595146bd9f7a12c9]
+cluster javafx.scene.layout-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="2116,6,2280,6,2287,28.2969,2546,28.2969,2546,105,2116,105,2116,6"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="2116" x2="2287" y1="28.2969" y2="28.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="158" x="2120" y="20.9951">javafx.scene.layout
+        </text><!--MD5=[7907e845f6d424a1eb4fde7c85cb6ac9]
+cluster twisk.simulation-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="750,403,892,403,899,425.2969,902,425.2969,902,502,750,502,750,403"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="750" x2="899" y1="425.2969" y2="425.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="136" x="754" y="417.9951">twisk.simulation
+        </text><!--MD5=[aa8f7b917213fcc1c2766e2d59b49067]
+cluster java.lang-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="926,403,1006,403,1013,425.2969,1040,425.2969,1040,502,926,502,926,403"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="926" x2="1013" y1="425.2969" y2="425.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="74" x="930" y="417.9951">java.lang
+        </text><!--MD5=[cdc1255cd7ce410e071b877db621e6bf]
+cluster twisk.designPattern-->
+        <polygon fill="#FFFFFF" filter="url(#f2yz5q5wv2buu)"
+                 points="2570,6,2740,6,2747,28.2969,2750,28.2969,2750,105,2570,105,2570,6"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="2570" x2="2747" y1="28.2969" y2="28.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="164" x="2574" y="20.9951">twisk.designPattern
+        </text><!--MD5=[8475436848ff03bf75ddf9d216c3f286]
+class twisk.vues.VueMenu-->
+        <rect codeLine="1" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="278.4844" id="twisk.vues.VueMenu"
+              style="stroke:#A80036;stroke-width:1.5;" width="332" x="2573" y="323"/>
+        <ellipse cx="2707.25" cy="339" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2709.5938,334.6719 C2708.6563,334.2344 2708.0625,334.0938 2707.1875,334.0938 C2704.5625,334.0938 2702.5625,336.1719 2702.5625,338.8906 L2702.5625,340.0156 C2702.5625,342.5938 2704.6719,344.4844 2707.5625,344.4844 C2708.7813,344.4844 2709.9375,344.1875 2710.6875,343.6406 C2711.2656,343.2344 2711.5938,342.7813 2711.5938,342.3906 C2711.5938,341.9375 2711.2031,341.5469 2710.7344,341.5469 C2710.5156,341.5469 2710.3125,341.625 2710.125,341.8125 C2709.6719,342.2969 2709.6719,342.2969 2709.4844,342.3906 C2709.0625,342.6563 2708.375,342.7813 2707.6094,342.7813 C2705.5625,342.7813 2704.2656,341.6875 2704.2656,339.9844 L2704.2656,338.8906 C2704.2656,337.1094 2705.5156,335.7969 2707.25,335.7969 C2707.8281,335.7969 2708.4375,335.9531 2708.9063,336.2031 C2709.3906,336.4844 2709.5625,336.7031 2709.6563,337.1094 C2709.7188,337.5156 2709.75,337.6406 2709.8906,337.7656 C2710.0313,337.9063 2710.2656,338.0156 2710.4844,338.0156 C2710.75,338.0156 2711.0156,337.875 2711.1875,337.6563 C2711.2969,337.5 2711.3281,337.3125 2711.3281,336.8906 L2711.3281,335.4688 C2711.3281,335.0313 2711.3125,334.9063 2711.2188,334.75 C2711.0625,334.4844 2710.7813,334.3438 2710.4844,334.3438 C2710.1875,334.3438 2709.9844,334.4375 2709.7656,334.75 L2709.5938,334.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="2727.75"
+              y="343.1543">VueMenu
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2574" x2="2904" y1="355" y2="355"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2574" x2="2904" y1="363" y2="363"/>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="371"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="2593"
+              y="377.2104">void supprimer()
+        </text>
+        <ellipse cx="2584" cy="386.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="2593"
+              y="390.0151">void rename()
+        </text>
+        <ellipse cx="2584" cy="399.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="2593"
+              y="402.8198">void delai()
+        </text>
+        <ellipse cx="2584" cy="412.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="2593"
+              y="415.6245">void ecart()
+        </text>
+        <ellipse cx="2584" cy="425.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="2593"
+              y="428.4292">void jetons()
+        </text>
+        <ellipse cx="2584" cy="438.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="2593"
+              y="441.2339">void clients()
+        </text>
+        <ellipse cx="2584" cy="450.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="2593"
+              y="454.0386">void nouveau()
+        </text>
+        <polygon fill="#4177AF" points="2584,459.6328,2580,465.6328,2588,465.6328"
+                 style="stroke:#1963A0;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="2593"
+              y="466.8433">void restaurer()
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="473.4375"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="2593"
+              y="479.6479">void enregistrer()
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="486.2422"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="183" x="2593"
+              y="492.4526">void ajouterMenuItemsMondes()
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="499.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="2593"
+              y="505.2573">void ajouter()
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="511.8516"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="2593"
+              y="518.062">void supprimerMonde()
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="524.6563"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="252" x="2593"
+              y="530.8667">void ouvrirFenetreNouveauMonde(MondeIG)
+        </text>
+        <ellipse cx="2584" cy="540.4609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="236" x="2593"
+              y="543.6714">void gestionDesImages(MenuItem,String)
+        </text>
+        <ellipse cx="2584" cy="553.2656" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="202" x="2593"
+              y="556.4761">void gestionDuCheckmarkDesLois()
+        </text>
+        <ellipse cx="2584" cy="566.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="306" x="2593"
+              y="569.2808">void gestionDesAlertes(Exception,String,String,String)
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2581" y="575.875"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="2593"
+              y="582.0854">void chargerMonde(String)
+        </text>
+        <ellipse cx="2584" cy="591.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="2593"
+              y="594.8901">void reagir()
+        </text><!--MD5=[4377592cd2df7e47c4d8b9c5ed10ca14]
+class twisk.vues.VueOutils-->
+        <rect codeLine="22" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="73.6094" id="twisk.vues.VueOutils"
+              style="stroke:#A80036;stroke-width:1.5;" width="292" x="2494" y="176.5"/>
+        <ellipse cx="2607.25" cy="192.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2609.5938,188.1719 C2608.6563,187.7344 2608.0625,187.5938 2607.1875,187.5938 C2604.5625,187.5938 2602.5625,189.6719 2602.5625,192.3906 L2602.5625,193.5156 C2602.5625,196.0938 2604.6719,197.9844 2607.5625,197.9844 C2608.7813,197.9844 2609.9375,197.6875 2610.6875,197.1406 C2611.2656,196.7344 2611.5938,196.2813 2611.5938,195.8906 C2611.5938,195.4375 2611.2031,195.0469 2610.7344,195.0469 C2610.5156,195.0469 2610.3125,195.125 2610.125,195.3125 C2609.6719,195.7969 2609.6719,195.7969 2609.4844,195.8906 C2609.0625,196.1563 2608.375,196.2813 2607.6094,196.2813 C2605.5625,196.2813 2604.2656,195.1875 2604.2656,193.4844 L2604.2656,192.3906 C2604.2656,190.6094 2605.5156,189.2969 2607.25,189.2969 C2607.8281,189.2969 2608.4375,189.4531 2608.9063,189.7031 C2609.3906,189.9844 2609.5625,190.2031 2609.6563,190.6094 C2609.7188,191.0156 2609.75,191.1406 2609.8906,191.2656 C2610.0313,191.4063 2610.2656,191.5156 2610.4844,191.5156 C2610.75,191.5156 2611.0156,191.375 2611.1875,191.1563 C2611.2969,191 2611.3281,190.8125 2611.3281,190.3906 L2611.3281,188.9688 C2611.3281,188.5313 2611.3125,188.4063 2611.2188,188.25 C2611.0625,187.9844 2610.7813,187.8438 2610.4844,187.8438 C2610.1875,187.8438 2609.9844,187.9375 2609.7656,188.25 L2609.5938,188.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="2627.75"
+              y="196.6543">VueOutils
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2495" x2="2785" y1="208.5" y2="208.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2495" x2="2785" y1="216.5" y2="216.5"/>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2502" y="224.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="266" x="2514"
+              y="230.7104">void lancerFenetreErreurSimu(TwiskException)
+        </text>
+        <ellipse cx="2505" cy="240.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="2514"
+              y="243.5151">void reagir()
+        </text><!--MD5=[eb009c718eacd164ba7b7f4203208be3]
+class twisk.vues.VuePointDeControleIG-->
+        <rect codeLine="27" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="73.6094"
+              id="twisk.vues.VuePointDeControleIG" style="stroke:#A80036;stroke-width:1.5;" width="363" x="1648.5"
+              y="176.5"/>
+        <ellipse cx="1760.25" cy="192.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M1762.5938,188.1719 C1761.6563,187.7344 1761.0625,187.5938 1760.1875,187.5938 C1757.5625,187.5938 1755.5625,189.6719 1755.5625,192.3906 L1755.5625,193.5156 C1755.5625,196.0938 1757.6719,197.9844 1760.5625,197.9844 C1761.7813,197.9844 1762.9375,197.6875 1763.6875,197.1406 C1764.2656,196.7344 1764.5938,196.2813 1764.5938,195.8906 C1764.5938,195.4375 1764.2031,195.0469 1763.7344,195.0469 C1763.5156,195.0469 1763.3125,195.125 1763.125,195.3125 C1762.6719,195.7969 1762.6719,195.7969 1762.4844,195.8906 C1762.0625,196.1563 1761.375,196.2813 1760.6094,196.2813 C1758.5625,196.2813 1757.2656,195.1875 1757.2656,193.4844 L1757.2656,192.3906 C1757.2656,190.6094 1758.5156,189.2969 1760.25,189.2969 C1760.8281,189.2969 1761.4375,189.4531 1761.9063,189.7031 C1762.3906,189.9844 1762.5625,190.2031 1762.6563,190.6094 C1762.7188,191.0156 1762.75,191.1406 1762.8906,191.2656 C1763.0313,191.4063 1763.2656,191.5156 1763.4844,191.5156 C1763.75,191.5156 1764.0156,191.375 1764.1875,191.1563 C1764.2969,191 1764.3281,190.8125 1764.3281,190.3906 L1764.3281,188.9688 C1764.3281,188.5313 1764.3125,188.4063 1764.2188,188.25 C1764.0625,187.9844 1763.7813,187.8438 1763.4844,187.8438 C1763.1875,187.8438 1762.9844,187.9375 1762.7656,188.25 L1762.5938,188.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="1780.75"
+              y="196.6543">VuePointDeControleIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1649.5" x2="2010.5" y1="208.5" y2="208.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1649.5" x2="2010.5" y1="216.5" y2="216.5"/>
+        <ellipse cx="1659.5" cy="227.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="337" x="1668.5"
+              y="230.7104">void gestionDesAlertes(TwiskException,String,String,String)
+        </text>
+        <ellipse cx="1659.5" cy="240.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="1668.5"
+              y="243.5151">void reagir()
+        </text><!--MD5=[34a654b9c6fbce44129dd90524ca0b1e]
+class twisk.vues.VueMondeIG-->
+        <rect codeLine="32" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="60.8047" id="twisk.vues.VueMondeIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="108" x="1505" y="183"/>
+        <ellipse cx="1520" cy="199" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M1522.3438,194.6719 C1521.4063,194.2344 1520.8125,194.0938 1519.9375,194.0938 C1517.3125,194.0938 1515.3125,196.1719 1515.3125,198.8906 L1515.3125,200.0156 C1515.3125,202.5938 1517.4219,204.4844 1520.3125,204.4844 C1521.5313,204.4844 1522.6875,204.1875 1523.4375,203.6406 C1524.0156,203.2344 1524.3438,202.7813 1524.3438,202.3906 C1524.3438,201.9375 1523.9531,201.5469 1523.4844,201.5469 C1523.2656,201.5469 1523.0625,201.625 1522.875,201.8125 C1522.4219,202.2969 1522.4219,202.2969 1522.2344,202.3906 C1521.8125,202.6563 1521.125,202.7813 1520.3594,202.7813 C1518.3125,202.7813 1517.0156,201.6875 1517.0156,199.9844 L1517.0156,198.8906 C1517.0156,197.1094 1518.2656,195.7969 1520,195.7969 C1520.5781,195.7969 1521.1875,195.9531 1521.6563,196.2031 C1522.1406,196.4844 1522.3125,196.7031 1522.4063,197.1094 C1522.4688,197.5156 1522.5,197.6406 1522.6406,197.7656 C1522.7813,197.9063 1523.0156,198.0156 1523.2344,198.0156 C1523.5,198.0156 1523.7656,197.875 1523.9375,197.6563 C1524.0469,197.5 1524.0781,197.3125 1524.0781,196.8906 L1524.0781,195.4688 C1524.0781,195.0313 1524.0625,194.9063 1523.9688,194.75 C1523.8125,194.4844 1523.5313,194.3438 1523.2344,194.3438 C1522.9375,194.3438 1522.7344,194.4375 1522.5156,194.75 L1522.3438,194.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="76" x="1534"
+              y="203.1543">VueMondeIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1506" x2="1612" y1="215" y2="215"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1506" x2="1612" y1="223" y2="223"/>
+        <ellipse cx="1516" cy="234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="1525"
+              y="237.2104">void reagir()
+        </text><!--MD5=[599fe0e7e6948d4f0e88c390156fd656]
+class twisk.vues.VueArcIG-->
+        <rect codeLine="35" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="86.4141" id="twisk.vues.VueArcIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="390" x="1080" y="170.5"/>
+        <ellipse cx="1243.25" cy="186.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M1245.5938,182.1719 C1244.6563,181.7344 1244.0625,181.5938 1243.1875,181.5938 C1240.5625,181.5938 1238.5625,183.6719 1238.5625,186.3906 L1238.5625,187.5156 C1238.5625,190.0938 1240.6719,191.9844 1243.5625,191.9844 C1244.7813,191.9844 1245.9375,191.6875 1246.6875,191.1406 C1247.2656,190.7344 1247.5938,190.2813 1247.5938,189.8906 C1247.5938,189.4375 1247.2031,189.0469 1246.7344,189.0469 C1246.5156,189.0469 1246.3125,189.125 1246.125,189.3125 C1245.6719,189.7969 1245.6719,189.7969 1245.4844,189.8906 C1245.0625,190.1563 1244.375,190.2813 1243.6094,190.2813 C1241.5625,190.2813 1240.2656,189.1875 1240.2656,187.4844 L1240.2656,186.3906 C1240.2656,184.6094 1241.5156,183.2969 1243.25,183.2969 C1243.8281,183.2969 1244.4375,183.4531 1244.9063,183.7031 C1245.3906,183.9844 1245.5625,184.2031 1245.6563,184.6094 C1245.7188,185.0156 1245.75,185.1406 1245.8906,185.2656 C1246.0313,185.4063 1246.2656,185.5156 1246.4844,185.5156 C1246.75,185.5156 1247.0156,185.375 1247.1875,185.1563 C1247.2969,185 1247.3281,184.8125 1247.3281,184.3906 L1247.3281,182.9688 C1247.3281,182.5313 1247.3125,182.4063 1247.2188,182.25 C1247.0625,181.9844 1246.7813,181.8438 1246.4844,181.8438 C1246.1875,181.8438 1245.9844,181.9375 1245.7656,182.25 L1245.5938,182.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="1263.75"
+              y="190.6543">VueArcIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1081" x2="1469" y1="202.5" y2="202.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1081" x2="1469" y1="210.5" y2="210.5"/>
+        <ellipse cx="1091" cy="221.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="364" x="1100"
+              y="224.7104">void apparitionDeLaLigne(PointDeControleIG,PointDeControleIG)
+        </text>
+        <ellipse cx="1091" cy="234.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="1100"
+              y="237.5151">void apparitionDuTriangle()
+        </text>
+        <ellipse cx="1091" cy="247.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="1100"
+              y="250.3198">void reagir()
+        </text><!--MD5=[31884e338878cd815cc73ffede1ab360]
+class twisk.vues.VueActiviteIG-->
+        <rect codeLine="43" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="73.6094" id="twisk.vues.VueActiviteIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="214" x="2324" y="425"/>
+        <ellipse cx="2387.25" cy="441" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2389.5938,436.6719 C2388.6563,436.2344 2388.0625,436.0938 2387.1875,436.0938 C2384.5625,436.0938 2382.5625,438.1719 2382.5625,440.8906 L2382.5625,442.0156 C2382.5625,444.5938 2384.6719,446.4844 2387.5625,446.4844 C2388.7813,446.4844 2389.9375,446.1875 2390.6875,445.6406 C2391.2656,445.2344 2391.5938,444.7813 2391.5938,444.3906 C2391.5938,443.9375 2391.2031,443.5469 2390.7344,443.5469 C2390.5156,443.5469 2390.3125,443.625 2390.125,443.8125 C2389.6719,444.2969 2389.6719,444.2969 2389.4844,444.3906 C2389.0625,444.6563 2388.375,444.7813 2387.6094,444.7813 C2385.5625,444.7813 2384.2656,443.6875 2384.2656,441.9844 L2384.2656,440.8906 C2384.2656,439.1094 2385.5156,437.7969 2387.25,437.7969 C2387.8281,437.7969 2388.4375,437.9531 2388.9063,438.2031 C2389.3906,438.4844 2389.5625,438.7031 2389.6563,439.1094 C2389.7188,439.5156 2389.75,439.6406 2389.8906,439.7656 C2390.0313,439.9063 2390.2656,440.0156 2390.4844,440.0156 C2390.75,440.0156 2391.0156,439.875 2391.1875,439.6563 C2391.2969,439.5 2391.3281,439.3125 2391.3281,438.8906 L2391.3281,437.4688 C2391.3281,437.0313 2391.3125,436.9063 2391.2188,436.75 C2391.0625,436.4844 2390.7813,436.3438 2390.4844,436.3438 C2390.1875,436.3438 2389.9844,436.4375 2389.7656,436.75 L2389.5938,436.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="79" x="2407.75"
+              y="445.1543">VueActiviteIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2325" x2="2537" y1="457" y2="457"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2325" x2="2537" y1="465" y2="465"/>
+        <ellipse cx="2335" cy="476" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="2344"
+              y="479.2104">void ajouterVueClient(VueClient)
+        </text>
+        <ellipse cx="2335" cy="488.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="2344"
+              y="492.0151">void reagir()
+        </text><!--MD5=[d1dae6e7c6c6d23ce418abef4e4c172e]
+class twisk.vues.VueClient-->
+        <rect codeLine="48" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="73.6094" id="twisk.vues.VueClient"
+              style="stroke:#A80036;stroke-width:1.5;" width="109" x="2046.5" y="176.5"/>
+        <ellipse cx="2070.95" cy="192.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2073.2938,188.1719 C2072.3563,187.7344 2071.7625,187.5938 2070.8875,187.5938 C2068.2625,187.5938 2066.2625,189.6719 2066.2625,192.3906 L2066.2625,193.5156 C2066.2625,196.0938 2068.3719,197.9844 2071.2625,197.9844 C2072.4813,197.9844 2073.6375,197.6875 2074.3875,197.1406 C2074.9656,196.7344 2075.2938,196.2813 2075.2938,195.8906 C2075.2938,195.4375 2074.9031,195.0469 2074.4344,195.0469 C2074.2156,195.0469 2074.0125,195.125 2073.825,195.3125 C2073.3719,195.7969 2073.3719,195.7969 2073.1844,195.8906 C2072.7625,196.1563 2072.075,196.2813 2071.3094,196.2813 C2069.2625,196.2813 2067.9656,195.1875 2067.9656,193.4844 L2067.9656,192.3906 C2067.9656,190.6094 2069.2156,189.2969 2070.95,189.2969 C2071.5281,189.2969 2072.1375,189.4531 2072.6063,189.7031 C2073.0906,189.9844 2073.2625,190.2031 2073.3563,190.6094 C2073.4188,191.0156 2073.45,191.1406 2073.5906,191.2656 C2073.7313,191.4063 2073.9656,191.5156 2074.1844,191.5156 C2074.45,191.5156 2074.7156,191.375 2074.8875,191.1563 C2074.9969,191 2075.0281,190.8125 2075.0281,190.3906 L2075.0281,188.9688 C2075.0281,188.5313 2075.0125,188.4063 2074.9188,188.25 C2074.7625,187.9844 2074.4813,187.8438 2074.1844,187.8438 C2073.8875,187.8438 2073.6844,187.9375 2073.4656,188.25 L2073.2938,188.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="56" x="2087.05"
+              y="196.6543">VueClient
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2047.5" x2="2154.5" y1="208.5" y2="208.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2047.5" x2="2154.5" y1="216.5" y2="216.5"/>
+        <ellipse cx="2057.5" cy="227.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="2066.5"
+              y="230.7104">EtapeIG getE()
+        </text>
+        <ellipse cx="2057.5" cy="240.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="2066.5"
+              y="243.5151">void reagir()
+        </text><!--MD5=[bfe334d5a8881469919dbf0e0c71a636]
+class twisk.vues.VueGuichetIG-->
+        <rect codeLine="54" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="99.2188" id="twisk.vues.VueGuichetIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="214" x="2075" y="412.5"/>
+        <ellipse cx="2137.75" cy="428.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2140.0938,424.1719 C2139.1563,423.7344 2138.5625,423.5938 2137.6875,423.5938 C2135.0625,423.5938 2133.0625,425.6719 2133.0625,428.3906 L2133.0625,429.5156 C2133.0625,432.0938 2135.1719,433.9844 2138.0625,433.9844 C2139.2813,433.9844 2140.4375,433.6875 2141.1875,433.1406 C2141.7656,432.7344 2142.0938,432.2813 2142.0938,431.8906 C2142.0938,431.4375 2141.7031,431.0469 2141.2344,431.0469 C2141.0156,431.0469 2140.8125,431.125 2140.625,431.3125 C2140.1719,431.7969 2140.1719,431.7969 2139.9844,431.8906 C2139.5625,432.1563 2138.875,432.2813 2138.1094,432.2813 C2136.0625,432.2813 2134.7656,431.1875 2134.7656,429.4844 L2134.7656,428.3906 C2134.7656,426.6094 2136.0156,425.2969 2137.75,425.2969 C2138.3281,425.2969 2138.9375,425.4531 2139.4063,425.7031 C2139.8906,425.9844 2140.0625,426.2031 2140.1563,426.6094 C2140.2188,427.0156 2140.25,427.1406 2140.3906,427.2656 C2140.5313,427.4063 2140.7656,427.5156 2140.9844,427.5156 C2141.25,427.5156 2141.5156,427.375 2141.6875,427.1563 C2141.7969,427 2141.8281,426.8125 2141.8281,426.3906 L2141.8281,424.9688 C2141.8281,424.5313 2141.8125,424.4063 2141.7188,424.25 C2141.5625,423.9844 2141.2813,423.8438 2140.9844,423.8438 C2140.6875,423.8438 2140.4844,423.9375 2140.2656,424.25 L2140.0938,424.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="80" x="2158.25"
+              y="432.6543">VueGuichetIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2076" x2="2288" y1="444.5" y2="444.5"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2083" y="452.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="2095"
+              y="458.7104">int paneLibre
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2076" x2="2288" y1="465.3047" y2="465.3047"/>
+        <ellipse cx="2086" cy="476.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="2095"
+              y="479.5151">void ajouterVueClient(VueClient)
+        </text>
+        <ellipse cx="2086" cy="489.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="2095"
+              y="492.3198">int getNbVueClients()
+        </text>
+        <ellipse cx="2086" cy="501.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="2095"
+              y="505.1245">void reagir()
+        </text><!--MD5=[8d2a7c910166bc2a57767c3f0cae9604]
+class twisk.vues.VueEtapeIG-->
+        <rect codeLine="61" fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="99.2188" id="twisk.vues.VueEtapeIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="268" x="2191" y="164"/>
+        <ellipse cx="2285.25" cy="180" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2287.3281,181.8125 L2287.7188,182.7969 L2287.3281,182.7969 C2286.875,182.7969 2286.7656,182.8125 2286.6094,182.9219 C2286.3594,183.0781 2286.2031,183.3594 2286.2031,183.6563 C2286.2031,183.9219 2286.3438,184.1719 2286.5625,184.3281 C2286.7031,184.4531 2286.9063,184.5 2287.3281,184.5 L2289.6875,184.5 C2290.0469,184.5 2290.2656,184.4688 2290.4063,184.375 C2290.6563,184.2344 2290.8125,183.9375 2290.8125,183.6563 C2290.8125,183.375 2290.6719,183.125 2290.4531,182.9688 C2290.2813,182.8281 2290.125,182.7969 2289.6563,182.7969 L2286.2656,174.5938 L2282.5938,174.5938 C2282.1406,174.5938 2282.0156,174.6094 2281.8594,174.7031 C2281.6094,174.875 2281.4531,175.1563 2281.4531,175.4375 C2281.4531,175.7188 2281.5938,175.9688 2281.8125,176.1406 C2281.9844,176.25 2282.1563,176.2813 2282.5938,176.2813 L2283.6719,176.2813 L2281.0313,182.7969 C2280.6094,182.7969 2280.4531,182.8125 2280.2969,182.9219 C2280.0469,183.0781 2279.8906,183.3594 2279.8906,183.6563 C2279.8906,184.2188 2280.2656,184.5 2281.0156,184.5 L2283.2813,184.5 C2283.6406,184.5 2283.8594,184.4688 2283.9844,184.375 C2284.25,184.2344 2284.3906,183.9375 2284.3906,183.6563 C2284.3906,183.375 2284.2656,183.125 2284.0469,182.9531 C2283.875,182.8281 2283.7344,182.7969 2283.2813,182.7969 L2282.8906,182.7969 L2283.2813,181.8125 L2287.3281,181.8125 Z M2286.625,180.1094 L2283.9531,180.1094 L2285.2969,176.8438 L2286.625,180.1094 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+              textLength="71" x="2305.75" y="184.1543">VueEtapeIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2192" x2="2458" y1="196" y2="196"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2192" x2="2458" y1="204" y2="204"/>
+        <ellipse cx="2202" cy="215" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="2211"
+              y="218.2104">void setMouse(MouseEvent)
+        </text>
+        <ellipse cx="2202" cy="227.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="2211"
+              y="231.0151">EtapeIG getEtape()
+        </text>
+        <ellipse cx="2202" cy="240.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="184" x="2211" y="243.8198">void ajouterVueClient(VueClient)
+        </text>
+        <ellipse cx="2202" cy="253.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="242" x="2211"
+              y="256.6245">void setPoBVueMondeIG(BooleanProperty)
+        </text><!--MD5=[3f507ab716ecf62516da7ec3f81fd259]
+class twisk.vues.MenuBar-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="twisk.vues.MenuBar"
+              style="stroke:#A80036;stroke-width:1.5;" width="84" x="2821" y="189.5"/>
+        <ellipse cx="2836" cy="205.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2838.3438,201.1719 C2837.4063,200.7344 2836.8125,200.5938 2835.9375,200.5938 C2833.3125,200.5938 2831.3125,202.6719 2831.3125,205.3906 L2831.3125,206.5156 C2831.3125,209.0938 2833.4219,210.9844 2836.3125,210.9844 C2837.5313,210.9844 2838.6875,210.6875 2839.4375,210.1406 C2840.0156,209.7344 2840.3438,209.2813 2840.3438,208.8906 C2840.3438,208.4375 2839.9531,208.0469 2839.4844,208.0469 C2839.2656,208.0469 2839.0625,208.125 2838.875,208.3125 C2838.4219,208.7969 2838.4219,208.7969 2838.2344,208.8906 C2837.8125,209.1563 2837.125,209.2813 2836.3594,209.2813 C2834.3125,209.2813 2833.0156,208.1875 2833.0156,206.4844 L2833.0156,205.3906 C2833.0156,203.6094 2834.2656,202.2969 2836,202.2969 C2836.5781,202.2969 2837.1875,202.4531 2837.6563,202.7031 C2838.1406,202.9844 2838.3125,203.2031 2838.4063,203.6094 C2838.4688,204.0156 2838.5,204.1406 2838.6406,204.2656 C2838.7813,204.4063 2839.0156,204.5156 2839.2344,204.5156 C2839.5,204.5156 2839.7656,204.375 2839.9375,204.1563 C2840.0469,204 2840.0781,203.8125 2840.0781,203.3906 L2840.0781,201.9688 C2840.0781,201.5313 2840.0625,201.4063 2839.9688,201.25 C2839.8125,200.9844 2839.5313,200.8438 2839.2344,200.8438 C2838.9375,200.8438 2838.7344,200.9375 2838.5156,201.25 L2838.3438,201.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="2850"
+              y="209.6543">MenuBar
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2822" x2="2904" y1="221.5" y2="221.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2822" x2="2904" y1="229.5" y2="229.5"/><!--MD5=[26a347b817b4db8381d50548526fd9b7]
+class javafx.scene.control.Menu-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.control.Menu"
+              style="stroke:#A80036;stroke-width:1.5;" width="64" x="2123" y="676"/>
+        <ellipse cx="2138" cy="692" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2140.3438,687.6719 C2139.4063,687.2344 2138.8125,687.0938 2137.9375,687.0938 C2135.3125,687.0938 2133.3125,689.1719 2133.3125,691.8906 L2133.3125,693.0156 C2133.3125,695.5938 2135.4219,697.4844 2138.3125,697.4844 C2139.5313,697.4844 2140.6875,697.1875 2141.4375,696.6406 C2142.0156,696.2344 2142.3438,695.7813 2142.3438,695.3906 C2142.3438,694.9375 2141.9531,694.5469 2141.4844,694.5469 C2141.2656,694.5469 2141.0625,694.625 2140.875,694.8125 C2140.4219,695.2969 2140.4219,695.2969 2140.2344,695.3906 C2139.8125,695.6563 2139.125,695.7813 2138.3594,695.7813 C2136.3125,695.7813 2135.0156,694.6875 2135.0156,692.9844 L2135.0156,691.8906 C2135.0156,690.1094 2136.2656,688.7969 2138,688.7969 C2138.5781,688.7969 2139.1875,688.9531 2139.6563,689.2031 C2140.1406,689.4844 2140.3125,689.7031 2140.4063,690.1094 C2140.4688,690.5156 2140.5,690.6406 2140.6406,690.7656 C2140.7813,690.9063 2141.0156,691.0156 2141.2344,691.0156 C2141.5,691.0156 2141.7656,690.875 2141.9375,690.6563 C2142.0469,690.5 2142.0781,690.3125 2142.0781,689.8906 L2142.0781,688.4688 C2142.0781,688.0313 2142.0625,687.9063 2141.9688,687.75 C2141.8125,687.4844 2141.5313,687.3438 2141.2344,687.3438 C2140.9375,687.3438 2140.7344,687.4375 2140.5156,687.75 L2140.3438,687.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="2152"
+              y="696.1543">Menu
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2124" x2="2186" y1="708" y2="708"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2124" x2="2186" y1="716" y2="716"/><!--MD5=[0581863c60b5f8c141571a677a4fa78c]
+class javafx.scene.control.Button-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.control.Button"
+              style="stroke:#A80036;stroke-width:1.5;" width="70" x="2018" y="676"/>
+        <ellipse cx="2033" cy="692" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2035.3438,687.6719 C2034.4063,687.2344 2033.8125,687.0938 2032.9375,687.0938 C2030.3125,687.0938 2028.3125,689.1719 2028.3125,691.8906 L2028.3125,693.0156 C2028.3125,695.5938 2030.4219,697.4844 2033.3125,697.4844 C2034.5313,697.4844 2035.6875,697.1875 2036.4375,696.6406 C2037.0156,696.2344 2037.3438,695.7813 2037.3438,695.3906 C2037.3438,694.9375 2036.9531,694.5469 2036.4844,694.5469 C2036.2656,694.5469 2036.0625,694.625 2035.875,694.8125 C2035.4219,695.2969 2035.4219,695.2969 2035.2344,695.3906 C2034.8125,695.6563 2034.125,695.7813 2033.3594,695.7813 C2031.3125,695.7813 2030.0156,694.6875 2030.0156,692.9844 L2030.0156,691.8906 C2030.0156,690.1094 2031.2656,688.7969 2033,688.7969 C2033.5781,688.7969 2034.1875,688.9531 2034.6563,689.2031 C2035.1406,689.4844 2035.3125,689.7031 2035.4063,690.1094 C2035.4688,690.5156 2035.5,690.6406 2035.6406,690.7656 C2035.7813,690.9063 2036.0156,691.0156 2036.2344,691.0156 C2036.5,691.0156 2036.7656,690.875 2036.9375,690.6563 C2037.0469,690.5 2037.0781,690.3125 2037.0781,689.8906 L2037.0781,688.4688 C2037.0781,688.0313 2037.0625,687.9063 2036.9688,687.75 C2036.8125,687.4844 2036.5313,687.3438 2036.2344,687.3438 C2035.9375,687.3438 2035.7344,687.4375 2035.5156,687.75 L2035.3438,687.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="2047"
+              y="696.1543">Button
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2019" x2="2087" y1="708" y2="708"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2019" x2="2087" y1="716" y2="716"/><!--MD5=[4cf12abecad1ddd4e6cae1e12091a2af]
+class javafx.scene.control.Label-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.control.Label"
+              style="stroke:#A80036;stroke-width:1.5;" width="64" x="1919" y="676"/>
+        <ellipse cx="1934" cy="692" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M1936.3438,687.6719 C1935.4063,687.2344 1934.8125,687.0938 1933.9375,687.0938 C1931.3125,687.0938 1929.3125,689.1719 1929.3125,691.8906 L1929.3125,693.0156 C1929.3125,695.5938 1931.4219,697.4844 1934.3125,697.4844 C1935.5313,697.4844 1936.6875,697.1875 1937.4375,696.6406 C1938.0156,696.2344 1938.3438,695.7813 1938.3438,695.3906 C1938.3438,694.9375 1937.9531,694.5469 1937.4844,694.5469 C1937.2656,694.5469 1937.0625,694.625 1936.875,694.8125 C1936.4219,695.2969 1936.4219,695.2969 1936.2344,695.3906 C1935.8125,695.6563 1935.125,695.7813 1934.3594,695.7813 C1932.3125,695.7813 1931.0156,694.6875 1931.0156,692.9844 L1931.0156,691.8906 C1931.0156,690.1094 1932.2656,688.7969 1934,688.7969 C1934.5781,688.7969 1935.1875,688.9531 1935.6563,689.2031 C1936.1406,689.4844 1936.3125,689.7031 1936.4063,690.1094 C1936.4688,690.5156 1936.5,690.6406 1936.6406,690.7656 C1936.7813,690.9063 1937.0156,691.0156 1937.2344,691.0156 C1937.5,691.0156 1937.7656,690.875 1937.9375,690.6563 C1938.0469,690.5 1938.0781,690.3125 1938.0781,689.8906 L1938.0781,688.4688 C1938.0781,688.0313 1938.0625,687.9063 1937.9688,687.75 C1937.8125,687.4844 1937.5313,687.3438 1937.2344,687.3438 C1936.9375,687.3438 1936.7344,687.4375 1936.5156,687.75 L1936.3438,687.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="1948"
+              y="696.1543">Label
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1920" x2="1982" y1="708" y2="708"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="1920" x2="1982" y1="716" y2="716"/><!--MD5=[77ee202a31c15765ae6e394fdc4b5735]
+class twisk.mondeIG.PointDeControleIG-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="twisk.mondeIG.PointDeControleIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="140" x="131" y="438"/>
+        <ellipse cx="146" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M148.3438,449.6719 C147.4063,449.2344 146.8125,449.0938 145.9375,449.0938 C143.3125,449.0938 141.3125,451.1719 141.3125,453.8906 L141.3125,455.0156 C141.3125,457.5938 143.4219,459.4844 146.3125,459.4844 C147.5313,459.4844 148.6875,459.1875 149.4375,458.6406 C150.0156,458.2344 150.3438,457.7813 150.3438,457.3906 C150.3438,456.9375 149.9531,456.5469 149.4844,456.5469 C149.2656,456.5469 149.0625,456.625 148.875,456.8125 C148.4219,457.2969 148.4219,457.2969 148.2344,457.3906 C147.8125,457.6563 147.125,457.7813 146.3594,457.7813 C144.3125,457.7813 143.0156,456.6875 143.0156,454.9844 L143.0156,453.8906 C143.0156,452.1094 144.2656,450.7969 146,450.7969 C146.5781,450.7969 147.1875,450.9531 147.6563,451.2031 C148.1406,451.4844 148.3125,451.7031 148.4063,452.1094 C148.4688,452.5156 148.5,452.6406 148.6406,452.7656 C148.7813,452.9063 149.0156,453.0156 149.2344,453.0156 C149.5,453.0156 149.7656,452.875 149.9375,452.6563 C150.0469,452.5 150.0781,452.3125 150.0781,451.8906 L150.0781,450.4688 C150.0781,450.0313 150.0625,449.9063 149.9688,449.75 C149.8125,449.4844 149.5313,449.3438 149.2344,449.3438 C148.9375,449.3438 148.7344,449.4375 148.5156,449.75 L148.3438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="108" x="160"
+              y="458.1543">PointDeControleIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="132" x2="270" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="132" x2="270" y1="478" y2="478"/><!--MD5=[2427a02a575a2dc98fc70c29b4044af1]
+class twisk.mondeIG.ArcIG-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="twisk.mondeIG.ArcIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="64" x="32" y="438"/>
+        <ellipse cx="47" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M49.3438,449.6719 C48.4063,449.2344 47.8125,449.0938 46.9375,449.0938 C44.3125,449.0938 42.3125,451.1719 42.3125,453.8906 L42.3125,455.0156 C42.3125,457.5938 44.4219,459.4844 47.3125,459.4844 C48.5313,459.4844 49.6875,459.1875 50.4375,458.6406 C51.0156,458.2344 51.3438,457.7813 51.3438,457.3906 C51.3438,456.9375 50.9531,456.5469 50.4844,456.5469 C50.2656,456.5469 50.0625,456.625 49.875,456.8125 C49.4219,457.2969 49.4219,457.2969 49.2344,457.3906 C48.8125,457.6563 48.125,457.7813 47.3594,457.7813 C45.3125,457.7813 44.0156,456.6875 44.0156,454.9844 L44.0156,453.8906 C44.0156,452.1094 45.2656,450.7969 47,450.7969 C47.5781,450.7969 48.1875,450.9531 48.6563,451.2031 C49.1406,451.4844 49.3125,451.7031 49.4063,452.1094 C49.4688,452.5156 49.5,452.6406 49.6406,452.7656 C49.7813,452.9063 50.0156,453.0156 50.2344,453.0156 C50.5,453.0156 50.7656,452.875 50.9375,452.6563 C51.0469,452.5 51.0781,452.3125 51.0781,451.8906 L51.0781,450.4688 C51.0781,450.0313 51.0625,449.9063 50.9688,449.75 C50.8125,449.4844 50.5313,449.3438 50.2344,449.3438 C49.9375,449.3438 49.7344,449.4375 49.5156,449.75 L49.3438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="61"
+              y="458.1543">ArcIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="95" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="95" y1="478" y2="478"/><!--MD5=[9b6a503ee0c2ea323714f4191231ea4e]
+class twisk.mondeIG.EtapeIG-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="twisk.mondeIG.EtapeIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="78" x="306" y="438"/>
+        <ellipse cx="321" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M323.3438,449.6719 C322.4063,449.2344 321.8125,449.0938 320.9375,449.0938 C318.3125,449.0938 316.3125,451.1719 316.3125,453.8906 L316.3125,455.0156 C316.3125,457.5938 318.4219,459.4844 321.3125,459.4844 C322.5313,459.4844 323.6875,459.1875 324.4375,458.6406 C325.0156,458.2344 325.3438,457.7813 325.3438,457.3906 C325.3438,456.9375 324.9531,456.5469 324.4844,456.5469 C324.2656,456.5469 324.0625,456.625 323.875,456.8125 C323.4219,457.2969 323.4219,457.2969 323.2344,457.3906 C322.8125,457.6563 322.125,457.7813 321.3594,457.7813 C319.3125,457.7813 318.0156,456.6875 318.0156,454.9844 L318.0156,453.8906 C318.0156,452.1094 319.2656,450.7969 321,450.7969 C321.5781,450.7969 322.1875,450.9531 322.6563,451.2031 C323.1406,451.4844 323.3125,451.7031 323.4063,452.1094 C323.4688,452.5156 323.5,452.6406 323.6406,452.7656 C323.7813,452.9063 324.0156,453.0156 324.2344,453.0156 C324.5,453.0156 324.7656,452.875 324.9375,452.6563 C325.0469,452.5 325.0781,452.3125 325.0781,451.8906 L325.0781,450.4688 C325.0781,450.0313 325.0625,449.9063 324.9688,449.75 C324.8125,449.4844 324.5313,449.3438 324.2344,449.3438 C323.9375,449.3438 323.7344,449.4375 323.5156,449.75 L323.3438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46" x="335"
+              y="458.1543">EtapeIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="307" x2="383" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="307" x2="383" y1="478" y2="478"/><!--MD5=[fcbef430d071e470c7cad3f62b086f36]
+class javafx.scene.shape.Line-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.shape.Line"
+              style="stroke:#A80036;stroke-width:1.5;" width="56" x="440" y="438"/>
+        <ellipse cx="455" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M457.3438,449.6719 C456.4063,449.2344 455.8125,449.0938 454.9375,449.0938 C452.3125,449.0938 450.3125,451.1719 450.3125,453.8906 L450.3125,455.0156 C450.3125,457.5938 452.4219,459.4844 455.3125,459.4844 C456.5313,459.4844 457.6875,459.1875 458.4375,458.6406 C459.0156,458.2344 459.3438,457.7813 459.3438,457.3906 C459.3438,456.9375 458.9531,456.5469 458.4844,456.5469 C458.2656,456.5469 458.0625,456.625 457.875,456.8125 C457.4219,457.2969 457.4219,457.2969 457.2344,457.3906 C456.8125,457.6563 456.125,457.7813 455.3594,457.7813 C453.3125,457.7813 452.0156,456.6875 452.0156,454.9844 L452.0156,453.8906 C452.0156,452.1094 453.2656,450.7969 455,450.7969 C455.5781,450.7969 456.1875,450.9531 456.6563,451.2031 C457.1406,451.4844 457.3125,451.7031 457.4063,452.1094 C457.4688,452.5156 457.5,452.6406 457.6406,452.7656 C457.7813,452.9063 458.0156,453.0156 458.2344,453.0156 C458.5,453.0156 458.7656,452.875 458.9375,452.6563 C459.0469,452.5 459.0781,452.3125 459.0781,451.8906 L459.0781,450.4688 C459.0781,450.0313 459.0625,449.9063 458.9688,449.75 C458.8125,449.4844 458.5313,449.3438 458.2344,449.3438 C457.9375,449.3438 457.7344,449.4375 457.5156,449.75 L457.3438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="24" x="469"
+              y="458.1543">Line
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="441" x2="495" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="441" x2="495" y1="478" y2="478"/><!--MD5=[1f832297319af814e230c92f8018c95e]
+class javafx.scene.shape.Polyline-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.shape.Polyline"
+              style="stroke:#A80036;stroke-width:1.5;" width="77" x="531.5" y="438"/>
+        <ellipse cx="546.5" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M548.8438,449.6719 C547.9063,449.2344 547.3125,449.0938 546.4375,449.0938 C543.8125,449.0938 541.8125,451.1719 541.8125,453.8906 L541.8125,455.0156 C541.8125,457.5938 543.9219,459.4844 546.8125,459.4844 C548.0313,459.4844 549.1875,459.1875 549.9375,458.6406 C550.5156,458.2344 550.8438,457.7813 550.8438,457.3906 C550.8438,456.9375 550.4531,456.5469 549.9844,456.5469 C549.7656,456.5469 549.5625,456.625 549.375,456.8125 C548.9219,457.2969 548.9219,457.2969 548.7344,457.3906 C548.3125,457.6563 547.625,457.7813 546.8594,457.7813 C544.8125,457.7813 543.5156,456.6875 543.5156,454.9844 L543.5156,453.8906 C543.5156,452.1094 544.7656,450.7969 546.5,450.7969 C547.0781,450.7969 547.6875,450.9531 548.1563,451.2031 C548.6406,451.4844 548.8125,451.7031 548.9063,452.1094 C548.9688,452.5156 549,452.6406 549.1406,452.7656 C549.2813,452.9063 549.5156,453.0156 549.7344,453.0156 C550,453.0156 550.2656,452.875 550.4375,452.6563 C550.5469,452.5 550.5781,452.3125 550.5781,451.8906 L550.5781,450.4688 C550.5781,450.0313 550.5625,449.9063 550.4688,449.75 C550.3125,449.4844 550.0313,449.3438 549.7344,449.3438 C549.4375,449.3438 549.2344,449.4375 549.0156,449.75 L548.8438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="45" x="560.5"
+              y="458.1543">Polyline
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="532.5" x2="607.5" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="532.5" x2="607.5" y1="478" y2="478"/><!--MD5=[5670e7cb7c152ac72a1c0084cfffe9d8]
+class javafx.scene.shape.Circle-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.shape.Circle"
+              style="stroke:#A80036;stroke-width:1.5;" width="66" x="644" y="438"/>
+        <ellipse cx="659" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M661.3438,449.6719 C660.4063,449.2344 659.8125,449.0938 658.9375,449.0938 C656.3125,449.0938 654.3125,451.1719 654.3125,453.8906 L654.3125,455.0156 C654.3125,457.5938 656.4219,459.4844 659.3125,459.4844 C660.5313,459.4844 661.6875,459.1875 662.4375,458.6406 C663.0156,458.2344 663.3438,457.7813 663.3438,457.3906 C663.3438,456.9375 662.9531,456.5469 662.4844,456.5469 C662.2656,456.5469 662.0625,456.625 661.875,456.8125 C661.4219,457.2969 661.4219,457.2969 661.2344,457.3906 C660.8125,457.6563 660.125,457.7813 659.3594,457.7813 C657.3125,457.7813 656.0156,456.6875 656.0156,454.9844 L656.0156,453.8906 C656.0156,452.1094 657.2656,450.7969 659,450.7969 C659.5781,450.7969 660.1875,450.9531 660.6563,451.2031 C661.1406,451.4844 661.3125,451.7031 661.4063,452.1094 C661.4688,452.5156 661.5,452.6406 661.6406,452.7656 C661.7813,452.9063 662.0156,453.0156 662.2344,453.0156 C662.5,453.0156 662.7656,452.875 662.9375,452.6563 C663.0469,452.5 663.0781,452.3125 663.0781,451.8906 L663.0781,450.4688 C663.0781,450.0313 663.0625,449.9063 662.9688,449.75 C662.8125,449.4844 662.5313,449.3438 662.2344,449.3438 C661.9375,449.3438 661.7344,449.4375 661.5156,449.75 L661.3438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="673"
+              y="458.1543">Circle
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="645" x2="709" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="645" x2="709" y1="478" y2="478"/><!--MD5=[0e3538d64a6d9f596bad1432873ae1db]
+class javafx.scene.layout.FlowPane-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.layout.FlowPane"
+              style="stroke:#A80036;stroke-width:1.5;" width="88" x="2442" y="41"/>
+        <ellipse cx="2457" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2459.3438,52.6719 C2458.4063,52.2344 2457.8125,52.0938 2456.9375,52.0938 C2454.3125,52.0938 2452.3125,54.1719 2452.3125,56.8906 L2452.3125,58.0156 C2452.3125,60.5938 2454.4219,62.4844 2457.3125,62.4844 C2458.5313,62.4844 2459.6875,62.1875 2460.4375,61.6406 C2461.0156,61.2344 2461.3438,60.7813 2461.3438,60.3906 C2461.3438,59.9375 2460.9531,59.5469 2460.4844,59.5469 C2460.2656,59.5469 2460.0625,59.625 2459.875,59.8125 C2459.4219,60.2969 2459.4219,60.2969 2459.2344,60.3906 C2458.8125,60.6563 2458.125,60.7813 2457.3594,60.7813 C2455.3125,60.7813 2454.0156,59.6875 2454.0156,57.9844 L2454.0156,56.8906 C2454.0156,55.1094 2455.2656,53.7969 2457,53.7969 C2457.5781,53.7969 2458.1875,53.9531 2458.6563,54.2031 C2459.1406,54.4844 2459.3125,54.7031 2459.4063,55.1094 C2459.4688,55.5156 2459.5,55.6406 2459.6406,55.7656 C2459.7813,55.9063 2460.0156,56.0156 2460.2344,56.0156 C2460.5,56.0156 2460.7656,55.875 2460.9375,55.6563 C2461.0469,55.5 2461.0781,55.3125 2461.0781,54.8906 L2461.0781,53.4688 C2461.0781,53.0313 2461.0625,52.9063 2460.9688,52.75 C2460.8125,52.4844 2460.5313,52.3438 2460.2344,52.3438 C2459.9375,52.3438 2459.7344,52.4375 2459.5156,52.75 L2459.3438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="56" x="2471"
+              y="61.1543">FlowPane
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2443" x2="2529" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2443" x2="2529" y1="81" y2="81"/><!--MD5=[c649c1a94710cb23221a545c481e5eb1]
+class javafx.scene.layout.TilePane-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.layout.TilePane"
+              style="stroke:#A80036;stroke-width:1.5;" width="81" x="2325.5" y="41"/>
+        <ellipse cx="2340.5" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2342.8438,52.6719 C2341.9063,52.2344 2341.3125,52.0938 2340.4375,52.0938 C2337.8125,52.0938 2335.8125,54.1719 2335.8125,56.8906 L2335.8125,58.0156 C2335.8125,60.5938 2337.9219,62.4844 2340.8125,62.4844 C2342.0313,62.4844 2343.1875,62.1875 2343.9375,61.6406 C2344.5156,61.2344 2344.8438,60.7813 2344.8438,60.3906 C2344.8438,59.9375 2344.4531,59.5469 2343.9844,59.5469 C2343.7656,59.5469 2343.5625,59.625 2343.375,59.8125 C2342.9219,60.2969 2342.9219,60.2969 2342.7344,60.3906 C2342.3125,60.6563 2341.625,60.7813 2340.8594,60.7813 C2338.8125,60.7813 2337.5156,59.6875 2337.5156,57.9844 L2337.5156,56.8906 C2337.5156,55.1094 2338.7656,53.7969 2340.5,53.7969 C2341.0781,53.7969 2341.6875,53.9531 2342.1563,54.2031 C2342.6406,54.4844 2342.8125,54.7031 2342.9063,55.1094 C2342.9688,55.5156 2343,55.6406 2343.1406,55.7656 C2343.2813,55.9063 2343.5156,56.0156 2343.7344,56.0156 C2344,56.0156 2344.2656,55.875 2344.4375,55.6563 C2344.5469,55.5 2344.5781,55.3125 2344.5781,54.8906 L2344.5781,53.4688 C2344.5781,53.0313 2344.5625,52.9063 2344.4688,52.75 C2344.3125,52.4844 2344.0313,52.3438 2343.7344,52.3438 C2343.4375,52.3438 2343.2344,52.4375 2343.0156,52.75 L2342.8438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="49" x="2354.5"
+              y="61.1543">TilePane
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2326.5" x2="2405.5" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2326.5" x2="2405.5" y1="81" y2="81"/><!--MD5=[69f56fd45d3ebe8f4e05b74971429e92]
+class javafx.scene.layout.Pane-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.layout.Pane"
+              style="stroke:#A80036;stroke-width:1.5;" width="60" x="2132" y="41"/>
+        <ellipse cx="2147" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2149.3438,52.6719 C2148.4063,52.2344 2147.8125,52.0938 2146.9375,52.0938 C2144.3125,52.0938 2142.3125,54.1719 2142.3125,56.8906 L2142.3125,58.0156 C2142.3125,60.5938 2144.4219,62.4844 2147.3125,62.4844 C2148.5313,62.4844 2149.6875,62.1875 2150.4375,61.6406 C2151.0156,61.2344 2151.3438,60.7813 2151.3438,60.3906 C2151.3438,59.9375 2150.9531,59.5469 2150.4844,59.5469 C2150.2656,59.5469 2150.0625,59.625 2149.875,59.8125 C2149.4219,60.2969 2149.4219,60.2969 2149.2344,60.3906 C2148.8125,60.6563 2148.125,60.7813 2147.3594,60.7813 C2145.3125,60.7813 2144.0156,59.6875 2144.0156,57.9844 L2144.0156,56.8906 C2144.0156,55.1094 2145.2656,53.7969 2147,53.7969 C2147.5781,53.7969 2148.1875,53.9531 2148.6563,54.2031 C2149.1406,54.4844 2149.3125,54.7031 2149.4063,55.1094 C2149.4688,55.5156 2149.5,55.6406 2149.6406,55.7656 C2149.7813,55.9063 2150.0156,56.0156 2150.2344,56.0156 C2150.5,56.0156 2150.7656,55.875 2150.9375,55.6563 C2151.0469,55.5 2151.0781,55.3125 2151.0781,54.8906 L2151.0781,53.4688 C2151.0781,53.0313 2151.0625,52.9063 2150.9688,52.75 C2150.8125,52.4844 2150.5313,52.3438 2150.2344,52.3438 C2149.9375,52.3438 2149.7344,52.4375 2149.5156,52.75 L2149.3438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="2161"
+              y="61.1543">Pane
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2133" x2="2191" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2133" x2="2191" y1="81" y2="81"/><!--MD5=[3dbac7afcefd4b30d5ebdf4a9a866f54]
+class javafx.scene.layout.VBox-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="javafx.scene.layout.VBox"
+              style="stroke:#A80036;stroke-width:1.5;" width="63" x="2227.5" y="41"/>
+        <ellipse cx="2242.5" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2244.8438,52.6719 C2243.9063,52.2344 2243.3125,52.0938 2242.4375,52.0938 C2239.8125,52.0938 2237.8125,54.1719 2237.8125,56.8906 L2237.8125,58.0156 C2237.8125,60.5938 2239.9219,62.4844 2242.8125,62.4844 C2244.0313,62.4844 2245.1875,62.1875 2245.9375,61.6406 C2246.5156,61.2344 2246.8438,60.7813 2246.8438,60.3906 C2246.8438,59.9375 2246.4531,59.5469 2245.9844,59.5469 C2245.7656,59.5469 2245.5625,59.625 2245.375,59.8125 C2244.9219,60.2969 2244.9219,60.2969 2244.7344,60.3906 C2244.3125,60.6563 2243.625,60.7813 2242.8594,60.7813 C2240.8125,60.7813 2239.5156,59.6875 2239.5156,57.9844 L2239.5156,56.8906 C2239.5156,55.1094 2240.7656,53.7969 2242.5,53.7969 C2243.0781,53.7969 2243.6875,53.9531 2244.1563,54.2031 C2244.6406,54.4844 2244.8125,54.7031 2244.9063,55.1094 C2244.9688,55.5156 2245,55.6406 2245.1406,55.7656 C2245.2813,55.9063 2245.5156,56.0156 2245.7344,56.0156 C2246,56.0156 2246.2656,55.875 2246.4375,55.6563 C2246.5469,55.5 2246.5781,55.3125 2246.5781,54.8906 L2246.5781,53.4688 C2246.5781,53.0313 2246.5625,52.9063 2246.4688,52.75 C2246.3125,52.4844 2246.0313,52.3438 2245.7344,52.3438 C2245.4375,52.3438 2245.2344,52.4375 2245.0156,52.75 L2244.8438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="2256.5"
+              y="61.1543">VBox
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2228.5" x2="2289.5" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2228.5" x2="2289.5" y1="81" y2="81"/><!--MD5=[981135c3db39ec3dc6758bdf3fcc6e5a]
+class twisk.simulation.Client-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="twisk.simulation.Client"
+              style="stroke:#A80036;stroke-width:1.5;" width="65" x="820.5" y="438"/>
+        <ellipse cx="835.5" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M837.8438,449.6719 C836.9063,449.2344 836.3125,449.0938 835.4375,449.0938 C832.8125,449.0938 830.8125,451.1719 830.8125,453.8906 L830.8125,455.0156 C830.8125,457.5938 832.9219,459.4844 835.8125,459.4844 C837.0313,459.4844 838.1875,459.1875 838.9375,458.6406 C839.5156,458.2344 839.8438,457.7813 839.8438,457.3906 C839.8438,456.9375 839.4531,456.5469 838.9844,456.5469 C838.7656,456.5469 838.5625,456.625 838.375,456.8125 C837.9219,457.2969 837.9219,457.2969 837.7344,457.3906 C837.3125,457.6563 836.625,457.7813 835.8594,457.7813 C833.8125,457.7813 832.5156,456.6875 832.5156,454.9844 L832.5156,453.8906 C832.5156,452.1094 833.7656,450.7969 835.5,450.7969 C836.0781,450.7969 836.6875,450.9531 837.1563,451.2031 C837.6406,451.4844 837.8125,451.7031 837.9063,452.1094 C837.9688,452.5156 838,452.6406 838.1406,452.7656 C838.2813,452.9063 838.5156,453.0156 838.7344,453.0156 C839,453.0156 839.2656,452.875 839.4375,452.6563 C839.5469,452.5 839.5781,452.3125 839.5781,451.8906 L839.5781,450.4688 C839.5781,450.0313 839.5625,449.9063 839.4688,449.75 C839.3125,449.4844 839.0313,449.3438 838.7344,449.3438 C838.4375,449.3438 838.2344,449.4375 838.0156,449.75 L837.8438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="849.5"
+              y="458.1543">Client
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="821.5" x2="884.5" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="821.5" x2="884.5" y1="478" y2="478"/><!--MD5=[d23733d20ff3d6997a7eb608cd448174]
+class java.lang.Boolean-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="java.lang.Boolean"
+              style="stroke:#A80036;stroke-width:1.5;" width="81" x="942.5" y="438"/>
+        <ellipse cx="957.5" cy="454" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M959.8438,449.6719 C958.9063,449.2344 958.3125,449.0938 957.4375,449.0938 C954.8125,449.0938 952.8125,451.1719 952.8125,453.8906 L952.8125,455.0156 C952.8125,457.5938 954.9219,459.4844 957.8125,459.4844 C959.0313,459.4844 960.1875,459.1875 960.9375,458.6406 C961.5156,458.2344 961.8438,457.7813 961.8438,457.3906 C961.8438,456.9375 961.4531,456.5469 960.9844,456.5469 C960.7656,456.5469 960.5625,456.625 960.375,456.8125 C959.9219,457.2969 959.9219,457.2969 959.7344,457.3906 C959.3125,457.6563 958.625,457.7813 957.8594,457.7813 C955.8125,457.7813 954.5156,456.6875 954.5156,454.9844 L954.5156,453.8906 C954.5156,452.1094 955.7656,450.7969 957.5,450.7969 C958.0781,450.7969 958.6875,450.9531 959.1563,451.2031 C959.6406,451.4844 959.8125,451.7031 959.9063,452.1094 C959.9688,452.5156 960,452.6406 960.1406,452.7656 C960.2813,452.9063 960.5156,453.0156 960.7344,453.0156 C961,453.0156 961.2656,452.875 961.4375,452.6563 C961.5469,452.5 961.5781,452.3125 961.5781,451.8906 L961.5781,450.4688 C961.5781,450.0313 961.5625,449.9063 961.4688,449.75 C961.3125,449.4844 961.0313,449.3438 960.7344,449.3438 C960.4375,449.3438 960.2344,449.4375 960.0156,449.75 L959.8438,449.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="49" x="971.5"
+              y="458.1543">Boolean
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="943.5" x2="1022.5" y1="470" y2="470"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="943.5" x2="1022.5" y1="478" y2="478"/><!--MD5=[a480427e2b0495212a8cd6706556f868]
+class twisk.designPattern.Observateur-->
+        <rect fill="#FEFECE" filter="url(#f2yz5q5wv2buu)" height="48" id="twisk.designPattern.Observateur"
+              style="stroke:#A80036;stroke-width:1.5;" width="108" x="2586" y="41"/>
+        <ellipse cx="2601" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M2603.3438,52.6719 C2602.4063,52.2344 2601.8125,52.0938 2600.9375,52.0938 C2598.3125,52.0938 2596.3125,54.1719 2596.3125,56.8906 L2596.3125,58.0156 C2596.3125,60.5938 2598.4219,62.4844 2601.3125,62.4844 C2602.5313,62.4844 2603.6875,62.1875 2604.4375,61.6406 C2605.0156,61.2344 2605.3438,60.7813 2605.3438,60.3906 C2605.3438,59.9375 2604.9531,59.5469 2604.4844,59.5469 C2604.2656,59.5469 2604.0625,59.625 2603.875,59.8125 C2603.4219,60.2969 2603.4219,60.2969 2603.2344,60.3906 C2602.8125,60.6563 2602.125,60.7813 2601.3594,60.7813 C2599.3125,60.7813 2598.0156,59.6875 2598.0156,57.9844 L2598.0156,56.8906 C2598.0156,55.1094 2599.2656,53.7969 2601,53.7969 C2601.5781,53.7969 2602.1875,53.9531 2602.6563,54.2031 C2603.1406,54.4844 2603.3125,54.7031 2603.4063,55.1094 C2603.4688,55.5156 2603.5,55.6406 2603.6406,55.7656 C2603.7813,55.9063 2604.0156,56.0156 2604.2344,56.0156 C2604.5,56.0156 2604.7656,55.875 2604.9375,55.6563 C2605.0469,55.5 2605.0781,55.3125 2605.0781,54.8906 L2605.0781,53.4688 C2605.0781,53.0313 2605.0625,52.9063 2604.9688,52.75 C2604.8125,52.4844 2604.5313,52.3438 2604.2344,52.3438 C2603.9375,52.3438 2603.7344,52.4375 2603.5156,52.75 L2603.3438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="76" x="2615"
+              y="61.1543">Observateur
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2587" x2="2693" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="2587" x2="2693" y1="81" y2="81"/><!--MD5=[aae99e8d3f31b6abdf61c4f40b6ebec0]
+link twisk.vues.VueMenu to javafx.scene.control.Menu-->
+        <path codeLine="21"
+              d="M2596.8,601.093 C2583.59,610.07 2569.92,618.214 2556,625 C2429.52,686.6493 2257.73,697.1768 2187.22,698.8022 "
+              fill="none" id="twisk.vues.VueMenu-javafx.scene.control.Menu" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2195.1431"
+              y="693.981">7
+        </text><!--MD5=[07be53ef80b27469709e512709a86f16]
+link twisk.vues.VueOutils to javafx.scene.control.Button-->
+        <path codeLine="26"
+              d="M2526.56,250.573 C2510.04,255.149 2493.15,259.461 2477,263 C2385.12,283.134 2120.09,252.342 2058,323 C1967.94,425.495 2021.6,611.246 2044.34,675.9968 "
+              fill="none" id="twisk.vues.VueOutils-javafx.scene.control.Button"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2033.0959"
+              y="665.008">3
+        </text><!--MD5=[9ff2a4901af257b419317a229ce95d5c]
+link twisk.vues.VuePointDeControleIG to twisk.mondeIG.PointDeControleIG-->
+        <path codeLine="31"
+              d="M1697.02,250.529 C1674.78,255.463 1651.84,259.893 1630,263 C1482.23,284.019 417.047,247.997 288,323 C244.169,348.475 219.098,405.794 207.982,437.97 "
+              fill="none" id="twisk.vues.VuePointDeControleIG-twisk.mondeIG.PointDeControleIG"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="200.7461"
+              y="426.9743">1
+        </text><!--MD5=[a9aa44db332bbfad97aa8e1e68c33372]
+link twisk.vues.VueArcIG to twisk.mondeIG.ArcIG-->
+        <path codeLine="40"
+              d="M1079.8,221.37 C768.632,233.995 187.451,265.056 113,323 C77.3874,350.717 67.6028,406.341 64.9508,437.849 "
+              fill="none" id="twisk.vues.VueArcIG-twisk.mondeIG.ArcIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="56.1694"
+              y="426.8223">1
+        </text><!--MD5=[1245b83282c142172a4ffb36a3ce51a4]
+link twisk.vues.VueArcIG to javafx.scene.shape.Line-->
+        <path codeLine="41"
+              d="M1079.74,219.466 C883.196,228.386 597.514,253.321 514,323 C479.677,351.637 470.827,406.644 468.632,437.867 "
+              fill="none" id="twisk.vues.VueArcIG-javafx.scene.shape.Line" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="459.769"
+              y="426.845">1
+        </text><!--MD5=[b980b5fd856ad3c5c9e12bc3511013d6]
+link twisk.vues.VueArcIG to javafx.scene.shape.Polyline-->
+        <path codeLine="42"
+              d="M1079.9,226.32 C914.845,239.999 694.536,268.089 626,323 C590.285,351.615 577.187,406.631 572.504,437.861 "
+              fill="none" id="twisk.vues.VueArcIG-javafx.scene.shape.Polyline"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="564.1207"
+              y="426.8374">1
+        </text><!--MD5=[189bdfafac1a68293e53bcef39949501]
+link twisk.vues.VueActiviteIG to javafx.scene.layout.FlowPane-->
+        <path codeLine="47"
+              d="M2453.13,424.771 C2475,392.387 2511.58,346.525 2556,323 C2640.87,278.052 2920.98,335.472 2984,263 C3025.41,215.377 3028.19,166.055 2984,121 C2975.95,112.789 2581.1,116.009 2570,113 C2551.94,108.103 2533.6,98.495 2518.69,89.235 "
+              fill="none" id="twisk.vues.VueActiviteIG-javafx.scene.layout.FlowPane"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2517.6832"
+              y="109.0535">1
+        </text><!--MD5=[31ce7d68537011e034aa2520fbde1791]
+link twisk.vues.VueClient to twisk.simulation.Client-->
+        <path codeLine="52"
+              d="M2054.89,250.725 C2046.65,255.652 2037.86,260.029 2029,263 C1796.26,341.049 1132.76,190.682 926,323 C885.25,349.079 865.836,405.883 857.816,437.885 "
+              fill="none" id="twisk.vues.VueClient-twisk.simulation.Client" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="850.0251"
+              y="426.8676">1
+        </text><!--MD5=[a276a6665abf37febcb526eae65e920c]
+link twisk.vues.VueClient to twisk.mondeIG.EtapeIG-->
+        <path codeLine="53"
+              d="M2055.33,250.617 C2046.97,255.626 2038.03,260.058 2029,263 C1859.33,318.303 576.686,230.619 424,323 C381.721,348.581 359.943,405.857 350.667,437.999 "
+              fill="none" id="twisk.vues.VueClient-twisk.mondeIG.EtapeIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="353.1442"
+              y="427.0108">1
+        </text><!--MD5=[27dc994fac8278d0f8c52ca12e28da92]
+link twisk.vues.VueGuichetIG to javafx.scene.layout.FlowPane-->
+        <path codeLine="60"
+              d="M2212.27,412.163 C2234.42,381.019 2267.43,342.896 2307,323 C2429.88,261.21 2830.58,364.858 2923,263 C2965.41,216.261 2967.12,166.129 2923,121 C2909.29,106.973 2588.92,118.164 2570,113 C2551.94,108.073 2533.61,98.461 2518.69,89.206 "
+              fill="none" id="twisk.vues.VueGuichetIG-javafx.scene.layout.FlowPane"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2527.6332"
+              y="109.0174">1
+        </text><!--MD5=[0a9369b34d0dc9616a7c19e3e6a6de5c]
+link twisk.vues.VueEtapeIG to twisk.mondeIG.EtapeIG-->
+        <path codeLine="67"
+              d="M2190.81,259.472 C2184.82,260.795 2178.87,261.983 2173,263 C1981.41,296.2 590.521,222.597 424,323 C381.682,348.516 359.919,405.818 350.656,437.981 "
+              fill="none" id="twisk.vues.VueEtapeIG-twisk.mondeIG.EtapeIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="343.0804"
+              y="426.9882">1
+        </text><!--MD5=[de22ba74f019fdacecf9b4c14373b415]
+link twisk.vues.VueEtapeIG to javafx.scene.control.Label-->
+        <path codeLine="68"
+              d="M2190.75,257.888 C2100.52,287.191 1997.7,320.916 1996,323 C1909.2,429.095 1933.94,611.785 1946.11,675.9272 "
+              fill="none" id="twisk.vues.VueEtapeIG-javafx.scene.control.Label"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1935.8319"
+              y="664.9206">1
+        </text><!--MD5=[b4d67bafad6bb14fde564681911aaf9e]
+link twisk.vues.VueEtapeIG to java.lang.Boolean-->
+        <path codeLine="69"
+              d="M2190.78,259.326 C2184.8,260.689 2178.86,261.925 2173,263 C2051.62,285.27 1169.39,258.811 1064,323 C1021.65,348.794 998.977,405.71 989.131,437.807 "
+              fill="none" id="twisk.vues.VueEtapeIG-java.lang.Boolean" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="981.6771"
+              y="426.7696">1
+        </text><!--MD5=[66cd338af0002afea2a8175db6dbb03a]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueMenu-->
+        <path codeLine="72"
+              d="M2714.05,67.89 C2858.18,72.338 3165.17,85.869 3197,121 C3239.38,167.768 3231.66,210.257 3197,263 C3132.54,361.094 3008,410.817 2905.05,435.893 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueMenu"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2713.8,74.886,2694.02,67.299,2714.21,60.892,2713.8,74.886"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3e17f4649418983f1d668c73d3643324]
+reverse link twisk.vues.MenuBar to twisk.vues.VueMenu-->
+        <path codeLine="73" d="M2842.2,255.853 C2832.69,274.759 2820.81,298.362 2808.54,322.761 " fill="none"
+              id="twisk.vues.MenuBar-backto-twisk.vues.VueMenu" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2836.09,252.411,2851.33,237.69,2848.6,258.703,2836.09,252.411"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2e213b1b2a8bd4c934a47986c8c4844e]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueOutils-->
+        <path codeLine="74" d="M2640,109.53 C2640,130.789 2640,156.07 2640,176.262 " fill="none"
+              id="twisk.designPattern.Observateur-backto-twisk.vues.VueOutils"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2633,109.213,2640,89.213,2647,109.213,2633,109.213"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f2ab782c6b1ef765092db7ceda4ed6dc]
+reverse link javafx.scene.layout.TilePane to twisk.vues.VueOutils-->
+        <path codeLine="75"
+              d="M2404.83,101.411 C2411.23,105.889 2418.05,109.959 2425,113 C2446.42,122.378 2454.89,113.377 2477,121 C2515.96,134.436 2556.38,157.06 2587.23,176.449 "
+              fill="none" id="javafx.scene.layout.TilePane-backto-twisk.vues.VueOutils"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2400.48,106.895,2389.09,89.031,2409.13,95.89,2400.48,106.895"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[44859597f191c849cfc74f4de4ef4b18]
+reverse link twisk.designPattern.Observateur to twisk.vues.VuePointDeControleIG-->
+        <path codeLine="76"
+              d="M2585.43,98.383 C2572.88,104.369 2559.3,109.751 2546,113 C2490.19,126.632 2085.03,108.282 2029,121 C1980.24,132.07 1929.06,155.91 1890.82,176.48 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VuePointDeControleIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2582.54,91.996,2603.52,89.033,2588.97,104.434,2582.54,91.996"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[565053dff5bbd6adb120735068a9b2da]
+reverse link javafx.scene.shape.Circle to twisk.vues.VuePointDeControleIG-->
+        <path codeLine="77"
+              d="M701.519,420.75 C723.814,388.154 759.919,344.277 804,323 C969.742,242.999 1448.17,291.45 1630,263 C1651,259.714 1673.05,255.335 1694.51,250.549 "
+              fill="none" id="javafx.scene.shape.Circle-backto-twisk.vues.VuePointDeControleIG"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="707.101,425.005,690.312,437.932,695.375,417.356,707.101,425.005"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[434a1f8134393907304483da3b77a1a0]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueMondeIG-->
+        <path codeLine="78"
+              d="M2585.45,98.45 C2572.9,104.432 2559.31,109.796 2546,113 C2521.29,118.948 1653.82,109.797 1631,121 C1604.87,133.829 1585.36,161.177 1573.28,182.65 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueMondeIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2582.56,92.064,2603.54,89.096,2588.99,104.5,2582.56,92.064"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7d05c853ad564f84babfe7b72bf72d52]
+reverse link javafx.scene.layout.Pane to twisk.vues.VueMondeIG-->
+        <path codeLine="79"
+              d="M2111.6,66.284 C1995.49,67.717 1712.88,75.879 1631,121 C1605.68,134.951 1586.18,161.866 1573.9,182.91 "
+              fill="none" id="javafx.scene.layout.Pane-backto-twisk.vues.VueMondeIG"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2111.8,59.282,2131.87,66.083,2111.94,73.281,2111.8,59.282"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[84a60d415afdcdb7aa93dc072ff3ab59]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueArcIG-->
+        <path codeLine="80"
+              d="M2585.45,98.462 C2572.9,104.443 2559.31,109.804 2546,113 C2488.79,126.734 1544.57,108.879 1487,121 C1440.32,130.828 1391.23,151.29 1352.05,170.377 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueArcIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2582.56,92.076,2603.54,89.107,2588.99,104.511,2582.56,92.076"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ada3389b8403a8b2b3e01e663a5e8b9a]
+reverse link javafx.scene.layout.Pane to twisk.vues.VueArcIG-->
+        <path codeLine="81"
+              d="M2111.61,67.981 C1975.98,73.65 1605.47,91.459 1487,121 C1441.88,132.251 1394.12,152.093 1355.38,170.43 "
+              fill="none" id="javafx.scene.layout.Pane-backto-twisk.vues.VueArcIG"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2111.73,60.97,2131.99,67.147,2112.3,74.959,2111.73,60.97"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4c5e14c87c45b880ee72e2ca7119605a]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueActiviteIG-->
+        <path codeLine="82"
+              d="M2714.21,65.528 C2814.81,66.654 2986.46,75.426 3026,121 C3067.36,168.67 3067.71,215.632 3026,263 C2956.42,342.026 2649.35,274.296 2556,323 C2511.29,346.326 2474.65,392.468 2452.85,424.957 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueActiviteIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2714.15,72.528,2694.2,65.394,2714.25,58.528,2714.15,72.528"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cfb31d446482f4f1a2477c6dda5798e8]
+reverse link twisk.vues.VueEtapeIG to twisk.vues.VueActiviteIG-->
+        <path codeLine="83" d="M2353.91,281.739 C2373.75,327.877 2399.31,387.317 2415.43,424.804 " fill="none"
+              id="twisk.vues.VueEtapeIG-backto-twisk.vues.VueActiviteIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2347.41,284.339,2345.94,263.2,2360.27,278.808,2347.41,284.339"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[541d1f9dcaaa94fb106a08a85a91691a]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueClient-->
+        <path codeLine="84"
+              d="M2585.08,98.482 C2572.63,104.408 2559.17,109.74 2546,113 C2525.93,117.965 2192.53,111.833 2174,121 C2150.32,132.715 2131.87,156.128 2119.44,176.336 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueClient"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2582.08,92.157,2603.06,89.224,2588.49,104.603,2582.08,92.157"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2dea69330479c6652dcfe764f8dce433]
+reverse link javafx.scene.shape.Circle to twisk.vues.VueClient-->
+        <path codeLine="85"
+              d="M701.084,420.94 C723.274,388.133 759.465,343.853 804,323 C1050.83,207.426 1770.36,348.959 2029,263 C2038.01,260.005 2046.95,255.547 2055.3,250.528 "
+              fill="none" id="javafx.scene.shape.Circle-backto-twisk.vues.VueClient"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="706.955,424.751,690.231,437.764,695.19,417.162,706.955,424.751"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[83b8e7b9a169a555e95ed39965434ab0]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueGuichetIG-->
+        <path codeLine="86"
+              d="M2714.43,67.857 C2800.25,71.753 2933.57,83.799 2965,121 C3005.73,169.206 3007.55,216.392 2965,263 C2866,371.435 2438.38,257.439 2307,323 C2267.23,342.846 2234.12,381.185 2211.99,412.425 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueGuichetIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2713.96,74.844,2694.26,67.05,2714.52,60.855,2713.96,74.844"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f04fd721c3ae72cadc9cc6ec81086ac0]
+reverse link twisk.vues.VueEtapeIG to twisk.vues.VueGuichetIG-->
+        <path codeLine="87" d="M2286.7,280.526 C2262.61,322.045 2232.07,374.699 2210.19,412.401 " fill="none"
+              id="twisk.vues.VueEtapeIG-backto-twisk.vues.VueGuichetIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2280.66,276.988,2296.75,263.2,2292.77,284.013,2280.66,276.988"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3f369446c91184dea067cc789a21d34d]
+reverse link twisk.designPattern.Observateur to twisk.vues.VueEtapeIG-->
+        <path codeLine="88"
+              d="M2583.4,98.238 C2571.37,103.96 2558.51,109.274 2546,113 C2516.41,121.814 2506.22,111.036 2477,121 C2447.41,131.091 2417.39,147.564 2391.93,163.771 "
+              fill="none" id="twisk.designPattern.Observateur-backto-twisk.vues.VueEtapeIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="2580.46,91.879,2601.47,89.077,2586.79,104.365,2580.46,91.879"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3feac72129c654986b596d64f5d69d9e]
+reverse link javafx.scene.layout.VBox to twisk.vues.VueEtapeIG-->
+        <path codeLine="89" d="M2277.69,107.482 C2285.6,125.054 2294.88,145.651 2303.12,163.927 " fill="none"
+              id="javafx.scene.layout.VBox-backto-twisk.vues.VueEtapeIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="2271.29,110.324,2269.46,89.213,2284.06,104.573,2271.29,110.324"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e52b31ef716261757bd104b1d041d952]
+@startuml
+class twisk.vues.VueMenu {
+- void supprimer()
++ void rename()
++ void delai()
++ void ecart()
++ void jetons()
++ void clients()
++ void nouveau()
+~ void restaurer()
+- void enregistrer()
+- void ajouterMenuItemsMondes()
+- void ajouter()
+- void supprimerMonde()
+- void ouvrirFenetreNouveauMonde(MondeIG)
++ void gestionDesImages(MenuItem,String)
++ void gestionDuCheckmarkDesLois()
++ void gestionDesAlertes(Exception,String,String,String)
+- void chargerMonde(String)
++ void reagir()
+}
+twisk.vues.VueMenu- -"7" javafx.scene.control.Menu
+class twisk.vues.VueOutils {
+- void lancerFenetreErreurSimu(TwiskException)
++ void reagir()
+}
+twisk.vues.VueOutils - -"3" javafx.scene.control.Button
+class twisk.vues.VuePointDeControleIG {
++ void gestionDesAlertes(TwiskException,String,String,String)
++ void reagir()
+}
+twisk.vues.VuePointDeControleIG- -"1" twisk.mondeIG.PointDeControleIG
+class twisk.vues.VueMondeIG {
++ void reagir()
+}
+class twisk.vues.VueArcIG {
++ void apparitionDeLaLigne(PointDeControleIG,PointDeControleIG)
++ void apparitionDuTriangle()
++ void reagir()
+}
+twisk.vues.VueArcIG- -"1" twisk.mondeIG.ArcIG
+twisk.vues.VueArcIG- -"1" javafx.scene.shape.Line
+twisk.vues.VueArcIG- -"1" javafx.scene.shape.Polyline
+class twisk.vues.VueActiviteIG {
++ void ajouterVueClient(VueClient)
++ void reagir()
+}
+twisk.vues.VueActiviteIG - -"1" javafx.scene.layout.FlowPane
+class twisk.vues.VueClient {
++ EtapeIG getE()
++ void reagir()
+}
+twisk.vues.VueClient- -"1" twisk.simulation.Client
+twisk.vues.VueClient- -"1" twisk.mondeIG.EtapeIG
+class twisk.vues.VueGuichetIG {
+- int paneLibre
++ void ajouterVueClient(VueClient)
++ int getNbVueClients()
++ void reagir()
+}
+twisk.vues.VueGuichetIG- -"1" javafx.scene.layout.FlowPane
+abstract class twisk.vues.VueEtapeIG {
++ void setMouse(MouseEvent)
++ EtapeIG getEtape()
++ {abstract}void ajouterVueClient(VueClient)
++ void setPoBVueMondeIG(BooleanProperty)
+}
+twisk.vues.VueEtapeIG- -"1" twisk.mondeIG.EtapeIG
+twisk.vues.VueEtapeIG- -"1" javafx.scene.control.Label
+twisk.vues.VueEtapeIG- -"1" java.lang.Boolean
+
+
+twisk.designPattern.Observateur <|.. twisk.vues.VueMenu
+twisk.vues.MenuBar <|- - twisk.vues.VueMenu
+twisk.designPattern.Observateur <|.. twisk.vues.VueOutils
+javafx.scene.layout.TilePane <|- - twisk.vues.VueOutils
+twisk.designPattern.Observateur <|.. twisk.vues.VuePointDeControleIG
+javafx.scene.shape.Circle <|- - twisk.vues.VuePointDeControleIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueMondeIG
+javafx.scene.layout.Pane <|- - twisk.vues.VueMondeIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueArcIG
+javafx.scene.layout.Pane <|- - twisk.vues.VueArcIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueActiviteIG
+twisk.vues.VueEtapeIG <|- - twisk.vues.VueActiviteIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueClient
+javafx.scene.shape.Circle <|- - twisk.vues.VueClient
+twisk.designPattern.Observateur <|.. twisk.vues.VueGuichetIG
+twisk.vues.VueEtapeIG <|- - twisk.vues.VueGuichetIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueEtapeIG
+javafx.scene.layout.VBox <|- - twisk.vues.VueEtapeIG
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+-->
+    </g>
+</svg>

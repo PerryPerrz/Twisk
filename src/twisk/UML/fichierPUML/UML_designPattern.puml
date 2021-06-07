@@ -3,8 +3,8 @@ interface twisk.designPattern.Observateur {
 ~ void reagir()
 }
 class twisk.designPattern.SujetObserve {
-- ArrayList<Observateur> observateurs
 + void ajouterObservateur(Observateur)
 + void notifierObservateurs()
 }
+twisk.designPattern.SujetObserve "1"--"*" twisk.designPattern.Observateur
 @enduml

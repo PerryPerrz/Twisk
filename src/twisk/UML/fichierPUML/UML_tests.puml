@@ -1,0 +1,84 @@
+@startuml
+class twisk.tests.ActiviteTest {
+~ void setUp()
+~ void toC()
+}
+class twisk.tests.GuichetTest {
+~ void setUp()
+~ void toC()
+}
+class twisk.tests.KitCTest {
+~ void setUp()
+~ void creerEnvironnement()
+~ void creerFichier()
+}
+twisk.tests.KitCTest -- "1" twisk.outils.KitC
+class twisk.tests.SasEntreeTest {
+~ void setUp()
+~ void toC()
+}
+class twisk.tests.FabriqueNumeroTest {
+~ void setUp()
+~ void getNumeroEtape()
+~ void getNumeroSemaphore()
+~ void reset()
+}
+twisk.tests.FabriqueNumeroTest -- "1" twisk.outils.FabriqueNumero
+class twisk.tests.SasSortieTest {
+~ void setUp()
+~ void toC()
+}
+class twisk.tests.GestionnaireSuccesseursTest {
+~ void setUp()
+~ void nbEtapes()
+~ void iterator()
+}
+twisk.tests.GestionnaireSuccesseursTest -- "1" twisk.monde.Activite
+twisk.tests.GestionnaireSuccesseursTest -- "1" twisk.monde.Guichet
+twisk.tests.GestionnaireSuccesseursTest -- "1" twisk.monde.GestionnaireSuccesseurs
+class twisk.tests.GestionnaireClientsTest {
+- int[] tab1
+- int[] tab2
+~ void setUp()
+~ void setClients()
+~ void allerA()
+~ void reset()
+}
+twisk.tests.GestionnaireClientsTest -- "2" twisk.simulation.GestionnaireClients
+class twisk.tests.MondeIGTest {
+~ void setUp()
+~ void creerMonde()
+}
+twisk.tests.MondeIGTest -- "1"twisk.mondeIG.MondeIG
+class twisk.tests.GestionnaireEtapesTest {
+~ void setUp()
+~ void nbEtapes()
+~ void iterator()
+}
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.Activite
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.Guichet
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.GestionnaireEtapes
+class twisk.tests.EtapeTest {
+~ void setUp()
+~ void nbSuccesseur()
+~ void estUneActivite()
+~ void estUnGuichet()
+~ void iterator()
+}
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.Activite
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.Activite
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.ActiviteRestreinte
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.SasEntree
+twisk.tests.GestionnaireEtapesTest -- "1" twisk.monde.SasSortie
+class twisk.tests.ActiviteRestreinteTest {
+~ void setUp()
+~ void toC()
+}
+
+
+twisk.tests.EtapeTest <|-- twisk.tests.ActiviteTest
+twisk.tests.EtapeTest <|-- twisk.tests.GuichetTest
+twisk.tests.ActiviteTest <|-- twisk.tests.SasEntreeTest
+twisk.tests.ActiviteTest <|-- twisk.tests.SasSortieTest
+twisk.tests.ActiviteTest <|-- twisk.tests.ActiviteRestreinteTest
+@enduml

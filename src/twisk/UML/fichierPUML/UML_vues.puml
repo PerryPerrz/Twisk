@@ -1,0 +1,91 @@
+@startuml
+class twisk.vues.VueMenu {
+- void supprimer()
++ void rename()
++ void delai()
++ void ecart()
++ void jetons()
++ void clients()
++ void nouveau()
+~ void restaurer()
+- void enregistrer()
+- void ajouterMenuItemsMondes()
+- void ajouter()
+- void supprimerMonde()
+- void ouvrirFenetreNouveauMonde(MondeIG)
++ void gestionDesImages(MenuItem,String)
++ void gestionDuCheckmarkDesLois()
++ void gestionDesAlertes(Exception,String,String,String)
+- void chargerMonde(String)
++ void reagir()
+}
+twisk.vues.VueMenu--"7" javafx.scene.control.Menu
+class twisk.vues.VueOutils {
+- void lancerFenetreErreurSimu(TwiskException)
++ void reagir()
+}
+twisk.vues.VueOutils --"3" javafx.scene.control.Button
+class twisk.vues.VuePointDeControleIG {
++ void gestionDesAlertes(TwiskException,String,String,String)
++ void reagir()
+}
+twisk.vues.VuePointDeControleIG--"1" twisk.mondeIG.PointDeControleIG
+class twisk.vues.VueMondeIG {
++ void reagir()
+}
+class twisk.vues.VueArcIG {
++ void apparitionDeLaLigne(PointDeControleIG,PointDeControleIG)
++ void apparitionDuTriangle()
++ void reagir()
+}
+twisk.vues.VueArcIG--"1" twisk.mondeIG.ArcIG
+twisk.vues.VueArcIG--"1" javafx.scene.shape.Line
+twisk.vues.VueArcIG--"1" javafx.scene.shape.Polyline
+class twisk.vues.VueActiviteIG {
++ void ajouterVueClient(VueClient)
++ void reagir()
+}
+twisk.vues.VueActiviteIG --"1" javafx.scene.layout.FlowPane
+class twisk.vues.VueClient {
++ EtapeIG getE()
++ void reagir()
+}
+twisk.vues.VueClient--"1" twisk.simulation.Client
+twisk.vues.VueClient--"1" twisk.mondeIG.EtapeIG
+class twisk.vues.VueGuichetIG {
+- int paneLibre
++ void ajouterVueClient(VueClient)
++ int getNbVueClients()
++ void reagir()
+}
+twisk.vues.VueGuichetIG--"1" javafx.scene.layout.FlowPane
+abstract class twisk.vues.VueEtapeIG {
++ void setMouse(MouseEvent)
++ EtapeIG getEtape()
++ {abstract}void ajouterVueClient(VueClient)
++ void setPoBVueMondeIG(BooleanProperty)
+}
+twisk.vues.VueEtapeIG--"1" twisk.mondeIG.EtapeIG
+twisk.vues.VueEtapeIG--"1" javafx.scene.control.Label
+twisk.vues.VueEtapeIG--"1" java.lang.Boolean
+
+
+twisk.designPattern.Observateur <|.. twisk.vues.VueMenu
+twisk.vues.MenuBar <|-- twisk.vues.VueMenu
+twisk.designPattern.Observateur <|.. twisk.vues.VueOutils
+javafx.scene.layout.TilePane <|-- twisk.vues.VueOutils
+twisk.designPattern.Observateur <|.. twisk.vues.VuePointDeControleIG
+javafx.scene.shape.Circle <|-- twisk.vues.VuePointDeControleIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueMondeIG
+javafx.scene.layout.Pane <|-- twisk.vues.VueMondeIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueArcIG
+javafx.scene.layout.Pane <|-- twisk.vues.VueArcIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueActiviteIG
+twisk.vues.VueEtapeIG <|-- twisk.vues.VueActiviteIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueClient
+javafx.scene.shape.Circle <|-- twisk.vues.VueClient
+twisk.designPattern.Observateur <|.. twisk.vues.VueGuichetIG
+twisk.vues.VueEtapeIG <|-- twisk.vues.VueGuichetIG
+twisk.designPattern.Observateur <|.. twisk.vues.VueEtapeIG
+javafx.scene.layout.VBox <|-- twisk.vues.VueEtapeIG
+@enduml

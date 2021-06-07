@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentScriptType="application/ecmascript" contentStyleType="text/css"
+     height="1291px" preserveAspectRatio="none" style="width:787px;height:1291px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 787 1291" width="787px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="fqatdk4wg6bah" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix"
+                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g><!--MD5=[5288b49022d8a4a78208282469da21db]
+cluster twisk.monde-->
+        <polygon fill="#FFFFFF" filter="url(#fqatdk4wg6bah)"
+                 points="45.843,6,154.843,6,161.843,28.2969,770.843,28.2969,770.843,1284,45.843,1284,45.843,6"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="45.843" x2="161.843" y1="28.2969" y2="28.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="103" x="49.843" y="20.9951">twisk.monde
+        </text><!--MD5=[ad6531f8db55bc0ef8091b539afffb2c]
+class twisk.monde.ActiviteRestreinte-->
+        <rect codeLine="1" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="60.8047"
+              id="twisk.monde.ActiviteRestreinte" style="stroke:#A80036;stroke-width:1.5;" width="137" x="480.343"
+              y="1188"/>
+        <ellipse cx="495.343" cy="1204" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M497.6868,1199.6719 C496.7493,1199.2344 496.1555,1199.0938 495.2805,1199.0938 C492.6555,1199.0938 490.6555,1201.1719 490.6555,1203.8906 L490.6555,1205.0156 C490.6555,1207.5938 492.7649,1209.4844 495.6555,1209.4844 C496.8743,1209.4844 498.0305,1209.1875 498.7805,1208.6406 C499.3586,1208.2344 499.6868,1207.7813 499.6868,1207.3906 C499.6868,1206.9375 499.2961,1206.5469 498.8274,1206.5469 C498.6086,1206.5469 498.4055,1206.625 498.218,1206.8125 C497.7649,1207.2969 497.7649,1207.2969 497.5774,1207.3906 C497.1555,1207.6563 496.468,1207.7813 495.7024,1207.7813 C493.6555,1207.7813 492.3586,1206.6875 492.3586,1204.9844 L492.3586,1203.8906 C492.3586,1202.1094 493.6086,1200.7969 495.343,1200.7969 C495.9211,1200.7969 496.5305,1200.9531 496.9993,1201.2031 C497.4836,1201.4844 497.6555,1201.7031 497.7493,1202.1094 C497.8118,1202.5156 497.843,1202.6406 497.9836,1202.7656 C498.1243,1202.9063 498.3586,1203.0156 498.5774,1203.0156 C498.843,1203.0156 499.1086,1202.875 499.2805,1202.6563 C499.3899,1202.5 499.4211,1202.3125 499.4211,1201.8906 L499.4211,1200.4688 C499.4211,1200.0313 499.4055,1199.9063 499.3118,1199.75 C499.1555,1199.4844 498.8743,1199.3438 498.5774,1199.3438 C498.2805,1199.3438 498.0774,1199.4375 497.8586,1199.75 L497.6868,1199.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="105" x="509.343"
+              y="1208.1543">ActiviteRestreinte
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="481.343" x2="616.343" y1="1220" y2="1220"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="481.343" x2="616.343" y1="1228" y2="1228"/>
+        <ellipse cx="491.343" cy="1239" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="500.343"
+              y="1242.2104">String toC()
+        </text><!--MD5=[19fbd293c6e89ad2589da393c3ac081d]
+class twisk.monde.GestionnaireEtapes-->
+        <rect codeLine="4" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="99.2188"
+              id="twisk.monde.GestionnaireEtapes" style="stroke:#A80036;stroke-width:1.5;" width="171" x="238.343"
+              y="423"/>
+        <ellipse cx="263.243" cy="439" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M265.5868,434.6719 C264.6493,434.2344 264.0555,434.0938 263.1805,434.0938 C260.5555,434.0938 258.5555,436.1719 258.5555,438.8906 L258.5555,440.0156 C258.5555,442.5938 260.6649,444.4844 263.5555,444.4844 C264.7743,444.4844 265.9305,444.1875 266.6805,443.6406 C267.2586,443.2344 267.5868,442.7813 267.5868,442.3906 C267.5868,441.9375 267.1961,441.5469 266.7274,441.5469 C266.5086,441.5469 266.3055,441.625 266.118,441.8125 C265.6649,442.2969 265.6649,442.2969 265.4774,442.3906 C265.0555,442.6563 264.368,442.7813 263.6024,442.7813 C261.5555,442.7813 260.2586,441.6875 260.2586,439.9844 L260.2586,438.8906 C260.2586,437.1094 261.5086,435.7969 263.243,435.7969 C263.8211,435.7969 264.4305,435.9531 264.8993,436.2031 C265.3836,436.4844 265.5555,436.7031 265.6493,437.1094 C265.7118,437.5156 265.743,437.6406 265.8836,437.7656 C266.0243,437.9063 266.2586,438.0156 266.4774,438.0156 C266.743,438.0156 267.0086,437.875 267.1805,437.6563 C267.2899,437.5 267.3211,437.3125 267.3211,436.8906 L267.3211,435.4688 C267.3211,435.0313 267.3055,434.9063 267.2118,434.75 C267.0555,434.4844 266.7743,434.3438 266.4774,434.3438 C266.1805,434.3438 265.9774,434.4375 265.7586,434.75 L265.5868,434.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="117" x="279.443"
+              y="443.1543">GestionnaireEtapes
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="239.343" x2="408.343" y1="455" y2="455"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="239.343" x2="408.343" y1="463" y2="463"/>
+        <ellipse cx="249.343" cy="474" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="258.343"
+              y="477.2104">void ajouter(Etape)
+        </text>
+        <ellipse cx="249.343" cy="486.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="258.343"
+              y="490.0151">int nbEtapes()
+        </text>
+        <ellipse cx="249.343" cy="499.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="258.343"
+              y="502.8198">Iterator&lt;Etape&gt; iterator()
+        </text>
+        <ellipse cx="249.343" cy="512.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="258.343"
+              y="515.6245">String toString()
+        </text><!--MD5=[09aa7eb68af6758ca1bf8ede19960d66]
+class twisk.monde.Etape-->
+        <rect codeLine="11" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="278.4844" id="twisk.monde.Etape"
+              style="stroke:#A80036;stroke-width:1.5;" width="254" x="318.843" y="582"/>
+        <ellipse cx="424.093" cy="598" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M426.1711,599.8125 L426.5618,600.7969 L426.1711,600.7969 C425.718,600.7969 425.6086,600.8125 425.4524,600.9219 C425.2024,601.0781 425.0461,601.3594 425.0461,601.6563 C425.0461,601.9219 425.1868,602.1719 425.4055,602.3281 C425.5461,602.4531 425.7493,602.5 426.1711,602.5 L428.5305,602.5 C428.8899,602.5 429.1086,602.4688 429.2493,602.375 C429.4993,602.2344 429.6555,601.9375 429.6555,601.6563 C429.6555,601.375 429.5149,601.125 429.2961,600.9688 C429.1243,600.8281 428.968,600.7969 428.4993,600.7969 L425.1086,592.5938 L421.4368,592.5938 C420.9836,592.5938 420.8586,592.6094 420.7024,592.7031 C420.4524,592.875 420.2961,593.1563 420.2961,593.4375 C420.2961,593.7188 420.4368,593.9688 420.6555,594.1406 C420.8274,594.25 420.9993,594.2813 421.4368,594.2813 L422.5149,594.2813 L419.8743,600.7969 C419.4524,600.7969 419.2961,600.8125 419.1399,600.9219 C418.8899,601.0781 418.7336,601.3594 418.7336,601.6563 C418.7336,602.2188 419.1086,602.5 419.8586,602.5 L422.1243,602.5 C422.4836,602.5 422.7024,602.4688 422.8274,602.375 C423.093,602.2344 423.2336,601.9375 423.2336,601.6563 C423.2336,601.375 423.1086,601.125 422.8899,600.9531 C422.718,600.8281 422.5774,600.7969 422.1243,600.7969 L421.7336,600.7969 L422.1243,599.8125 L426.1711,599.8125 Z M425.468,598.1094 L422.7961,598.1094 L424.1399,594.8438 L425.468,598.1094 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+              textLength="35" x="444.593" y="602.1543">Etape
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="319.843" x2="571.843" y1="614" y2="614"/>
+        <polygon fill="none" points="329.843,620,333.843,624,329.843,628,325.843,624"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="338.843"
+              y="628.2104">String nom
+        </text>
+        <polygon fill="none" points="329.843,632.8047,333.843,636.8047,329.843,640.8047,325.843,636.8047"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="43" x="338.843"
+              y="641.0151">int num
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="319.843" x2="571.843" y1="647.6094" y2="647.6094"/>
+        <ellipse cx="329.843" cy="658.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="175" x="338.843"
+              y="661.8198">void ajouterSuccesseur(Etape)
+        </text>
+        <ellipse cx="329.843" cy="671.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="338.843"
+              y="674.6245">int nbSuccesseurs()
+        </text>
+        <ellipse cx="329.843" cy="684.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="338.843"
+              y="687.4292">boolean estUneActivite()
+        </text>
+        <ellipse cx="329.843" cy="697.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="338.843"
+              y="700.2339">boolean estUnGuichet()
+        </text>
+        <ellipse cx="329.843" cy="709.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="338.843"
+              y="713.0386">Iterator&lt;Etape&gt; iterator()
+        </text>
+        <ellipse cx="329.843" cy="722.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="338.843"
+              y="725.8433">String getNom()
+        </text>
+        <ellipse cx="329.843" cy="735.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="338.843"
+              y="738.6479">int getNum()
+        </text>
+        <ellipse cx="329.843" cy="748.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="64" x="338.843" y="751.4526">String toC()
+        </text>
+        <ellipse cx="329.843" cy="761.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="228" x="338.843"
+              y="764.2573">GestionnaireSuccesseurs getGestsucc()
+        </text>
+        <ellipse cx="329.843" cy="773.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="338.843"
+              y="777.062">Etape getSucc()
+        </text>
+        <ellipse cx="329.843" cy="786.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="338.843"
+              y="789.8667">Etape getSuccI(int)
+        </text>
+        <ellipse cx="329.843" cy="799.4609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="145" x="338.843" y="802.6714">int getNbTicketSiGuichet()
+        </text>
+        <ellipse cx="329.843" cy="812.2656" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="95" x="338.843" y="815.4761">int getNumSem()
+        </text>
+        <ellipse cx="329.843" cy="825.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="338.843"
+              y="828.2808">String getNomMaj()
+        </text>
+        <ellipse cx="329.843" cy="837.875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="338.843"
+              y="841.0854">boolean estUnSasEntree()
+        </text>
+        <ellipse cx="329.843" cy="850.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="338.843"
+              y="853.8901">boolean estUnSasSortie()
+        </text><!--MD5=[285d748a52ea38e99b2c280e4ed6a9c2]
+class twisk.monde.GestionnaireSuccesseurs-->
+        <rect codeLine="64" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="137.6328"
+              id="twisk.monde.GestionnaireSuccesseurs" style="stroke:#A80036;stroke-width:1.5;" width="186" x="568.843"
+              y="945.5"/>
+        <ellipse cx="583.843" cy="961.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M586.1868,957.1719 C585.2493,956.7344 584.6555,956.5938 583.7805,956.5938 C581.1555,956.5938 579.1555,958.6719 579.1555,961.3906 L579.1555,962.5156 C579.1555,965.0938 581.2649,966.9844 584.1555,966.9844 C585.3743,966.9844 586.5305,966.6875 587.2805,966.1406 C587.8586,965.7344 588.1868,965.2813 588.1868,964.8906 C588.1868,964.4375 587.7961,964.0469 587.3274,964.0469 C587.1086,964.0469 586.9055,964.125 586.718,964.3125 C586.2649,964.7969 586.2649,964.7969 586.0774,964.8906 C585.6555,965.1563 584.968,965.2813 584.2024,965.2813 C582.1555,965.2813 580.8586,964.1875 580.8586,962.4844 L580.8586,961.3906 C580.8586,959.6094 582.1086,958.2969 583.843,958.2969 C584.4211,958.2969 585.0305,958.4531 585.4993,958.7031 C585.9836,958.9844 586.1555,959.2031 586.2493,959.6094 C586.3118,960.0156 586.343,960.1406 586.4836,960.2656 C586.6243,960.4063 586.8586,960.5156 587.0774,960.5156 C587.343,960.5156 587.6086,960.375 587.7805,960.1563 C587.8899,960 587.9211,959.8125 587.9211,959.3906 L587.9211,957.9688 C587.9211,957.5313 587.9055,957.4063 587.8118,957.25 C587.6555,956.9844 587.3743,956.8438 587.0774,956.8438 C586.7805,956.8438 586.5774,956.9375 586.3586,957.25 L586.1868,957.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="154" x="597.843"
+              y="965.6543">GestionnaireSuccesseurs
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="569.843" x2="753.843" y1="977.5" y2="977.5"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="576.843" y="985.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="129" x="588.843"
+              y="991.7104">ArrayList&lt;Etape&gt; succ
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="569.843" x2="753.843" y1="998.3047" y2="998.3047"/>
+        <ellipse cx="579.843" cy="1009.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="588.843"
+              y="1012.5151">void ajouter(Etape)
+        </text>
+        <ellipse cx="579.843" cy="1022.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="588.843"
+              y="1025.3198">int nbEtapes()
+        </text>
+        <ellipse cx="579.843" cy="1034.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="588.843"
+              y="1038.1245">Iterator&lt;Etape&gt; iterator()
+        </text>
+        <ellipse cx="579.843" cy="1047.7188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="588.843"
+              y="1050.9292">Etape getSucc()
+        </text>
+        <ellipse cx="579.843" cy="1060.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="588.843"
+              y="1063.7339">Etape getSuccI(int)
+        </text>
+        <ellipse cx="579.843" cy="1073.3281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="588.843"
+              y="1076.5386">String toString()
+        </text><!--MD5=[6d685743b02d14d57f987fc9d254d98d]
+class twisk.monde.SasEntree-->
+        <rect codeLine="32" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="99.2188" id="twisk.monde.SasEntree"
+              style="stroke:#A80036;stroke-width:1.5;" width="176" x="61.843" y="1169"/>
+        <ellipse cx="115.093" cy="1185" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M117.4368,1180.6719 C116.4993,1180.2344 115.9055,1180.0938 115.0305,1180.0938 C112.4055,1180.0938 110.4055,1182.1719 110.4055,1184.8906 L110.4055,1186.0156 C110.4055,1188.5938 112.5149,1190.4844 115.4055,1190.4844 C116.6243,1190.4844 117.7805,1190.1875 118.5305,1189.6406 C119.1086,1189.2344 119.4368,1188.7813 119.4368,1188.3906 C119.4368,1187.9375 119.0461,1187.5469 118.5774,1187.5469 C118.3586,1187.5469 118.1555,1187.625 117.968,1187.8125 C117.5149,1188.2969 117.5149,1188.2969 117.3274,1188.3906 C116.9055,1188.6563 116.218,1188.7813 115.4524,1188.7813 C113.4055,1188.7813 112.1086,1187.6875 112.1086,1185.9844 L112.1086,1184.8906 C112.1086,1183.1094 113.3586,1181.7969 115.093,1181.7969 C115.6711,1181.7969 116.2805,1181.9531 116.7493,1182.2031 C117.2336,1182.4844 117.4055,1182.7031 117.4993,1183.1094 C117.5618,1183.5156 117.593,1183.6406 117.7336,1183.7656 C117.8743,1183.9063 118.1086,1184.0156 118.3274,1184.0156 C118.593,1184.0156 118.8586,1183.875 119.0305,1183.6563 C119.1399,1183.5 119.1711,1183.3125 119.1711,1182.8906 L119.1711,1181.4688 C119.1711,1181.0313 119.1555,1180.9063 119.0618,1180.75 C118.9055,1180.4844 118.6243,1180.3438 118.3274,1180.3438 C118.0305,1180.3438 117.8274,1180.4375 117.6086,1180.75 L117.4368,1180.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="61" x="135.593"
+              y="1189.1543">SasEntree
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="62.843" x2="236.843" y1="1201" y2="1201"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="69.843" y="1209"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="81.843"
+              y="1215.2104">String loi
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="62.843" x2="236.843" y1="1221.8047" y2="1221.8047"/>
+        <ellipse cx="72.843" cy="1232.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="81.843"
+              y="1236.0151">String toC()
+        </text>
+        <ellipse cx="72.843" cy="1245.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="81.843"
+              y="1248.8198">boolean estUnSasEntree()
+        </text>
+        <ellipse cx="72.843" cy="1258.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="81.843"
+              y="1261.6245">void setLoi(String)
+        </text><!--MD5=[b557584a77730f7950a8752137f5ede3]
+class twisk.monde.Activite-->
+        <rect codeLine="38" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="188.8516" id="twisk.monde.Activite"
+              style="stroke:#A80036;stroke-width:1.5;" width="175" x="358.343" y="920"/>
+        <ellipse cx="419.593" cy="936" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M421.9368,931.6719 C420.9993,931.2344 420.4055,931.0938 419.5305,931.0938 C416.9055,931.0938 414.9055,933.1719 414.9055,935.8906 L414.9055,937.0156 C414.9055,939.5938 417.0149,941.4844 419.9055,941.4844 C421.1243,941.4844 422.2805,941.1875 423.0305,940.6406 C423.6086,940.2344 423.9368,939.7813 423.9368,939.3906 C423.9368,938.9375 423.5461,938.5469 423.0774,938.5469 C422.8586,938.5469 422.6555,938.625 422.468,938.8125 C422.0149,939.2969 422.0149,939.2969 421.8274,939.3906 C421.4055,939.6563 420.718,939.7813 419.9524,939.7813 C417.9055,939.7813 416.6086,938.6875 416.6086,936.9844 L416.6086,935.8906 C416.6086,934.1094 417.8586,932.7969 419.593,932.7969 C420.1711,932.7969 420.7805,932.9531 421.2493,933.2031 C421.7336,933.4844 421.9055,933.7031 421.9993,934.1094 C422.0618,934.5156 422.093,934.6406 422.2336,934.7656 C422.3743,934.9063 422.6086,935.0156 422.8274,935.0156 C423.093,935.0156 423.3586,934.875 423.5305,934.6563 C423.6399,934.5 423.6711,934.3125 423.6711,933.8906 L423.6711,932.4688 C423.6711,932.0313 423.6555,931.9063 423.5618,931.75 C423.4055,931.4844 423.1243,931.3438 422.8274,931.3438 C422.5305,931.3438 422.3274,931.4375 422.1086,931.75 L421.9368,931.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="44" x="440.093"
+              y="940.1543">Activite
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="359.343" x2="532.343" y1="952" y2="952"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="366.343" y="960"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="378.343"
+              y="966.2104">int temps
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="366.343" y="972.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="378.343"
+              y="979.0151">int ecartTemps
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="359.343" x2="532.343" y1="985.6094" y2="985.6094"/>
+        <ellipse cx="369.343" cy="996.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="378.343"
+              y="999.8198">boolean estUneActivite()
+        </text>
+        <ellipse cx="369.343" cy="1009.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="378.343"
+              y="1012.6245">int getTemps()
+        </text>
+        <ellipse cx="369.343" cy="1022.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="107" x="378.343"
+              y="1025.4292">void setTemps(int)
+        </text>
+        <ellipse cx="369.343" cy="1035.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="378.343"
+              y="1038.2339">int getEcartTemps()
+        </text>
+        <ellipse cx="369.343" cy="1047.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="378.343"
+              y="1051.0386">void setEcartTemps(int)
+        </text>
+        <ellipse cx="369.343" cy="1060.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="378.343"
+              y="1063.8433">String toString()
+        </text>
+        <ellipse cx="369.343" cy="1073.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="378.343"
+              y="1076.6479">String toC()
+        </text>
+        <ellipse cx="369.343" cy="1086.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="378.343"
+              y="1089.4526">int getNbTicketSiGuichet()
+        </text>
+        <ellipse cx="369.343" cy="1099.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="378.343"
+              y="1102.2573">int getNumSem()
+        </text><!--MD5=[10ddce422daa09c1cd98b1a691311c85]
+class twisk.monde.Guichet-->
+        <rect codeLine="51" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="188.8516" id="twisk.monde.Guichet"
+              style="stroke:#A80036;stroke-width:1.5;" width="187" x="136.343" y="920"/>
+        <ellipse cx="203.093" cy="936" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M205.4368,931.6719 C204.4993,931.2344 203.9055,931.0938 203.0305,931.0938 C200.4055,931.0938 198.4055,933.1719 198.4055,935.8906 L198.4055,937.0156 C198.4055,939.5938 200.5149,941.4844 203.4055,941.4844 C204.6243,941.4844 205.7805,941.1875 206.5305,940.6406 C207.1086,940.2344 207.4368,939.7813 207.4368,939.3906 C207.4368,938.9375 207.0461,938.5469 206.5774,938.5469 C206.3586,938.5469 206.1555,938.625 205.968,938.8125 C205.5149,939.2969 205.5149,939.2969 205.3274,939.3906 C204.9055,939.6563 204.218,939.7813 203.4524,939.7813 C201.4055,939.7813 200.1086,938.6875 200.1086,936.9844 L200.1086,935.8906 C200.1086,934.1094 201.3586,932.7969 203.093,932.7969 C203.6711,932.7969 204.2805,932.9531 204.7493,933.2031 C205.2336,933.4844 205.4055,933.7031 205.4993,934.1094 C205.5618,934.5156 205.593,934.6406 205.7336,934.7656 C205.8743,934.9063 206.1086,935.0156 206.3274,935.0156 C206.593,935.0156 206.8586,934.875 207.0305,934.6563 C207.1399,934.5 207.1711,934.3125 207.1711,933.8906 L207.1711,932.4688 C207.1711,932.0313 207.1555,931.9063 207.0618,931.75 C206.9055,931.4844 206.6243,931.3438 206.3274,931.3438 C206.0305,931.3438 205.8274,931.4375 205.6086,931.75 L205.4368,931.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="45" x="223.593"
+              y="940.1543">Guichet
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="137.343" x2="322.343" y1="952" y2="952"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="144.343" y="960"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="156.343"
+              y="966.2104">int nbJetons
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="144.343" y="972.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="156.343"
+              y="979.0151">int numSemaphore
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="137.343" x2="322.343" y1="985.6094" y2="985.6094"/>
+        <ellipse cx="147.343" cy="996.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="156.343"
+              y="999.8198">boolean estUnGuichet()
+        </text>
+        <ellipse cx="147.343" cy="1009.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="156.343"
+              y="1012.6245">int getNbJetons()
+        </text>
+        <ellipse cx="147.343" cy="1022.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="156.343"
+              y="1025.4292">void setNbJetons(int)
+        </text>
+        <ellipse cx="147.343" cy="1035.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="156.343"
+              y="1038.2339">int getNumSemaphore()
+        </text>
+        <ellipse cx="147.343" cy="1047.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="156.343"
+              y="1051.0386">void setNumSemaphore(int)
+        </text>
+        <ellipse cx="147.343" cy="1060.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="156.343"
+              y="1063.8433">String toString()
+        </text>
+        <ellipse cx="147.343" cy="1073.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="156.343"
+              y="1076.6479">String toC()
+        </text>
+        <ellipse cx="147.343" cy="1086.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="156.343"
+              y="1089.4526">int getNbTicketSiGuichet()
+        </text>
+        <ellipse cx="147.343" cy="1099.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="156.343"
+              y="1102.2573">int getNumSem()
+        </text><!--MD5=[4193200f2c817aa15a7c5b3819218d4c]
+class twisk.monde.Monde-->
+        <rect codeLine="74" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="214.4609" id="twisk.monde.Monde"
+              style="stroke:#A80036;stroke-width:1.5;" width="187" x="102.343" y="149"/>
+        <ellipse cx="171.093" cy="165" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M173.4368,160.6719 C172.4993,160.2344 171.9055,160.0938 171.0305,160.0938 C168.4055,160.0938 166.4055,162.1719 166.4055,164.8906 L166.4055,166.0156 C166.4055,168.5938 168.5149,170.4844 171.4055,170.4844 C172.6243,170.4844 173.7805,170.1875 174.5305,169.6406 C175.1086,169.2344 175.4368,168.7813 175.4368,168.3906 C175.4368,167.9375 175.0461,167.5469 174.5774,167.5469 C174.3586,167.5469 174.1555,167.625 173.968,167.8125 C173.5149,168.2969 173.5149,168.2969 173.3274,168.3906 C172.9055,168.6563 172.218,168.7813 171.4524,168.7813 C169.4055,168.7813 168.1086,167.6875 168.1086,165.9844 L168.1086,164.8906 C168.1086,163.1094 169.3586,161.7969 171.093,161.7969 C171.6711,161.7969 172.2805,161.9531 172.7493,162.2031 C173.2336,162.4844 173.4055,162.7031 173.4993,163.1094 C173.5618,163.5156 173.593,163.6406 173.7336,163.7656 C173.8743,163.9063 174.1086,164.0156 174.3274,164.0156 C174.593,164.0156 174.8586,163.875 175.0305,163.6563 C175.1399,163.5 175.1711,163.3125 175.1711,162.8906 L175.1711,161.4688 C175.1711,161.0313 175.1555,160.9063 175.0618,160.75 C174.9055,160.4844 174.6243,160.3438 174.3274,160.3438 C174.0305,160.3438 173.8274,160.4375 173.6086,160.75 L173.4368,160.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="41" x="191.593"
+              y="169.1543">Monde
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="103.343" x2="288.343" y1="181" y2="181"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="103.343" x2="288.343" y1="189" y2="189"/>
+        <ellipse cx="113.343" cy="200" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="159" x="122.343"
+              y="203.2104">void aCommeEntree(Etape)
+        </text>
+        <ellipse cx="113.343" cy="212.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="122.343"
+              y="216.0151">void aCommeSortie(Etape)
+        </text>
+        <ellipse cx="113.343" cy="225.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="122.343"
+              y="228.8198">void ajouter(Etape)
+        </text>
+        <ellipse cx="113.343" cy="238.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="122.343"
+              y="241.6245">int nbEtapes()
+        </text>
+        <ellipse cx="113.343" cy="251.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="122.343"
+              y="254.4292">int nbGuichets()
+        </text>
+        <ellipse cx="113.343" cy="264.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="122.343"
+              y="267.2339">Iterator&lt;Etape&gt; iterator()
+        </text>
+        <ellipse cx="113.343" cy="276.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="122.343"
+              y="280.0386">String toString()
+        </text>
+        <ellipse cx="113.343" cy="289.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="122.343"
+              y="292.8433">String toC()
+        </text>
+        <ellipse cx="113.343" cy="302.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="122.343"
+              y="305.6479">int getNbTicketsGuichetI(int)
+        </text>
+        <ellipse cx="113.343" cy="315.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="140" x="122.343"
+              y="318.4526">String getNomEtapeI(int)
+        </text>
+        <ellipse cx="113.343" cy="328.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="122.343"
+              y="331.2573">int getNumSasSortie()
+        </text>
+        <ellipse cx="113.343" cy="340.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="122.343"
+              y="344.062">Etape getEtapeI(int)
+        </text>
+        <ellipse cx="113.343" cy="353.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="122.343"
+              y="356.8667">SasEntree getSasE()
+        </text><!--MD5=[e269d0fe7f24f4eea6b712cefb23736c]
+class twisk.monde.SasSortie-->
+        <rect codeLine="92" fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="73.6094" id="twisk.monde.SasSortie"
+              style="stroke:#A80036;stroke-width:1.5;" width="172" x="272.843" y="1181.5"/>
+        <ellipse cx="325.593" cy="1197.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M327.9368,1193.1719 C326.9993,1192.7344 326.4055,1192.5938 325.5305,1192.5938 C322.9055,1192.5938 320.9055,1194.6719 320.9055,1197.3906 L320.9055,1198.5156 C320.9055,1201.0938 323.0149,1202.9844 325.9055,1202.9844 C327.1243,1202.9844 328.2805,1202.6875 329.0305,1202.1406 C329.6086,1201.7344 329.9368,1201.2813 329.9368,1200.8906 C329.9368,1200.4375 329.5461,1200.0469 329.0774,1200.0469 C328.8586,1200.0469 328.6555,1200.125 328.468,1200.3125 C328.0149,1200.7969 328.0149,1200.7969 327.8274,1200.8906 C327.4055,1201.1563 326.718,1201.2813 325.9524,1201.2813 C323.9055,1201.2813 322.6086,1200.1875 322.6086,1198.4844 L322.6086,1197.3906 C322.6086,1195.6094 323.8586,1194.2969 325.593,1194.2969 C326.1711,1194.2969 326.7805,1194.4531 327.2493,1194.7031 C327.7336,1194.9844 327.9055,1195.2031 327.9993,1195.6094 C328.0618,1196.0156 328.093,1196.1406 328.2336,1196.2656 C328.3743,1196.4063 328.6086,1196.5156 328.8274,1196.5156 C329.093,1196.5156 329.3586,1196.375 329.5305,1196.1563 C329.6399,1196 329.6711,1195.8125 329.6711,1195.3906 L329.6711,1193.9688 C329.6711,1193.5313 329.6555,1193.4063 329.5618,1193.25 C329.4055,1192.9844 329.1243,1192.8438 328.8274,1192.8438 C328.5305,1192.8438 328.3274,1192.9375 328.1086,1193.25 L327.9368,1193.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="346.093"
+              y="1201.6543">SasSortie
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="273.843" x2="443.843" y1="1213.5" y2="1213.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="273.843" x2="443.843" y1="1221.5" y2="1221.5"/>
+        <ellipse cx="283.843" cy="1232.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="292.843"
+              y="1235.7104">String toC()
+        </text>
+        <ellipse cx="283.843" cy="1245.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="292.843"
+              y="1248.5151">boolean estUnSasSortie()
+        </text><!--MD5=[65aab0ac97548b7db3c801e4261a5595]
+class twisk.monde.Iterable-->
+        <rect fill="#FEFECE" filter="url(#fqatdk4wg6bah)" height="48" id="twisk.monde.Iterable"
+              style="stroke:#A80036;stroke-width:1.5;" width="78" x="366.843" y="41"/>
+        <ellipse cx="381.843" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M384.1868,52.6719 C383.2493,52.2344 382.6555,52.0938 381.7805,52.0938 C379.1555,52.0938 377.1555,54.1719 377.1555,56.8906 L377.1555,58.0156 C377.1555,60.5938 379.2649,62.4844 382.1555,62.4844 C383.3743,62.4844 384.5305,62.1875 385.2805,61.6406 C385.8586,61.2344 386.1868,60.7813 386.1868,60.3906 C386.1868,59.9375 385.7961,59.5469 385.3274,59.5469 C385.1086,59.5469 384.9055,59.625 384.718,59.8125 C384.2649,60.2969 384.2649,60.2969 384.0774,60.3906 C383.6555,60.6563 382.968,60.7813 382.2024,60.7813 C380.1555,60.7813 378.8586,59.6875 378.8586,57.9844 L378.8586,56.8906 C378.8586,55.1094 380.1086,53.7969 381.843,53.7969 C382.4211,53.7969 383.0305,53.9531 383.4993,54.2031 C383.9836,54.4844 384.1555,54.7031 384.2493,55.1094 C384.3118,55.5156 384.343,55.6406 384.4836,55.7656 C384.6243,55.9063 384.8586,56.0156 385.0774,56.0156 C385.343,56.0156 385.6086,55.875 385.7805,55.6563 C385.8899,55.5 385.9211,55.3125 385.9211,54.8906 L385.9211,53.4688 C385.9211,53.0313 385.9055,52.9063 385.8118,52.75 C385.6555,52.4844 385.3743,52.3438 385.0774,52.3438 C384.7805,52.3438 384.5774,52.4375 384.3586,52.75 L384.1868,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46" x="395.843"
+              y="61.1543">Iterable
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="367.843" x2="443.843" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="367.843" x2="443.843" y1="81" y2="81"/><!--MD5=[37348ef634def56e93d30045653beb16]
+link twisk.monde.GestionnaireEtapes to twisk.monde.Etape-->
+        <path codeLine="10" d="M347.946,522.2 C356.627,539.739 366.904,560.503 377.48,581.873 " fill="none"
+              id="twisk.monde.GestionnaireEtapes-twisk.monde.Etape" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="366.55"
+              y="570.9116">*
+        </text><!--MD5=[9137114da8ce601968991ec5da4a2164]
+link twisk.monde.Etape to twisk.monde.GestionnaireSuccesseurs-->
+        <path codeLine="31" d="M535.416,860.067 C557.212,889.645 580.023,919.647 600.226,945.181 " fill="none"
+              id="twisk.monde.Etape-twisk.monde.GestionnaireSuccesseurs" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="585.4592"
+              y="934.3517">1
+        </text><!--MD5=[334cf4c332dae53f3478f51be60046a9]
+link twisk.monde.GestionnaireSuccesseurs to twisk.monde.Etape-->
+        <path codeLine="73" d="M622.858,945.181 C605.296,919.647 583.679,889.645 561.633,860.067 " fill="none"
+              id="twisk.monde.GestionnaireSuccesseurs-twisk.monde.Etape" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="561.1248"
+              y="880.5971">*
+        </text><!--MD5=[80edd22f41e93f5e0c1f74c56d0335df]
+link twisk.monde.Monde to twisk.monde.SasEntree-->
+        <path codeLine="89"
+              d="M116.7279,363.061 C106.0673,382.159 96.7739,402.529 90.843,423 C6,715.846 15.6997,813.516 90.843,1109 C96.1275,1129.78 106.2862,1150.882 116.7048,1168.883 "
+              fill="none" id="twisk.monde.Monde-twisk.monde.SasEntree" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="103.4822"
+              y="1157.9118">1
+        </text><!--MD5=[73f901aac6100ec309c0aab3ea8837b9]
+link twisk.monde.Monde to twisk.monde.SasSortie-->
+        <path codeLine="90"
+              d="M170.285,363.028 C124.5221,563.454 40.3784,988.622 118.843,1109 C154.919,1164.346 194.68,1141.704 254.843,1169 C263.642,1172.992 272.84,1177.212 281.97,1181.431 "
+              fill="none" id="twisk.monde.Monde-twisk.monde.SasSortie" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="259.059"
+              y="1170.3287">1
+        </text><!--MD5=[7004a555f5c9d3734c8cb5e4f85ce07d]
+link twisk.monde.Monde to twisk.monde.GestionnaireEtapes-->
+        <path codeLine="91" d="M259.281,363.307 C271.728,384.166 284.203,405.072 294.823,422.87 " fill="none"
+              id="twisk.monde.Monde-twisk.monde.GestionnaireEtapes" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="282.1796"
+              y="411.8969">1
+        </text><!--MD5=[7d1727e5a4030700639bde6ad9d50dc9]
+reverse link twisk.monde.Activite to twisk.monde.ActiviteRestreinte-->
+        <path codeLine="98" d="M502.775,1127.153 C514.206,1149.57 525.275,1171.28 533.698,1187.798 " fill="none"
+              id="twisk.monde.Activite-backto-twisk.monde.ActiviteRestreinte" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="496.423,1130.106,493.574,1109.108,508.895,1123.746,496.423,1130.106"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[17b6eddf12962e9c44c8af93ac7a2d74]
+reverse link twisk.monde.Iterable to twisk.monde.GestionnaireEtapes-->
+        <path codeLine="99" d="M397.089,109.29 C381.68,185.49 349.821,343.035 333.678,422.864 " fill="none"
+              id="twisk.monde.Iterable-backto-twisk.monde.GestionnaireEtapes"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="390.314,107.47,401.14,89.26,404.037,110.25,390.314,107.47"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8e40ec52f7810ac15b2d95d7844328a5]
+reverse link twisk.monde.Iterable to twisk.monde.Etape-->
+        <path codeLine="100" d="M408.495,109.36 C414.287,204.06 428.279,432.831 437.396,581.897 " fill="none"
+              id="twisk.monde.Iterable-backto-twisk.monde.Etape"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="401.501,109.67,407.267,89.28,415.475,108.81,401.501,109.67"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[861a3b1ef6830be3cee83ac51ae06ac8]
+reverse link twisk.monde.Activite to twisk.monde.SasEntree-->
+        <path codeLine="101"
+              d="M342.192,1108.028 C341.742,1108.354 341.292,1108.678 340.843,1109 C308.766,1132.001 271.406,1154.138 238.278,1172.351 "
+              fill="none" id="twisk.monde.Activite-backto-twisk.monde.SasEntree"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="337.98,1102.438,358.149,1095.943,346.432,1113.598,337.98,1102.438"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ac37a81856282a5f5b7ead5a92a2b04c]
+reverse link twisk.monde.Etape to twisk.monde.Activite-->
+        <path codeLine="102" d="M445.843,880.393 C445.843,893.752 445.843,906.969 445.843,919.589 " fill="none"
+              id="twisk.monde.Etape-backto-twisk.monde.Activite" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="438.843,880.067,445.843,860.067,452.843,880.067,438.843,880.067"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ba2d47892a5ac319ebfb409e25e3bc6d]
+reverse link twisk.monde.Etape to twisk.monde.Guichet-->
+        <path codeLine="103" d="M331.622,876.145 C320.654,890.947 309.772,905.633 299.43,919.589 " fill="none"
+              id="twisk.monde.Etape-backto-twisk.monde.Guichet" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="326.005,871.969,343.536,860.067,337.253,880.304,326.005,871.969"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[72f6e1588961d4a4bbc268a1a4391264]
+reverse link twisk.monde.Iterable to twisk.monde.GestionnaireSuccesseurs-->
+        <path codeLine="104"
+              d="M423.704,107.64 C460.231,194.33 543.97,401.197 590.843,582 C623.613,708.405 644.399,859.739 654.511,945.443 "
+              fill="none" id="twisk.monde.Iterable-backto-twisk.monde.GestionnaireSuccesseurs"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="417.24,110.33,415.873,89.18,430.128,104.86,417.24,110.33"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[62dad8a74cc92c7dd79f34eafe5e8b55]
+reverse link twisk.monde.Iterable to twisk.monde.Monde-->
+        <path codeLine="105" d="M365.167,102.61 C343.555,122.06 316.028,146.83 289.481,170.73 " fill="none"
+              id="twisk.monde.Iterable-backto-twisk.monde.Monde"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="360.544,97.35,380.093,89.18,369.91,107.76,360.544,97.35"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[251b03e500fdcc3de2a22a74e9e0e4a7]
+reverse link twisk.monde.Activite to twisk.monde.SasSortie-->
+        <path codeLine="106" d="M397.51,1127.722 C389.182,1147.057 381.094,1165.836 374.486,1181.179 " fill="none"
+              id="twisk.monde.Activite-backto-twisk.monde.SasSortie" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="391.186,1124.708,405.527,1109.108,404.044,1130.246,391.186,1124.708"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[02cdfcd7ace1f11b1ba76f3e15dd859a]
+@startuml
+class twisk.monde.ActiviteRestreinte {
++ String toC()
+}
+class twisk.monde.GestionnaireEtapes {
++ void ajouter(Etape)
++ int nbEtapes()
++ Iterator<Etape> iterator()
++ String toString()
+}
+twisk.monde.GestionnaireEtapes - -"*" twisk.monde.Etape
+abstract class twisk.monde.Etape {
+# String nom
+# int num
++ void ajouterSuccesseur(Etape)
++ int nbSuccesseurs()
++ boolean estUneActivite()
++ boolean estUnGuichet()
++ Iterator<Etape> iterator()
++ String getNom()
++ int getNum()
++ {abstract}String toC()
++ GestionnaireSuccesseurs getGestsucc()
++ Etape getSucc()
++ Etape getSuccI(int)
++ {abstract}int getNbTicketSiGuichet()
++ {abstract}int getNumSem()
++ String getNomMaj()
++ boolean estUnSasEntree()
++ boolean estUnSasSortie()
+}
+twisk.monde.Etape- -"1" twisk.monde.GestionnaireSuccesseurs
+class twisk.monde.SasEntree {
+- String loi
++ String toC()
++ boolean estUnSasEntree()
++ void setLoi(String)
+}
+class twisk.monde.Activite {
+- int temps
+- int ecartTemps
++ boolean estUneActivite()
++ int getTemps()
++ void setTemps(int)
++ int getEcartTemps()
++ void setEcartTemps(int)
++ String toString()
++ String toC()
++ int getNbTicketSiGuichet()
++ int getNumSem()
+}
+class twisk.monde.Guichet {
+- int nbJetons
+- int numSemaphore
++ boolean estUnGuichet()
++ int getNbJetons()
++ void setNbJetons(int)
++ int getNumSemaphore()
++ void setNumSemaphore(int)
++ String toString()
++ String toC()
++ int getNbTicketSiGuichet()
++ int getNumSem()
+}
+class twisk.monde.GestionnaireSuccesseurs {
+- ArrayList<Etape> succ
++ void ajouter(Etape)
++ int nbEtapes()
++ Iterator<Etape> iterator()
++ Etape getSucc()
++ Etape getSuccI(int)
++ String toString()
+}
+twisk.monde.GestionnaireSuccesseurs - -"*" twisk.monde.Etape
+class twisk.monde.Monde {
++ void aCommeEntree(Etape)
++ void aCommeSortie(Etape)
++ void ajouter(Etape)
++ int nbEtapes()
++ int nbGuichets()
++ Iterator<Etape> iterator()
++ String toString()
++ String toC()
++ int getNbTicketsGuichetI(int)
++ String getNomEtapeI(int)
++ int getNumSasSortie()
++ Etape getEtapeI(int)
++ SasEntree getSasE()
+}
+twisk.monde.Monde- -"1" twisk.monde.SasEntree
+twisk.monde.Monde- -"1" twisk.monde.SasSortie
+twisk.monde.Monde- -"1" twisk.monde.GestionnaireEtapes
+class twisk.monde.SasSortie {
++ String toC()
++ boolean estUnSasSortie()
+}
+
+
+twisk.monde.Activite <|- - twisk.monde.ActiviteRestreinte
+twisk.monde.Iterable <|.. twisk.monde.GestionnaireEtapes
+twisk.monde.Iterable <|.. twisk.monde.Etape
+twisk.monde.Activite <|- - twisk.monde.SasEntree
+twisk.monde.Etape <|- - twisk.monde.Activite
+twisk.monde.Etape <|- - twisk.monde.Guichet
+twisk.monde.Iterable <|.. twisk.monde.GestionnaireSuccesseurs
+twisk.monde.Iterable <|.. twisk.monde.Monde
+twisk.monde.Activite <|- - twisk.monde.SasSortie
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+-->
+    </g>
+</svg>

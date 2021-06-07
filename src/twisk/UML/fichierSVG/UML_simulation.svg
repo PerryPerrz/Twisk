@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentScriptType="application/ecmascript" contentStyleType="text/css"
+     height="869px" preserveAspectRatio="none" style="width:400px;height:869px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 400 869" width="400px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="fnjhsa0wjtwuu" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix"
+                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g><!--MD5=[7907e845f6d424a1eb4fde7c85cb6ac9]
+cluster twisk.simulation-->
+        <polygon fill="#FFFFFF" filter="url(#fnjhsa0wjtwuu)"
+                 points="16,129,158,129,165,151.2969,383,151.2969,383,739,16,739,16,129"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="165" y1="151.2969" y2="151.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="136" x="20" y="143.9951">twisk.simulation
+        </text><!--MD5=[5288b49022d8a4a78208282469da21db]
+cluster twisk.monde-->
+        <polygon fill="#FFFFFF" filter="url(#fnjhsa0wjtwuu)"
+                 points="128,763,237,763,244,785.2969,247,785.2969,247,862,128,862,128,763"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="128" x2="244" y1="785.2969" y2="785.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="103" x="132" y="777.9951">twisk.monde
+        </text><!--MD5=[cdc1255cd7ce410e071b877db621e6bf]
+cluster twisk.designPattern-->
+        <polygon fill="#FFFFFF" filter="url(#fnjhsa0wjtwuu)"
+                 points="166,6,336,6,343,28.2969,346,28.2969,346,105,166,105,166,6"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="166" x2="343" y1="28.2969" y2="28.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="164" x="170" y="20.9951">twisk.designPattern
+        </text><!--MD5=[1e5bedacf93a3bf0b5c5b6f9ad6139af]
+class twisk.simulation.GestionnaireClients-->
+        <rect codeLine="1" fill="#FEFECE" filter="url(#fnjhsa0wjtwuu)" height="137.6328"
+              id="twisk.simulation.GestionnaireClients" style="stroke:#A80036;stroke-width:1.5;" width="171" x="101.5"
+              y="387"/>
+        <ellipse cx="126.85" cy="403" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M129.1938,398.6719 C128.2563,398.2344 127.6625,398.0938 126.7875,398.0938 C124.1625,398.0938 122.1625,400.1719 122.1625,402.8906 L122.1625,404.0156 C122.1625,406.5938 124.2719,408.4844 127.1625,408.4844 C128.3813,408.4844 129.5375,408.1875 130.2875,407.6406 C130.8656,407.2344 131.1938,406.7813 131.1938,406.3906 C131.1938,405.9375 130.8031,405.5469 130.3344,405.5469 C130.1156,405.5469 129.9125,405.625 129.725,405.8125 C129.2719,406.2969 129.2719,406.2969 129.0844,406.3906 C128.6625,406.6563 127.975,406.7813 127.2094,406.7813 C125.1625,406.7813 123.8656,405.6875 123.8656,403.9844 L123.8656,402.8906 C123.8656,401.1094 125.1156,399.7969 126.85,399.7969 C127.4281,399.7969 128.0375,399.9531 128.5063,400.2031 C128.9906,400.4844 129.1625,400.7031 129.2563,401.1094 C129.3188,401.5156 129.35,401.6406 129.4906,401.7656 C129.6313,401.9063 129.8656,402.0156 130.0844,402.0156 C130.35,402.0156 130.6156,401.875 130.7875,401.6563 C130.8969,401.5 130.9281,401.3125 130.9281,400.8906 L130.9281,399.4688 C130.9281,399.0313 130.9125,398.9063 130.8188,398.75 C130.6625,398.4844 130.3813,398.3438 130.0844,398.3438 C129.7875,398.3438 129.5844,398.4375 129.3656,398.75 L129.1938,398.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="116" x="143.15"
+              y="407.1543">GestionnaireClients
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="102.5" x2="271.5" y1="419" y2="419"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="109.5" y="427"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="121.5"
+              y="433.2104">int nbClients
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="102.5" x2="271.5" y1="439.8047" y2="439.8047"/>
+        <ellipse cx="112.5" cy="450.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="107" x="121.5"
+              y="454.0151">void setClients(int)
+        </text>
+        <ellipse cx="112.5" cy="463.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="121.5"
+              y="466.8198">void allerA(int,Etape,int)
+        </text>
+        <ellipse cx="112.5" cy="476.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="121.5"
+              y="479.6245">void reset()
+        </text>
+        <ellipse cx="112.5" cy="489.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="121.5"
+              y="492.4292">Iterator&lt;Client&gt; iterator()
+        </text>
+        <ellipse cx="112.5" cy="502.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="121.5"
+              y="505.2339">Client getClientI(int)
+        </text>
+        <ellipse cx="112.5" cy="514.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="121.5"
+              y="518.0386">int getNbClients()
+        </text><!--MD5=[981135c3db39ec3dc6758bdf3fcc6e5a]
+class twisk.simulation.Client-->
+        <rect codeLine="11" fill="#FEFECE" filter="url(#fnjhsa0wjtwuu)" height="137.6328" id="twisk.simulation.Client"
+              style="stroke:#A80036;stroke-width:1.5;" width="149" x="112.5" y="585"/>
+        <ellipse cx="166.25" cy="601" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M168.5938,596.6719 C167.6563,596.2344 167.0625,596.0938 166.1875,596.0938 C163.5625,596.0938 161.5625,598.1719 161.5625,600.8906 L161.5625,602.0156 C161.5625,604.5938 163.6719,606.4844 166.5625,606.4844 C167.7813,606.4844 168.9375,606.1875 169.6875,605.6406 C170.2656,605.2344 170.5938,604.7813 170.5938,604.3906 C170.5938,603.9375 170.2031,603.5469 169.7344,603.5469 C169.5156,603.5469 169.3125,603.625 169.125,603.8125 C168.6719,604.2969 168.6719,604.2969 168.4844,604.3906 C168.0625,604.6563 167.375,604.7813 166.6094,604.7813 C164.5625,604.7813 163.2656,603.6875 163.2656,601.9844 L163.2656,600.8906 C163.2656,599.1094 164.5156,597.7969 166.25,597.7969 C166.8281,597.7969 167.4375,597.9531 167.9063,598.2031 C168.3906,598.4844 168.5625,598.7031 168.6563,599.1094 C168.7188,599.5156 168.75,599.6406 168.8906,599.7656 C169.0313,599.9063 169.2656,600.0156 169.4844,600.0156 C169.75,600.0156 170.0156,599.875 170.1875,599.6563 C170.2969,599.5 170.3281,599.3125 170.3281,598.8906 L170.3281,597.4688 C170.3281,597.0313 170.3125,596.9063 170.2188,596.75 C170.0625,596.4844 169.7813,596.3438 169.4844,596.3438 C169.1875,596.3438 168.9844,596.4375 168.7656,596.75 L168.5938,596.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="186.75"
+              y="605.1543">Client
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="113.5" x2="260.5" y1="617" y2="617"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="120.5" y="625"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="132.5"
+              y="631.2104">int numeroClient
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="120.5" y="637.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="43" x="132.5"
+              y="644.0151">int rang
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="113.5" x2="260.5" y1="650.6094" y2="650.6094"/>
+        <ellipse cx="123.5" cy="661.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="132.5"
+              y="664.8198">void allerA(Etape,int)
+        </text>
+        <ellipse cx="123.5" cy="674.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="132.5"
+              y="677.6245">Etape getEtape()
+        </text>
+        <ellipse cx="123.5" cy="687.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="132.5"
+              y="690.4292">int getNumeroClient()
+        </text>
+        <ellipse cx="123.5" cy="700.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="132.5"
+              y="703.2339">int getRang()
+        </text>
+        <ellipse cx="123.5" cy="712.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="132.5"
+              y="716.0386">String toString()
+        </text><!--MD5=[f2b55a4a08231a0f3a5f01e8dbd558f5]
+class twisk.simulation.Simulation-->
+        <rect codeLine="21" fill="#FEFECE" filter="url(#fnjhsa0wjtwuu)" height="163.2422"
+              id="twisk.simulation.Simulation" style="stroke:#A80036;stroke-width:1.5;" width="222" x="145" y="164"/>
+        <ellipse cx="221.25" cy="180" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M223.5938,175.6719 C222.6563,175.2344 222.0625,175.0938 221.1875,175.0938 C218.5625,175.0938 216.5625,177.1719 216.5625,179.8906 L216.5625,181.0156 C216.5625,183.5938 218.6719,185.4844 221.5625,185.4844 C222.7813,185.4844 223.9375,185.1875 224.6875,184.6406 C225.2656,184.2344 225.5938,183.7813 225.5938,183.3906 C225.5938,182.9375 225.2031,182.5469 224.7344,182.5469 C224.5156,182.5469 224.3125,182.625 224.125,182.8125 C223.6719,183.2969 223.6719,183.2969 223.4844,183.3906 C223.0625,183.6563 222.375,183.7813 221.6094,183.7813 C219.5625,183.7813 218.2656,182.6875 218.2656,180.9844 L218.2656,179.8906 C218.2656,178.1094 219.5156,176.7969 221.25,176.7969 C221.8281,176.7969 222.4375,176.9531 222.9063,177.2031 C223.3906,177.4844 223.5625,177.7031 223.6563,178.1094 C223.7188,178.5156 223.75,178.6406 223.8906,178.7656 C224.0313,178.9063 224.2656,179.0156 224.4844,179.0156 C224.75,179.0156 225.0156,178.875 225.1875,178.6563 C225.2969,178.5 225.3281,178.3125 225.3281,177.8906 L225.3281,176.4688 C225.3281,176.0313 225.3125,175.9063 225.2188,175.75 C225.0625,175.4844 224.7813,175.3438 224.4844,175.3438 C224.1875,175.3438 223.9844,175.4375 223.7656,175.75 L223.5938,175.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="61" x="241.75"
+              y="184.1543">Simulation
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="146" x2="366" y1="196" y2="196"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="204"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="165"
+              y="210.2104">int nbClients
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="216.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="174" x="165"
+              y="223.0151">boolean enCoursDeSimulation
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="146" x2="366" y1="229.6094" y2="229.6094"/>
+        <ellipse cx="156" cy="240.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="165"
+              y="243.8198">void simuler(Monde)
+        </text>
+        <ellipse cx="156" cy="253.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="196" x="165"
+              y="256.6245">int[] start_simulation(int,int,int,int[])
+        </text>
+        <ellipse cx="156" cy="266.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="175" x="165"
+              y="269.4292">int[] ou_sont_les_clients(int,int)
+        </text>
+        <ellipse cx="156" cy="279.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="165"
+              y="282.2339">void nettoyage()
+        </text>
+        <ellipse cx="156" cy="291.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="165"
+              y="295.0386">void setNbClients(int)
+        </text>
+        <ellipse cx="156" cy="304.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184" x="165"
+              y="307.8433">GestionnaireClients getGestCli()
+        </text>
+        <ellipse cx="156" cy="317.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="190" x="165"
+              y="320.6479">boolean isEnCoursDeSimulation()
+        </text><!--MD5=[008c26275752a4012c3997c15f9a3cc3]
+class twisk.simulation.Iterable-->
+        <rect fill="#FEFECE" filter="url(#fnjhsa0wjtwuu)" height="48" id="twisk.simulation.Iterable"
+              style="stroke:#A80036;stroke-width:1.5;" width="78" x="32" y="221.5"/>
+        <ellipse cx="47" cy="237.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M49.3438,233.1719 C48.4063,232.7344 47.8125,232.5938 46.9375,232.5938 C44.3125,232.5938 42.3125,234.6719 42.3125,237.3906 L42.3125,238.5156 C42.3125,241.0938 44.4219,242.9844 47.3125,242.9844 C48.5313,242.9844 49.6875,242.6875 50.4375,242.1406 C51.0156,241.7344 51.3438,241.2813 51.3438,240.8906 C51.3438,240.4375 50.9531,240.0469 50.4844,240.0469 C50.2656,240.0469 50.0625,240.125 49.875,240.3125 C49.4219,240.7969 49.4219,240.7969 49.2344,240.8906 C48.8125,241.1563 48.125,241.2813 47.3594,241.2813 C45.3125,241.2813 44.0156,240.1875 44.0156,238.4844 L44.0156,237.3906 C44.0156,235.6094 45.2656,234.2969 47,234.2969 C47.5781,234.2969 48.1875,234.4531 48.6563,234.7031 C49.1406,234.9844 49.3125,235.2031 49.4063,235.6094 C49.4688,236.0156 49.5,236.1406 49.6406,236.2656 C49.7813,236.4063 50.0156,236.5156 50.2344,236.5156 C50.5,236.5156 50.7656,236.375 50.9375,236.1563 C51.0469,236 51.0781,235.8125 51.0781,235.3906 L51.0781,233.9688 C51.0781,233.5313 51.0625,233.4063 50.9688,233.25 C50.8125,232.9844 50.5313,232.8438 50.2344,232.8438 C49.9375,232.8438 49.7344,232.9375 49.5156,233.25 L49.3438,233.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46" x="61"
+              y="241.6543">Iterable
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="109" y1="253.5" y2="253.5"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="109" y1="261.5" y2="261.5"/><!--MD5=[09aa7eb68af6758ca1bf8ede19960d66]
+class twisk.monde.Etape-->
+        <rect fill="#FEFECE" filter="url(#fnjhsa0wjtwuu)" height="48" id="twisk.monde.Etape"
+              style="stroke:#A80036;stroke-width:1.5;" width="66" x="154" y="798"/>
+        <ellipse cx="169" cy="814" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M171.3438,809.6719 C170.4063,809.2344 169.8125,809.0938 168.9375,809.0938 C166.3125,809.0938 164.3125,811.1719 164.3125,813.8906 L164.3125,815.0156 C164.3125,817.5938 166.4219,819.4844 169.3125,819.4844 C170.5313,819.4844 171.6875,819.1875 172.4375,818.6406 C173.0156,818.2344 173.3438,817.7813 173.3438,817.3906 C173.3438,816.9375 172.9531,816.5469 172.4844,816.5469 C172.2656,816.5469 172.0625,816.625 171.875,816.8125 C171.4219,817.2969 171.4219,817.2969 171.2344,817.3906 C170.8125,817.6563 170.125,817.7813 169.3594,817.7813 C167.3125,817.7813 166.0156,816.6875 166.0156,814.9844 L166.0156,813.8906 C166.0156,812.1094 167.2656,810.7969 169,810.7969 C169.5781,810.7969 170.1875,810.9531 170.6563,811.2031 C171.1406,811.4844 171.3125,811.7031 171.4063,812.1094 C171.4688,812.5156 171.5,812.6406 171.6406,812.7656 C171.7813,812.9063 172.0156,813.0156 172.2344,813.0156 C172.5,813.0156 172.7656,812.875 172.9375,812.6563 C173.0469,812.5 173.0781,812.3125 173.0781,811.8906 L173.0781,810.4688 C173.0781,810.0313 173.0625,809.9063 172.9688,809.75 C172.8125,809.4844 172.5313,809.3438 172.2344,809.3438 C171.9375,809.3438 171.7344,809.4375 171.5156,809.75 L171.3438,809.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="183"
+              y="818.1543">Etape
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="155" x2="219" y1="830" y2="830"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="155" x2="219" y1="838" y2="838"/><!--MD5=[1eec1bbfa71b989c3f9e65ca1c9de324]
+class twisk.designPattern.SujetObserve-->
+        <rect fill="#FEFECE" filter="url(#fnjhsa0wjtwuu)" height="48" id="twisk.designPattern.SujetObserve"
+              style="stroke:#A80036;stroke-width:1.5;" width="115" x="198.5" y="41"/>
+        <ellipse cx="213.5" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M215.8438,52.6719 C214.9063,52.2344 214.3125,52.0938 213.4375,52.0938 C210.8125,52.0938 208.8125,54.1719 208.8125,56.8906 L208.8125,58.0156 C208.8125,60.5938 210.9219,62.4844 213.8125,62.4844 C215.0313,62.4844 216.1875,62.1875 216.9375,61.6406 C217.5156,61.2344 217.8438,60.7813 217.8438,60.3906 C217.8438,59.9375 217.4531,59.5469 216.9844,59.5469 C216.7656,59.5469 216.5625,59.625 216.375,59.8125 C215.9219,60.2969 215.9219,60.2969 215.7344,60.3906 C215.3125,60.6563 214.625,60.7813 213.8594,60.7813 C211.8125,60.7813 210.5156,59.6875 210.5156,57.9844 L210.5156,56.8906 C210.5156,55.1094 211.7656,53.7969 213.5,53.7969 C214.0781,53.7969 214.6875,53.9531 215.1563,54.2031 C215.6406,54.4844 215.8125,54.7031 215.9063,55.1094 C215.9688,55.5156 216,55.6406 216.1406,55.7656 C216.2813,55.9063 216.5156,56.0156 216.7344,56.0156 C217,56.0156 217.2656,55.875 217.4375,55.6563 C217.5469,55.5 217.5781,55.3125 217.5781,54.8906 L217.5781,53.4688 C217.5781,53.0313 217.5625,52.9063 217.4688,52.75 C217.3125,52.4844 217.0313,52.3438 216.7344,52.3438 C216.4375,52.3438 216.2344,52.4375 216.0156,52.75 L215.8438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="227.5"
+              y="61.1543">SujetObserve
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="199.5" x2="312.5" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="199.5" x2="312.5" y1="81" y2="81"/><!--MD5=[c6780fdf579ea5fe044ca93011877c6b]
+link twisk.simulation.GestionnaireClients to twisk.simulation.Client-->
+        <path codeLine="10" d="M187,525.001 C187,544.35 187,565.426 187,584.787 " fill="none"
+              id="twisk.simulation.GestionnaireClients-twisk.simulation.Client"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="179.6391"
+              y="573.9686">*
+        </text><!--MD5=[31699a525810023cbf3890b503eef34d]
+link twisk.simulation.Client to twisk.monde.Etape-->
+        <path codeLine="20" d="M187,723.477 C187,749.913 187,778.377 187,797.6889 " fill="none"
+              id="twisk.simulation.Client-twisk.monde.Etape" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="178.025"
+              y="787.018">1
+        </text><!--MD5=[07e77a541ccabcda12be3477299b791d]
+link twisk.simulation.Simulation to twisk.simulation.GestionnaireClients-->
+        <path codeLine="32" d="M229.323,327.112 C222.8,346.822 215.883,367.722 209.574,386.788 " fill="none"
+              id="twisk.simulation.Simulation-twisk.simulation.GestionnaireClients"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="203.4894"
+              y="375.9698">1
+        </text><!--MD5=[6ccc2ddc2614b7c9faf4f92a0eff2e21]
+reverse link twisk.simulation.Iterable to twisk.simulation.GestionnaireClients-->
+        <path codeLine="35" d="M93.752,287.395 C109.483,315.67 130.787,353.962 149.061,386.808 " fill="none"
+              id="twisk.simulation.Iterable-backto-twisk.simulation.GestionnaireClients"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="87.4638,290.49,83.8572,269.61,99.6979,283.684,87.4638,290.49"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c4c3e1303c677bd0ebd872f35adfa706]
+reverse link twisk.designPattern.SujetObserve to twisk.simulation.Simulation-->
+        <path codeLine="36" d="M256,109.585 C256,125.934 256,145.08 256,163.728 " fill="none"
+              id="twisk.designPattern.SujetObserve-backto-twisk.simulation.Simulation"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="249,109.336,256,89.336,263,109.336,249,109.336"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[32e561c5039f1b36e519c4bbaee1a138]
+@startuml
+class twisk.simulation.GestionnaireClients {
+- int nbClients
++ void setClients(int)
++ void allerA(int,Etape,int)
++ void reset()
++ Iterator<Client> iterator()
++ Client getClientI(int)
++ int getNbClients()
+}
+twisk.simulation.GestionnaireClients - -"*" twisk.simulation.Client
+class twisk.simulation.Client {
+- int numeroClient
+- int rang
++ void allerA(Etape,int)
++ Etape getEtape()
++ int getNumeroClient()
++ int getRang()
++ String toString()
+}
+twisk.simulation.Client - -"1" twisk.monde.Etape
+class twisk.simulation.Simulation {
+- int nbClients
+- boolean enCoursDeSimulation
++ void simuler(Monde)
++ int[] start_simulation(int,int,int,int[])
++ int[] ou_sont_les_clients(int,int)
++ void nettoyage()
++ void setNbClients(int)
++ GestionnaireClients getGestCli()
++ boolean isEnCoursDeSimulation()
+}
+twisk.simulation.Simulation - -"1" twisk.simulation.GestionnaireClients
+
+
+twisk.simulation.Iterable <|.. twisk.simulation.GestionnaireClients
+twisk.designPattern.SujetObserve <|- - twisk.simulation.Simulation
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+-->
+    </g>
+</svg>

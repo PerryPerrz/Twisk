@@ -1,0 +1,171 @@
+@startuml
+class twisk.mondeIG.MondeIG {
+- {static} long serialVersionUID
+- int style
+- Object simulation
+- int nbClients
+- String nom
+- String loi
++ void ajouter(String)
++ Iterator<EtapeIG> iterator()
++ int nbEtapes()
++ void ajouter(PointDeControleIG,PointDeControleIG)
++ Iterator<ArcIG> iteratorArcs()
++ void creationArc(PointDeControleIG)
++ EtapeIG getEtapeIndice(String)
++ void ajouterEtapeSelectionnee(EtapeIG)
++ boolean isSelected(EtapeIG)
++ void supprimerLaSelection()
++ void supprimer(Iterator<EtapeIG>)
++ void renommerLaSelection(String)
++ int nbEtapesSelectionnees()
++ void changerEmplacementEtape(String,int,int)
++ void selectionArc(ArcIG)
++ boolean isSelected(ArcIG)
++ void effacerLaSelection()
++ void setEntree()
++ void setSortie()
++ void setDelai(String)
++ void setEcart(String)
++ void setStyle(int)
++ int getStyle()
++ void setTokens(int)
++ boolean etapesSelectionneesSontDesGuichets()
+- void verifierMondeIG()
++ Monde creerMonde()
++ void simuler()
++ CorrespondanceEtapes getCorE()
++ GestionnaireClients getGestionnaireClientDeSimulation()
++ boolean simulationACommencee()
++ void reagir()
++ void lavageDesClients()
++ int getNbClients()
++ void setNbClients(int)
++ String getNom()
++ void setNom(String)
++ void setLoi(String)
++ String getLoi()
++ int getNbArcsSelectionnes()
++ boolean etapesSelectionneesContientUnGuichet()
+}
+twisk.mondeIG.MondeIG--"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.MondeIG--"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.MondeIG--"*" twisk.mondeIG.ArcIG
+twisk.mondeIG.MondeIG--"1" twisk.outils.CorrespondanceEtapes
+twisk.mondeIG.MondeIG--"1" twisk.outils.FabriqueIdentifiant
+class twisk.mondeIG.ActiviteIG {
+- {static} long serialVersionUID
+- boolean estUneActiviteRestreinte
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ void siEstUnGuichetSetVersLaDroite(Boolean)
++ boolean setActiviteRestreinte(boolean)
++ Boolean siEstUnGuichetGetVersLaDroite()
+}
+class twisk.mondeIG.PointDeControleIG {
+- {static} long serialVersionUID
+- int centreX
+- int centreY
+- String id
+- boolean clicked
++ void setCentre(int,int)
++ int getCentreX()
++ int getCentreY()
++ void setClicked()
++ boolean isClicked()
++ String getId()
++ EtapeIG getEtapeRattache()
+}
+twisk.mondeIG.PointDeControleIG--"1" twisk.mondeIG.EtapeIG
+class twisk.mondeIG.ArcIG {
+- {static} long serialVersionUID
+- boolean select
++ PointDeControleIG getPdcDepart()
++ PointDeControleIG getPdcArrive()
++ boolean isLinkedToStage(EtapeIG)
++ boolean isSelected()
++ void setSelect(boolean)
++ EtapeIG getEtapePdcDepart()
++ EtapeIG getEtapePdcArrive()
+}
+twisk.mondeIG.ArcIG --"2" twisk.mondeIG.PointDeControleIG
+abstract class twisk.mondeIG.EtapeIG {
+- {static} long serialVersionUID
+# String nom
+# String identifiant
+# int posX
+# int posY
+# boolean entree
+# boolean sortie
+# int delai
+# int ecart
+# int nbPrec
++ void randomPositions()
++ void raffraichissementPdc()
++ String getIdentifiant()
++ int getPosX()
++ int getPosY()
++ Iterator<PointDeControleIG> iterator()
++ PointDeControleIG getPdcIndex(int)
++ String getNom()
++ void setNom(String)
++ void setPosXPosY(int,int)
++ void invEntree()
++ void invSortie()
++ int getDelai()
++ int getEcart()
++ void setDelai(int)
++ void setEcart(int)
++ boolean estUneEntree()
++ boolean estUneSortie()
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ boolean estUnGuichet()
++ {abstract}int siEstUnGuichetGetNbJetons()
++ {abstract}void siEstUnGuichetSetNbJetons(int)
++ {abstract}void siEstUnGuichetSetVersLaDroite(Boolean)
++ void ajouterSuccesseur(EtapeIG)
++ void supprimerSuccesseur(EtapeIG)
++ boolean possedeUnSuccesseur()
++ boolean estSuivieDUneActivite()
++ {abstract}boolean setActiviteRestreinte(boolean)
++ boolean actSuccIntoActRes()
++ ArrayList<EtapeIG> getSucc()
++ boolean estAccessibleDepuis(EtapeIG)
++ int getNbPrec()
++ void incrementeNbPrec()
++ void decrementeNbPrec()
++ {abstract}Boolean siEstUnGuichetGetVersLaDroite()
+}
+twisk.mondeIG.EtapeIG--"*" twisk.mondeIG.PointDeControleIG
+twisk.mondeIG.EtapeIG--"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.EtapeIG--"1" twisk.outils.FabriqueIdentifiant
+class twisk.mondeIG.GuichetIG {
+- {static} long serialVersionUID
+- int nbJetons
+- int numSemaphore
+- Boolean versLaDroite
++ boolean estUnGuichet()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ void siEstUnGuichetSetVersLaDroite(Boolean)
++ boolean setActiviteRestreinte(boolean)
++ Boolean siEstUnGuichetGetVersLaDroite()
++ void setVersLaDroite(Boolean)
+}
+twisk.mondeIG.GuichetIG--"1"twisk.outils.FabriqueIdentifiant
+
+twisk.designPattern.Observateur <|.. twisk.mondeIG.MondeIG
+java.io.Serializable <|.. twisk.mondeIG.MondeIG
+twisk.designPattern.SujetObserve <|-- twisk.mondeIG.MondeIG
+java.io.Serializable <|.. twisk.mondeIG.ActiviteIG
+twisk.mondeIG.EtapeIG <|-- twisk.mondeIG.ActiviteIG
+java.io.Serializable <|.. twisk.mondeIG.PointDeControleIG
+java.io.Serializable <|.. twisk.mondeIG.ArcIG
+twisk.mondeIG.Iterable <|.. twisk.mondeIG.EtapeIG
+java.io.Serializable <|.. twisk.mondeIG.EtapeIG
+java.io.Serializable <|.. twisk.mondeIG.GuichetIG
+twisk.mondeIG.EtapeIG <|-- twisk.mondeIG.GuichetIG
+@enduml

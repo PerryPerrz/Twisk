@@ -1,0 +1,46 @@
+@startuml
+abstract class twisk.exceptions.TwiskException {
+}
+class twisk.exceptions.PasUnGuichetException {
+}
+class twisk.exceptions.GuichetToGuichetException {
+}
+class twisk.exceptions.ChargementSauvegardeException {
+}
+class twisk.exceptions.UncorrectSettingsException {
+}
+class twisk.exceptions.CreateLoopException {
+}
+class twisk.exceptions.SameActivityException {
+}
+class twisk.exceptions.WrongDirectionException {
+}
+class twisk.exceptions.ArcAlreadyCreateException {
+}
+class twisk.exceptions.CreateArcWithEndPdcException {
+}
+class twisk.exceptions.FichierNullException {
+}
+class twisk.exceptions.URLIncorrectException {
+}
+class twisk.exceptions.MondeNullException {
+}
+class twisk.exceptions.MondeException {
+}
+
+
+twisk.exceptions.Exception <|-- twisk.exceptions.TwiskException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.PasUnGuichetException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.GuichetToGuichetException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.ChargementSauvegardeException
+twisk.exceptions.Exception <|-- twisk.exceptions.UncorrectSettingsException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.CreateLoopException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.SameActivityException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.WrongDirectionException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.ArcAlreadyCreateException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.CreateArcWithEndPdcException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.FichierNullException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.URLIncorrectException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.MondeNullException
+twisk.exceptions.TwiskException <|-- twisk.exceptions.MondeException
+@enduml

@@ -1,0 +1,159 @@
+@startuml
+class twisk.outils.ClassLoaderPerso {
++ Class<?> loadClass(String)
+- Class<?> getClass(String)
+- byte[] loadClassData(String)
++ void finalize()
+}
+class twisk.outils.FabriqueNumero {
+- int cptEtape
+- int cptSemaphore
+- int cptLibrairie
+- int cptLog
+- {static} FabriqueNumero instance
++ {static} FabriqueNumero getInstance()
++ int getNumeroEtape()
++ int getNumeroSemaphore()
++ int getNumeroLibrairie()
++ int consulterNumeroLibraire()
++ int getNumeroLog()
++ void reset()
+}
+class twisk.outils.CorrespondanceEtapes {
++ void ajouter(EtapeIG,Etape)
++ Etape get(EtapeIG)
++ EtapeIG get(Etape)
+}
+twisk.outils.CorrespondanceEtapes--"*"twisk.mondeIG.EtapeIG
+twisk.outils.CorrespondanceEtapes--"*"twisk.monde.Etape
+class twisk.outils.CouleurComposants {
+- {static} CouleurComposants instance
+- String couleurLabelActivite
+- String couleurActivite
+- String couleurBackgroudnActivite
+- String couleurLigneStroke
+- String couleurTriangleStroke
+- String couleurTriangleFill
+- String couleurLigneStrokeIsSelected
+- String couleurTriangleStrokeIsSelected
+- String couleurTriangleFillIsSelected
+- String couleurBackgroundEtapeIsSelected
+- String couleurBorderEtapeIsSelected
+- String couleurLabelGuichet
+- String couleurBorderGuichet
+- String couleurBackgroundGuichet
+- String couleurBackgroundJourMonde
+- String couleurBackgroundNuitMonde
+- String couleurBackgroundResetMonde
+- String couleurPointDeControle
++ {static} CouleurComposants getInstance()
++ String getCouleurActivite()
++ String getCouleurLabelActivite()
++ String getCouleurBackgroudnActivite()
++ String getCouleurLigneStroke()
++ String getCouleurTriangleStroke()
++ String getCouleurTriangleFill()
++ String getCouleurLigneStrokeIsSelected()
++ String getCouleurTriangleStrokeIsSelected()
++ String getCouleurTriangleFillIsSelected()
++ String getCouleurBackgroundEtapeIsSelected()
++ String getCouleurBorderEtapeIsSelected()
++ String getCouleurLabelGuichet()
++ String getCouleurBorderGuichet()
++ String getCouleurBackgroundGuichet()
++ String getCouleurBackgroundJourMonde()
++ String getCouleurBackgroundNuitMonde()
++ String getCouleurBackgroundResetMonde()
++ String getCouleurPointDeControle()
+}
+class twisk.outils.CreationLogs {
+- {static} CreationLogs instance
++ {static} CreationLogs getInstance()
++ void initializelogs()
++ void ecrireContenuDansLog(int,String)
+}
+class twisk.outils.GestionnaireThreads {
+- {static} GestionnaireThreads instance
++ {static} GestionnaireThreads getInstance()
++ int lancer(Task)
++ void detruireTout()
+}
+twisk.outils.GestionnaireThreads--"*" java.lang.Thread
+class twisk.outils.TailleComposants {
+- {static} TailleComposants instance
+- int largAct
+- int hautAct
+- int tailleBouton
+- int windowX
+- int windowY
+- int rad
+- int largLigne
+- int longTri
+- int largTri
+- int tailleIcons
+- int tailleIcons2
+- int tailleIcons3
+- int largGuichet
+- int hautGuichet
+- int hautLabelEtape
+- int margeSelection
+- int font
+- int radCLient
+- int ecartHV
++ {static} TailleComposants getInstance()
++ int getLargAct()
++ int getHautAct()
++ int getTailleBouton()
++ int getWindowX()
++ int getWindowY()
++ int getRad()
++ int getLargLigne()
++ int getLongTri()
++ int getLargTri()
++ int getTailleIcons()
++ int getTailleIcons2()
++ int getTailleIcons3()
++ int getLargGuichet()
++ int getHautGuichet()
++ int getHautLabelEtape()
++ int getMargeSelection()
++ int getFont()
++ int getRadClient()
++ int getEcartHV()
+}
+class twisk.outils.OutilsSerializable {
+- {static} OutilsSerializable instance
++ {static} OutilsSerializable getInstance()
++ void initializeSer()
++ void mondeToSer(MondeIG,File,String)
++ MondeIG mondeFromSer(File)
++ MondeIG[] mondesPredeterminesTemp()
++ void mondeToSerInMondesPredetermines(MondeIG,String)
++ void supprimerSer(String)
++ MondeIG chargerMondePredetermine(InputStream)
+}
+class twisk.outils.FabriqueIdentifiant {
+- {static} long serialVersionUID
+- {static} FabriqueIdentifiant instance
+- int noEtape
+- int noPdc
+- int numSem
++ {static} FabriqueIdentifiant getInstance()
++ String getIdentifiantEtape()
++ String getIdentifiantPdc()
++ void reset()
++ int getNumSem()
+}
+class twisk.outils.KitC {
++ void creerEnvironnement()
+- void copier(InputStream,File)
++ void creerFichier(String)
++ void compiler()
++ void construireLaLibrairie()
++ void tuerLesProcessusC(GestionnaireClients)
+}
+
+
+twisk.outils.ClassLoader <|-- twisk.outils.ClassLoaderPerso
+java.io.Serializable <|.. twisk.outils.FabriqueIdentifiant
+@enduml

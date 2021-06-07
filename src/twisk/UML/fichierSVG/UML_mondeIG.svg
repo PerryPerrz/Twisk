@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentScriptType="application/ecmascript" contentStyleType="text/css"
+     height="1919px" preserveAspectRatio="none" style="width:1288px;height:1919px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 1288 1919" width="1288px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1vu47h0vstuwb" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix"
+                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g><!--MD5=[da2508b1d141bd918f2f9ce350c3536b]
+cluster twisk.mondeIG-->
+        <polygon fill="#FFFFFF" filter="url(#f1vu47h0vstuwb)"
+                 points="337,129,463,129,470,151.2969,1201,151.2969,1201,1789,337,1789,337,129"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="337" x2="470" y1="151.2969" y2="151.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="120" x="341" y="143.9951">twisk.mondeIG
+        </text><!--MD5=[b2c5f27c9c3a6ca5bcf557b1cbf4a0f2]
+cluster twisk.outils-->
+        <polygon fill="#FFFFFF" filter="url(#f1vu47h0vstuwb)"
+                 points="16,1813,118,1813,125,1835.2969,401,1835.2969,401,1912,16,1912,16,1813"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="125" y1="1835.2969" y2="1835.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="96" x="20" y="1827.9951">twisk.outils
+        </text><!--MD5=[cdc1255cd7ce410e071b877db621e6bf]
+cluster twisk.designPattern-->
+        <polygon fill="#FFFFFF" filter="url(#f1vu47h0vstuwb)"
+                 points="386,6,556,6,563,28.2969,677,28.2969,677,105,386,105,386,6"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="386" x2="563" y1="28.2969" y2="28.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="164" x="390" y="20.9951">twisk.designPattern
+        </text><!--MD5=[0d852700fdad35b7061d461d6907a324]
+cluster java.io-->
+        <polygon fill="#FFFFFF" filter="url(#f1vu47h0vstuwb)"
+                 points="910,6,970,6,977,28.2969,1044,28.2969,1044,105,910,105,910,6"
+                 style="stroke:#000000;stroke-width:1.5;"/>
+        <line style="stroke:#000000;stroke-width:1.5;" x1="910" x2="977" y1="28.2969" y2="28.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="54" x="914" y="20.9951">java.io
+        </text><!--MD5=[977b08b38ecc8e6f0bc7677a095ee525]
+class twisk.mondeIG.MondeIG-->
+        <rect codeLine="1" fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="649.8203" id="twisk.mondeIG.MondeIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="352" x="353" y="164"/>
+        <ellipse cx="498.25" cy="180" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M500.5938,175.6719 C499.6563,175.2344 499.0625,175.0938 498.1875,175.0938 C495.5625,175.0938 493.5625,177.1719 493.5625,179.8906 L493.5625,181.0156 C493.5625,183.5938 495.6719,185.4844 498.5625,185.4844 C499.7813,185.4844 500.9375,185.1875 501.6875,184.6406 C502.2656,184.2344 502.5938,183.7813 502.5938,183.3906 C502.5938,182.9375 502.2031,182.5469 501.7344,182.5469 C501.5156,182.5469 501.3125,182.625 501.125,182.8125 C500.6719,183.2969 500.6719,183.2969 500.4844,183.3906 C500.0625,183.6563 499.375,183.7813 498.6094,183.7813 C496.5625,183.7813 495.2656,182.6875 495.2656,180.9844 L495.2656,179.8906 C495.2656,178.1094 496.5156,176.7969 498.25,176.7969 C498.8281,176.7969 499.4375,176.9531 499.9063,177.2031 C500.3906,177.4844 500.5625,177.7031 500.6563,178.1094 C500.7188,178.5156 500.75,178.6406 500.8906,178.7656 C501.0313,178.9063 501.2656,179.0156 501.4844,179.0156 C501.75,179.0156 502.0156,178.875 502.1875,178.6563 C502.2969,178.5 502.3281,178.3125 502.3281,177.8906 L502.3281,176.4688 C502.3281,176.0313 502.3125,175.9063 502.2188,175.75 C502.0625,175.4844 501.7813,175.3438 501.4844,175.3438 C501.1875,175.3438 500.9844,175.4375 500.7656,175.75 L500.5938,175.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="518.75"
+              y="184.1543">MondeIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="354" x2="704" y1="196" y2="196"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="204"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline"
+              textLength="122" x="373" y="210.2104">long serialVersionUID
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="216.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="373"
+              y="223.0151">int style
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="229.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="373"
+              y="235.8198">Object simulation
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="242.4141"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="373"
+              y="248.6245">int nbClients
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="255.2188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="373"
+              y="261.4292">String nom
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="268.0234"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="373"
+              y="274.2339">String loi
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="354" x2="704" y1="280.8281" y2="280.8281"/>
+        <ellipse cx="364" cy="291.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="373"
+              y="295.0386">void ajouter(String)
+        </text>
+        <ellipse cx="364" cy="304.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="373"
+              y="307.8433">Iterator&lt;EtapeIG&gt; iterator()
+        </text>
+        <ellipse cx="364" cy="317.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="373"
+              y="320.6479">int nbEtapes()
+        </text>
+        <ellipse cx="364" cy="330.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="287" x="373"
+              y="333.4526">void ajouter(PointDeControleIG,PointDeControleIG)
+        </text>
+        <ellipse cx="364" cy="343.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="373"
+              y="346.2573">Iterator&lt;ArcIG&gt; iteratorArcs()
+        </text>
+        <ellipse cx="364" cy="355.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="204" x="373"
+              y="359.062">void creationArc(PointDeControleIG)
+        </text>
+        <ellipse cx="364" cy="368.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="176" x="373"
+              y="371.8667">EtapeIG getEtapeIndice(String)
+        </text>
+        <ellipse cx="364" cy="381.4609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="231" x="373"
+              y="384.6714">void ajouterEtapeSelectionnee(EtapeIG)
+        </text>
+        <ellipse cx="364" cy="394.2656" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="373"
+              y="397.4761">boolean isSelected(EtapeIG)
+        </text>
+        <ellipse cx="364" cy="407.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160" x="373"
+              y="410.2808">void supprimerLaSelection()
+        </text>
+        <ellipse cx="364" cy="419.875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="197" x="373"
+              y="423.0854">void supprimer(Iterator&lt;EtapeIG&gt;)
+        </text>
+        <ellipse cx="364" cy="432.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="196" x="373"
+              y="435.8901">void renommerLaSelection(String)
+        </text>
+        <ellipse cx="364" cy="445.4844" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="373"
+              y="448.6948">int nbEtapesSelectionnees()
+        </text>
+        <ellipse cx="364" cy="458.2891" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="261" x="373"
+              y="461.4995">void changerEmplacementEtape(String,int,int)
+        </text>
+        <ellipse cx="364" cy="471.0938" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="373"
+              y="474.3042">void selectionArc(ArcIG)
+        </text>
+        <ellipse cx="364" cy="483.8984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="373"
+              y="487.1089">boolean isSelected(ArcIG)
+        </text>
+        <ellipse cx="364" cy="496.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="373"
+              y="499.9136">void effacerLaSelection()
+        </text>
+        <ellipse cx="364" cy="509.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="373"
+              y="512.7183">void setEntree()
+        </text>
+        <ellipse cx="364" cy="522.3125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="373"
+              y="525.5229">void setSortie()
+        </text>
+        <ellipse cx="364" cy="535.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="373"
+              y="538.3276">void setDelai(String)
+        </text>
+        <ellipse cx="364" cy="547.9219" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="373"
+              y="551.1323">void setEcart(String)
+        </text>
+        <ellipse cx="364" cy="560.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="373"
+              y="563.937">void setStyle(int)
+        </text>
+        <ellipse cx="364" cy="573.5313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="373"
+              y="576.7417">int getStyle()
+        </text>
+        <ellipse cx="364" cy="586.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="373"
+              y="589.5464">void setTokens(int)
+        </text>
+        <ellipse cx="364" cy="599.1406" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="280" x="373"
+              y="602.3511">boolean etapesSelectionneesSontDesGuichets()
+        </text>
+        <rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361" y="608.9453"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="373"
+              y="615.1558">void verifierMondeIG()
+        </text>
+        <ellipse cx="364" cy="624.75" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="373"
+              y="627.9604">Monde creerMonde()
+        </text>
+        <ellipse cx="364" cy="637.5547" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="373"
+              y="640.7651">void simuler()
+        </text>
+        <ellipse cx="364" cy="650.3594" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="189" x="373"
+              y="653.5698">CorrespondanceEtapes getCorE()
+        </text>
+        <ellipse cx="364" cy="663.1641" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="326" x="373"
+              y="666.3745">GestionnaireClients getGestionnaireClientDeSimulation()
+        </text>
+        <ellipse cx="364" cy="675.9688" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="198" x="373"
+              y="679.1792">boolean simulationACommencee()
+        </text>
+        <ellipse cx="364" cy="688.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="373"
+              y="691.9839">void reagir()
+        </text>
+        <ellipse cx="364" cy="701.5781" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="373"
+              y="704.7886">void lavageDesClients()
+        </text>
+        <ellipse cx="364" cy="714.3828" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="373"
+              y="717.5933">int getNbClients()
+        </text>
+        <ellipse cx="364" cy="727.1875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="373"
+              y="730.3979">void setNbClients(int)
+        </text>
+        <ellipse cx="364" cy="739.9922" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="373"
+              y="743.2026">String getNom()
+        </text>
+        <ellipse cx="364" cy="752.7969" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="373"
+              y="756.0073">void setNom(String)
+        </text>
+        <ellipse cx="364" cy="765.6016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="373"
+              y="768.812">void setLoi(String)
+        </text>
+        <ellipse cx="364" cy="778.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="373"
+              y="781.6167">String getLoi()
+        </text>
+        <ellipse cx="364" cy="791.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="159" x="373"
+              y="794.4214">int getNbArcsSelectionnes()
+        </text>
+        <ellipse cx="364" cy="804.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="288" x="373"
+              y="807.2261">boolean etapesSelectionneesContientUnGuichet()
+        </text><!--MD5=[9b6a503ee0c2ea323714f4191231ea4e]
+class twisk.mondeIG.EtapeIG-->
+        <rect codeLine="93" fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="637.0156" id="twisk.mondeIG.EtapeIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="283" x="611.5" y="874"/>
+        <ellipse cx="724.75" cy="890" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M726.8281,891.8125 L727.2188,892.7969 L726.8281,892.7969 C726.375,892.7969 726.2656,892.8125 726.1094,892.9219 C725.8594,893.0781 725.7031,893.3594 725.7031,893.6563 C725.7031,893.9219 725.8438,894.1719 726.0625,894.3281 C726.2031,894.4531 726.4063,894.5 726.8281,894.5 L729.1875,894.5 C729.5469,894.5 729.7656,894.4688 729.9063,894.375 C730.1563,894.2344 730.3125,893.9375 730.3125,893.6563 C730.3125,893.375 730.1719,893.125 729.9531,892.9688 C729.7813,892.8281 729.625,892.7969 729.1563,892.7969 L725.7656,884.5938 L722.0938,884.5938 C721.6406,884.5938 721.5156,884.6094 721.3594,884.7031 C721.1094,884.875 720.9531,885.1563 720.9531,885.4375 C720.9531,885.7188 721.0938,885.9688 721.3125,886.1406 C721.4844,886.25 721.6563,886.2813 722.0938,886.2813 L723.1719,886.2813 L720.5313,892.7969 C720.1094,892.7969 719.9531,892.8125 719.7969,892.9219 C719.5469,893.0781 719.3906,893.3594 719.3906,893.6563 C719.3906,894.2188 719.7656,894.5 720.5156,894.5 L722.7813,894.5 C723.1406,894.5 723.3594,894.4688 723.4844,894.375 C723.75,894.2344 723.8906,893.9375 723.8906,893.6563 C723.8906,893.375 723.7656,893.125 723.5469,892.9531 C723.375,892.8281 723.2344,892.7969 722.7813,892.7969 L722.3906,892.7969 L722.7813,891.8125 L726.8281,891.8125 Z M726.125,890.1094 L723.4531,890.1094 L724.7969,886.8438 L726.125,890.1094 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing"
+              textLength="48" x="745.25" y="894.1543">EtapeIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="612.5" x2="893.5" y1="906" y2="906"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="619.5" y="914"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline"
+              textLength="122" x="631.5" y="920.2104">long serialVersionUID
+        </text>
+        <polygon fill="none" points="622.5,924.8047,626.5,928.8047,622.5,932.8047,618.5,928.8047"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="631.5"
+              y="933.0151">String nom
+        </text>
+        <polygon fill="none" points="622.5,937.6094,626.5,941.6094,622.5,945.6094,618.5,941.6094"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="631.5"
+              y="945.8198">String identifiant
+        </text>
+        <polygon fill="none" points="622.5,950.4141,626.5,954.4141,622.5,958.4141,618.5,954.4141"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="631.5"
+              y="958.6245">int posX
+        </text>
+        <polygon fill="none" points="622.5,963.2188,626.5,967.2188,622.5,971.2188,618.5,967.2188"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="631.5"
+              y="971.4292">int posY
+        </text>
+        <polygon fill="none" points="622.5,976.0234,626.5,980.0234,622.5,984.0234,618.5,980.0234"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="631.5"
+              y="984.2339">boolean entree
+        </text>
+        <polygon fill="none" points="622.5,988.8281,626.5,992.8281,622.5,996.8281,618.5,992.8281"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="631.5"
+              y="997.0386">boolean sortie
+        </text>
+        <polygon fill="none" points="622.5,1001.6328,626.5,1005.6328,622.5,1009.6328,618.5,1005.6328"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="631.5"
+              y="1009.8433">int delai
+        </text>
+        <polygon fill="none" points="622.5,1014.4375,626.5,1018.4375,622.5,1022.4375,618.5,1018.4375"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="631.5"
+              y="1022.6479">int ecart
+        </text>
+        <polygon fill="none" points="622.5,1027.2422,626.5,1031.2422,622.5,1035.2422,618.5,1031.2422"
+                 style="stroke:#B38D22;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="631.5"
+              y="1035.4526">int nbPrec
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="612.5" x2="893.5" y1="1042.0469" y2="1042.0469"/>
+        <ellipse cx="622.5" cy="1053.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="128" x="631.5"
+              y="1056.2573">void randomPositions()
+        </text>
+        <ellipse cx="622.5" cy="1065.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="631.5"
+              y="1069.062">void raffraichissementPdc()
+        </text>
+        <ellipse cx="622.5" cy="1078.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="631.5"
+              y="1081.8667">String getIdentifiant()
+        </text>
+        <ellipse cx="622.5" cy="1091.4609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="631.5"
+              y="1094.6714">int getPosX()
+        </text>
+        <ellipse cx="622.5" cy="1104.2656" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="631.5"
+              y="1107.4761">int getPosY()
+        </text>
+        <ellipse cx="622.5" cy="1117.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="216" x="631.5"
+              y="1120.2808">Iterator&lt;PointDeControleIG&gt; iterator()
+        </text>
+        <ellipse cx="622.5" cy="1129.875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="200" x="631.5"
+              y="1133.0854">PointDeControleIG getPdcIndex(int)
+        </text>
+        <ellipse cx="622.5" cy="1142.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="631.5"
+              y="1145.8901">String getNom()
+        </text>
+        <ellipse cx="622.5" cy="1155.4844" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="631.5"
+              y="1158.6948">void setNom(String)
+        </text>
+        <ellipse cx="622.5" cy="1168.2891" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="631.5"
+              y="1171.4995">void setPosXPosY(int,int)
+        </text>
+        <ellipse cx="622.5" cy="1181.0938" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="631.5"
+              y="1184.3042">void invEntree()
+        </text>
+        <ellipse cx="622.5" cy="1193.8984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="631.5"
+              y="1197.1089">void invSortie()
+        </text>
+        <ellipse cx="622.5" cy="1206.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="631.5"
+              y="1209.9136">int getDelai()
+        </text>
+        <ellipse cx="622.5" cy="1219.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="631.5"
+              y="1222.7183">int getEcart()
+        </text>
+        <ellipse cx="622.5" cy="1232.3125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="631.5"
+              y="1235.5229">void setDelai(int)
+        </text>
+        <ellipse cx="622.5" cy="1245.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="631.5"
+              y="1248.3276">void setEcart(int)
+        </text>
+        <ellipse cx="622.5" cy="1257.9219" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="631.5"
+              y="1261.1323">boolean estUneEntree()
+        </text>
+        <ellipse cx="622.5" cy="1270.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="631.5"
+              y="1273.937">boolean estUneSortie()
+        </text>
+        <ellipse cx="622.5" cy="1283.5313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="631.5"
+              y="1286.7417">boolean estUneActivite()
+        </text>
+        <ellipse cx="622.5" cy="1296.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="201" x="631.5"
+              y="1299.5464">boolean estUneActiviteRestreinte()
+        </text>
+        <ellipse cx="622.5" cy="1309.1406" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="631.5"
+              y="1312.3511">boolean estUnGuichet()
+        </text>
+        <ellipse cx="622.5" cy="1321.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="179" x="631.5" y="1325.1558">int siEstUnGuichetGetNbJetons()
+        </text>
+        <ellipse cx="622.5" cy="1334.75" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="201" x="631.5" y="1337.9604">void siEstUnGuichetSetNbJetons(int)
+        </text>
+        <ellipse cx="622.5" cy="1347.5547" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="257" x="631.5" y="1350.7651">void siEstUnGuichetSetVersLaDroite(Boolean)
+        </text>
+        <ellipse cx="622.5" cy="1360.3594" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="631.5"
+              y="1363.5698">void ajouterSuccesseur(EtapeIG)
+        </text>
+        <ellipse cx="622.5" cy="1373.1641" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="204" x="631.5"
+              y="1376.3745">void supprimerSuccesseur(EtapeIG)
+        </text>
+        <ellipse cx="622.5" cy="1385.9688" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="631.5"
+              y="1389.1792">boolean possedeUnSuccesseur()
+        </text>
+        <ellipse cx="622.5" cy="1398.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="631.5"
+              y="1401.9839">boolean estSuivieDUneActivite()
+        </text>
+        <ellipse cx="622.5" cy="1411.5781" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="219" x="631.5" y="1414.7886">boolean setActiviteRestreinte(boolean)
+        </text>
+        <ellipse cx="622.5" cy="1424.3828" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="631.5"
+              y="1427.5933">boolean actSuccIntoActRes()
+        </text>
+        <ellipse cx="622.5" cy="1437.1875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="631.5"
+              y="1440.3979">ArrayList&lt;EtapeIG&gt; getSucc()
+        </text>
+        <ellipse cx="622.5" cy="1449.9922" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="222" x="631.5"
+              y="1453.2026">boolean estAccessibleDepuis(EtapeIG)
+        </text>
+        <ellipse cx="622.5" cy="1462.7969" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="631.5"
+              y="1466.0073">int getNbPrec()
+        </text>
+        <ellipse cx="622.5" cy="1475.6016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="631.5"
+              y="1478.812">void incrementeNbPrec()
+        </text>
+        <ellipse cx="622.5" cy="1488.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="631.5"
+              y="1491.6167">void decrementeNbPrec()
+        </text>
+        <ellipse cx="622.5" cy="1501.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing"
+              textLength="235" x="631.5" y="1504.4214">Boolean siEstUnGuichetGetVersLaDroite()
+        </text><!--MD5=[2427a02a575a2dc98fc70c29b4044af1]
+class twisk.mondeIG.ArcIG-->
+        <rect codeLine="81" fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="163.2422" id="twisk.mondeIG.ArcIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="223" x="353.5" y="1111"/>
+        <ellipse cx="444.75" cy="1127" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M447.0938,1122.6719 C446.1563,1122.2344 445.5625,1122.0938 444.6875,1122.0938 C442.0625,1122.0938 440.0625,1124.1719 440.0625,1126.8906 L440.0625,1128.0156 C440.0625,1130.5938 442.1719,1132.4844 445.0625,1132.4844 C446.2813,1132.4844 447.4375,1132.1875 448.1875,1131.6406 C448.7656,1131.2344 449.0938,1130.7813 449.0938,1130.3906 C449.0938,1129.9375 448.7031,1129.5469 448.2344,1129.5469 C448.0156,1129.5469 447.8125,1129.625 447.625,1129.8125 C447.1719,1130.2969 447.1719,1130.2969 446.9844,1130.3906 C446.5625,1130.6563 445.875,1130.7813 445.1094,1130.7813 C443.0625,1130.7813 441.7656,1129.6875 441.7656,1127.9844 L441.7656,1126.8906 C441.7656,1125.1094 443.0156,1123.7969 444.75,1123.7969 C445.3281,1123.7969 445.9375,1123.9531 446.4063,1124.2031 C446.8906,1124.4844 447.0625,1124.7031 447.1563,1125.1094 C447.2188,1125.5156 447.25,1125.6406 447.3906,1125.7656 C447.5313,1125.9063 447.7656,1126.0156 447.9844,1126.0156 C448.25,1126.0156 448.5156,1125.875 448.6875,1125.6563 C448.7969,1125.5 448.8281,1125.3125 448.8281,1124.8906 L448.8281,1123.4688 C448.8281,1123.0313 448.8125,1122.9063 448.7188,1122.75 C448.5625,1122.4844 448.2813,1122.3438 447.9844,1122.3438 C447.6875,1122.3438 447.4844,1122.4375 447.2656,1122.75 L447.0938,1122.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="465.25"
+              y="1131.1543">ArcIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="354.5" x2="575.5" y1="1143" y2="1143"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1151"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline"
+              textLength="122" x="373.5" y="1157.2104">long serialVersionUID
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1163.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="373.5"
+              y="1170.0151">boolean select
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="354.5" x2="575.5" y1="1176.6094" y2="1176.6094"/>
+        <ellipse cx="364.5" cy="1187.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="373.5"
+              y="1190.8198">PointDeControleIG getPdcDepart()
+        </text>
+        <ellipse cx="364.5" cy="1200.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="373.5"
+              y="1203.6245">PointDeControleIG getPdcArrive()
+        </text>
+        <ellipse cx="364.5" cy="1213.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="197" x="373.5"
+              y="1216.4292">boolean isLinkedToStage(EtapeIG)
+        </text>
+        <ellipse cx="364.5" cy="1226.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="373.5"
+              y="1229.2339">boolean isSelected()
+        </text>
+        <ellipse cx="364.5" cy="1238.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="373.5"
+              y="1242.0386">void setSelect(boolean)
+        </text>
+        <ellipse cx="364.5" cy="1251.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="373.5"
+              y="1254.8433">EtapeIG getEtapePdcDepart()
+        </text>
+        <ellipse cx="364.5" cy="1264.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="373.5"
+              y="1267.6479">EtapeIG getEtapePdcArrive()
+        </text><!--MD5=[61e42ccfa92b0bf2bdd3784af34d943e]
+class twisk.mondeIG.ActiviteIG-->
+        <rect codeLine="55" fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="163.2422" id="twisk.mondeIG.ActiviteIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="288" x="574" y="1590.5"/>
+        <ellipse cx="685.75" cy="1606.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M688.0938,1602.1719 C687.1563,1601.7344 686.5625,1601.5938 685.6875,1601.5938 C683.0625,1601.5938 681.0625,1603.6719 681.0625,1606.3906 L681.0625,1607.5156 C681.0625,1610.0938 683.1719,1611.9844 686.0625,1611.9844 C687.2813,1611.9844 688.4375,1611.6875 689.1875,1611.1406 C689.7656,1610.7344 690.0938,1610.2813 690.0938,1609.8906 C690.0938,1609.4375 689.7031,1609.0469 689.2344,1609.0469 C689.0156,1609.0469 688.8125,1609.125 688.625,1609.3125 C688.1719,1609.7969 688.1719,1609.7969 687.9844,1609.8906 C687.5625,1610.1563 686.875,1610.2813 686.1094,1610.2813 C684.0625,1610.2813 682.7656,1609.1875 682.7656,1607.4844 L682.7656,1606.3906 C682.7656,1604.6094 684.0156,1603.2969 685.75,1603.2969 C686.3281,1603.2969 686.9375,1603.4531 687.4063,1603.7031 C687.8906,1603.9844 688.0625,1604.2031 688.1563,1604.6094 C688.2188,1605.0156 688.25,1605.1406 688.3906,1605.2656 C688.5313,1605.4063 688.7656,1605.5156 688.9844,1605.5156 C689.25,1605.5156 689.5156,1605.375 689.6875,1605.1563 C689.7969,1605 689.8281,1604.8125 689.8281,1604.3906 L689.8281,1602.9688 C689.8281,1602.5313 689.8125,1602.4063 689.7188,1602.25 C689.5625,1601.9844 689.2813,1601.8438 688.9844,1601.8438 C688.6875,1601.8438 688.4844,1601.9375 688.2656,1602.25 L688.0938,1602.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="56" x="706.25"
+              y="1610.6543">ActiviteIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="575" x2="861" y1="1622.5" y2="1622.5"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="582" y="1630.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline"
+              textLength="122" x="594" y="1636.7104">long serialVersionUID
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="582" y="1643.3047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="594"
+              y="1649.5151">boolean estUneActiviteRestreinte
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="575" x2="861" y1="1656.1094" y2="1656.1094"/>
+        <ellipse cx="585" cy="1667.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="594"
+              y="1670.3198">boolean estUneActivite()
+        </text>
+        <ellipse cx="585" cy="1679.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="201" x="594"
+              y="1683.1245">boolean estUneActiviteRestreinte()
+        </text>
+        <ellipse cx="585" cy="1692.7188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="594"
+              y="1695.9292">int siEstUnGuichetGetNbJetons()
+        </text>
+        <ellipse cx="585" cy="1705.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="205" x="594"
+              y="1708.7339">void siEstUnGuichetSetNbJetons(int)
+        </text>
+        <ellipse cx="585" cy="1718.3281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="262" x="594"
+              y="1721.5386">void siEstUnGuichetSetVersLaDroite(Boolean)
+        </text>
+        <ellipse cx="585" cy="1731.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="594"
+              y="1734.3433">boolean setActiviteRestreinte(boolean)
+        </text>
+        <ellipse cx="585" cy="1743.9375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="239" x="594"
+              y="1747.1479">Boolean siEstUnGuichetGetVersLaDroite()
+        </text><!--MD5=[77ee202a31c15765ae6e394fdc4b5735]
+class twisk.mondeIG.PointDeControleIG-->
+        <rect codeLine="66" fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="201.6563"
+              id="twisk.mondeIG.PointDeControleIG" style="stroke:#A80036;stroke-width:1.5;" width="185" x="353.5"
+              y="1571"/>
+        <ellipse cx="388.75" cy="1587" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M391.0938,1582.6719 C390.1563,1582.2344 389.5625,1582.0938 388.6875,1582.0938 C386.0625,1582.0938 384.0625,1584.1719 384.0625,1586.8906 L384.0625,1588.0156 C384.0625,1590.5938 386.1719,1592.4844 389.0625,1592.4844 C390.2813,1592.4844 391.4375,1592.1875 392.1875,1591.6406 C392.7656,1591.2344 393.0938,1590.7813 393.0938,1590.3906 C393.0938,1589.9375 392.7031,1589.5469 392.2344,1589.5469 C392.0156,1589.5469 391.8125,1589.625 391.625,1589.8125 C391.1719,1590.2969 391.1719,1590.2969 390.9844,1590.3906 C390.5625,1590.6563 389.875,1590.7813 389.1094,1590.7813 C387.0625,1590.7813 385.7656,1589.6875 385.7656,1587.9844 L385.7656,1586.8906 C385.7656,1585.1094 387.0156,1583.7969 388.75,1583.7969 C389.3281,1583.7969 389.9375,1583.9531 390.4063,1584.2031 C390.8906,1584.4844 391.0625,1584.7031 391.1563,1585.1094 C391.2188,1585.5156 391.25,1585.6406 391.3906,1585.7656 C391.5313,1585.9063 391.7656,1586.0156 391.9844,1586.0156 C392.25,1586.0156 392.5156,1585.875 392.6875,1585.6563 C392.7969,1585.5 392.8281,1585.3125 392.8281,1584.8906 L392.8281,1583.4688 C392.8281,1583.0313 392.8125,1582.9063 392.7188,1582.75 C392.5625,1582.4844 392.2813,1582.3438 391.9844,1582.3438 C391.6875,1582.3438 391.4844,1582.4375 391.2656,1582.75 L391.0938,1582.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="108" x="407.25"
+              y="1591.1543">PointDeControleIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="354.5" x2="537.5" y1="1603" y2="1603"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1611"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline"
+              textLength="122" x="373.5" y="1617.2104">long serialVersionUID
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1623.8047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="373.5"
+              y="1630.0151">int centreX
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1636.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="373.5"
+              y="1642.8198">int centreY
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1649.4141"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="47" x="373.5"
+              y="1655.6245">String id
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="361.5" y="1662.2188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="373.5"
+              y="1668.4292">boolean clicked
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="354.5" x2="537.5" y1="1675.0234" y2="1675.0234"/>
+        <ellipse cx="364.5" cy="1686.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="373.5"
+              y="1689.2339">void setCentre(int,int)
+        </text>
+        <ellipse cx="364.5" cy="1698.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="373.5"
+              y="1702.0386">int getCentreX()
+        </text>
+        <ellipse cx="364.5" cy="1711.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="373.5"
+              y="1714.8433">int getCentreY()
+        </text>
+        <ellipse cx="364.5" cy="1724.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="373.5"
+              y="1727.6479">void setClicked()
+        </text>
+        <ellipse cx="364.5" cy="1737.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="373.5"
+              y="1740.4526">boolean isClicked()
+        </text>
+        <ellipse cx="364.5" cy="1750.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="373.5"
+              y="1753.2573">String getId()
+        </text>
+        <ellipse cx="364.5" cy="1762.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="159" x="373.5"
+              y="1766.062">EtapeIG getEtapeRattache()
+        </text><!--MD5=[2edad319b4c61b5e9fca1c2f3d305785]
+class twisk.mondeIG.GuichetIG-->
+        <rect codeLine="144" fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="188.8516" id="twisk.mondeIG.GuichetIG"
+              style="stroke:#A80036;stroke-width:1.5;" width="288" x="897" y="1577.5"/>
+        <ellipse cx="1008.25" cy="1593.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M1010.5938,1589.1719 C1009.6563,1588.7344 1009.0625,1588.5938 1008.1875,1588.5938 C1005.5625,1588.5938 1003.5625,1590.6719 1003.5625,1593.3906 L1003.5625,1594.5156 C1003.5625,1597.0938 1005.6719,1598.9844 1008.5625,1598.9844 C1009.7813,1598.9844 1010.9375,1598.6875 1011.6875,1598.1406 C1012.2656,1597.7344 1012.5938,1597.2813 1012.5938,1596.8906 C1012.5938,1596.4375 1012.2031,1596.0469 1011.7344,1596.0469 C1011.5156,1596.0469 1011.3125,1596.125 1011.125,1596.3125 C1010.6719,1596.7969 1010.6719,1596.7969 1010.4844,1596.8906 C1010.0625,1597.1563 1009.375,1597.2813 1008.6094,1597.2813 C1006.5625,1597.2813 1005.2656,1596.1875 1005.2656,1594.4844 L1005.2656,1593.3906 C1005.2656,1591.6094 1006.5156,1590.2969 1008.25,1590.2969 C1008.8281,1590.2969 1009.4375,1590.4531 1009.9063,1590.7031 C1010.3906,1590.9844 1010.5625,1591.2031 1010.6563,1591.6094 C1010.7188,1592.0156 1010.75,1592.1406 1010.8906,1592.2656 C1011.0313,1592.4063 1011.2656,1592.5156 1011.4844,1592.5156 C1011.75,1592.5156 1012.0156,1592.375 1012.1875,1592.1563 C1012.2969,1592 1012.3281,1591.8125 1012.3281,1591.3906 L1012.3281,1589.9688 C1012.3281,1589.5313 1012.3125,1589.4063 1012.2188,1589.25 C1012.0625,1588.9844 1011.7813,1588.8438 1011.4844,1588.8438 C1011.1875,1588.8438 1010.9844,1588.9375 1010.7656,1589.25 L1010.5938,1589.1719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="1028.75"
+              y="1597.6543">GuichetIG
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="898" x2="1184" y1="1609.5" y2="1609.5"/>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="905" y="1617.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" text-decoration="underline"
+              textLength="122" x="917" y="1623.7104">long serialVersionUID
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="905" y="1630.3047"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="917"
+              y="1636.5151">int nbJetons
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="905" y="1643.1094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="917"
+              y="1649.3198">int numSemaphore
+        </text>
+        <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="905" y="1655.9141"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="917"
+              y="1662.1245">Boolean versLaDroite
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="898" x2="1184" y1="1668.7188" y2="1668.7188"/>
+        <ellipse cx="908" cy="1679.7188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="917"
+              y="1682.9292">boolean estUnGuichet()
+        </text>
+        <ellipse cx="908" cy="1692.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="917"
+              y="1695.7339">int siEstUnGuichetGetNbJetons()
+        </text>
+        <ellipse cx="908" cy="1705.3281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="205" x="917"
+              y="1708.5386">void siEstUnGuichetSetNbJetons(int)
+        </text>
+        <ellipse cx="908" cy="1718.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="262" x="917"
+              y="1721.3433">void siEstUnGuichetSetVersLaDroite(Boolean)
+        </text>
+        <ellipse cx="908" cy="1730.9375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="917"
+              y="1734.1479">boolean setActiviteRestreinte(boolean)
+        </text>
+        <ellipse cx="908" cy="1743.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="239" x="917"
+              y="1746.9526">Boolean siEstUnGuichetGetVersLaDroite()
+        </text>
+        <ellipse cx="908" cy="1756.5469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="175" x="917"
+              y="1759.7573">void setVersLaDroite(Boolean)
+        </text><!--MD5=[9fac15b71d63e9cb99193daa54cdef54]
+class twisk.mondeIG.Iterable-->
+        <rect fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="48" id="twisk.mondeIG.Iterable"
+              style="stroke:#A80036;stroke-width:1.5;" width="78" x="740" y="465"/>
+        <ellipse cx="755" cy="481" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M757.3438,476.6719 C756.4063,476.2344 755.8125,476.0938 754.9375,476.0938 C752.3125,476.0938 750.3125,478.1719 750.3125,480.8906 L750.3125,482.0156 C750.3125,484.5938 752.4219,486.4844 755.3125,486.4844 C756.5313,486.4844 757.6875,486.1875 758.4375,485.6406 C759.0156,485.2344 759.3438,484.7813 759.3438,484.3906 C759.3438,483.9375 758.9531,483.5469 758.4844,483.5469 C758.2656,483.5469 758.0625,483.625 757.875,483.8125 C757.4219,484.2969 757.4219,484.2969 757.2344,484.3906 C756.8125,484.6563 756.125,484.7813 755.3594,484.7813 C753.3125,484.7813 752.0156,483.6875 752.0156,481.9844 L752.0156,480.8906 C752.0156,479.1094 753.2656,477.7969 755,477.7969 C755.5781,477.7969 756.1875,477.9531 756.6563,478.2031 C757.1406,478.4844 757.3125,478.7031 757.4063,479.1094 C757.4688,479.5156 757.5,479.6406 757.6406,479.7656 C757.7813,479.9063 758.0156,480.0156 758.2344,480.0156 C758.5,480.0156 758.7656,479.875 758.9375,479.6563 C759.0469,479.5 759.0781,479.3125 759.0781,478.8906 L759.0781,477.4688 C759.0781,477.0313 759.0625,476.9063 758.9688,476.75 C758.8125,476.4844 758.5313,476.3438 758.2344,476.3438 C757.9375,476.3438 757.7344,476.4375 757.5156,476.75 L757.3438,476.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46" x="769"
+              y="485.1543">Iterable
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="741" x2="817" y1="497" y2="497"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="741" x2="817" y1="505" y2="505"/><!--MD5=[6ef62fe321058af161dc69c6e975b89d]
+class twisk.outils.CorrespondanceEtapes-->
+        <rect fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="48" id="twisk.outils.CorrespondanceEtapes"
+              style="stroke:#A80036;stroke-width:1.5;" width="174" x="32" y="1848"/>
+        <ellipse cx="47" cy="1864" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M49.3438,1859.6719 C48.4063,1859.2344 47.8125,1859.0938 46.9375,1859.0938 C44.3125,1859.0938 42.3125,1861.1719 42.3125,1863.8906 L42.3125,1865.0156 C42.3125,1867.5938 44.4219,1869.4844 47.3125,1869.4844 C48.5313,1869.4844 49.6875,1869.1875 50.4375,1868.6406 C51.0156,1868.2344 51.3438,1867.7813 51.3438,1867.3906 C51.3438,1866.9375 50.9531,1866.5469 50.4844,1866.5469 C50.2656,1866.5469 50.0625,1866.625 49.875,1866.8125 C49.4219,1867.2969 49.4219,1867.2969 49.2344,1867.3906 C48.8125,1867.6563 48.125,1867.7813 47.3594,1867.7813 C45.3125,1867.7813 44.0156,1866.6875 44.0156,1864.9844 L44.0156,1863.8906 C44.0156,1862.1094 45.2656,1860.7969 47,1860.7969 C47.5781,1860.7969 48.1875,1860.9531 48.6563,1861.2031 C49.1406,1861.4844 49.3125,1861.7031 49.4063,1862.1094 C49.4688,1862.5156 49.5,1862.6406 49.6406,1862.7656 C49.7813,1862.9063 50.0156,1863.0156 50.2344,1863.0156 C50.5,1863.0156 50.7656,1862.875 50.9375,1862.6563 C51.0469,1862.5 51.0781,1862.3125 51.0781,1861.8906 L51.0781,1860.4688 C51.0781,1860.0313 51.0625,1859.9063 50.9688,1859.75 C50.8125,1859.4844 50.5313,1859.3438 50.2344,1859.3438 C49.9375,1859.3438 49.7344,1859.4375 49.5156,1859.75 L49.3438,1859.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="142" x="61"
+              y="1868.1543">CorrespondanceEtapes
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="205" y1="1880" y2="1880"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="205" y1="1888" y2="1888"/><!--MD5=[b51f34150e7ed2f0b86232072112074b]
+class twisk.outils.FabriqueIdentifiant-->
+        <rect fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="48" id="twisk.outils.FabriqueIdentifiant"
+              style="stroke:#A80036;stroke-width:1.5;" width="143" x="241.5" y="1848"/>
+        <ellipse cx="256.5" cy="1864" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M258.8438,1859.6719 C257.9063,1859.2344 257.3125,1859.0938 256.4375,1859.0938 C253.8125,1859.0938 251.8125,1861.1719 251.8125,1863.8906 L251.8125,1865.0156 C251.8125,1867.5938 253.9219,1869.4844 256.8125,1869.4844 C258.0313,1869.4844 259.1875,1869.1875 259.9375,1868.6406 C260.5156,1868.2344 260.8438,1867.7813 260.8438,1867.3906 C260.8438,1866.9375 260.4531,1866.5469 259.9844,1866.5469 C259.7656,1866.5469 259.5625,1866.625 259.375,1866.8125 C258.9219,1867.2969 258.9219,1867.2969 258.7344,1867.3906 C258.3125,1867.6563 257.625,1867.7813 256.8594,1867.7813 C254.8125,1867.7813 253.5156,1866.6875 253.5156,1864.9844 L253.5156,1863.8906 C253.5156,1862.1094 254.7656,1860.7969 256.5,1860.7969 C257.0781,1860.7969 257.6875,1860.9531 258.1563,1861.2031 C258.6406,1861.4844 258.8125,1861.7031 258.9063,1862.1094 C258.9688,1862.5156 259,1862.6406 259.1406,1862.7656 C259.2813,1862.9063 259.5156,1863.0156 259.7344,1863.0156 C260,1863.0156 260.2656,1862.875 260.4375,1862.6563 C260.5469,1862.5 260.5781,1862.3125 260.5781,1861.8906 L260.5781,1860.4688 C260.5781,1860.0313 260.5625,1859.9063 260.4688,1859.75 C260.3125,1859.4844 260.0313,1859.3438 259.7344,1859.3438 C259.4375,1859.3438 259.2344,1859.4375 259.0156,1859.75 L258.8438,1859.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="111" x="270.5"
+              y="1868.1543">FabriqueIdentifiant
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="242.5" x2="383.5" y1="1880" y2="1880"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="242.5" x2="383.5" y1="1888" y2="1888"/><!--MD5=[a480427e2b0495212a8cd6706556f868]
+class twisk.designPattern.Observateur-->
+        <rect fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="48" id="twisk.designPattern.Observateur"
+              style="stroke:#A80036;stroke-width:1.5;" width="108" x="402" y="41"/>
+        <ellipse cx="417" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M419.3438,52.6719 C418.4063,52.2344 417.8125,52.0938 416.9375,52.0938 C414.3125,52.0938 412.3125,54.1719 412.3125,56.8906 L412.3125,58.0156 C412.3125,60.5938 414.4219,62.4844 417.3125,62.4844 C418.5313,62.4844 419.6875,62.1875 420.4375,61.6406 C421.0156,61.2344 421.3438,60.7813 421.3438,60.3906 C421.3438,59.9375 420.9531,59.5469 420.4844,59.5469 C420.2656,59.5469 420.0625,59.625 419.875,59.8125 C419.4219,60.2969 419.4219,60.2969 419.2344,60.3906 C418.8125,60.6563 418.125,60.7813 417.3594,60.7813 C415.3125,60.7813 414.0156,59.6875 414.0156,57.9844 L414.0156,56.8906 C414.0156,55.1094 415.2656,53.7969 417,53.7969 C417.5781,53.7969 418.1875,53.9531 418.6563,54.2031 C419.1406,54.4844 419.3125,54.7031 419.4063,55.1094 C419.4688,55.5156 419.5,55.6406 419.6406,55.7656 C419.7813,55.9063 420.0156,56.0156 420.2344,56.0156 C420.5,56.0156 420.7656,55.875 420.9375,55.6563 C421.0469,55.5 421.0781,55.3125 421.0781,54.8906 L421.0781,53.4688 C421.0781,53.0313 421.0625,52.9063 420.9688,52.75 C420.8125,52.4844 420.5313,52.3438 420.2344,52.3438 C419.9375,52.3438 419.7344,52.4375 419.5156,52.75 L419.3438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="76" x="431"
+              y="61.1543">Observateur
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="403" x2="509" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="403" x2="509" y1="81" y2="81"/><!--MD5=[1eec1bbfa71b989c3f9e65ca1c9de324]
+class twisk.designPattern.SujetObserve-->
+        <rect fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="48" id="twisk.designPattern.SujetObserve"
+              style="stroke:#A80036;stroke-width:1.5;" width="115" x="545.5" y="41"/>
+        <ellipse cx="560.5" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M562.8438,52.6719 C561.9063,52.2344 561.3125,52.0938 560.4375,52.0938 C557.8125,52.0938 555.8125,54.1719 555.8125,56.8906 L555.8125,58.0156 C555.8125,60.5938 557.9219,62.4844 560.8125,62.4844 C562.0313,62.4844 563.1875,62.1875 563.9375,61.6406 C564.5156,61.2344 564.8438,60.7813 564.8438,60.3906 C564.8438,59.9375 564.4531,59.5469 563.9844,59.5469 C563.7656,59.5469 563.5625,59.625 563.375,59.8125 C562.9219,60.2969 562.9219,60.2969 562.7344,60.3906 C562.3125,60.6563 561.625,60.7813 560.8594,60.7813 C558.8125,60.7813 557.5156,59.6875 557.5156,57.9844 L557.5156,56.8906 C557.5156,55.1094 558.7656,53.7969 560.5,53.7969 C561.0781,53.7969 561.6875,53.9531 562.1563,54.2031 C562.6406,54.4844 562.8125,54.7031 562.9063,55.1094 C562.9688,55.5156 563,55.6406 563.1406,55.7656 C563.2813,55.9063 563.5156,56.0156 563.7344,56.0156 C564,56.0156 564.2656,55.875 564.4375,55.6563 C564.5469,55.5 564.5781,55.3125 564.5781,54.8906 L564.5781,53.4688 C564.5781,53.0313 564.5625,52.9063 564.4688,52.75 C564.3125,52.4844 564.0313,52.3438 563.7344,52.3438 C563.4375,52.3438 563.2344,52.4375 563.0156,52.75 L562.8438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="574.5"
+              y="61.1543">SujetObserve
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="546.5" x2="659.5" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="546.5" x2="659.5" y1="81" y2="81"/><!--MD5=[5a5af9b0547913863cbe0ddf55a9ab5e]
+class java.io.Serializable-->
+        <rect fill="#FEFECE" filter="url(#f1vu47h0vstuwb)" height="48" id="java.io.Serializable"
+              style="stroke:#A80036;stroke-width:1.5;" width="102" x="926" y="41"/>
+        <ellipse cx="941" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/>
+        <path d="M943.3438,52.6719 C942.4063,52.2344 941.8125,52.0938 940.9375,52.0938 C938.3125,52.0938 936.3125,54.1719 936.3125,56.8906 L936.3125,58.0156 C936.3125,60.5938 938.4219,62.4844 941.3125,62.4844 C942.5313,62.4844 943.6875,62.1875 944.4375,61.6406 C945.0156,61.2344 945.3438,60.7813 945.3438,60.3906 C945.3438,59.9375 944.9531,59.5469 944.4844,59.5469 C944.2656,59.5469 944.0625,59.625 943.875,59.8125 C943.4219,60.2969 943.4219,60.2969 943.2344,60.3906 C942.8125,60.6563 942.125,60.7813 941.3594,60.7813 C939.3125,60.7813 938.0156,59.6875 938.0156,57.9844 L938.0156,56.8906 C938.0156,55.1094 939.2656,53.7969 941,53.7969 C941.5781,53.7969 942.1875,53.9531 942.6563,54.2031 C943.1406,54.4844 943.3125,54.7031 943.4063,55.1094 C943.4688,55.5156 943.5,55.6406 943.6406,55.7656 C943.7813,55.9063 944.0156,56.0156 944.2344,56.0156 C944.5,56.0156 944.7656,55.875 944.9375,55.6563 C945.0469,55.5 945.0781,55.3125 945.0781,54.8906 L945.0781,53.4688 C945.0781,53.0313 945.0625,52.9063 944.9688,52.75 C944.8125,52.4844 944.5313,52.3438 944.2344,52.3438 C943.9375,52.3438 943.7344,52.4375 943.5156,52.75 L943.3438,52.6719 Z "
+              fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="955"
+              y="61.1543">Serializable
+        </text>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="927" x2="1027" y1="73" y2="73"/>
+        <line style="stroke:#A80036;stroke-width:1.5;" x1="927" x2="1027" y1="81" y2="81"/><!--MD5=[4c8027300130e598008062999858c228]
+link twisk.mondeIG.MondeIG to twisk.mondeIG.EtapeIG-->
+        <path codeLine="50" d="M619.759,814.06 C626.072,833.98 632.477,854.02 638.891,873.92 " fill="none"
+              id="twisk.mondeIG.MondeIG-twisk.mondeIG.EtapeIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="629.1345"
+              y="863.3458">*
+        </text><!--MD5=[4c8027300130e598008062999858c228]
+link twisk.mondeIG.MondeIG to twisk.mondeIG.EtapeIG-->
+        <path codeLine="51" d="M645.941,814.06 C652.355,833.98 658.748,854.02 665.037,873.92 " fill="none"
+              id="twisk.mondeIG.MondeIG-twisk.mondeIG.EtapeIG-1" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="655.8933"
+              y="863.3458">*
+        </text><!--MD5=[373300f98aa90924d7d91ee2ca711d79]
+link twisk.mondeIG.MondeIG to twisk.mondeIG.ArcIG-->
+        <path codeLine="52" d="M499.435,814.06 C489.413,923.91 479.071,1037.273 472.37,1110.713 " fill="none"
+              id="twisk.mondeIG.MondeIG-twisk.mondeIG.ArcIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="465.7147"
+              y="1099.8229">*
+        </text><!--MD5=[bbed904d4a70c6c6b021f31dcdb852e4]
+link twisk.mondeIG.MondeIG to twisk.outils.CorrespondanceEtapes-->
+        <path codeLine="53"
+              d="M352.966,721.99 C322.975,770.23 295.078,822.2 275,874 C132.053,1242.769 119.907,1736.452 119.032,1847.9744 "
+              fill="none" id="twisk.mondeIG.MondeIG-twisk.outils.CorrespondanceEtapes"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="110.0152"
+              y="1836.9799">1
+        </text><!--MD5=[bfb16535105189c22ef26975ed75e833]
+link twisk.mondeIG.MondeIG to twisk.outils.FabriqueIdentifiant-->
+        <path codeLine="54"
+              d="M355.422,814.13 C348.085,834.09 341.514,854.14 336,874 C252.891,1173.349 294.786,1260.552 283,1571 C279.189,1671.372 263.776,1698.412 283,1797 C286.449,1814.689 294.131,1833.4948 300.858,1847.7222 "
+              fill="none" id="twisk.mondeIG.MondeIG-twisk.outils.FabriqueIdentifiant"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="288.9234"
+              y="1837.0594">1
+        </text><!--MD5=[31c5d54c1e8fe88484a03799ad195331]
+link twisk.mondeIG.PointDeControleIG to twisk.mondeIG.EtapeIG-->
+        <path codeLine="80" d="M538.565,1598.083 C564.235,1572.101 590.667,1541.745 611.677,1511.467 " fill="none"
+              id="twisk.mondeIG.PointDeControleIG-twisk.mondeIG.EtapeIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="595.2755"
+              y="1526.544">1
+        </text><!--MD5=[96f7de0aceceb48d36eed48f689da0c2]
+link twisk.mondeIG.EtapeIG to twisk.mondeIG.PointDeControleIG-->
+        <path codeLine="141"
+              d="M611.372,1457.215 C600.321,1475.776 588.84,1493.891 577,1511 C562.896,1531.38 546.32,1551.806 529.746,1570.919 "
+              fill="none" id="twisk.mondeIG.EtapeIG-twisk.mondeIG.PointDeControleIG"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="528.6391"
+              y="1560.0295">*
+        </text><!--MD5=[317e0e060a83a655991a359d143a251a]
+link twisk.mondeIG.ArcIG to twisk.mondeIG.PointDeControleIG-->
+        <path codeLine="92" d="M461.788,1274.231 C458.534,1356.006 453.494,1482.671 449.987,1570.809 " fill="none"
+              id="twisk.mondeIG.ArcIG-twisk.mondeIG.PointDeControleIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="441.986"
+              y="1559.9114">2
+        </text><!--MD5=[86228de6bf4ffda2485a84e2257e808d]
+link twisk.mondeIG.EtapeIG to twisk.mondeIG.EtapeIG-->
+        <path codeLine="142"
+              d="M894.605,1111.41 C915.438,1124.158 929.5,1151.188 929.5,1192.5 C929.5,1233.812 915.438,1260.842 894.605,1273.59 "
+              fill="none" id="twisk.mondeIG.EtapeIG-twisk.mondeIG.EtapeIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="902.5404"
+              y="1274.6846">*
+        </text><!--MD5=[5e15fd4a1c38fe163347fdea9fec7d89]
+link twisk.mondeIG.EtapeIG to twisk.outils.FabriqueIdentifiant-->
+        <path codeLine="143"
+              d="M611.188,1496.174 C605.658,1501.371 599.931,1506.325 594,1511 C501.541,1583.876 412.685,1481.675 336,1571 C267.098,1651.259 292.81,1792.257 306.566,1847.6852 "
+              fill="none" id="twisk.mondeIG.EtapeIG-twisk.outils.FabriqueIdentifiant"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="305.9727"
+              y="1837.0134">1
+        </text><!--MD5=[307114415be072625f247e09a4a0008f]
+link twisk.mondeIG.GuichetIG to twisk.outils.FabriqueIdentifiant-->
+        <path codeLine="157"
+              d="M934.253,1766.717 C916.686,1778.505 897.987,1789.158 879,1797 C791.01,1833.3389 516.301,1856.8132 384.693,1866.2651 "
+              fill="none" id="twisk.mondeIG.GuichetIG-twisk.outils.FabriqueIdentifiant"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="392.4988"
+              y="1861.974">1
+        </text><!--MD5=[e57c97d16fa1621d61f093a1033e4d9e]
+reverse link twisk.designPattern.Observateur to twisk.mondeIG.MondeIG-->
+        <path codeLine="159" d="M463.477,109.22 C466.128,124.55 469.354,143.2 472.936,163.91 " fill="none"
+              id="twisk.designPattern.Observateur-backto-twisk.mondeIG.MondeIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="456.54,110.19,460.029,89.29,470.336,107.8,456.54,110.19"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bb9d390b0140ea01ec48a54f1c6b40b1]
+reverse link java.io.Serializable to twisk.mondeIG.MondeIG-->
+        <path codeLine="160"
+              d="M905.64,74.55 C840.588,83.55 750.435,99.4 722,121 C705.375,133.63 690.039,148.1 675.915,163.85 "
+              fill="none" id="java.io.Serializable-backto-twisk.mondeIG.MondeIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="905.02,67.57,925.768,71.87,906.866,81.45,905.02,67.57"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[304071042b14292f2169d10bcd10e56e]
+reverse link twisk.designPattern.SujetObserve to twisk.mondeIG.MondeIG-->
+        <path codeLine="161" d="M595.421,109.22 C592.733,124.55 589.463,143.2 585.832,163.91 " fill="none"
+              id="twisk.designPattern.SujetObserve-backto-twisk.mondeIG.MondeIG"
+              style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="588.567,107.78,598.916,89.29,602.356,110.2,588.567,107.78"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1dade2c9024508703359d725a4d36db5]
+reverse link java.io.Serializable to twisk.mondeIG.ActiviteIG-->
+        <path codeLine="162"
+              d="M1027.39,103.12 C1032.06,108.59 1036.11,114.57 1039,121 C1102.34,261.86 1126.97,1384.058 1039,1511 C995.741,1573.423 947.143,1537.468 879,1571 C866.895,1576.956 854.538,1583.57 842.32,1590.477 "
+              fill="none" id="java.io.Serializable-backto-twisk.mondeIG.ActiviteIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="1022.47,108.1,1013.07,89.11,1032.26,98.09,1022.47,108.1"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[74a6a96cc523904c8a27096559de8374]
+reverse link twisk.mondeIG.EtapeIG to twisk.mondeIG.ActiviteIG-->
+        <path codeLine="163" d="M728.246,1531.214 C726.694,1552.383 725.235,1572.291 723.931,1590.082 " fill="none"
+              id="twisk.mondeIG.EtapeIG-backto-twisk.mondeIG.ActiviteIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="721.284,1530.438,729.728,1511.003,735.247,1531.462,721.284,1530.438"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d0f018ab116fe5aa920c1f00e39ea341]
+reverse link java.io.Serializable to twisk.mondeIG.PointDeControleIG-->
+        <path codeLine="164"
+              d="M978.811,109.06 C988.011,337.79 1025.52,1404.157 930,1511 C817.795,1636.503 707.702,1498.011 556,1571 C550.069,1573.853 544.229,1577.131 538.519,1580.719 "
+              fill="none" id="java.io.Serializable-backto-twisk.mondeIG.PointDeControleIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="971.816,109.33,977.992,89.06,985.804,108.76,971.816,109.33"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[190f7178e58716e874b3c89c44059eeb]
+reverse link java.io.Serializable to twisk.mondeIG.ArcIG-->
+        <path codeLine="165"
+              d="M909.604,101.36 C903.132,107.14 897.366,113.67 893,121 C813.906,253.76 935.163,696.32 835,814 C763.457,898.06 677.388,801.68 594,874 C524.218,934.52 491.631,1038.405 476.789,1110.8 "
+              fill="none" id="java.io.Serializable-backto-twisk.mondeIG.ArcIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="905.481,95.7,925.658,89.23,913.92,106.87,905.481,95.7"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3d26584d165ed2d8cd6972dc4281fce8]
+reverse link twisk.mondeIG.Iterable to twisk.mondeIG.EtapeIG-->
+        <path codeLine="166" d="M777.392,533.39 C774.851,601.94 769.691,741.18 764.768,874 " fill="none"
+              id="twisk.mondeIG.Iterable-backto-twisk.mondeIG.EtapeIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="770.399,533.07,778.135,513.34,784.389,533.59,770.399,533.07"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[efeed7dc02482a23db2af31b14924725]
+reverse link java.io.Serializable to twisk.mondeIG.EtapeIG-->
+        <path codeLine="167"
+              d="M976.25,109.3 C973.415,225.19 959.989,551.47 897,814 C892.274,833.7 886.783,853.75 880.758,873.83 "
+              fill="none" id="java.io.Serializable-backto-twisk.mondeIG.EtapeIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="969.258,108.85,976.688,89.01,983.255,109.15,969.258,108.85"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d78015c5db16dd032a574520b4a289d2]
+reverse link java.io.Serializable to twisk.mondeIG.GuichetIG-->
+        <path codeLine="168"
+              d="M1047.51,78.56 C1071.44,86.56 1095.72,99.64 1110,121 C1281.68,377.78 1172.45,1208.49 1110,1511 C1105.41,1533.22 1097.59,1556.153 1088.82,1577.474 "
+              fill="none" id="java.io.Serializable-backto-twisk.mondeIG.GuichetIG"
+              style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="none" points="1045.48,85.26,1028.15,73.07,1049.3,71.79,1045.48,85.26"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[87b2d26520fe2329c3836d4f08bf3a2e]
+reverse link twisk.mondeIG.EtapeIG to twisk.mondeIG.GuichetIG-->
+        <path codeLine="169" d="M905.146,1445.756 C933.525,1492.808 961.481,1539.158 984.585,1577.465 " fill="none"
+              id="twisk.mondeIG.EtapeIG-backto-twisk.mondeIG.GuichetIG" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="none" points="899.015,1449.145,894.68,1428.403,911.003,1441.914,899.015,1449.145"
+                 style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[56c2eff1a12ac059f21ddd3fe7cbc196]
+@startuml
+class twisk.mondeIG.MondeIG {
+- {static} long serialVersionUID
+- int style
+- Object simulation
+- int nbClients
+- String nom
+- String loi
++ void ajouter(String)
++ Iterator<EtapeIG> iterator()
++ int nbEtapes()
++ void ajouter(PointDeControleIG,PointDeControleIG)
++ Iterator<ArcIG> iteratorArcs()
++ void creationArc(PointDeControleIG)
++ EtapeIG getEtapeIndice(String)
++ void ajouterEtapeSelectionnee(EtapeIG)
++ boolean isSelected(EtapeIG)
++ void supprimerLaSelection()
++ void supprimer(Iterator<EtapeIG>)
++ void renommerLaSelection(String)
++ int nbEtapesSelectionnees()
++ void changerEmplacementEtape(String,int,int)
++ void selectionArc(ArcIG)
++ boolean isSelected(ArcIG)
++ void effacerLaSelection()
++ void setEntree()
++ void setSortie()
++ void setDelai(String)
++ void setEcart(String)
++ void setStyle(int)
++ int getStyle()
++ void setTokens(int)
++ boolean etapesSelectionneesSontDesGuichets()
+- void verifierMondeIG()
++ Monde creerMonde()
++ void simuler()
++ CorrespondanceEtapes getCorE()
++ GestionnaireClients getGestionnaireClientDeSimulation()
++ boolean simulationACommencee()
++ void reagir()
++ void lavageDesClients()
++ int getNbClients()
++ void setNbClients(int)
++ String getNom()
++ void setNom(String)
++ void setLoi(String)
++ String getLoi()
++ int getNbArcsSelectionnes()
++ boolean etapesSelectionneesContientUnGuichet()
+}
+twisk.mondeIG.MondeIG- -"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.MondeIG- -"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.MondeIG- -"*" twisk.mondeIG.ArcIG
+twisk.mondeIG.MondeIG- -"1" twisk.outils.CorrespondanceEtapes
+twisk.mondeIG.MondeIG- -"1" twisk.outils.FabriqueIdentifiant
+class twisk.mondeIG.ActiviteIG {
+- {static} long serialVersionUID
+- boolean estUneActiviteRestreinte
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ void siEstUnGuichetSetVersLaDroite(Boolean)
++ boolean setActiviteRestreinte(boolean)
++ Boolean siEstUnGuichetGetVersLaDroite()
+}
+class twisk.mondeIG.PointDeControleIG {
+- {static} long serialVersionUID
+- int centreX
+- int centreY
+- String id
+- boolean clicked
++ void setCentre(int,int)
++ int getCentreX()
++ int getCentreY()
++ void setClicked()
++ boolean isClicked()
++ String getId()
++ EtapeIG getEtapeRattache()
+}
+twisk.mondeIG.PointDeControleIG- -"1" twisk.mondeIG.EtapeIG
+class twisk.mondeIG.ArcIG {
+- {static} long serialVersionUID
+- boolean select
++ PointDeControleIG getPdcDepart()
++ PointDeControleIG getPdcArrive()
++ boolean isLinkedToStage(EtapeIG)
++ boolean isSelected()
++ void setSelect(boolean)
++ EtapeIG getEtapePdcDepart()
++ EtapeIG getEtapePdcArrive()
+}
+twisk.mondeIG.ArcIG - -"2" twisk.mondeIG.PointDeControleIG
+abstract class twisk.mondeIG.EtapeIG {
+- {static} long serialVersionUID
+# String nom
+# String identifiant
+# int posX
+# int posY
+# boolean entree
+# boolean sortie
+# int delai
+# int ecart
+# int nbPrec
++ void randomPositions()
++ void raffraichissementPdc()
++ String getIdentifiant()
++ int getPosX()
++ int getPosY()
++ Iterator<PointDeControleIG> iterator()
++ PointDeControleIG getPdcIndex(int)
++ String getNom()
++ void setNom(String)
++ void setPosXPosY(int,int)
++ void invEntree()
++ void invSortie()
++ int getDelai()
++ int getEcart()
++ void setDelai(int)
++ void setEcart(int)
++ boolean estUneEntree()
++ boolean estUneSortie()
++ boolean estUneActivite()
++ boolean estUneActiviteRestreinte()
++ boolean estUnGuichet()
++ {abstract}int siEstUnGuichetGetNbJetons()
++ {abstract}void siEstUnGuichetSetNbJetons(int)
++ {abstract}void siEstUnGuichetSetVersLaDroite(Boolean)
++ void ajouterSuccesseur(EtapeIG)
++ void supprimerSuccesseur(EtapeIG)
++ boolean possedeUnSuccesseur()
++ boolean estSuivieDUneActivite()
++ {abstract}boolean setActiviteRestreinte(boolean)
++ boolean actSuccIntoActRes()
++ ArrayList<EtapeIG> getSucc()
++ boolean estAccessibleDepuis(EtapeIG)
++ int getNbPrec()
++ void incrementeNbPrec()
++ void decrementeNbPrec()
++ {abstract}Boolean siEstUnGuichetGetVersLaDroite()
+}
+twisk.mondeIG.EtapeIG- -"*" twisk.mondeIG.PointDeControleIG
+twisk.mondeIG.EtapeIG- -"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.EtapeIG- -"1" twisk.outils.FabriqueIdentifiant
+class twisk.mondeIG.GuichetIG {
+- {static} long serialVersionUID
+- int nbJetons
+- int numSemaphore
+- Boolean versLaDroite
++ boolean estUnGuichet()
++ int siEstUnGuichetGetNbJetons()
++ void siEstUnGuichetSetNbJetons(int)
++ void siEstUnGuichetSetVersLaDroite(Boolean)
++ boolean setActiviteRestreinte(boolean)
++ Boolean siEstUnGuichetGetVersLaDroite()
++ void setVersLaDroite(Boolean)
+}
+twisk.mondeIG.GuichetIG- -"1"twisk.outils.FabriqueIdentifiant
+
+twisk.designPattern.Observateur <|.. twisk.mondeIG.MondeIG
+java.io.Serializable <|.. twisk.mondeIG.MondeIG
+twisk.designPattern.SujetObserve <|- - twisk.mondeIG.MondeIG
+java.io.Serializable <|.. twisk.mondeIG.ActiviteIG
+twisk.mondeIG.EtapeIG <|- - twisk.mondeIG.ActiviteIG
+java.io.Serializable <|.. twisk.mondeIG.PointDeControleIG
+java.io.Serializable <|.. twisk.mondeIG.ArcIG
+twisk.mondeIG.Iterable <|.. twisk.mondeIG.EtapeIG
+java.io.Serializable <|.. twisk.mondeIG.EtapeIG
+java.io.Serializable <|.. twisk.mondeIG.GuichetIG
+twisk.mondeIG.EtapeIG <|- - twisk.mondeIG.GuichetIG
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+-->
+    </g>
+</svg>

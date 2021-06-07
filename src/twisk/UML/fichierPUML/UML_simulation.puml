@@ -1,0 +1,38 @@
+@startuml
+class twisk.simulation.GestionnaireClients {
+- int nbClients
++ void setClients(int)
++ void allerA(int,Etape,int)
++ void reset()
++ Iterator<Client> iterator()
++ Client getClientI(int)
++ int getNbClients()
+}
+twisk.simulation.GestionnaireClients --"*" twisk.simulation.Client
+class twisk.simulation.Client {
+- int numeroClient
+- int rang
++ void allerA(Etape,int)
++ Etape getEtape()
++ int getNumeroClient()
++ int getRang()
++ String toString()
+}
+twisk.simulation.Client --"1" twisk.monde.Etape
+class twisk.simulation.Simulation {
+- int nbClients
+- boolean enCoursDeSimulation
++ void simuler(Monde)
++ int[] start_simulation(int,int,int,int[])
++ int[] ou_sont_les_clients(int,int)
++ void nettoyage()
++ void setNbClients(int)
++ GestionnaireClients getGestCli()
++ boolean isEnCoursDeSimulation()
+}
+twisk.simulation.Simulation --"1" twisk.simulation.GestionnaireClients
+
+
+twisk.simulation.Iterable <|.. twisk.simulation.GestionnaireClients
+twisk.designPattern.SujetObserve <|-- twisk.simulation.Simulation
+@enduml

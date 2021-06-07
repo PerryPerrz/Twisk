@@ -169,7 +169,6 @@ abstract class twisk.mondeIG.EtapeIG {
 # int delai
 # int ecart
 # int nbPrec
-# FabriqueIdentifiant fabrik
 + void randomPositions()
 + void raffraichissementPdc()
 + String getIdentifiant()
@@ -209,6 +208,7 @@ abstract class twisk.mondeIG.EtapeIG {
 }
 twisk.mondeIG.EtapeIG--"*" twisk.mondeIG.PointDeControleIG
 twisk.mondeIG.EtapeIG--"*" twisk.mondeIG.EtapeIG
+twisk.mondeIG.EtapeIG--"1" twisk.outils.FabriqueIdentifiant
 abstract class twisk.monde.Etape {
 # String nom
 # int num
