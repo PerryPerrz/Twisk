@@ -46,6 +46,7 @@ public class VueMondeIG extends Pane implements Observateur {
         }
         this.setOnDragOver(dragEvent -> {
             if (dragEvent.getDragboard().hasString()) { //Si le dragDropped renvoie bien un string, je peux bouger
+                //On fait réapparaitre la hitbox de VueMondeIG par dessus la hitbox de VueOutils pour drag'n'drop donc on ne peut pas appuyer sur les boutons pendant le drag'n'drop
                 this.setPickOnBounds(true);
                 dragEvent.acceptTransferModes(TransferMode.MOVE);
             }
@@ -65,10 +66,12 @@ public class VueMondeIG extends Pane implements Observateur {
                     success = true;
                 }
             }
+            //On autorise plus le drag'n'drop pour empêcher les conflits de hitbox avec les boutons de vueOutils.
             this.setPickOnBounds(false);
             dragEvent.setDropCompleted(success);
             dragEvent.consume();
         });
+        //On passe la hitbox de VueMondeIG en dessous ou pas au même endroit que celle de VueOutils pour permettre de clique sur les boutons lorsqu'une activité les recouvre ou est à côté mais on ne peut plus drag'n'drop
         this.setPickOnBounds(false);
     }
 
