@@ -1,11 +1,11 @@
 package twisk.exceptions;
 
 /**
- * La classe Pas un guichet exception.
+ * La classe PasUnGuichetException
  */
 public class PasUnGuichetException extends TwiskException {
     /**
-     * Constructeur de l'exception se déclanchant lorsque l'on essaie de changer un paramètre de guichet sur une activité.
+     * Constructeur de l'exception se déclenchant lorsque l'on essaie de changer un paramètre de guichet sur une activité.
      *
      * @param message le message
      */

@@ -1,7 +1,7 @@
 package twisk.exceptions;
 
 /**
- * La classe Arc already create exception.
+ * La classe ArcAlreadyCreateException
  */
 public class ArcAlreadyCreateException extends TwiskException {
     /**

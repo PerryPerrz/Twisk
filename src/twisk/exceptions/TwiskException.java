@@ -1,7 +1,7 @@
 package twisk.exceptions;
 
 /**
- * La classe Twisk exception.
+ * La classe TwiskException.
  */
 public abstract class TwiskException extends Exception {
     /**
