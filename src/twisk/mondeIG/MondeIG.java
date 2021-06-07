@@ -127,15 +127,18 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
         if (pdc1.getEtapeRattache().estAccessibleDepuis(pdc2.getEtapeRattache()))
             throw new CreateLoopException("On peut pas créer un circuit entre deux étapes !");
         if (pdc2.getEtapeRattache().estUnGuichet()) {
-            if (pdc2.getEtapeRattache().getNbPrec() == 0)
+            if (pdc2.getEtapeRattache().getNbPrec() == 0) {
+                System.out.println(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)));
                 pdc2.getEtapeRattache().siEstUnGuichetSetVersLaDroite(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)));
-            else {
+            } else {
                 if (pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && !(pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3))))
                     throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
                 if (!pdc2.getEtapeRattache().siEstUnGuichetGetVersLaDroite() && pdc2.equals(pdc2.getEtapeRattache().getPdcIndex(3)))
                     throw new WrongDirectionException("On ne peut pas créer d'arc vers un guichet dans le sens inverse du guichet !");
             }
         }
+        if (pdc1.getEtapeRattache().estUnGuichet() && pdc2.getEtapeRattache().estUnGuichet())
+            throw new GuichetToGuichetException("On ne peut pas créer d'arcs allant d'un guichet à un autre guichet !");
         ArcIG ark = new ArcIG(pdc1, pdc2);
         this.arcs.add(ark);
     }
@@ -718,5 +721,13 @@ public class MondeIG extends SujetObserve implements Observateur, Serializable {
 
     public String getLoi() {
         return loi;
+    }
+
+    public int getNbArcsSelectionnes() {
+        int i = 0;
+        for (ArcIG arc : this.arcs)
+            if (arc.isSelected())
+                i++;
+        return i;
     }
 }
