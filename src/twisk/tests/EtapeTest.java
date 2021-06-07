@@ -12,53 +12,53 @@ import static org.junit.jupiter.api.Assertions.*;
 class EtapeTest {
 
     /**
-     * The Act 1.
+     * L'activité 1.
      */
     protected Activite act1, /**
-     * The Act 2.
+     * L'activité 2.
      */
     act2, /**
-     * The Act 3.
+     * L'activité 3.
      */
     act3;
     /**
-     * The Gui 1.
+     * Le guichet 1.
      */
     protected Guichet gui1, /**
-     * The Gui 2.
+     * Le guichet 2.
      */
     gui2, /**
-     * The Gui 3.
+     * Le guichet 3.
      */
     gui3;
     /**
-     * The Act res 1.
+     * L'activité restreinte 1.
      */
     protected ActiviteRestreinte actRes1, /**
-     * The Act res 2.
+     * L'activité restreinte 2.
      */
     actRes2, /**
-     * The Act res 3.
+     * L'activité restreinte 3.
      */
     actRes3;
     /**
-     * The Sas e 1.
+     * Le sas d'entrée 1.
      */
     protected SasEntree sasE1, /**
-     * The Sas e 2.
+     * Le sas d'entrée 2.
      */
     sasE2, /**
-     * The Sas e 3.
+     * Le sas d'entrée 3.
      */
     sasE3;
     /**
-     * The Sas s 1.
+     * Le sas de sortie 1.
      */
     protected SasSortie sasS1, /**
-     * The Sas s 2.
+     * Le sas de sortie 2.
      */
     sasS2, /**
-     * The Sas s 3.
+     * Le sas de sortie 3.
      */
     sasS3;
 

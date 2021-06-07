@@ -15,13 +15,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class MondeIGTest {
     /**
-     * The Monde ig 1.
+     * Le MondeIG 1
      */
     MondeIG mondeIG1, /**
-     * The Monde ig 2.
+     * Le MondeIG 2.
      */
     mondeIG2, /**
-     * The Monde ig 3.
+     * Le MondeIG 3.
      */
     mondeIG3;
 
