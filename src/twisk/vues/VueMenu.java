@@ -684,6 +684,14 @@ public class VueMenu extends MenuBar implements Observateur {
                     parametres.getItems().get(1).setDisable(true);
                     parametres.getItems().get(2).setDisable(monde.nbEtapesSelectionnees() != 1); //Si plus d'un guichet est selectionné on disable jetons
                 }
+                fichier.getItems().get(0).setDisable(false);
+                fichier.getItems().get(1).setDisable(false);
+                parametres.getItems().get(3).setDisable(false);
+                mondes.getItems().get(0).setDisable(false);
+                mondes.getItems().get(1).setDisable(false);
+                lois.getItems().get(0).setDisable(false);
+                lois.getItems().get(1).setDisable(false);
+                lois.getItems().get(2).setDisable(false);
             } else {
                 fichier.getItems().get(0).setDisable(true);
                 fichier.getItems().get(1).setDisable(true);
